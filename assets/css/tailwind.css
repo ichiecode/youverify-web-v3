@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@font-face {
+    font-family: 'BRSonoma';
+    src: local('BR Sonoma'), url(../fonts/BrinkBRSonomaRegular.otf) ;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'BRSonoma';
+    src: local('BR Sonoma Medium'), url(../fonts/BrinkBRSonomaMedium.otf) ;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BRSonoma';
+    src: local('BR Sonoma SemiBold'), url(../fonts/BrinkBRSonomaSemiBold.otf) ;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'BRSonoma';
+    src: local('BR Sonoma Bold'), url(../fonts/BrinkBRSonomaBold.otf) ;
+    font-weight: 700;
+    font-display: swap;
+}
+@layer base {
+
+
+    body{
+        @apply font-sans;
+        @apply text-grey;
+        @apply font-normal;
+        @apply leading-loose !important;
+        @apply text-sm;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        @apply text-blue;
+        @apply font-bold;
+        @apply leading-tight !important;
+    }
+    h1{@apply text-4xl;}
+    h2{@apply text-2xl;}
+    h3{@apply text-xl;}
+    h4{
+        @apply text-base;
+        @apply font-semibold;
+    }
+
+    .text-container p{
+        @apply max-w-screen-md;
+        @apply mx-auto;
+    }
+
+    /* Animation */
+    .meuve{
+        animation: gbe_body_e 50s linear forwards infinite;
+        @apply cursor-pointer;
+        transform: translateX(50%);
+        @apply inline-grid;
+        @apply grid-cols-5;
+        @apply whitespace-nowrap;
+        @apply overflow-hidden;
+        @apply w-auto;
+    }
+    .meuve:nth-child(2){
+        transform: translateX(0%);
+        animation: gbe_body_e_2 25s linear forwards infinite;
+        animation-delay: 24s;
+    }
+ .meuve:hover{
+        animation-play-state: paused;
+    }
+
+    @keyframes gbe_body_e {
+        from{
+            transform: translateX(50%);
+        }
+        to{
+            transform: translateX(-250%);
+        }
+    }
+    @keyframes gbe_body_e_2 {
+        from{
+            transform: translateX(-50%);
+        }
+        to{
+            transform: translateX(-250%);
+        }
+    }
+    /* .testimony{
+        clip-path: polygon(120% 0, 100% 90%, 90% 100%, 0 100%, 0% -20%);
+        background: linear-gradient(132deg, transparent, transparent  95%, #46B2CA 5%);
+    } */
+
+    .youverify-plus-item, .company-logo-wrapper{
+        transition: filter 0.7s ease-in-out;
+        filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
+        @apply cursor-pointer;
+    }
+    .youverify-plus-item:hover{
+        filter: drop-shadow(6px 7px 6px rgba(17,87,102,0.1));
+
+    }
+    .company-logo-wrapper:hover {
+        filter: drop-shadow(3px 3px 6px rgba(17,87,102,0.1))
+    }
+    .youverify-plus-item > div, .company-logo-wrapper > div{
+        clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
+    }
+    
+    /* Name tags in Page header */
+    .confetti{
+        @apply duration-100;
+    }
+   
+.youverify-stamp{
+    bottom: 55%;
+    right: 30%;
+}
+
+.request-demo{
+    background-image: url(../images/screenshots/request-demo.png);
+    @apply bg-no-repeat;
+    background-position:  70px 320px;
+    background-size: 90%;
+
+}
+
+
+.form-group{
+    @apply w-full;
+    @apply mb-6;
+}
+.form-group h4{
+    @apply mb-2;
+    @apply font-semibold;
+    @apply text-base;
+}
+.form-group input,.form-group select, .form-group textarea {
+    @apply border;
+    @apply border-grey;
+    @apply px-4;
+    @apply py-3;
+    @apply w-full;
+    @apply rounded;
+    @apply text-blue-200;
+    @apply text-xs;
+    @apply outline-none;
+    @apply duration-500;
+    
+}
+
+.form-group input:focus,.form-group select:focus, .form-group textarea:focus {
+    @apply outline-none;
+}
+
+.form-group .error{
+    @apply border-red-600 !important;
+}
+
+.form-group select option{
+    @apply py-3;
+
+}
+.form-group:last-child{
+    @apply mb-0;
+}
+
+.for-a-reason{
+    background: none;
+}
+
+.form-group input:focus,.form-group select:focus, .form-group textarea:focus{
+    @apply border-blue;
+}
+
+
+.policy-page h2, .policy-page h3{
+    @apply mt-8;
+}
+
+.policy-page p{
+    @apply mt-4;
+}
+
+.policy-page ul{
+    @apply list-inside;
+    @apply list-disc;
+}
+
+.policy-page table tr {
+    @apply border-b;
+    @apply border-grey;
+}
+.policy-page table tr:first-child{
+    @apply font-semibold;
+    @apply text-xl;
+    @apply text-blue;
+}
+.policy-page table tr td {
+    @apply pr-8;
+    @apply pt-7;
+}
+
+.policy-page .wp-block-image {
+        text-align: center;
+        @apply my-16;
+    }
+
+    @screen sm{
+        body{
+            @apply text-base;
+        }
+        h1{
+            @apply text-6xl;
+        }
+        h2{
+            @apply text-5xl;
+        }
+        h3{
+            @apply text-3xl;
+        }
+        h4{
+            @apply text-lg;
+        }
+
+        .meuve{
+            animation: gbe_body_e 50s linear forwards infinite;
+            transform: translateX(100%);
+        }
+        .meuve:nth-child(2){
+            animation: gbe_body_e_2 50s linear forwards infinite;
+            animation-delay: 25s;
+        }
+
+        @keyframes gbe_body_e {
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+        @keyframes gbe_body_e_2 {
+            from{
+                transform: translateX(0%);
+            }
+            to{
+                transform: translateX(-200%);
+            }
+        }
+/* 
+        .testimony{
+            background-image: linear-gradient(130deg, transparent, transparent  95%, #46B2CA 2%)
+        } */
+
+        .for-a-reason{
+            background-image: url(../images/illustrations/for-a-reason-and-more/bg.svg);
+            /* background-repeat: no-repeat; */
+            background-position: right center;
+          
+        }
+
+        .request-demo{
+            @apply bg-contain;
+            background-position: right 50px;
+            background-size: auto;
+        }
+
+        .form-group{
+            @apply w-5/12;
+        }
+
+        .policy-page table tr td {
+            @apply pr-12;
+            @apply pt-7;
+        }
+          
+    }
+}
