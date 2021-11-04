@@ -1,18 +1,29 @@
 <template>
   <div>
-    <header class="flex items-center justify-start pt-48 pb-24">
+    <header
+      class="
+        bg-blue
+        relative
+        flex
+        items-center
+        justify-start
+        pt-20
+        pb-32
+        md:pt-48 md:pb-20
+      "
+    >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex justify-center">
-          <div class="w-3/6">
-            <h1 class="max-w-screen-lg mt-8">
+        <div class="flex-col-reverse md:flex-row flex justify-center">
+          <div class="md:w-3/6">
+            <h2 class="text-white max-w-screen-lg mt-8">
               Profile and screen customer identity on the go!
-            </h1>
-            <p class="mt-6 md:w-4/5">
+            </h2>
+            <p class="mt-3 md:w-4/5 text-white">
               With the Youverify Operating System, businesses can verify one
               customer per time or tens of thousands simultaneously without
-              sweat or code.
+              sweat or code
             </p>
-            <div class="mt-6 sm:mt-8 lg:mt-10 flex flex-wrap">
+            <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
                 class="
                   items-center
@@ -40,8 +51,8 @@
                   group
                   flex-shrink-0
                 "
-                href="/signup"
-                >Get started for free<svg
+                href="#how-it-works"
+                >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
                   class="
@@ -76,9 +87,9 @@
                   inline-flex
                   bg-gray-100
                   text-black
-                  py-3.5
-                  sm:py-3.75
-                  px-3.75
+                  py-3
+                  sm:py-4
+                  px-4
                   sm:px-5
                   text-sm
                   sm:text-1sm
@@ -122,338 +133,585 @@
                   ></path></svg
               ></a>
             </div>
+
+            <div class="mt-10 flex items-center">
+              <h4 class="text-white">Building with Youverify OS</h4>
+              <div class="ml-3 border w-3/6"></div>
+            </div>
+            <div class="mt-3 grid grid-cols-3">
+              <figure class="relative" style="width: 100px; height: 62px">
+                <img
+                  src="../../assets/images/logos/trusted/cazoo_white.svg"
+                  alt="Carbon logo"
+                  class="h-full w-full object-contain"
+                />
+              </figure>
+              <figure class="relative" style="width: 100px; height: 62px">
+                <img
+                  src="../../assets/images/logos/trusted/leovegas_white.svg"
+                  alt="Carbon logo"
+                  class="h-full w-full object-contain"
+                />
+              </figure>
+              <figure class="relative" style="width: 100px; height: 62px">
+                <img
+                  src="../../assets/images/logos/trusted/casumo_white.svg"
+                  alt="Carbon logo"
+                  class="h-full w-full object-contain"
+                />
+              </figure>
+            </div>
           </div>
-          <div class="w-3/6">
-            <img
-              class="object-contain h-full"
-              src="../../../../../Downloads/flow.gif"
-              alt=""
-              srcset=""
-            />
+          <div class="md:w-3/6">
+            <video
+              playsinline=""
+              autoplay=""
+              loop=""
+              controlslist="nodownload"
+              class="h-full"
+            >
+              <source
+                src="../../../../../Downloads/api-box-4-loop-2x.webm"
+                type="video/webm"
+              />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
           </div>
         </div>
       </section>
+      <div class="custom-shape-divider-bottom-1636017048">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </header>
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-      <div class="mx-auto pb-10">
-        <h6 class="font-medium">Trusted by the trustworthy</h6>
-        <div
-          class="
-            grid
-            gap-6
-            sm:gap-8
-            lg:gap-10
-            mt-4
-            sm:mt-10
-            lg:mt-12
-            grid-cols-2
-            md:grid-cols-4
-            lg:grid-cols-5
-          "
-        >
-          <figure class="relative" style="width: 100px; height: 62px">
-            <img
-              src="../../assets/images/logos/trusted/sterling-bank.png"
-              alt="Carbon logo"
-              class="h-full w-full object-contain"
-            />
-          </figure>
-          <figure class="relative" style="width: 100px; height: 62px">
-            <img
-              src="../../assets/images/logos/companies/bolt.png"
-              alt="Carbon logo"
-              class="h-full w-full object-contain"
-            />
-          </figure>
-          <figure class="relative" style="width: 100px; height: 62px">
-            <img
-              src="../../assets/images/logos/trusted/fidelity.webp"
-              alt="Carbon logo"
-              class="h-full w-full object-contain"
-            />
-          </figure>
-          <figure class="relative" style="width: 100px; height: 62px">
-            <img
-              src="../../assets/images/logos/trusted/wema.png"
-              alt="Carbon logo"
-              class="h-full w-full object-contain"
-            />
-          </figure>
-          <figure class="relative" style="width: 100px; height: 62px">
-            <img
-              src="../../assets/images/logos/trusted/sterling-bank.png"
-              alt="Carbon logo"
-              class="h-full w-full object-contain"
-            />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <div>
-      <section
+      <div
         class="
-          min-h-jumbotron
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-28
-          my-10
-          flex flex-wrap
-          sm:px-12
-          px-6
-          py-20
+          flex
+          sm:flex-row
+          flex-col-reverse
+          justify-evenly
           items-center
-          even:bg-white
-          odd:bg-blue-100
-          even:flex-row
-          odd:flex-row-reverse
+          py-20
         "
       >
-        <header class="sm:w-5/12 w-full relative">
-          <div>
-            <img
-              width="449"
-              height="398.99999999999994"
-              src="../../assets/images/illustrations/products/employee-screening.png"
-              
-              alt="Employee Screening"
-            />
-          </div>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-5/12 w-full sm:mt-0 mt-8">
-          <h3>Employee Screening</h3>
-          <p class="my-4">
+        <div class="sm:w-6/12 sm:pt-0 pt-8">
+          <span
+            class="
+              text-blue
+              tracking-widest
+              px-4
+              py-2
+              uppercase
+              sm:text-sm
+              text-xs
+              rounded
+              mb-3
+              leading-none
+              inline-block
+              bg-blue-100
+            "
+            >INSTANT VERIFICATION PAYMENTS</span
+          >
+          <h2>Employee Screening</h2>
+          <p class="sm:my-8 my-4 sm:w-10/12">
             We help our clients digitally execute processes around employee
             background checks with ease and in compliance with global personal
             data protection regulations.
           </p>
-          <span class="cursor-pointer inline-block" role="button" tabindex="0"
-            ><button
-              class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
-            >
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
+          <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
+            <a
+              href="#how-it-works"
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-blue-300
+                text-white
+                py-3
+                sm:py-4
+                px-4
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                mr-4
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              data-v-6addea9c=""
+              >Video Demo<svg
+                viewBox="0 0 20 20"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="transform inline-block mr-4 false"
+                class="
+                  w-5
+                  ml-1.25
+                  transition-transform
+                  duration-75
+                  transform
+                  group-hover:translate-x-0.5
+                "
+                data-v-6addea9c=""
               >
                 <path
-                  d="M1 0.999999L7 7L1 13"
-                  stroke="#46B2C8"
-                  stroke-width="2"
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path></svg></a
+            ><a
+              href="/contact-us"
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-gray-100
+                text-black
+                py-3
+                sm:py-4
+                px-4
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              data-v-6addea9c=""
+              >Contact Sales<svg
+                viewBox="0 0 20 20"
+                fill="none"
+                class="
+                  w-5
+                  ml-1.25
+                  transition-transform
+                  duration-75
+                  transform
+                  group-hover:translate-x-0.5
+                "
+                data-v-6addea9c=""
+              >
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
                 ></path></svg
-              >Get a free demo
-            </button></span
-          >
+            ></a>
+          </div>
         </div>
-      </section>
-      
-      <section
+        <div class="sm:w-5/12">
+          <div class="sm:w-auto w-full mx-auto">
+            <img
+              width="504"
+              height="545"
+              src="../../../../../Downloads/payments_api_account_funding-2x.webp"
+              alt="Mand holding a paper plane"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
+      <div
         class="
-          min-h-jumbotron
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-28
-          my-10
-          flex flex-wrap
-          sm:px-12
-          px-6
-          py-20
+          flex
+          sm:flex-row
+          flex-col-reverse
+          justify-evenly
           items-center
-          even:bg-white
-          odd:bg-blue-100
-          even:flex-row
-          odd:flex-row-reverse
+          py-20
         "
       >
-        <header class="sm:w-5/12 w-full relative">
-          <div
-            data-gatsby-image-wrapper=""
-            class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-          >
-            <div style="max-width: 425px; display: block">
-              <img
-                alt=""
-                role="presentation"
-                aria-hidden="true"
-                src="data:image/svg+xml;charset=utf-8,%3Csvg height='398.99999999999994' width='425' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                style="max-width: 100%; display: block; position: static"
-              />
-            </div>
+        <div class="sm:w-6/12 sm:pt-0 pt-8">
+          <div class="sm:w-auto w-full mx-auto">
             <img
-              aria-hidden="true"
-              data-placeholder-image=""
-              decoding="async"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFKUlEQVQ4y1WUC1BUVRjHT+yDBfER+CxsmjHTJmtSxkwtUUYzGxCBheW1LHsfu8s+EGFhWXBh2QVBFMWasGYsLcoanRSzSKOQyTFJs0FpGtOcFJVsGh+Jou699/w7i1Z2Zs6cO2fm/s7v/31nDtEaeELyrWR0kiFCuzyPPBO7IHbmjOWVCc+u+Hja9GWl06cumRD5Wi7RGq0kosBGpizSE+gNhDy6YCyZmKhaNX4B0eWIRJstkEiDQIiGAUfpuQiSayUkz5qwMCnrcluaEe05HLak5iMxUT9AssU9UQZhvzZb3B+VwXUsnpfak/riysGls5OPP7U4q4Pt72Owg2xuJtr7QDVJMxOSwXkz0kzotxYNny0tkX4qsktclhkkS8CobBEkR8T0tEJ0FgjoczqxO5fD3DkpiNJzYFAwIIiGqU5LNanHrMgjMcnGNUG9Cd2FQqiXF+ihQgHbTBYlWs9JumxRYqZSQiYnHSwQ5B7BphwWbXJNcq4UtdIkaXMsEgPKLDdP4g2COiLdTB7R82XNuTwuV1aEjnsq6fkKN/YKVoxiJ+vChmwuyuJwQrTimKMIPxe7sC3ThMczzFTF7HUGgRJXLmuKQVSRTCG8uufn8LhQ7Q/9WduM32uD0BdYQAz/RLZgTkYhznqqcWnTVpzxVCF5mQHMbiRuZDaL3JnPkfkGXjsjg2M15B0knUNJWl6oL8eE2iwTCKuZmtVQl8lBw36KWWVC9bJsfPl6HuoYbPzSHKhyLWE7aMM1bDOYIrYmZRHnyxmPfZBvPtoYLEert1b2LEyGLdOCZF894gptUFvdiDQ7oTY68FKiHtb5yZg7LwWaLB4aZh81YshSGGanEM3zr2p7xaL+kxU2nLzwtfTrqTM40LoVxz7rwt3hG9jc2QJdRR3U/maMX+3D7p17cTTQBG/jFujSzYgNRzWIUIUNrwbcZEch33a62Il+u+3erYHzoAC9q1DclWWER/+Vb7C0yQ1SFsTCuhZ0b9+F731NCO7ch8mWMmTyLnjNVkxg0ckr1UL8O/XFf3Xl8/iw3KmEgWxQKAooVcJfuCYNoGyHB6SgDCvad6GvbTsGGzbive4jIPZKPF3qwy9mHiVCEYj3XfeyYLsHb7cWy59/0krvSCE6QqRhpjJiOHD5ImaxOkbbKvFk4xs4XbsOCotc1nEAxFWFF7x1tMpsx1uFIiVOq5mrXOdC5UdrpG173qShYeUB7z/gud8uYmq2HaPLaqEuD+BgnoAf2fWKq27E6BIfneTwwuhw03TeoZA9eZzYKVjQ5bJIe99vx/2Q9H+GlwavYKbRhWhPgEVqwHrWBF9BESWeII1bU4Mn9DYlvqoeGncNyKdGPnDSbkcvb5EPfXFIkZWHDOlIevxx9TpmiW7oyv0gDZuwJM9BZ4huSoIbEVMRUKbwbhrBboDa19hI9puEnf1OB3tdCnd3f/vD+Tu3h8MM5WHg1ZtDmM1iadx+aBpa6ES+jEZ56xHRuEkew/YmieWIXrvOHemqIqSjgA/2Oew4Ilraew6fOPMQkI5Qme21m0N0jqOKMiDV1LfQcaU10NU0Sap6ZugJ0Hjj6pxYZxWZbLBFEH9K/pgjFuvgiSL70Hc9vTfu3Qvh3y4/MLw+dAsJrmrWED90/vWIc1YpkTVNUAc23NT61yeNW+0jmrpmlSq4kZCvTBw5YBZXnmKvR39Xj3RHkiXGkBlQZsDwzZZv3Lotzy1eK6vdflkb2BAKx2SAc+rghufYSsaW1qpj3HVEW9NE/gbYplGdcMOo9wAAAABJRU5ErkJggg=="
-              alt=""
-              style="
-                opacity: 0;
-                transition: opacity 500ms linear 0s;
-                object-fit: cover;
-              "
-            /><img
-              width="425"
-              height="398.99999999999994"
-              data-main-image=""
-              sizes="(min-width: 425px) 425px, 100vw"
-              decoding="async"
-              src="/static/7fc34f3d1005851a86955f595bd27f09/54858/remittance-kyc.png"
-              srcset="
-                /static/7fc34f3d1005851a86955f595bd27f09/edbe3/remittance-kyc.png 106w,
-                /static/7fc34f3d1005851a86955f595bd27f09/4c443/remittance-kyc.png 213w,
-                /static/7fc34f3d1005851a86955f595bd27f09/54858/remittance-kyc.png 425w
-              "
-              alt="International Remittance KYC Compliance"
-              style="object-fit: cover; opacity: 1"
-            /><noscript></noscript>
+              width="504"
+              height="545"
+              src="../../../../../Downloads/payouts_api_auto_payouts-2x.webp"
+              alt="Mand holding a paper plane"
+            />
           </div>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-5/12 w-full sm:mt-0 mt-8">
-          <h3>International Remittance KYC Compliance</h3>
-          <p class="my-4">
+        </div>
+        <div class="sm:w-5/12">
+          <span
+            class="
+              text-white
+              tracking-widest
+              px-4
+              py-2
+              uppercase
+              sm:text-sm
+              text-xs
+              rounded
+              mb-3
+              leading-none
+              inline-block
+              bg-blue
+            "
+            >INSTANT VERIFICATION PAYMENTS</span
+          >
+          <h2>International Remittance KYC <br />Compliance</h2>
+          <p class="sm:my-8 my-4 sm:w-10/12">
             The Youverify Operating System helps businesses meet global
             regulatory requirements including Know Your Customer (KYC),
             Anti-Money-Laundering (AML) and Counterterrorism Funding (CFT)
-            regulations across the world.
+            regulations across the world
           </p>
-          <span class="cursor-pointer inline-block" role="button" tabindex="0"
-            ><button
-              class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
-            >
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
+          <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
+            <a
+              href="#how-it-works"
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-blue-300
+                text-white
+                py-3
+                sm:py-4
+                px-4
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                mr-4
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              data-v-6addea9c=""
+              >See how it works<svg
+                viewBox="0 0 20 20"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="transform inline-block mr-4 false"
+                class="
+                  w-5
+                  ml-1.25
+                  transition-transform
+                  duration-75
+                  transform
+                  group-hover:translate-x-0.5
+                "
+                data-v-6addea9c=""
               >
                 <path
-                  d="M1 0.999999L7 7L1 13"
-                  stroke="#46B2C8"
-                  stroke-width="2"
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path></svg></a
+            ><a
+              href="/contact-us"
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-gray-100
+                text-black
+                py-3.5
+                sm:py-3.75
+                px-3.75
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              data-v-6addea9c=""
+              >Get in touch<svg
+                viewBox="0 0 20 20"
+                fill="none"
+                class="
+                  w-5
+                  ml-1.25
+                  transition-transform
+                  duration-75
+                  transform
+                  group-hover:translate-x-0.5
+                "
+                data-v-6addea9c=""
+              >
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
                 ></path></svg
-              >Get a free demo
-            </button></span
-          >
+            ></a>
+          </div>
         </div>
-      </section>
-      
-      <section
+      </div>
+    </section>
+
+    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+      <div
         class="
-          min-h-jumbotron
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-28
-          my-10
-          flex flex-wrap
-          sm:px-12
-          px-6
-          py-20
+          flex
+          sm:flex-row
+          flex-col-reverse
+          justify-evenly
           items-center
-          even:bg-white
-          odd:bg-blue-100
-          even:flex-row
-          odd:flex-row-reverse
+          py-20
         "
       >
-        <header class="sm:w-5/12 w-full relative">
-          <div
-            data-gatsby-image-wrapper=""
-            class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+        <div class="sm:w-6/12 sm:pt-0 pt-8">
+          <span
+            class="
+              text-blue
+              tracking-widest
+              px-4
+              py-2
+              uppercase
+              sm:text-sm
+              text-xs
+              rounded
+              mb-3
+              leading-none
+              inline-block
+              bg-blue-100
+            "
+            >INSTANT VERIFICATION PAYMENTS</span
           >
-            <div style="max-width: 447px; display: block">
-              <img
-                alt=""
-                role="presentation"
-                aria-hidden="true"
-                src="data:image/svg+xml;charset=utf-8,%3Csvg height='453' width='447' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                style="max-width: 100%; display: block; position: static"
-              />
-            </div>
-            <img
-              aria-hidden="true"
-              data-placeholder-image=""
-              decoding="async"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE20lEQVQ4y3XUbVBUVRgH8MOG+ZZT0wez+uL0IV9TU8cEVkVFYJe7u3fvy77DgggIaJqig4bIGOoAaaCia+U0qZgiKelo6VQYiUq+psmGqOM4jGIiiDmJ7u7599wVp6TpzjzznL333N8+59znXsY5jwCga73Xoau7ekOHU3UR6Rdv9Iv9dN+wmIS0Cv1kuZMipI+xtcQImfnTd343NPvslb64fD7i+PWbupbbd3SBYEinGZrFHgcCjH48H7ZkNjzanqkfa4R+nIDoCRauZf3YJIyOUpdAcf/nnmeONniLBsMo3v5XHl7y8bbs6NEGRI8xhqaPM2o5EDUyAfn5ZYW95ofH5Iyg/KamBto6u+Cu2AqxZAOk0o1QPtmCuMIyKFNEvllUsEVSeYVFgWmSwGd9WAKZrkslGyGXbYKwphw/XvJDO4KhUKsGor6pmTODnTOzhzPBxZmcxgdbUnilVYGPsGqXAz5Z5SsTrXjV7AWTU5/OE5M5m2nl+Tv3hjTnSTDYqYG84fcWHmlL5wNdWXyAI4P3987jQ91z+VabDZUmkX8hWrjPYuUfCTJet2XyAanzw/MGebIJTeFFe2p5D9gerpBARChp6OvIQF9bOl5OzgHzzkeebENdbjaqFy/BD9mZmCMo4fOD6PqLNG+AKwvM7MbK3fufgfeeA+lf0ceeDuYhMDMPZqsXRxcuxuWCYhzI/QBThBT0p/P9UnLQj8CB/wceJ1BHICNQQwVbGqpsKVg+VYI0yYC8WAHG8YmIGW/Gu5MsGJzgAnNmog+FBhb2Bk/6r4ARKNpn47TiQbfsQojirGDHvMki5AkmLIgSMeMdA6aMSED1TBmb7KkYEgY9KOoN1lGFb8ip8FtdCBJ0T3GH4z5Fm+RCF+XiaRJioyUUGRy4oHoA2YkTajIGUYXLe4OH/C3Is3pwJF4Jow/ohg6qtF2r1O5BTZyMkRPNiFRng9G+GWhLfkpU0WpxItdkx/u7a58HzzRfxVGLA98nqDgdL+Ivs4JOiseqCydo2QljjCiNUzDWm4vXaFsUyYsdsRJ+NTnweZKCvJ4KAz0g77xwCc1JCj+caENjQSnaq/bhzqp1uCW7kUDv8+ZEJxqWFWCFOxXFVhs+k+04aFRxUXCg1iCjpKcPn4GB619+xc9MTUJDWi4/f64e5/yNuN64HzlxKmZPEBBweXHIm4G1JivKRZVXOVR+UHHgnODkdbMsgfId1U+0woLB4B+sm0aty4rw2zQj3y2q2FuQgzb/OtxuKoaXltVMy3qkunFXcuKwZOeVksJr3Hb47M7QRjGVN9FWNRw/GX6XQySyu3fad/kWFAZXu3OxXlT4BkHFNwVL0HSqHPW0tG756ROnJ80fUfyiOrFHkYKrZiRhVtYK+Lft2E9WVZDzr8F5KaNjyKjKmlDMJ9tRHp/EKwWRf7thDbpOrsdDhwsd1DbUPrxDdvMHBN8SnQFPyiJEzV8dmrjtgLMuZ+k/30XOGTMvWjss2lcDfdFmzHVmcauchSLa/AcZ3jDW2dOPndRC91VPsMOsoiJradcrrd2xL1X/zI7NWRjZ/ufDSAIj6Yv9Aos3ZbCoil0+/brteG9xWShqqosfmynhkeRGh4ZQEMYpQlqDt8nuazfH60elHGlkOYXlkbXXbjBWD3aloytc5d956+fUHcuLswAAAABJRU5ErkJggg=="
-              alt=""
-              style="
-                opacity: 0;
-                transition: opacity 500ms linear 0s;
-                object-fit: cover;
-              "
-            /><img
-              width="447"
-              height="453"
-              data-main-image=""
-              sizes="(min-width: 447px) 447px, 100vw"
-              decoding="async"
-              src="/static/0f2fa700d78d8c3c6dd66a05970148a5/3e075/onboarding.png"
-              srcset="
-                /static/0f2fa700d78d8c3c6dd66a05970148a5/af681/onboarding.png 112w,
-                /static/0f2fa700d78d8c3c6dd66a05970148a5/8af5d/onboarding.png 224w,
-                /static/0f2fa700d78d8c3c6dd66a05970148a5/3e075/onboarding.png 447w
-              "
-              alt="Onboarding and more"
-              style="object-fit: cover; opacity: 1"
-            /><noscript></noscript>
-          </div>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-5/12 w-full sm:mt-0 mt-8">
-          <h3>Onboarding and more</h3>
-          <p class="my-4">
+          <h2>Onboarding and more</h2>
+          <p class="sm:my-8 my-4 sm:w-10/12">
             The Youverify OS also provides services for customer onboarding
             (Liveness check, Facial Match, Business name, ID validation, Address
             verification etc.) and Transaction monitoring (Sanction list,
             Politically Exposed People - PEP List etc.)
           </p>
-          <span class="cursor-pointer inline-block" role="button" tabindex="0"
-            ><button
-              class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
-            >
-              <svg
-                width="8"
-                height="14"
-                viewBox="0 0 8 14"
+          <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
+            <a
+              href="#how-it-works"
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-blue-300
+                text-white
+                py-3
+                sm:py-4
+                px-4
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                mr-4
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              data-v-6addea9c=""
+              >Video Demo<svg
+                viewBox="0 0 20 20"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="transform inline-block mr-4 false"
+                class="
+                  w-5
+                  ml-1.25
+                  transition-transform
+                  duration-75
+                  transform
+                  group-hover:translate-x-0.5
+                "
+                data-v-6addea9c=""
               >
                 <path
-                  d="M1 0.999999L7 7L1 13"
-                  stroke="#46B2C8"
-                  stroke-width="2"
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path></svg></a
+            ><a
+              href="/contact-us"
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-gray-100
+                text-black
+                py-3
+                sm:py-4
+                px-4
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              data-v-6addea9c=""
+              >Contact Sales<svg
+                viewBox="0 0 20 20"
+                fill="none"
+                class="
+                  w-5
+                  ml-1.25
+                  transition-transform
+                  duration-75
+                  transform
+                  group-hover:translate-x-0.5
+                "
+                data-v-6addea9c=""
+              >
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-v-6addea9c=""
                 ></path></svg
-              >Get a free demo
-            </button></span
-          >
+            ></a>
+          </div>
         </div>
-      </section>
-    </div>
+        <div class="sm:w-5/12">
+          <div class="sm:w-auto w-full mx-auto">
+            <img
+              width="504"
+              height="545"
+              src="../../../../../Downloads/en_account_verification.webp"
+              alt="Mand holding a paper plane"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="bg-blue-100 sm:pb-20 pb-10">
-      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="bg-blue-100 sm:pb-20 pb-10 relative">
+      <div class="custom-shape-divider-top-1636027032">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
         <section
           class="
             text-center
@@ -713,9 +971,24 @@
           </div>
         </section>
       </section>
+      <div class="custom-shape-divider-bottom-1636017048">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </section>
 
+    
     <section
+      id="how-it-works"
       class="
         text-center
         max-w-screen-lg
@@ -728,10 +1001,11 @@
       "
     >
       <section class="text-center">
-        <h3 class="mb-12">
+        <h3>See how Youverify operating system works</h3>
+        <p class="mb-12">
           The only tool your compliance team needs for seamless and efficient
           checks.
-        </h3>
+        </p>
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/a_x-smlfWPk"
@@ -743,10 +1017,537 @@
       </section>
     </section>
 
+     <section class="bg-blue-100 sm:pb-20 pb-10">
+      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+        <section
+          class="
+            text-center
+            max-w-screen-lg
+            text-container
+            sm:py-20
+            py-10
+            mx-auto
+            sm:px-8
+            px-6
+          "
+        >
+          <div class="text-center">
+            <h3>Explore Youverify operating system for your solutions</h3>
+            <p class="pt-4">We've built comprehensive API endpoints to retrieve financial data from your customers' bank accounts</p>
+          </div>
+        </section>
+        <div class="grid gap-5 grid-cols-1 sm:grid-cols-3">
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Accounts
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Transactions
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Balance
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Statements
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Income
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Identity
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+        </div>
+        <div class="mt-3 sm:mt-8 lg:mt-10 flex justify-center flex-wrap">
+          <a
+            class="
+              items-center
+              justify-center
+              font-medium
+              disabled:curs
+              inline-flex
+              bg-blue-300
+              text-white
+              py-3
+              sm:py-4
+              px-4
+              sm:px-5
+              text-sm
+              sm:text-1sm
+              rounded-md
+              mr-4
+              my-2
+              outline-none
+              focus:outline-none
+              hover:outline-none
+              transition-all
+              cursor-pointer
+              box-border
+              group
+              flex-shrink-0
+            "
+            href="/contact-us"
+            >See how it works<svg
+              viewBox="0 0 20 20"
+              fill="none"
+              class="
+                w-5
+                ml-1.25
+                transition-transform
+                duration-75
+                transform
+                group-hover:translate-x-0.5
+              "
+            >
+              <path
+                d="M6 10H14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M10 6L14 10L10 14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+          ></a>
+          <a data-v-6addea9c="" href="/contact-us" class="
+              items-center
+              justify-center
+              font-medium
+              disabled:curs
+              inline-flex
+              bg-white
+              text-black
+              py-3
+              sm:py-4
+              px-4
+              sm:px-5
+              text-sm
+              sm:text-1sm
+              rounded-md
+              my-2
+              outline-none
+              focus:outline-none
+              hover:outline-none
+              transition-all
+              cursor-pointer
+              box-border
+              group
+              flex-shrink-0
+            ">Contact Sales<svg data-v-6addea9c="" viewBox="0 0 20 20" fill="none" class="
+                w-5
+                ml-1.25
+                transition-transform
+                duration-75
+                transform
+                group-hover:translate-x-0.5
+              "><path data-v-6addea9c="" d="M6 10H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path data-v-6addea9c="" d="M10 6L14 10L10 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        </div>
+      </section>
+    </section>
+
     <section class="bg-blue-200 for-a-reason">
       <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
         <h2 class="text-white font-display">Getting started</h2>
-        <div class="mt-15 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
+        <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
           <article
             class="
               bg-white
@@ -915,7 +1716,7 @@
               />
               <h4 class="text-center lg:text-left mb-8">Always-on support</h4>
               <a
-                href="https://join.slack.com/t/devwithmono/shared_invite/zt-gvkqczzk-Ldt4FQpHtOL7FFTqh4Ux6A"
+                href="/contact-us"
                 target="_blank"
                 rel="noreferrer"
                 class="
@@ -959,4 +1760,44 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+.custom-shape-divider-bottom-1636017048 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1636017048 svg {
+  position: relative;
+  display: block;
+  width: calc(159% + 1.3px);
+  height: 103px;
+}
+
+.custom-shape-divider-bottom-1636017048 .shape-fill {
+  fill: #fff;
+}
+
+.custom-shape-divider-top-1636027032 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1636027032 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.custom-shape-divider-top-1636027032 .shape-fill {
+  fill: #ffffff;
+}
+</style>

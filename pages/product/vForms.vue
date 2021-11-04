@@ -1,11 +1,20 @@
 <template>
   <div>
     <header
-      class="bg-blue relative flex items-center justify-start pt-48 pb-20"
+      class="
+        bg-blue
+        relative
+        flex
+        items-center
+        justify-start
+        pt-20
+        pb-32
+        md:pt-48 md:pb-20
+      "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex justify-center">
-          <div class="w-3/6">
+        <div class="flex-col-reverse md:flex-row flex justify-center">
+          <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Scale your business operations with vForms
             </h2>
@@ -77,9 +86,9 @@
                   inline-flex
                   bg-gray-100
                   text-black
-                  py-3.5
-                  sm:py-3.75
-                  px-3.75
+                  py-3
+                  sm:py-4
+                  px-4
                   sm:px-5
                   text-sm
                   sm:text-1sm
@@ -152,7 +161,7 @@
               </figure>
             </div>
           </div>
-          <div class="w-3/6">
+          <div class="md:w-3/6">
             <video
               playsinline=""
               autoplay=""
@@ -288,9 +297,9 @@
                 inline-flex
                 bg-gray-100
                 text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
+                py-3
+                sm:py-4
+                px-4
                 sm:px-5
                 text-sm
                 sm:text-1sm
@@ -339,7 +348,7 @@
           </div>
         </div>
         <div class="sm:w-5/12">
-          <div class="sm:w-auto w-10/12 mx-auto">
+          <div class="sm:w-auto w-full mx-auto">
             <img
               width="504"
               height="545"
@@ -362,8 +371,8 @@
           py-20
         "
       >
-      <div class="sm:w-6/12">
-          <div class="sm:w-auto w-10/12 mx-auto">
+        <div class="sm:w-6/12 sm:pt-0 pt-8">
+          <div class="sm:w-auto w-full mx-auto">
             <img
               width="504"
               height="545"
@@ -372,10 +381,10 @@
             />
           </div>
         </div>
-        <div class="sm:w-5/12 sm:pt-0 pt-8">
+        <div class="sm:w-5/12">
           <span
             class="
-              text-blue
+              text-white
               tracking-widest
               px-4
               py-2
@@ -386,7 +395,7 @@
               mb-3
               leading-none
               inline-block
-              bg-blue-100
+              bg-blue
             "
             >INSTANT VERIFICATION PAYMENTS</span
           >
@@ -426,7 +435,7 @@
                 flex-shrink-0
               "
               data-v-6addea9c=""
-              >See how ir works<svg
+              >See how it works<svg
                 viewBox="0 0 20 20"
                 fill="none"
                 class="
@@ -515,7 +524,6 @@
             ></a>
           </div>
         </div>
-        
       </div>
     </section>
 
@@ -623,9 +631,9 @@
                 inline-flex
                 bg-gray-100
                 text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
+                py-3
+                sm:py-4
+                px-4
                 sm:px-5
                 text-sm
                 sm:text-1sm
@@ -674,7 +682,7 @@
           </div>
         </div>
         <div class="sm:w-5/12">
-          <div class="sm:w-auto w-10/12 mx-auto">
+          <div class="sm:w-auto w-full mx-auto">
             <img
               width="504"
               height="545"
@@ -1130,9 +1138,9 @@
                 inline-flex
                 bg-gray-100
                 text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
+                py-3
+                sm:py-4
+                px-4
                 sm:px-5
                 text-sm
                 sm:text-1sm
@@ -1203,6 +1211,533 @@
       </section>
     </section>
 
+    <section class="bg-blue-100 sm:pb-20 pb-10">
+      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+        <section
+          class="
+            text-center
+            max-w-screen-lg
+            text-container
+            sm:py-20
+            py-10
+            mx-auto
+            sm:px-8
+            px-6
+          "
+        >
+          <div class="text-center">
+            <h3>Explore vForms for your solutions</h3>
+            <p class="pt-4">We've built comprehensive API endpoints to retrieve financial data from your customers' bank accounts</p>
+          </div>
+        </section>
+        <div class="grid gap-5 grid-cols-1 sm:grid-cols-3">
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Accounts
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Transactions
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Balance
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Statements
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Income
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
+          >
+            <div class="flex flex-col items-center lg:items-start">
+              <img
+                class="h-20 w-20"
+                src="../../../../../Downloads/icon_reg_azure_igaming.svg"
+                alt=""
+                srcset=""
+              />
+              <h4
+                class="
+                  text-center
+                  lg:text-left
+                  text-blue-300
+                  mt-2
+                "
+              >
+                Identity
+              </h4>
+              <p
+                class="
+                  text-grey-text
+                  app-follow-text-2
+                  mt-3.5
+                  md:mt-4
+                  lg:mt-5
+                  text-center
+                  lg:text-left
+                "
+              >
+                Retrieve account holder's full name, account type, account
+                number, balance, currency, and more.
+              </p>
+              <a
+                href="/"
+                rel="noreferrer"
+                class="
+                  hover:text-blue-200
+                  sm:text-sm
+                  lg:text-sm
+                  mt-5
+                  font-bold
+                  inline-flex
+                  items-center
+                  text-blue
+                "
+                >See API Docs<svg
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-5 lg:w-6.25"
+                >
+                  <path
+                    d="M8 18L18 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 8H18V18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+            </div>
+          </article>
+        </div>
+        <div class="mt-3 sm:mt-8 lg:mt-10 flex justify-center flex-wrap">
+          <a
+            class="
+              items-center
+              justify-center
+              font-medium
+              disabled:curs
+              inline-flex
+              bg-blue-300
+              text-white
+              py-3
+              sm:py-4
+              px-4
+              sm:px-5
+              text-sm
+              sm:text-1sm
+              rounded-md
+              mr-4
+              my-2
+              outline-none
+              focus:outline-none
+              hover:outline-none
+              transition-all
+              cursor-pointer
+              box-border
+              group
+              flex-shrink-0
+            "
+            href="/contact-us"
+            >See how it works<svg
+              viewBox="0 0 20 20"
+              fill="none"
+              class="
+                w-5
+                ml-1.25
+                transition-transform
+                duration-75
+                transform
+                group-hover:translate-x-0.5
+              "
+            >
+              <path
+                d="M6 10H14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M10 6L14 10L10 14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+          ></a>
+          <a data-v-6addea9c="" href="/contact-us" class="
+              items-center
+              justify-center
+              font-medium
+              disabled:curs
+              inline-flex
+              bg-white
+              text-black
+              py-3
+              sm:py-4
+              px-4
+              sm:px-5
+              text-sm
+              sm:text-1sm
+              rounded-md
+              my-2
+              outline-none
+              focus:outline-none
+              hover:outline-none
+              transition-all
+              cursor-pointer
+              box-border
+              group
+              flex-shrink-0
+            ">Contact Sales<svg data-v-6addea9c="" viewBox="0 0 20 20" fill="none" class="
+                w-5
+                ml-1.25
+                transition-transform
+                duration-75
+                transform
+                group-hover:translate-x-0.5
+              "><path data-v-6addea9c="" d="M6 10H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path data-v-6addea9c="" d="M10 6L14 10L10 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        </div>
+      </section>
+    </section>
+
     <section
       id="how-it-works"
       class="
@@ -1235,7 +1770,7 @@
     <section class="bg-blue-200 for-a-reason">
       <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
         <h2 class="text-white font-display">Getting started</h2>
-        <div class="mt-15 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
+        <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
           <article
             class="
               bg-white

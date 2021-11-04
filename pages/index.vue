@@ -3,7 +3,7 @@
     <header class="flex items-center justify-start pt-48 pb-24">
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex justify-center">
-          <div class="w-3/6">
+          <div class="w-5/12">
             <a
               class="
                 inline-flex
@@ -186,13 +186,14 @@
               ></a>
             </div>
           </div>
-          <div class="w-3/6">
+          <div class="w-7/12">
             <img
               class="object-contain h-full"
               src="../../../../Downloads/flow.gif"
               alt=""
               srcset=""
             />
+            
           </div>
         </div>
       </section>
