@@ -707,7 +707,7 @@
                   About us
                 </li>
               </a>
-              <a href="/blog/1">
+              <a href="/blogs">
                 <li
                   class="
                     inline-flex
@@ -1214,7 +1214,7 @@
                 >
                   About us
                 </li></a
-              ><a href="/blog">
+              ><a href="/blogs">
                 <li
                   class="
                     text-base text-blue

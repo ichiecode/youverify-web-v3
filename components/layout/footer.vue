@@ -66,7 +66,7 @@
         <ul class="">
           <a aria-current="page" class="mb-2 block w-full" href="/about-us"
             ><li>About us</li></a
-          ><a class="mb-2 block w-full" href="/blog/1"><li>Blog</li></a
+          ><a class="mb-2 block w-full" href="/blogs"><li>Blog</li></a
           ><a class="mb-2 block w-full" href="/about-us#career"
             ><li>Career</li></a
           ><a class="mb-2 block w-full" href="/gdpr"
