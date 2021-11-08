@@ -1684,8 +1684,9 @@
                   items-center
                   hover:text-black
                 "
+                target="_blank"
                 href="/demo"
-                >See a demo<svg
+                >Signup<svg
                   viewBox="0 0 25 25"
                   fill="none"
                   class="w-5 lg:w-6.25"

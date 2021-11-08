@@ -937,8 +937,9 @@
                   items-center
                   hover:text-black
                 "
-                href="/demo"
-                >See a demo<svg
+                target="_blank"
+                href="https://os.dev.youverify.co/auth/create-account"
+                >Signup<svg
                   viewBox="0 0 25 25"
                   fill="none"
                   class="w-5 lg:w-6.25"

@@ -50,7 +50,7 @@
                   group
                   flex-shrink-0
                 "
-                href="#how-it-works"
+                href="/vforms-demo"
                 >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -77,7 +77,8 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg></a
-              ><a
+              >
+              <a
                 class="
                   items-center
                   justify-center
@@ -407,7 +408,7 @@
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
-              href="#how-it-works"
+              href="/vforms-demo"
               class="
                 items-center
                 justify-center
@@ -1227,7 +1228,7 @@
         >
           <div class="text-center">
             <h3>Explore vForms for your solutions</h3>
-            <p class="pt-4">We've built comprehensive API endpoints to retrieve financial data from your customers' bank accounts</p>
+            <p class="pt-4"></p>
           </div>
         </section>
         <div class="grid gap-5 grid-cols-1 sm:grid-cols-3">
@@ -1674,7 +1675,7 @@
               group
               flex-shrink-0
             "
-            href="/contact-us"
+            href="/vforms-demo"
             >See how it works<svg
               viewBox="0 0 20 20"
               fill="none"
@@ -1764,6 +1765,16 @@
           class="md:min-h-subfooter h-60 rounded-xl bg-white"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         ></iframe>
+        <!-- <iframe
+          title="User Guarantor Form"
+          style="border: none"
+          height="100%"
+          width="100%"
+          src="https://os.dev.youverify.co/v-forms/6169781713d6d7c51a1d5cdc"
+          frameborder="0"
+          class="md:min-h-subfooter h-60 rounded-xl bg-white"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        ></iframe> -->
       </section>
     </section>
 
@@ -1907,8 +1918,9 @@
                   items-center
                   hover:text-black
                 "
-                href="/demo"
-                >See a demo<svg
+                target="_blank"
+                href="https://os.dev.youverify.co/auth/create-account"
+                >Signup<svg
                   viewBox="0 0 25 25"
                   fill="none"
                   class="w-5 lg:w-6.25"

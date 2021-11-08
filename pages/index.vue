@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header class="flex items-center justify-start pt-48 pb-24">
+    <header class="flex items-center justify-start pt-32 md:pt-48 pb-24">
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex justify-center">
-          <div class="w-5/12">
+        <div class="md:flex justify-center">
+          <div class="md:w-5/12">
             <a
               class="
                 inline-flex
@@ -72,8 +72,9 @@
               <span class="line-through">Hard</span> Easy to trust people
             </h1>
             <p class="mt-6 md:w-4/5">
-              We simplify the trust process for Africans through seamless and
-              secure identity data access and verification.
+              Research shows many businesses lose large numbers of potential
+              customers because of cumbersome application processes. As many as
+              5 in 10 can drop out before their application is complete
             </p>
             <div class="mt-6 sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
@@ -103,8 +104,8 @@
                   group
                   flex-shrink-0
                 "
-                href="/signup"
-                >Get started for free<svg
+                href="/vforms-demo"
+                >View Demo<svg
                   viewBox="0 0 20 20"
                   fill="none"
                   class="
@@ -139,9 +140,9 @@
                   inline-flex
                   bg-gray-100
                   text-black
-                  py-3.5
-                  sm:py-3.75
-                  px-3.75
+                  py-3
+                  sm:py-4
+                  px-4
                   sm:px-5
                   text-sm
                   sm:text-1sm
@@ -186,14 +187,13 @@
               ></a>
             </div>
           </div>
-          <div class="w-7/12">
+          <div class="mt-10 md:mt-0 md:w-7/12">
             <img
               class="object-contain h-full"
               src="../../../../Downloads/flow.gif"
               alt=""
               srcset=""
             />
-            
           </div>
         </div>
       </section>
@@ -697,11 +697,12 @@
         "
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
-          <h2>Bridging the gap <br />from both sides</h2>
+          <h2>Collect and Verify in <br />just a few simple steps</h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            While we help companies and governments run effective background
-            checks—automating their compliance process; we also make it easy for
-            people who have to share their data from time to time, to do so.
+            Use our vForms to collect customer information and verify their
+            identities in one easy self service solution. It is an optimised &
+            responsive user experience that provides secure and quick onboarding
+            for your customers.
           </p>
         </div>
         <div class="sm:w-5/12">
@@ -717,11 +718,14 @@
       </div>
     </section>
 
-    <section class="bg-blue-100 ">
+    <section class="bg-blue-100">
       <div
         class="
           flex
-          max-w-screen-xl mx-auto sm:px-8 px-6
+          max-w-screen-xl
+          mx-auto
+          sm:px-8
+          px-6
           sm:flex-row
           flex-col
           sm:text-left
@@ -757,7 +761,18 @@
             with background checks that meet set standards.
           </p>
           <a href="/solution/businesses"
-            ><button class="bg-transparent hover:text-blue-200 text-blue rounded py-2 sm:mb-0 mb-4 px-0">
+            ><button
+              class="
+                bg-transparent
+                hover:text-blue-200
+                text-blue
+                rounded
+                py-2
+                sm:mb-0
+                mb-4
+                px-0
+              "
+            >
               <svg
                 width="8"
                 height="14"
@@ -1432,10 +1447,14 @@
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="grid sm:grid-cols-2 grid-cols-1 max-w-screen-lg mx-auto">
           <div>
-            <div class="bg-blue-200 mb-10 text-white w-2/6 rounded-2xl text-center">
+            <div
+              class="bg-blue-200 mb-10 text-white w-2/6 rounded-2xl text-center"
+            >
               vForms
             </div>
-            <h2 class="sm:mb-0 mb-4 text-blue-200">Single view of the customer</h2>
+            <h2 class="sm:mb-0 mb-4 text-blue-200">
+              Single view of the customer
+            </h2>
           </div>
           <div>
             <p class="sm:mb-8 mb-4">
@@ -1468,14 +1487,12 @@
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
           <img
-              src="../assets/images/screenshots/home-dashboard.png"
-              alt="Youverify Dashboard"
-            />
+            src="../assets/images/screenshots/home-dashboard.png"
+            alt="Youverify Dashboard"
+          />
         </div>
       </section>
     </section>
-
-  
 
     <!-- <section
       class="
@@ -1717,7 +1734,6 @@
       </div>
     </section> -->
 
-
     <section class="bg-blue-200 for-a-reason">
       <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
         <h2 class="text-white font-display">Getting started</h2>
@@ -1858,8 +1874,9 @@
                   items-center
                   hover:text-black
                 "
-                href="/demo"
-                >See a demo<svg
+                target="_blank"
+                href="https://os.dev.youverify.co/auth/create-account"
+                >Signup<svg
                   viewBox="0 0 25 25"
                   fill="none"
                   class="w-5 lg:w-6.25"
