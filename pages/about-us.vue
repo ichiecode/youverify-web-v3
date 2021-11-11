@@ -75,7 +75,30 @@
         </div>
       </section>
     </section>
-    
+
+    <section class="py-10">
+      <section class="max-w-screen-xl mx-auto sm:px-8 px-6" >
+        <h2>Meet the Youverify Team</h2>
+        <div class="grid sm:grid-cols-5 grid-cols-2 sm:gap-12 gap-8 py-10">
+          <section v-for="team in teams" :key="team.id">
+            <div class="block">
+              <img
+                width="203"
+                height="331.99999999999994"
+                :src="team.images.url"
+                :alt="team.name"
+                style="object-fit: cover; opacity: 1"
+              />
+            </div>
+            <div class="pt-6">
+              <h4 class="text-blue text-base">{{team.name}}</h4>
+              <p class="text-xs mt-2">{{team.role}}</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+
     <div id="career">
       <section
         class="
@@ -98,6 +121,7 @@
         <div class="py-20"><h2 class="text-grey">careers@youverify.co</h2></div>
       </section>
     </div>
+
     <section class="bg-blue-100 sm:py-20 py-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex flex-wrap justify-between">
@@ -128,7 +152,24 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+
+export default {
+  name: "Teams",
+  methods: {
+    async getAllTeam() {
+      const allBlogPost = await this.$store.dispatch("teams/getTeams");
+    },
+  },
+  mounted() {
+    this.getAllTeam();
+  },
+  computed: {
+    ...mapState({
+      teams: (state) => state.teams.teams,
+    }),
+  },
+};
 </script>
 
 <style></style>

@@ -195,6 +195,20 @@
     </header>
 
     <div id="more">
+      <div class="text-container">
+          <div class="mx-auto">
+            <div class="text-center w-full mt-12">
+              <h3 class="text-dark font-display">
+                Our solutions is your all in one KYC verification engine
+              </h3>
+              <p class="mt-5 md:mt-7">
+                More templates to take your business to the next level. Custom
+                made templates to fit your needs and get you fully integrated
+                into vForms with maximum returns
+              </p>
+            </div>
+          </div>
+        </div>
       <section
         class="
           react-reveal
@@ -206,8 +220,6 @@
           sm:rounded-xl
           relative
           w-full
-          sm:my-40
-          my-10
           flex
           odd:flex-row
           even:flex-row-reverse
@@ -215,7 +227,8 @@
           first:mt-0
           sm:px-12
           px-6
-          py-20
+          mt-10
+          mb-20
           items-center
         "
       >
@@ -238,204 +251,6 @@
             YOUID computes a CredenceScore™ to help you access the best credit
             products, online sales discounts and social programmes from
             government agencies.
-          </p>
-        </div>
-      </section>
-      <section
-        class="
-          react-reveal
-          odd:bg-blue-100
-          min-h-jumbotron
-          even:bg-white
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-40
-          my-10
-          flex
-          odd:flex-row
-          even:flex-row-reverse
-          flex-wrap
-          first:mt-0
-          sm:px-12
-          px-6
-          py-20
-          items-center
-        "
-      >
-        <div class="w-1/12"></div>
-        <header class="sm:w-5/12 w-full relative">
-          <span class="sm:absolute sm:-mt-32"
-            ><div>
-              <img
-                width="457"
-                height="395"
-                src="../../assets/images/screenshots/for-individual/smooth-onboarding.png"
-                alt="Smooth Onboarding"
-              /></div
-          ></span>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-4/12 w-full sm:mt-0 mt-8">
-          <h3>Smooth Onboarding</h3>
-          <p class="mt-4">
-            Register your SIM card, open a bank account and do more with a
-            simple quick scan. No long forms, never again.
-          </p>
-        </div>
-      </section>
-      <section
-        class="
-          react-reveal
-          odd:bg-blue-100
-          min-h-jumbotron
-          even:bg-white
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-40
-          my-10
-          flex
-          odd:flex-row
-          even:flex-row-reverse
-          flex-wrap
-          first:mt-0
-          sm:px-12
-          px-6
-          py-20
-          items-center
-        "
-      >
-        <div class="w-1/12"></div>
-        <header class="sm:w-5/12 w-full relative">
-          <span class="sm:absolute sm:-mt-32"
-            ><div>
-              <img
-                width="480"
-                height="420"
-                src="../../assets/images/screenshots/for-individual/full-data-ownership.png"
-                alt="Full data ownership"
-              /></div
-          ></span>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-4/12 w-full sm:mt-0 mt-8">
-          <h3>Full Data Ownership</h3>
-          <p class="mt-4">
-            Our approach to privacy borders on paranoia. You know exactly the
-            data you have shared, to whom, and you can deny them access any
-            time.
-          </p>
-        </div>
-      </section>
-      <section
-        class="
-          react-reveal
-          odd:bg-blue-100
-          min-h-jumbotron
-          even:bg-white
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-40
-          my-10
-          flex
-          odd:flex-row
-          even:flex-row-reverse
-          flex-wrap
-          first:mt-0
-          sm:px-12
-          px-6
-          py-20
-          items-center
-        "
-        style="
-          animation-fill-mode: both;
-          animation-duration: 1000ms;
-          animation-delay: 0ms;
-          animation-iteration-count: 1;
-          opacity: 1;
-          animation-name: react-reveal-347850671259881-7;
-        "
-      >
-        <div class="w-1/12"></div>
-        <header class="sm:w-5/12 w-full relative">
-          <span class="sm:absolute sm:-mt-32"
-            ><div>
-              <img
-                width="505"
-                height="427"
-                src="../../assets/images/screenshots/for-individual/digital-access-to-facilities.png"
-                alt="Digital Access to Facilities"
-              /></div
-          ></span>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-4/12 w-full sm:mt-0 mt-8">
-          <h3>Digital Access to Facilities</h3>
-          <p class="mt-4">
-            With YOUID, the typical access log book is old school. To access a
-            facility, all you need to do is scan the YOUID compatible QR code on
-            entry and exit.
-          </p>
-        </div>
-      </section>
-      <section
-        class="
-          react-reveal
-          odd:bg-blue-100
-          min-h-jumbotron
-          even:bg-white
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          sm:my-40
-          my-10
-          flex
-          odd:flex-row
-          even:flex-row-reverse
-          flex-wrap
-          first:mt-0
-          sm:px-12
-          px-6
-          py-20
-          items-center
-        "
-        style="
-          animation-fill-mode: both;
-          animation-duration: 1000ms;
-          animation-delay: 0ms;
-          animation-iteration-count: 1;
-          opacity: 1;
-          animation-name: react-reveal-347850671259881-7;
-        "
-      >
-        <div class="w-1/12"></div>
-        <header class="sm:w-5/12 w-full relative">
-          <span class="sm:absolute sm:-mt-32"
-            ><div>
-              <img
-                width="467"
-                height="405"
-                src="../../assets/images/screenshots/for-individual/ease-of-campaign-participation.png"
-                alt="Ease of Campaign Participation"
-              /></div
-          ></span>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-4/12 w-full sm:mt-0 mt-8">
-          <h3>Ease of Campaign Participation</h3>
-          <p class="mt-4">
-            With YOUID, you can participate in multiple opportunities online
-            without having to waste time filling the same fields all the time.
           </p>
         </div>
       </section>
