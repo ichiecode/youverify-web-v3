@@ -213,7 +213,7 @@
               >
                 <img
                   loading="lazy"
-                  src="../assets/images/illustrations/agent-money-app.svg"
+                  src="~/assets/images/illustrations/agent-money-app.svg"
                   alt="Agent Mobile App Illustration"
                 />
               </div>
@@ -347,7 +347,7 @@
               class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start"
             >
               <img
-                src="../assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
                 alt=""
                 class="inline-block mb-5 w-20 h-20"
               />
@@ -401,7 +401,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -445,7 +445,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -488,7 +488,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
