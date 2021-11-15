@@ -22,6 +22,10 @@ export default {
   css: [
   ],
 
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:1337'
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@plugins/filters.js'
@@ -34,14 +38,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/ngrok',
   ],
-
-  ngrok: {
-    // module options
-    authtoken: process.env.NGROK_AUTHTOKEN,
-    auth: process.env.NGROK_AUTH
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
 
