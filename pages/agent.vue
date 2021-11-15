@@ -162,7 +162,7 @@
                   ><button
                     class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8"
                   >
-                    Get Started
+                    <a href="/contact-us">Get Started</a>
                   </button></span
                 >
               </p>

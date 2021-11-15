@@ -16,6 +16,7 @@
 import Footer from "~/components/layout/footer.vue";
 import Header from "~/components/layout/header.vue";
 export default {
+  name: 'youverify',
   components: {
     Footer,
     Header,

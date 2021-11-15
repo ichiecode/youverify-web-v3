@@ -50,15 +50,17 @@
       </section>
       <section class="sm:w-1/12"></section>
       <section class="sm:w-2/12 w-6/12">
-        <h4 class="py-3 mb-4">Solutions</h4>
+        <h4 class="py-3 mb-4">Industries</h4>
         <ul class="">
-          <a class="mb-2 block w-full" href="/solution/individuals"
-            ><li>Individual</li></a
-          ><a class="mb-2 block w-full" href="/solution/businesses"
-            ><li>Business</li></a
-          ><a class="mb-2 block w-full" href="/solution/government"
-            ><li>Government</li></a
-          ><a class="mb-2 block w-full" href="/agent"><li>Agents</li></a>
+          <NuxtLink
+            v-for="industry in industries"
+            :key="industry.id"
+            v-show="industry.visible === true"
+            class="mb-2 block w-full"
+            :to="`/industries/${industry.slug}`"
+          >
+            <li>{{ industry.name }}</li>
+          </NuxtLink>
         </ul>
       </section>
       <section class="sm:w-3/12 w-6/12">
@@ -183,7 +185,25 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  name: "footerComponent",
+  methods: {
+    async getAllIndustries() {
+      const allIndustries = await this.$store.dispatch(
+        "industries/getIndustries"
+      );
+    },
+  },
+  mounted() {
+    this.getAllIndustries();
+  },
+  computed: {
+    ...mapState({
+      industries: (state) => state.industries.industries,
+    }),
+  },
+};
 </script>
 
 <style></style>
