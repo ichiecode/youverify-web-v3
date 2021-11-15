@@ -51,3 +51,5 @@ ENV NUXT_PORT=30079
 
 # start the application
 CMD [ "yarn", "start" ]
+
+# Trigger build 
