@@ -53,21 +53,21 @@
             <div class="mt-3 grid grid-cols-3">
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../assets/images/logos/trusted/cazoo_white.svg"
+                  src="~/assets/images/logos/trusted/cazoo_white.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../assets/images/logos/trusted/leovegas_white.svg"
+                  src="~/assets/images/logos/trusted/leovegas_white.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../assets/images/logos/trusted/casumo_white.svg"
+                  src="~/assets/images/logos/trusted/casumo_white.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -83,7 +83,7 @@
               class="h-full"
             >
               <source
-                src="../../../../../Downloads/api-box-1-loop-2x.webm"
+                src="~/assets/images/illustrations/api-box-1-loop-2x.webm"
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
@@ -263,7 +263,7 @@
             <img
               width="504"
               height="545"
-              src="../../../../../Downloads/payments_api_account_funding-2x.webp"
+              src="~/assets/images/illustrations/payments_api_account_funding-2x.webp"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -287,7 +287,7 @@
             <img
               width="504"
               height="545"
-              src="../../../../../Downloads/payouts_api_auto_payouts-2x.webp"
+              src="~/assets/images/illustrations/payouts_api_auto_payouts-2x.webp"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -595,7 +595,7 @@
             <img
               width="504"
               height="545"
-              src="../../../../../Downloads/en_account_verification.webp"
+              src="~/assets/images/illustrations/en_account_verification.webp"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -619,7 +619,7 @@
             <img
               width="504"
               height="545"
-              src="../../../../../Downloads/payouts_api_auto_payouts-2x.webp"
+              src="~/assets/images/illustrations/payouts_api_auto_payouts-2x.webp"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -823,7 +823,7 @@
               class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start"
             >
               <img
-                src="../../assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
                 alt=""
                 class="inline-block mb-5 w-20 h-20"
               />
@@ -877,7 +877,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../../assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -921,7 +921,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../../assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -964,7 +964,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../../assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />

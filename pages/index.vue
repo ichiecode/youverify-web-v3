@@ -190,7 +190,7 @@
           <div class="mt-10 md:mt-0 md:w-7/12">
             <img
               class="object-contain h-full"
-              src="../../../../Downloads/flow.gif"
+              src="~/assets/images/illustrations/flow.gif"
               alt=""
               srcset=""
             />
@@ -218,35 +218,35 @@
         >
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/sterling-bank.png"
+              src="~/assets/images/logos/trusted/sterling-bank.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/companies/bolt.png"
+              src="~/assets/images/logos/companies/bolt.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/fidelity.webp"
+              src="~/assets/images/logos/trusted/fidelity.webp"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/wema.png"
+              src="~/assets/images/logos/trusted/wema.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/sterling-bank.png"
+              src="~/assets/images/logos/trusted/sterling-bank.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
@@ -296,7 +296,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -338,7 +338,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/civil-defence.png"
+                    src="~/assets/images/logos/companies/civil-defence.png"
                     alt="Sterling"
                   />
                 </div>
@@ -380,7 +380,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/fidelity.png"
+                    src="~/assets/images/logos/companies/fidelity.png"
                     alt="Sterling"
                   />
                 </div>
@@ -422,7 +422,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -464,7 +464,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/standard chartered.png"
+                    src="~/assets/images/logos/companies/standard chartered.png"
                     alt="Sterling"
                   />
                 </div>
@@ -506,7 +506,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -548,7 +548,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/civil-defence.png"
+                    src="~/assets/images/logos/companies/civil-defence.png"
                     alt="Sterling"
                   />
                 </div>
@@ -590,7 +590,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/fidelity.png"
+                    src="~/assets/images/logos/companies/fidelity.png"
                     alt="Sterling"
                   />
                 </div>
@@ -632,7 +632,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -674,7 +674,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/standard chartered.png"
+                    src="~/assets/images/logos/companies/standard chartered.png"
                     alt="Sterling"
                   />
                 </div>
@@ -710,7 +710,7 @@
             <img
               width="504"
               height="545"
-              src="../assets/images/illustrations/selfie-guys-smiling.png"
+              src="~/assets/images/illustrations/selfie-guys-smiling.png"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -748,7 +748,7 @@
             <img
               width="505"
               height="425"
-              src="../assets/images/illustrations/bridging-gap.png"
+              src="~/assets/images/illustrations/bridging-gap.png"
               alt="Man holding SIM for verification"
             /><noscript></noscript>
           </div>
@@ -844,7 +844,7 @@
             <img
               width="416"
               height="486"
-              src="../assets/images/illustrations/righ-thumb-mosope.svg"
+              src="~/assets/images/illustrations/righ-thumb-mosope.svg"
               alt="hands in the air for verification"
             />
           </div>
@@ -1487,7 +1487,7 @@
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
           <img
-            src="../assets/images/screenshots/home-dashboard.png"
+            src="~/assets/images/screenshots/home-dashboard.png"
             alt="Youverify Dashboard"
           />
         </div>
@@ -1760,7 +1760,7 @@
               class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start"
             >
               <img
-                src="../assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
                 alt=""
                 class="inline-block mb-5 w-20 h-20"
               />
@@ -1814,7 +1814,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -1858,7 +1858,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -1901,7 +1901,7 @@
           <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
             <div class="flex flex-col items-center lg:items-start">
               <img
-                src="../assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
+                src="~/assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
                 alt=""
                 class="inline-block mb-5 w-16 h-16"
               />
@@ -1973,7 +1973,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/biometric-update.png"
+              src="~/assets/images/logos/features/biometric-update.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -1987,7 +1987,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/techpoint.png"
+              src="~/assets/images/logos/features/techpoint.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2001,7 +2001,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/techcabal.png"
+              src="~/assets/images/logos/features/techcabal.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2015,7 +2015,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/crunchbase.png"
+              src="~/assets/images/logos/features/crunchbase.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2029,7 +2029,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/venture-burn.png"
+              src="~/assets/images/logos/features/venture-burn.png"
               alt="BIOMETRIC Update"
             />
           </div>

@@ -1,5 +1,3 @@
-const baseURL = "http://localhost:1337";
-
 export const state = () => ({
   teams: null,
   loading: false
@@ -20,7 +18,7 @@ export const actions = {
   async getTeams({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/teams`)
+      .$get(`${process.env.baseUrl}/teams`)
       .then((res) => {
         commit("setTeams", res);
         commit("setLoading", false);
