@@ -190,7 +190,7 @@
           <div class="mt-10 md:mt-0 md:w-7/12">
             <img
               class="object-contain h-full"
-              src="../../../../Downloads/flow.gif"
+              src="~/assets/images/illustrations/flow.gif"
               alt=""
               srcset=""
             />
@@ -218,35 +218,35 @@
         >
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/sterling-bank.png"
+              src="~/assets/images/logos/trusted/sterling-bank.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/companies/bolt.png"
+              src="~/assets/images/logos/companies/bolt.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/fidelity.webp"
+              src="~/assets/images/logos/trusted/fidelity.webp"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/wema.png"
+              src="~/assets/images/logos/trusted/wema.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
           </figure>
           <figure class="relative" style="width: 100px; height: 62px">
             <img
-              src="../assets/images/logos/trusted/sterling-bank.png"
+              src="~/assets/images/logos/trusted/sterling-bank.png"
               alt="Carbon logo"
               class="h-full w-full object-contain"
             />
@@ -296,7 +296,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -338,7 +338,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/civil-defence.png"
+                    src="~/assets/images/logos/companies/civil-defence.png"
                     alt="Sterling"
                   />
                 </div>
@@ -380,7 +380,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/fidelity.png"
+                    src="~/assets/images/logos/companies/fidelity.png"
                     alt="Sterling"
                   />
                 </div>
@@ -422,7 +422,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -464,7 +464,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/standard chartered.png"
+                    src="~/assets/images/logos/companies/standard chartered.png"
                     alt="Sterling"
                   />
                 </div>
@@ -506,7 +506,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -548,7 +548,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/civil-defence.png"
+                    src="~/assets/images/logos/companies/civil-defence.png"
                     alt="Sterling"
                   />
                 </div>
@@ -590,7 +590,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/fidelity.png"
+                    src="~/assets/images/logos/companies/fidelity.png"
                     alt="Sterling"
                   />
                 </div>
@@ -632,7 +632,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/bolt.png"
+                    src="~/assets/images/logos/companies/bolt.png"
                     alt="Sterling"
                   />
                 </div>
@@ -674,7 +674,7 @@
                   <img
                     width="58"
                     height="58"
-                    src="../assets/images/logos/companies/standard chartered.png"
+                    src="~/assets/images/logos/companies/standard chartered.png"
                     alt="Sterling"
                   />
                 </div>
@@ -710,7 +710,7 @@
             <img
               width="504"
               height="545"
-              src="../assets/images/illustrations/selfie-guys-smiling.png"
+              src="~/assets/images/illustrations/selfie-guys-smiling.png"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -748,7 +748,7 @@
             <img
               width="505"
               height="425"
-              src="../assets/images/illustrations/bridging-gap.png"
+              src="~/assets/images/illustrations/bridging-gap.png"
               alt="Man holding SIM for verification"
             /><noscript></noscript>
           </div>
@@ -844,7 +844,7 @@
             <img
               width="416"
               height="486"
-              src="../assets/images/illustrations/righ-thumb-mosope.svg"
+              src="~/assets/images/illustrations/righ-thumb-mosope.svg"
               alt="hands in the air for verification"
             />
           </div>
@@ -1487,7 +1487,7 @@
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
           <img
-            src="../assets/images/screenshots/home-dashboard.png"
+            src="~/assets/images/screenshots/home-dashboard.png"
             alt="Youverify Dashboard"
           />
         </div>
@@ -1734,216 +1734,7 @@
       </div>
     </section> -->
 
-    <section class="bg-blue-200 for-a-reason">
-      <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
-        <h2 class="text-white font-display">Getting started</h2>
-        <div class="mt-15 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
-          <article
-            class="
-              bg-white
-              col-span-full
-              rounded-2xl
-              py-10
-              px-6
-              sm:py-15 sm:px-10
-              lg:px-15 lg:pt-20
-              pb-0
-              gap-10
-              lg:gap-10
-              xl:gap-20
-              grid grid-cols-1
-              items-end
-            "
-            style="grid-template-columns: minmax(350px, 1fr) 1.2fr"
-          >
-            <div
-              class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start"
-            >
-              <img
-                src="../assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
-                alt=""
-                class="inline-block mb-5 w-20 h-20"
-              />
-              <h2 class="text-center lg:text-left mb-8">
-                Powerful APIs and easy-to-use resources
-              </h2>
-
-              <a
-                href="https://docs.mono.co"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                >Read our API Docs<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="flex justify-center flex-1">
-              <figure class="w-full max-w-lg relative">
-                <img
-                  src="https://monoassets.com/f/118499/540x380/1298b7c253/api-response-frame.png"
-                  alt=""
-                  class="w-full"
-                />
-              </figure>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="../assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">Plug-and-play SDKs</h4>
-              <a
-                href="https://docs.mono.co"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  text-base
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  group
-                  hover:text-black
-                "
-                >Explore our SDKs<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="../assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">
-                Beautiful seamless UX
-              </h4>
-              <a
-                class="
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                target="_blank"
-                href="https://os.dev.youverify.co/auth/create-account"
-                >Signup<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="../assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">Always-on support</h4>
-              <a
-                href="https://join.slack.com/t/devwithmono/shared_invite/zt-gvkqczzk-Ldt4FQpHtOL7FFTqh4Ux6A"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  text-base
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                >Contact Support Team<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <get-started></get-started>
 
     <section class="my-20 max-w-screen-lg mx-auto text-center">
       <span
@@ -1973,7 +1764,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/biometric-update.png"
+              src="~/assets/images/logos/features/biometric-update.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -1987,7 +1778,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/techpoint.png"
+              src="~/assets/images/logos/features/techpoint.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2001,7 +1792,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/techcabal.png"
+              src="~/assets/images/logos/features/techcabal.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2015,7 +1806,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/crunchbase.png"
+              src="~/assets/images/logos/features/crunchbase.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2029,7 +1820,7 @@
             <img
               width="156"
               height="33"
-              src="../assets/images/logos/features/venture-burn.png"
+              src="~/assets/images/logos/features/venture-burn.png"
               alt="BIOMETRIC Update"
             />
           </div>
@@ -2044,7 +1835,6 @@
         py-20
         text-blue-100
         relative
-        min-h-subfooter
         overflow-hidden
       "
     >
@@ -2052,7 +1842,7 @@
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
         <span class="cursor-pointer inline-block" role="button" tabindex="0"
           ><button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
-            Request more info
+            <NuxtLink to="/contact-us">Request more info</NuxtLink>
           </button></span
         >
       </section>
@@ -2061,6 +1851,10 @@
 </template>
 
 <script>
+import getStarted from "~/components/common/getStarted.vue";
 export default {
+  components: {
+    getStarted
+  }
 };
 </script>

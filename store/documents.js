@@ -1,4 +1,3 @@
-const baseURL = "http://localhost:1337";
 
 export const state = () => ({
   gdpr: null,
@@ -35,7 +34,7 @@ export const actions = {
   async getGDPR({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/gdpr`)
+      .$get(`${process.env.baseUrl}/gdpr`)
       .then((res) => {
         commit("setGDPR", res);
         commit("setLoading", false);
@@ -48,7 +47,7 @@ export const actions = {
   async getTermOfUse({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/term-of-use`)
+      .$get(`${process.env.baseUrl}/term-of-use`)
       .then((res) => {
         commit("setTermOfUse", res);
         commit("setLoading", false);
@@ -61,7 +60,7 @@ export const actions = {
   async getPrivacyPolicy({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/privacy-policy`)
+      .$get(`${process.env.baseUrl}/privacy-policy`)
       .then((res) => {
         commit("setPrivacyPolicy", res);
         commit("setLoading", false);
@@ -74,7 +73,7 @@ export const actions = {
   async getCookies({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/cookies`)
+      .$get(`${process.env.baseUrl}/cookies`)
       .then((res) => {
         commit("setCookies", res);
         commit("setLoading", false);

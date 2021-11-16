@@ -165,9 +165,9 @@
             >
               <source
                 :src="
-                  formattedIndustries.heroSection
+                  formattedIndustries.heroSection.image
                     ? formattedIndustries.heroSection.image.url
-                    : ''
+                    : 'https://res.cloudinary.com/youverify/video/upload/v1636704052/api_box_1_loop_2x_ab416d8659.webm'
                 "
                 type="video/webm"
               />
@@ -191,7 +191,7 @@
       </div>
     </header>
 
-    <div id="more" v-if="formattedIndustries.features">
+    <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300" id="more" v-if="formattedIndustries.features">
       <div class="text-container">
         <div class="mx-auto">
           <div class="text-center w-full mt-12">
@@ -206,51 +206,53 @@
           </div>
         </div>
       </div>
-      <section
-        class="
-          react-reveal
-          odd:bg-blue-100
-          min-h-jumbotron
-          even:bg-white
-          max-w-screen-xl
-          mx-auto
-          sm:rounded-xl
-          relative
-          w-full
-          flex
-          odd:flex-row
-          even:flex-row-reverse
-          flex-wrap
-          first:mt-0
-          sm:px-12
-          px-6
-          mt-10
-          mb-20
-          items-center
-        "
-        v-for="feature in formattedIndustries.features"
-        :key="feature.id"
-      >
-        <div class="w-1/12"></div>
-        <header class="sm:w-5/12 w-full relative">
-          <span class="sm:absolute sm:-mt-32"
-            ><div>
-              <img
-                width="569"
-                height="425"
-                :src="feature.image.url"
-                alt="Alternative Credit Score"
-              /></div
-          ></span>
-        </header>
-        <div class="w-1/12"></div>
-        <div class="sm:w-4/12 w-full sm:mt-0 mt-8">
-          <h3>{{ feature.title }}</h3>
-          <p class="mt-4">
-            {{ feature.teaser }}
-          </p>
-        </div>
-      </section>
+      <div>
+        <section
+          class="
+            react-reveal
+            odd:bg-blue-100
+            min-h-jumbotron
+            even:bg-white
+            max-w-screen-xl
+            mx-auto
+            sm:rounded-xl
+            relative
+            w-full
+            flex
+            odd:flex-row
+            even:flex-row-reverse
+            flex-wrap
+            first:mt-0
+            sm:px-12
+            px-6
+            mt-20
+            mb-20
+            items-center
+          "
+          v-for="feature in formattedIndustries.features"
+          :key="feature.id"
+        >
+          <div class="w-1/12"></div>
+          <header class="sm:w-5/12 w-full relative">
+            <span class="sm:absolute sm:-mt-32"
+              ><div>
+                <img
+                  width="569"
+                  height="425"
+                  :src="feature.image.url"
+                  alt="Alternative Credit Score"
+                /></div
+            ></span>
+          </header>
+          <div class="w-1/12"></div>
+          <div class="sm:w-4/12 w-full sm:mt-0 mt-8">
+            <h3>{{ feature.title }}</h3>
+            <p class="mt-4">
+              {{ feature.teaser }}
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
 
     <section class="bg-blue-100" id="case-study">
@@ -288,7 +290,10 @@
                 </p>
                 <div class="mt-3 flex">
                   <NuxtLink
-                    :to="{ name: 'demo', params: { link: demo.link, vformId: demo.vformId } }"
+                    :to="{
+                      name: 'demo',
+                      params: { link: demo.link, vformId: demo.vformId },
+                    }"
                     href="/vforms-demo"
                     rel="noreferrer"
                     class="
@@ -370,223 +375,18 @@
       </div>
     </section>
 
-    <section class="bg-blue-200 for-a-reason">
-      <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
-        <h2 class="text-white font-display">Getting started</h2>
-        <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
-          <article
-            class="
-              bg-white
-              col-span-full
-              rounded-2xl
-              py-10
-              px-6
-              sm:py-15 sm:px-10
-              lg:px-15 lg:pt-20
-              pb-0
-              gap-10
-              lg:gap-10
-              xl:gap-20
-              grid grid-cols-1
-              items-end
-            "
-            style="grid-template-columns: minmax(350px, 1fr) 1.2fr"
-          >
-            <div
-              class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start"
-            >
-              <img
-                src="../../assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
-                alt=""
-                class="inline-block mb-5 w-20 h-20"
-              />
-              <h2 class="text-center lg:text-left mb-8">
-                Powerful APIs and easy-to-use resources
-              </h2>
-
-              <a
-                href="https://docs.mono.co"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                >Read our API Docs<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="flex justify-center flex-1">
-              <figure class="w-full max-w-lg relative">
-                <img
-                  src="https://monoassets.com/f/118499/540x380/1298b7c253/api-response-frame.png"
-                  alt=""
-                  class="w-full"
-                />
-              </figure>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="../../assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">Plug-and-play SDKs</h4>
-              <a
-                href="https://docs.mono.co"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  text-base
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  group
-                  hover:text-black
-                "
-                >Explore our SDKs<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="../../assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">
-                Beautiful seamless UX
-              </h4>
-              <a
-                class="
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                target="_blank"
-                href="https://os.dev.youverify.co/auth/create-account"
-                >Signup<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="../../assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">Always-on support</h4>
-              <a
-                href="/contact-us"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  text-base
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                >Contact Support Team<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <get-started></get-started>
   </main>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import getStarted from "~/components/common/getStarted.vue";
 
 export default {
+  components: {
+    getStarted,
+  },
   methods: {
     async getSingleIndustry() {
       const singleIndustries = await this.$store.dispatch(

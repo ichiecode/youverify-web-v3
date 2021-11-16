@@ -6,7 +6,7 @@
           <p class="mb-8">
             <a href="/"
               ><img
-                src="../../assets/images/logos/youverify.svg"
+                src="~/assets/images/logos/youverify.svg"
                 alt="Youverify"
                 class="sm:w-32 w-24"
             /></a>
@@ -132,28 +132,28 @@
           to="https://web.facebook.com/youverifyID"
           target="_blank"
         >
-          <img src="../../assets/images/icons/social/facebook.svg" alt="" />
+          <img src="~/assets/images/icons/social/facebook.svg" alt="" />
         </NuxtLink>
         <NuxtLink
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           to="https://www.linkedin.com/company/youcheckonline/"
           target="_blank"
         >
-          <img src="../../assets/images/icons/social/linkedin.svg" alt="" />
+          <img src="~/assets/images/icons/social/linkedin.svg" alt="" />
         </NuxtLink>
         <NuxtLink
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           to="https://www.instagram.com/youcheckonline/"
           target="_blank"
         >
-          <img src="../../assets/images/icons/social/instagram.svg" alt="" />
+          <img src="~/assets/images/icons/social/instagram.svg" alt="" />
         </NuxtLink>
         <NuxtLink
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           to="https://twitter.com/YoucheckOnline"
           target="_blank"
         >
-          <img src="../../assets/images/icons/social/twitter.svg" alt="" />
+          <img src="~/assets/images/icons/social/twitter.svg" alt="" />
         </NuxtLink>
       </div>
       <div

@@ -1,4 +1,3 @@
-const baseURL = "http://localhost:1337";
 
 export const state = () => ({
   blogs: null,
@@ -28,7 +27,7 @@ export const actions = {
   async getBlogs({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/blogs`)
+      .$get(`${process.env.baseUrl}/blogs`)
       .then((res) => {
         commit("setBlogs", res);
         commit("setLoading", false);
@@ -41,7 +40,7 @@ export const actions = {
 	async getSingleBlogPost({ state, commit }, slug) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/blogs/?slug=${slug}`)
+      .$get(`${process.env.baseUrl}/blogs/?slug=${slug}`)
       .then((res) => {
         commit("setSingleBlogPost", res);
         commit("setLoading", false);

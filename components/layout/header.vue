@@ -348,7 +348,7 @@
                                 <img
                                   width="171"
                                   height="206"
-                                  src="../../assets/images/illustrations/submenu-products.png"
+                                  src="~/assets/images/illustrations/submenu-products.png"
                                   alt="Solutions"
                                 /><noscript></noscript>
                               </div>
@@ -454,7 +454,7 @@
                                 <img
                                   width="171"
                                   height="206"
-                                  src="../../assets/images/illustrations/lady-hugging-sim-smiling.png"
+                                  src="~/assets/images/illustrations/lady-hugging-sim-smiling.png"
                                   alt="Solutions"
                                 /><noscript></noscript>
                               </div>
@@ -750,7 +750,7 @@
           <div class="lg:w-auto w-6/12">
             <a aria-current="page" class="" href="/"
               ><img
-                src="../../assets/images/logos/youverify.svg"
+                src="~/assets/images/logos/youverify.svg"
                 alt="Youverify"
                 class="sm:w-32 w-24"
             /></a>
