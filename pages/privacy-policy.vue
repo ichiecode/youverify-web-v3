@@ -28,7 +28,7 @@
             bg-blue-100
           "
           >Updated {{
-            policy ? this.$root.$options.filters.formatDate(policy.updated_at) : ""
+            policy ? this.$root.$options.filters.formatDate(policy.updatedAt) : ""
           }}</span
         >
         <h1>{{ policy ? policy.title : "" }}</h1>

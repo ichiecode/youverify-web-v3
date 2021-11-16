@@ -28,7 +28,7 @@
             bg-blue-100
           "
           >Updated {{
-            cookies ? this.$root.$options.filters.formatDate(cookies.updated_at) : ""
+            cookies ? this.$root.$options.filters.formatDate(cookies.updatedAt) : ""
           }}</span
         >
         <h1>{{ cookies ? cookies.title : "" }}</h1>
