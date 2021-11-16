@@ -1,5 +1,3 @@
-const baseURL = "http://localhost:1337";
-
 export const state = () => ({
   industries: null,
   singleIndustries: null,
@@ -28,7 +26,7 @@ export const actions = {
   async getIndustries({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/industries`)
+      .$get(`${process.env.baseUrl}/industries`)
       .then((res) => {
         commit("setIndustries", res);
         commit("setLoading", false);
@@ -41,7 +39,7 @@ export const actions = {
   async getSingleIndustries({ state, commit }, slug) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${baseURL}/industries/?slug=${slug}`)
+      .$get(`${process.env.baseUrl}/industries/?slug=${slug}`)
       .then((res) => {
         commit("setSingleIndustries", res);
         commit("setLoading", false);
