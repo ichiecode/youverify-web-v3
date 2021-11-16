@@ -171,6 +171,50 @@
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
       <div class="flex sm:flex-row flex-col sm:my-10 py-20">
         <div class="sm:w-3/12">
+          <h3 class="sm:mb-8 mb-0">Trusted by  <br />the trustworthy</h3>
+          
+        </div>
+        <div class="sm:w-1/12 xl:block hidden"></div>
+        <div
+          class="md:w-7/12 sm:-mt-14 mt-0 grid place-items-center grid-cols-5"
+        >
+          <div v-for="client in clients" :key="client.id" class="partner w-full sm:px-8 px-2 relative pt-10 pb-7">
+            <p class="partner-name react-reveal absolute leading-none left-0  text-center w-full top-0">{{client.name}}</p>
+            <button class="h-full w-full">
+              <div
+                class="
+                  bg-white
+                  w-full
+                  flex
+                  items-center
+                  justify-center
+                  h-full
+                  rounded-lg
+                  sm:py-4
+                  py-2
+                  sm:px-4
+                  px-2
+                "
+              >
+                <div class="relative">
+                  <img
+                    :src="require(`~/assets/images/${client.url}`)"
+                    width="58"
+                    height="58"
+                    decoding="async"
+                    alt="First Central"
+                  />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+      <div class="flex sm:flex-row flex-col sm:my-10 py-20">
+        <div class="sm:w-3/12">
           <h3 class="sm:mb-8 mb-0">Reliable partners <br />and sources</h3>
           <div class="sm:block hidden">
             <span class="cursor-pointer inline-block" role="button" tabindex="0"
@@ -288,10 +332,72 @@ export default {
           name: "First Central"
         },
         {
-          id: 1,
-          url: 'logos/partners/First Central.png',
-          name: "First Central"
+          id: 2,
+          url: 'logos/partners/CAC.png',
+          name: "CAC"
+        },
+        {
+          id: 3,
+          url: 'logos/partners/FRSC.png',
+          name: "FRSC"
+        },
+        {
+          id: 4,
+          url: 'logos/partners/INEC.png',
+          name: "INEC"
+        },
+        {
+          id: 5,
+          url: 'logos/partners/NABTEB.png',
+          name: "NABTEB"
+        },
+        {
+          id: 6,
+          url: 'logos/partners/NECO.png',
+          name: "NECO"
+        },
+        {
+          id: 7,
+          url: 'logos/partners/Nimc.png',
+          name: "NIMC"
+        },
+        {
+          id: 8,
+          url: 'logos/partners/NIRSAL.png',
+          name: "NIRSAL"
+        },
+        {
+          id: 9,
+          url: 'logos/partners/NYSC.png',
+          name: "NYSC"
+        },
+        {
+          id: 10,
+          url: 'logos/partners/waec.png',
+          name: "WAEC"
         }
+      ],
+      clients: [
+        {
+          id: 1,
+          url: 'logos/companies/bolt.png',
+          name: "BOLT"
+        },
+        {
+          id: 2,
+          url: 'logos/companies/civil-defence.png',
+          name: "CIVIL DEFENCE"
+        },
+        {
+          id: 3,
+          url: 'logos/companies/fidelity.png',
+          name: "Fidelity"
+        },
+        {
+          id: 4,
+          url: 'logos/companies/standard-chartered.png',
+          name: "Standard"
+        },
       ]
     }
   },
