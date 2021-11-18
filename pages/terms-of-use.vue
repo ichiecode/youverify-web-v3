@@ -28,7 +28,7 @@
             bg-blue-100
           "
           >Updated {{
-            tou ? this.$root.$options.filters.formatDate(tou.updated_at) : ""
+            tou ? this.$root.$options.filters.formatDate(tou.updatedAt) : ""
           }}</span
         >
         <h1>{{ tou ? tou.title : "" }}</h1>

@@ -25,6 +25,7 @@
         <div class="mt-6"></div>
       </section>
     </header>
+
     <section class="max-w-screen-md mx-auto sm:pt-40 pt-20 text-center px-10">
       <h3>Why We Built Youverify</h3>
       <p class="py-4">
@@ -34,6 +35,7 @@
         it is our mission to change it.
       </p>
     </section>
+
     <section class="">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <svg
@@ -77,7 +79,7 @@
     </section>
 
     <section class="py-10">
-      <section class="max-w-screen-xl mx-auto sm:px-8 px-6" >
+      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <h2>Meet the Youverify Team</h2>
         <div class="grid sm:grid-cols-5 grid-cols-2 sm:gap-12 gap-8 py-10">
           <section v-for="team in teams" :key="team.id">
@@ -91,8 +93,8 @@
               />
             </div>
             <div class="pt-6">
-              <h4 class="text-blue text-base">{{team.name}}</h4>
-              <p class="text-xs mt-2">{{team.role}}</p>
+              <h4 class="text-blue text-base">{{ team.name }}</h4>
+              <p class="text-xs mt-2">{{ team.role }}</p>
             </div>
           </section>
         </div>
@@ -121,6 +123,184 @@
         <div class="py-20"><h2 class="text-grey">careers@youverify.co</h2></div>
       </section>
     </div>
+
+    <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
+      <div class="mb-15 sm:mb-10 lg:mb-12">
+        <section
+          class="
+            text-center
+            max-w-screen-lg
+            text-container
+            sm:py-20
+            py-10
+            mx-auto
+            sm:px-8
+            px-6
+          "
+        >
+          <div class="text-center">
+            <h3>Our Values<br class="sm:block hidden" /></h3>
+            <p class="pt-4">
+              Youverify is building innovative products that will continue to
+              push the bounds of what is possible KYC and Fraud Mitigation
+              across Africa. Our core values drive how we work with our partners
+              and how we build our team.
+            </p>
+          </div>
+        </section>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
+            <h4 class="mb-4">Customer-focus</h4>
+            <p class="">
+              We are focused on building products that deliver the best
+              experience and function to our partners.
+            </p>
+          </article>
+          <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
+            <h4 class="mb-4">Clear communication</h4>
+            <p class="">
+              To simplify our work, ideas, and journey to all, for the clearest
+              understanding.
+            </p>
+          </article>
+          <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
+            <h4 class="mb-4">Transparency</h4>
+            <p class="">
+              To always be open, honest, and forthcoming in detail, even when it
+              is difficult.
+            </p>
+          </article>
+          <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
+            <h4 class="mb-4">Integrity</h4>
+            <p class="">
+              To build and grow with a sense of ownership and responsibility to
+              our partners, at all times.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+      <div class="flex sm:flex-row flex-col sm:my-10 py-20">
+        <div class="sm:w-3/12">
+          <h3 class="sm:mb-8 mb-0">Trusted by  <br />the trustworthy</h3>
+          
+        </div>
+        <div class="sm:w-1/12 xl:block hidden"></div>
+        <div
+          class="md:w-7/12 sm:-mt-14 mt-0 grid place-items-center grid-cols-5"
+        >
+          <div v-for="client in clients" :key="client.id" class="partner w-full sm:px-8 px-2 relative pt-10 pb-7">
+            <p class="partner-name react-reveal absolute leading-none left-0  text-center w-full top-0">{{client.name}}</p>
+            <button class="h-full w-full">
+              <div
+                class="
+                  bg-white
+                  w-full
+                  flex
+                  items-center
+                  justify-center
+                  h-full
+                  rounded-lg
+                  sm:py-4
+                  py-2
+                  sm:px-4
+                  px-2
+                "
+              >
+                <div class="relative">
+                  <img
+                    :src="require(`~/assets/images/${client.url}`)"
+                    width="58"
+                    height="58"
+                    decoding="async"
+                    alt="First Central"
+                  />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+      <div class="flex sm:flex-row flex-col sm:my-10 py-20">
+        <div class="sm:w-3/12">
+          <h3 class="sm:mb-8 mb-0">Reliable partners <br />and sources</h3>
+          <div class="sm:block hidden">
+            <span class="cursor-pointer inline-block" role="button" tabindex="0"
+              ><a href="/contact-us"
+                ><button
+                  class="
+                    bg-transparent
+                    text-blue
+                    rounded
+                    py-2
+                    sm:mb-0
+                    mb-4
+                    px-0
+                  "
+                >
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transform inline-block mr-4 false"
+                  >
+                    <path
+                      d="M1 0.999999L7 7L1 13"
+                      stroke="#46B2C8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  >Become a Partner
+                </button></a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="sm:w-1/12 xl:block hidden"></div>
+        <div
+          class="md:w-7/12 sm:-mt-14 mt-0 grid place-items-center grid-cols-5"
+        >
+          <div v-for="partner in partners" :key="partner.id" class="partner w-full sm:px-8 px-2 relative pt-10 pb-7">
+            <p class="partner-name react-reveal absolute leading-none left-0  text-center w-full top-0">{{partner.name}}</p>
+            <button class="h-full w-full">
+              <div
+                class="
+                  bg-white
+                  w-full
+                  flex
+                  items-center
+                  justify-center
+                  h-full
+                  rounded-lg
+                  sm:py-4
+                  py-2
+                  sm:px-4
+                  px-2
+                "
+              >
+                <div class="relative">
+                  <img
+                    :src="require(`~/assets/images/${partner.url}`)"
+                    width="58"
+                    height="58"
+                    decoding="async"
+                    alt="First Central"
+                  />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <section class="bg-blue-100 sm:py-20 py-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
@@ -156,6 +336,84 @@ import { mapState } from "vuex";
 
 export default {
   name: "Teams",
+  data() {
+    return {
+      partners: [
+        {
+          id: 1,
+          url: "logos/partners/First Central.png",
+          name: "First Central",
+        },
+        {
+          id: 2,
+          url: "logos/partners/CAC.png",
+          name: "CAC",
+        },
+        {
+          id: 3,
+          url: "logos/partners/FRSC.png",
+          name: "FRSC",
+        },
+        {
+          id: 4,
+          url: "logos/partners/INEC.png",
+          name: "INEC",
+        },
+        {
+          id: 5,
+          url: "logos/partners/NABTEB.png",
+          name: "NABTEB",
+        },
+        {
+          id: 6,
+          url: "logos/partners/NECO.png",
+          name: "NECO",
+        },
+        {
+          id: 7,
+          url: "logos/partners/Nimc.png",
+          name: "NIMC",
+        },
+        {
+          id: 8,
+          url: "logos/partners/NIRSAL.png",
+          name: "NIRSAL",
+        },
+        {
+          id: 9,
+          url: "logos/partners/NYSC.png",
+          name: "NYSC",
+        },
+        {
+          id: 10,
+          url: "logos/partners/waec.png",
+          name: "WAEC",
+        },
+      ],
+      clients: [
+        {
+          id: 1,
+          url: "logos/companies/bolt.png",
+          name: "BOLT",
+        },
+        {
+          id: 2,
+          url: "logos/companies/civil-defence.png",
+          name: "CIVIL DEFENCE",
+        },
+        {
+          id: 3,
+          url: "logos/companies/fidelity.png",
+          name: "Fidelity",
+        },
+        {
+          id: 4,
+          url: "logos/companies/standard-chartered.png",
+          name: "Standard",
+        },
+      ],
+    };
+  },
   methods: {
     async getAllTeam() {
       const allBlogPost = await this.$store.dispatch("teams/getTeams");
@@ -172,4 +430,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.partner-name {
+  opacity: 0;
+}
+
+.partner:hover .partner-name {
+  opacity: 1;
+}
+</style>

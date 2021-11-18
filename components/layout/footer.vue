@@ -49,17 +49,17 @@
         </div>
       </section>
       <section class="sm:w-1/12"></section>
-      <section class="sm:w-2/12 w-6/12">
+      <section class="sm:w-4/12 w-6/12">
         <h4 class="py-3 mb-4">Industries</h4>
         <ul class="">
           <NuxtLink
-            v-for="industry in industries"
-            :key="industry.id"
-            v-show="industry.visible === true"
+            v-for="cases in industries"
+            :key="cases.id"
+            v-show="cases.visible === true"
             class="mb-2 block w-full"
-            :to="`/industries/${industry.slug}`"
+            :to="`/use-case/${cases.slug}`"
           >
-            <li>{{ industry.name }}</li>
+            <li>{{ cases.name }}</li>
           </NuxtLink>
         </ul>
       </section>
@@ -67,13 +67,18 @@
         <h4 class="py-3 mb-4">Company</h4>
         <ul class="">
           <a aria-current="page" class="mb-2 block w-full" href="/about-us"
-            ><li>About us</li></a
+            ><li>About us</li>
+            <a aria-current="page" class="mb-2 block w-full" href="/agent">
+            <li>Become an Agent</li>
+          </a></a
           ><a class="mb-2 block w-full" href="/blogs"><li>Blog</li></a
           ><a class="mb-2 block w-full" href="/about-us#career"
             ><li>Career</li></a
           ><a class="mb-2 block w-full" href="/gdpr"
             ><li>GDPR Compliance Statement</li></a
-          ><a
+          >
+          
+          <a
             href="https://docs.youverify.co/"
             target="_blank"
             rel="noreferrer"
@@ -88,6 +93,9 @@
             class="mb-2 block w-full"
             ><li>API Status</li></a
           >
+          <a aria-current="page" class="mb-2 block w-full" href="/resources">
+            <li>Resources</li>
+          </a>
         </ul>
       </section>
       <section class="sm:w-0/12"></section>

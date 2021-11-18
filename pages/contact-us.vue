@@ -10,7 +10,7 @@
           </p>
         </div>
         <div class="mt-14 flex flex-col items-center justify-center">
-          <div class="form-group w-8/12" name="enquiry_type">
+          <div class="form-group md:w-8/12" name="enquiry_type">
             <h4>Enquiry</h4>
             <select name="enquiry_type" required="">
               <option value="">Enquiry Type</option>
@@ -20,7 +20,7 @@
               <option>Investment enquiry</option>
             </select>
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>Company name</h4>
             <input
               name="company_name"
@@ -30,7 +30,7 @@
               value=""
             />
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>First name</h4>
             <input
               name="first_name"
@@ -40,7 +40,7 @@
               value=""
             />
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>Last name</h4>
             <input
               name="last_name"
@@ -50,7 +50,7 @@
               value=""
             />
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>Country</h4>
             <select name="country" required="">
               <option value="">Select Country</option>
@@ -315,7 +315,7 @@
               <option>Zimbabwe</option>
             </select>
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>Email</h4>
             <input
               name="email"
@@ -325,7 +325,7 @@
               value=""
             />
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>Message</h4>
             <textarea
               name="message"
@@ -333,7 +333,7 @@
               rows="5"
             ></textarea>
           </div>
-          <div class="form-group w-8/12">
+          <div class="form-group md:w-8/12">
             <h4>Phone number</h4>
             <input
               name="phone_number"
