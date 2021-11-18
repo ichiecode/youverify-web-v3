@@ -124,41 +124,54 @@
       </section>
     </div>
 
-    <section class="max-w-screen-xl mx-auto sm:px-8 px-6 py-20">
-      <div class="">
-        <div class="mb-15 sm:mb-10 lg:mb-12">
-          <h2 class="text-dark">Our values</h2>
-          <p class="mt-5 md:mt-8 w-3/6">
-            Mono is building user-focused and innovative products that will
-            continue to push the bounds of what is possible in access to data
-            and payments in Open Banking, across Africa. Our core values drive
-            how we work with our partners and how we build our team.
-          </p>
-        </div>
+    <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
+      <div class="mb-15 sm:mb-10 lg:mb-12">
+        <section
+          class="
+            text-center
+            max-w-screen-lg
+            text-container
+            sm:py-20
+            py-10
+            mx-auto
+            sm:px-8
+            px-6
+          "
+        >
+          <div class="text-center">
+            <h3>Our Values<br class="sm:block hidden" /></h3>
+            <p class="pt-4">
+              Youverify is building innovative products that will continue to
+              push the bounds of what is possible KYC and Fraud Mitigation
+              across Africa. Our core values drive how we work with our partners
+              and how we build our team.
+            </p>
+          </div>
+        </section>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
-            <h5 class="text-black mb-4">Customer-focus</h5>
+            <h4 class="mb-4">Customer-focus</h4>
             <p class="">
               We are focused on building products that deliver the best
               experience and function to our partners.
             </p>
           </article>
           <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
-            <h5 class="text-black mb-4">Clear communication</h5>
+            <h4 class="mb-4">Clear communication</h4>
             <p class="">
               To simplify our work, ideas, and journey to all, for the clearest
               understanding.
             </p>
           </article>
           <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
-            <h5 class="text-black mb-4">Transparency</h5>
+            <h4 class="mb-4">Transparency</h4>
             <p class="">
               To always be open, honest, and forthcoming in detail, even when it
               is difficult.
             </p>
           </article>
           <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md">
-            <h5 class="text-black mb-4">Integrity</h5>
+            <h4 class="mb-4">Integrity</h4>
             <p class="">
               To build and grow with a sense of ownership and responsibility to
               our partners, at all times.
@@ -168,7 +181,7 @@
       </div>
     </section>
 
-    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
       <div class="flex sm:flex-row flex-col sm:my-10 py-20">
         <div class="sm:w-3/12">
           <h3 class="sm:mb-8 mb-0">Trusted by  <br />the trustworthy</h3>
@@ -287,7 +300,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="bg-blue-100 sm:py-20 py-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
@@ -328,78 +341,78 @@ export default {
       partners: [
         {
           id: 1,
-          url: 'logos/partners/First Central.png',
-          name: "First Central"
+          url: "logos/partners/First Central.png",
+          name: "First Central",
         },
         {
           id: 2,
-          url: 'logos/partners/CAC.png',
-          name: "CAC"
+          url: "logos/partners/CAC.png",
+          name: "CAC",
         },
         {
           id: 3,
-          url: 'logos/partners/FRSC.png',
-          name: "FRSC"
+          url: "logos/partners/FRSC.png",
+          name: "FRSC",
         },
         {
           id: 4,
-          url: 'logos/partners/INEC.png',
-          name: "INEC"
+          url: "logos/partners/INEC.png",
+          name: "INEC",
         },
         {
           id: 5,
-          url: 'logos/partners/NABTEB.png',
-          name: "NABTEB"
+          url: "logos/partners/NABTEB.png",
+          name: "NABTEB",
         },
         {
           id: 6,
-          url: 'logos/partners/NECO.png',
-          name: "NECO"
+          url: "logos/partners/NECO.png",
+          name: "NECO",
         },
         {
           id: 7,
-          url: 'logos/partners/Nimc.png',
-          name: "NIMC"
+          url: "logos/partners/Nimc.png",
+          name: "NIMC",
         },
         {
           id: 8,
-          url: 'logos/partners/NIRSAL.png',
-          name: "NIRSAL"
+          url: "logos/partners/NIRSAL.png",
+          name: "NIRSAL",
         },
         {
           id: 9,
-          url: 'logos/partners/NYSC.png',
-          name: "NYSC"
+          url: "logos/partners/NYSC.png",
+          name: "NYSC",
         },
         {
           id: 10,
-          url: 'logos/partners/waec.png',
-          name: "WAEC"
-        }
+          url: "logos/partners/waec.png",
+          name: "WAEC",
+        },
       ],
       clients: [
         {
           id: 1,
-          url: 'logos/companies/bolt.png',
-          name: "BOLT"
+          url: "logos/companies/bolt.png",
+          name: "BOLT",
         },
         {
           id: 2,
-          url: 'logos/companies/civil-defence.png',
-          name: "CIVIL DEFENCE"
+          url: "logos/companies/civil-defence.png",
+          name: "CIVIL DEFENCE",
         },
         {
           id: 3,
-          url: 'logos/companies/fidelity.png',
-          name: "Fidelity"
+          url: "logos/companies/fidelity.png",
+          name: "Fidelity",
         },
         {
           id: 4,
-          url: 'logos/companies/standard-chartered.png',
-          name: "Standard"
+          url: "logos/companies/standard-chartered.png",
+          name: "Standard",
         },
-      ]
-    }
+      ],
+    };
   },
   methods: {
     async getAllTeam() {
@@ -418,13 +431,11 @@ export default {
 </script>
 
 <style scoped>
-
 .partner-name {
   opacity: 0;
 }
 
-.partner:hover .partner-name{
+.partner:hover .partner-name {
   opacity: 1;
-
 }
 </style>

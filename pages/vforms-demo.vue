@@ -12,80 +12,133 @@
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="r">
+        <div class="">
           <div class="">
-            <div class="text-center mb-8">
-              <h2 class="">vForms Demo</h2>
-            </div>
-            <div class="mt-3 justify-end sm:mt-8 lg:mt-10 flex flex-wrap">
-              <a
+            <section class="bg-blue-100" id="case-study">
+              <div
                 class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue-300
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
+                  max-w-screen-xl
+                  py-20
+                  mx-auto
+                  sm:px-8
+                  px-6
+                  mx-auto
+                  max-w-300
                 "
-                href="/vforms-demo"
-                >Use Template<svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="border-dashed border-4 border-blue p-4">
-              <iframe
-                id="Iframe"
-                title="User Guarantor Form"
-                width="100%"
-                height="800px"
-                src="https://os.dev.youverify.co/v-forms/6169781713d6d7c51a1d5cdc"
-                frameborder="0"
-                class=""
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              ></iframe>
-            </div>
+              >
+                <div class="text-container">
+                  <div class="mx-auto">
+                    <div class="text-center w-full mb-12 sm:mb-16 lg:mb-20">
+                      <h2 class="">vForms Demos</h2>
+                      <p class="mt-5 md:mt-7">
+                        More templates to take your business to the next level.
+                        Custom made templates to fit your needs and get you
+                        fully integrated into vForms with maximum returns
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                  <li v-for="i in 6" :key="i">
+                    <div class="relative bg-white">
+                      <div
+                        class="flex items-end justify-center overflow-hidden"
+                        style="height: 160px; background: rgb(242, 242, 242)"
+                      >
+                        <div class="bg-white h-32 w-32"></div>
+                      </div>
+                      <div class="pt-4 pb-6 px-7">
+                        <h4 class="my-4">Customer Onboarding</h4>
+                        <p class="">djdjjkdjksdjkdjsjdkdjsjd</p>
+                        <div class="mt-3 flex">
+                          <NuxtLink
+                            :to="{
+                              name: 'demo',
+                              params: {
+                                link: 1,
+                                vformId: 1,
+                              },
+                            }"
+                            href="/vforms-demo"
+                            rel="noreferrer"
+                            class="
+                              text-base
+                              sm:text-base
+                              lg:text-base
+                              font-bold
+                              inline-flex
+                              items-center
+                              hover:text-black
+                            "
+                            data-v-7c7bbed2=""
+                            >View Demo<svg
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-5 lg:w-6.25"
+                              data-v-7c7bbed2=""
+                            >
+                              <path
+                                d="M8 18L18 8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                data-v-7c7bbed2=""
+                              ></path>
+                              <path
+                                d="M8 8H18V18"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                data-v-7c7bbed2=""
+                              ></path></svg
+                          ></NuxtLink>
+                          <a
+                            :href="`https://os.dev.youverify.co/v-forms/${11}/edit/add-fields`"
+                            target="_blank"
+                            rel="noreferrer"
+                            class="
+                              text-base
+                              ml-4
+                              sm:text-base
+                              lg:text-base
+                              font-bold
+                              inline-flex
+                              items-center
+                              hover:text-black
+                            "
+                            data-v-7c7bbed2=""
+                            >Use Template<svg
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-5 lg:w-6.25"
+                              data-v-7c7bbed2=""
+                            >
+                              <path
+                                d="M8 18L18 8"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                data-v-7c7bbed2=""
+                              ></path>
+                              <path
+                                d="M8 8H18V18"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                data-v-7c7bbed2=""
+                              ></path></svg
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </div>
         </div>
       </section>
