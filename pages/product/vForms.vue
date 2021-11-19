@@ -148,7 +148,7 @@
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../../../../Downloads/image2vector.svg"
+                  src="~/assets/images/logos/trusted/Bolt_logo (1).png"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
