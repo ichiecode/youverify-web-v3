@@ -9,11 +9,13 @@
         justify-start
         pt-20
         pb-32
-        md:pt-48 md:pb-20
+        md:pt-40 md:pb-20
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex-col-reverse md:flex-row flex justify-center">
+        <div
+          class="flex-col-reverse md:flex-row flex justify-center items-center"
+        >
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Fill a KYC form once and forever.
@@ -44,34 +46,6 @@
                   /></a>
                 </div>
               </div>
-            </div>
-
-            <div class="mt-10 flex items-center">
-              <h4 class="text-white">Building with Youverify OS</h4>
-              <div class="ml-3 border w-3/6"></div>
-            </div>
-            <div class="mt-3 grid grid-cols-3">
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/cazoo_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/leovegas_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/casumo_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
             </div>
           </div>
           <div class="md:w-3/6">
@@ -133,11 +107,18 @@
               inline-block
               bg-blue-100
             "
-            >INSTANT VERIFICATION PAYMENTS</span
+            >machine-learning algorithm</span
           >
-          <h2>More opportunities with <br /> CredenceScore</h2>
+          <h2>
+            More opportunities with <br />
+            CredenceScore
+          </h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            YOUID’s proprietary machine-learning algorithm computes your CredenceScore based on the level of confidence it has in your data without exposing or accessing your personal data. The beauty of CredenceScore is that the higher the score, the richer, wider and better offers you get from our marketplace
+            YOUID’s proprietary machine-learning algorithm computes your
+            CredenceScore based on the level of confidence it has in your data
+            without exposing or accessing your personal data. The beauty of
+            CredenceScore is that the higher the score, the richer, wider and
+            better offers you get from our marketplace
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -308,11 +289,15 @@
               inline-block
               bg-blue
             "
-            >INSTANT VERIFICATION PAYMENTS</span
+            >Secured from breaches</span
           >
           <h2>Be sure with YOUID Secure</h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            Get notified when your password has been breached or your credentials are leaked by a third-party data breach. YOUID Secure continuously updates and collates reported data breaches and leakages globally. To check if any of your credentials have been breached, enable YOUID Secure for free on YOUID app
+            Get notified when your password has been breached or your
+            credentials are leaked by a third-party data breach. YOUID Secure
+            continuously updates and collates reported data breaches and
+            leakages globally. To check if any of your credentials have been
+            breached, enable YOUID Secure for free on YOUID app
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -463,13 +448,14 @@
               inline-block
               bg-blue-100
             "
-            >INSTANT VERIFICATION PAYMENTS</span
+            >multi-factor authentication</span
           >
           <h2>Never get stranded with YOU ID Key</h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            All passwords can be forgotten, compromised or stolen. YOUID Key allows you to protect your passwords with a passwordless feature or a multi-factor authentication. The YOUID Key supports industry standards for time-based one-time passcodes (TOTP or OTP).
-
-
+            All passwords can be forgotten, compromised or stolen. YOUID Key
+            allows you to protect your passwords with a passwordless feature or
+            a multi-factor authentication. The YOUID Key supports industry
+            standards for time-based one-time passcodes (TOTP or OTP).
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -640,11 +626,15 @@
               inline-block
               bg-blue
             "
-            >INSTANT VERIFICATION PAYMENTS</span
+            >Address verification</span
           >
           <h2>Increase Trustworthiness with AddressTrack</h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            Address verification in Africa can be laborious, repetitive, expensive anad mundane for consumers and businesses. YOUID AddressTrack solves the problem of address verification by enabling consumers and YOUID users to verify their address(es) and securely store it on their digital ID - YOUID.
+            Address verification in Africa can be laborious, repetitive,
+            expensive anad mundane for consumers and businesses. YOUID
+            AddressTrack solves the problem of address verification by enabling
+            consumers and YOUID users to verify their address(es) and securely
+            store it on their digital ID - YOUID.
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -782,10 +772,7 @@
       "
     >
       <section class="text-center">
-        <h3>See how youid works</h3>
-        <p class="mb-12">
-          Protect your personal identity with a secure digital ID
-        </p>
+        <h3 class="mb-12">Protect your personal identity with a secure digital ID</h3>
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/oWitV8UeiqM"
@@ -804,7 +791,7 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
-  getStarted
+  getStarted,
 };
 </script>
 

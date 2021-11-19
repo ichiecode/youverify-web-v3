@@ -75,7 +75,7 @@
                   ></path></svg
               ></a>
             </div>
-            <div class="border-dashed border-4 border-blue p-4">
+            <div class="border-dashed border-2 border-blue p-4">
               <iframe
                 id="Iframe"
                 title="User Guarantor Form"

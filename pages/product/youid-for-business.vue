@@ -9,11 +9,13 @@
         justify-start
         pt-20
         pb-32
-        md:pt-48 md:pb-20
+        md:pt-40 md:pb-20
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex-col-reverse md:flex-row flex justify-center">
+        <div
+          class="flex-col-reverse md:flex-row flex justify-center items-center"
+        >
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Do business with pre-verified customers
@@ -131,34 +133,6 @@
                     stroke-linejoin="round"
                   ></path></svg
               ></a>
-            </div>
-
-            <div class="mt-10 flex items-center">
-              <h4 class="text-white">Building with Youverify OS</h4>
-              <div class="ml-3 border w-3/6"></div>
-            </div>
-            <div class="mt-3 grid grid-cols-3">
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/cazoo_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/leovegas_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/casumo_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
             </div>
           </div>
           <div class="md:w-3/6">
@@ -480,7 +454,7 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/product/youid-for-business/#!"
+                    ><a href="/contact-us"
                       ><button
                         class="
                           bg-transparent
@@ -598,7 +572,7 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/product/youid-for-business/#!"
+                    ><a href="/contact-us"
                       ><button
                         class="
                           bg-transparent
@@ -717,7 +691,7 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/product/youid-for-business/#!"
+                    ><a href="/contact-us"
                       ><button
                         class="
                           bg-transparent
@@ -758,7 +732,7 @@
           <p class="my-4">More than 2000 Transactions</p>
           <span class="cursor-pointer inline-block" role="button" tabindex="0"
             ><button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
-              Contact sales
+              <NuxtLink to="/contact-us">Contact sales</NuxtLink>
             </button></span
           >
         </div>
@@ -778,11 +752,10 @@
       "
     >
       <section class="text-center">
-        <h3>See how youid for business works</h3>
-        <p class="mb-12">
+        <h3 class="mb-12">
           Create market templates and publish it to YOUID users and track the
           performance of your template in easy-to-read reports.
-        </p>
+        </h3>
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/oWitV8UeiqM"
@@ -802,8 +775,8 @@
 import getStarted from "~/components/common/getStarted.vue";
 export default {
   components: {
-    getStarted
-  }
+    getStarted,
+  },
 };
 </script>
 
@@ -825,6 +798,6 @@ export default {
 }
 
 .custom-shape-divider-bottom-1636017048 .shape-fill {
-  fill: #EFF8F9;
+  fill: #eff8f9;
 }
 </style>

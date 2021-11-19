@@ -9,11 +9,11 @@
         justify-start
         pt-20
         pb-32
-        md:pt-48 md:pb-20
+        md:pt-40 md:pb-20
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex-col-reverse md:flex-row flex justify-center">
+        <div class="flex-col-reverse md:flex-row flex justify-center items-center">
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Scale your business operations with vForms
@@ -141,21 +141,21 @@
             <div class="mt-3 grid grid-cols-3">
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
+                  src="~/assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../assets/images/logos/trusted/Bolt_logo (1).png"
+                  src="../../../../../Downloads/image2vector.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
                 <img
-                  src="../../assets/images/logos/trusted/sterling-logo-balanced (1).png"
+                  src="~/assets/images/logos/trusted/sterling-logo-balanced (1).png"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
