@@ -12,13 +12,13 @@
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="r">
+        <div class="">
           <div class="">
-            <div class="text-center mb-8">
-              <h2 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h2>
+            <div class="text-center mb-8 bg-white w-full py-5 sticky" style="top: 79px;">
+              <h3 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h3>
             </div>
             
-            <div class="border-dashed border-2 border-blue p-4 shadow-iframe">
+            <div class="border-solid border-2 border-blue p-4 shadow-iframe">
               <iframe
                 id="Iframe"
                 title="User Guarantor Form"
