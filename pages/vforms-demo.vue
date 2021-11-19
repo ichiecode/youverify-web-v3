@@ -8,7 +8,7 @@
         justify-start
         pt-20
         pb-32
-        md:pt-40 md:pb-20
+        md:pt-48 md:pb-20
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
@@ -49,7 +49,7 @@
                       </div>
                       <div class="pt-4 pb-6 px-7">
                         <h4 class="my-4">Customer Onboarding</h4>
-                        <p class="">djdjjkdjksdjkdjsjdkdjsjd</p>
+                        <p class="">More templates to take your business to the next level.</p>
                         <div class="mt-3 flex">
                           <NuxtLink
                             :to="{
@@ -153,9 +153,6 @@ import getStarted from "~/components/common/getStarted.vue";
 export default {
   components: {
     getStarted,
-  },
-  mounted() {
-    var frame = document.getElementById("Iframe");
   },
 };
 </script>

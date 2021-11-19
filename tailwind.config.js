@@ -6,8 +6,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      minHeight: {
-
+      boxShadow: {
+        'iframe': '-5px -4px 4px 0px rgb(164 216 227 / 25%)'
       },
       colors: {
         blue: {

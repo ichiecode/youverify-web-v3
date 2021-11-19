@@ -263,7 +263,7 @@
             credit decision
           </h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            Youverify Vforms allows you to digitise your credit decision into
+            Youverify vforms allows you to digitise your credit decision into
             data drive, clean and customisable workflows that can be set up and
             optimised without a single line of code. You’ll get the most
             reliable insight about your customer allowing you to make the best
@@ -401,7 +401,7 @@
       </div>
     </section>
 
-    <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="bg-blue-100 mb-10 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
         class="
           flex
@@ -737,7 +737,7 @@
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section class="grid sm:grid-cols-2 grid-cols-1">
           <div class="sm:mt-0 mt-96">
-            <h2 class="text-blue mb-4">Manage VForms on a Dashboard</h2>
+            <h2 class="text-blue mb-4">Manage vForms on a Dashboard</h2>
             <p>Custom-made features for seamless compliance workflow</p>
             <div class="mt-8">
               <div class="flex mb-10">
@@ -910,8 +910,9 @@
               src="~/assets/images/screenshots/choose-right-pattern.svg"
               alt="Youverify Dashboard"
               class="sm:block hidden absolute sm:h-full top-0 right-0"
-            /><img
-              src="~/assets/images/screenshots/choose-right.png"
+            />
+            <img
+              src="../../assets/images/screenshots/vform-dashboard-new.jpg"
               alt="Youverify Dashboard"
               class="
                 absolute
@@ -921,8 +922,8 @@
                 sm:pl-0
                 pl-6
                 py-12
-                right-0
               "
+              style="right: -10%;"
             />
           </div>
         </section>
@@ -955,16 +956,6 @@
           class="md:min-h-subfooter h-60 rounded-xl bg-white"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         ></iframe>
-        <!-- <iframe
-          title="User Guarantor Form"
-          style="border: none"
-          height="100%"
-          width="100%"
-          src="https://os.dev.youverify.co/v-forms/6169781713d6d7c51a1d5cdc"
-          frameborder="0"
-          class="md:min-h-subfooter h-60 rounded-xl bg-white"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-        ></iframe> -->
       </section>
     </section>
 
