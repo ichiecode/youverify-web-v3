@@ -334,33 +334,33 @@
               ></a>
             </div>
 
-            <!-- <div class="mt-10 flex items-center">
+            <div class="mt-10 flex items-center">
               <h4 class="text-white">Building with Youverify OS</h4>
               <div class="ml-3 border w-3/6"></div>
             </div>
-            <div class="mt-3 grid grid-cols-3">
-              <figure class="relative" style="width: 100px; height: 62px">
+            <div class="mt-3 grid grid-cols-4">
+              <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
+                  src="../assets/images/logos/trusted/svg/Fidelity Bank Nigeria Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
+              <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/companies/bolt.png"
+                  src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
+              <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/companies/bolt.png"
+                  src="../assets/images/logos/trusted/svg/Wema Bank Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
-            </div> -->
+            </div>
           </div>
           <div class="md:w-3/6">
             <video
@@ -1209,7 +1209,7 @@
           </div>
         </a>
         <a
-          href="https://www.biometricupdate.com/202010/nigerias-youverify-granted-two-iso-certifications-to-ensure-biometric-data-protection"
+          href="https://techpoint.africa/2020/03/10/youverify-raises-1-5million/"
           target="_blank"
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
@@ -1223,7 +1223,7 @@
           </div>
         </a>
         <a
-          href="https://www.biometricupdate.com/202010/nigerias-youverify-granted-two-iso-certifications-to-ensure-biometric-data-protection"
+          href="https://techcabal.com/2020/03/10/nigerian-startup-youverify-raises-1-5-million-and-is-looking-to-solve-africas-identity-verification-problem/"
           target="_blank"
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
@@ -1237,7 +1237,7 @@
           </div>
         </a>
         <a
-          href="https://www.biometricupdate.com/202010/nigerias-youverify-granted-two-iso-certifications-to-ensure-biometric-data-protection"
+          href="https://www.crunchbase.com/organization/youverify-ng"
           target="_blank"
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
@@ -1251,7 +1251,7 @@
           </div>
         </a>
         <a
-          href="https://www.biometricupdate.com/202010/nigerias-youverify-granted-two-iso-certifications-to-ensure-biometric-data-protection"
+          href="https://ventureburn.com/2020/03/nigeria-identity-verification-startup-youverify-1-5m/"
           target="_blank"
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
