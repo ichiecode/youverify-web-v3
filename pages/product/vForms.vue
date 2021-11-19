@@ -13,7 +13,9 @@
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex-col-reverse md:flex-row flex justify-center items-center">
+        <div
+          class="flex-col-reverse md:flex-row flex justify-center items-center"
+        >
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Scale your business operations with vForms
@@ -138,24 +140,24 @@
               <h4 class="text-white">Building with vForms</h4>
               <div class="ml-3 border w-3/6"></div>
             </div>
-            <div class="mt-3 grid grid-cols-3">
-              <figure class="relative" style="width: 100px; height: 62px">
+            <div class="mt-3 grid grid-cols-4">
+              <figure class="relative w-20 h-20">
                 <img
                   src="~/assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
+              <figure class="relative w-16 h-16">
                 <img
-                  src="~/assets/images/logos/trusted/Bolt_logo (1).png"
+                  src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
+              <figure class="relative w-16 h-16">
                 <img
-                  src="~/assets/images/logos/trusted/sterling-logo-balanced (1).png"
+                  src="~/assets/images/logos/trusted/svg/Sterling Bank Plc Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -207,15 +209,17 @@
           "
         >
           <div class="text-center">
-            <h2>Complete unified onboarding & fraud-prevention platform</h2>
+            <h2>Approve more customers</h2>
             <p class="pt-4">
-              vforms helps banks and fintechs make better decisions using a
-              single API and dashboard to manage KYC/AML and fraud
+              Acquire more customers without waiting around for traditional
+              compliance systems. Youverify vForms onboarding lets you combine
+              300+ data sources into a single workflow and make automated
+              decisions with accuracy.
             </p>
           </div>
         </section>
         <div class="">
-          <div class=" w-full">
+          <div class="w-full">
             <img
               src="../../assets/images/illustrations/unified-portal.png"
               alt="Mand holding a paper plane"
@@ -252,15 +256,18 @@
               inline-block
               bg-blue-100
             "
-            >designs</span
+            >Data Driven</span
           >
           <h2>
-            Intuitive interface <br />
-            and forms
+            Make data-driven <br />
+            credit decision
           </h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            Design fully custom forms or start with a template that can be
-            modified from form layouts to components and data sources
+            Youverify Vforms allows you to digitise your credit decision into
+            data drive, clean and customisable workflows that can be set up and
+            optimised without a single line of code. You’ll get the most
+            reliable insight about your customer allowing you to make the best
+            credit offering, while mitigating risk to your business.
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -415,7 +422,7 @@
             />
           </div>
         </div>
-        <div class="sm:w-5/12">
+        <div class="sm:w-6/12">
           <span
             class="
               text-white
@@ -431,12 +438,11 @@
               inline-block
               bg-blue
             "
-            >reporting</span
+            >regulations</span
           >
-          <h2>Dynamic Workflow and Visualisation</h2>
+          <h2>Comply with  data <br> regulations seamlessly</h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            Design the journey your data takes through the process, using easy
-            visual workflow automation
+            Data privacy and protection is inbuilt into vForm allowing you to capture and save consent; securely archive and retrieve PIIs,
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -560,7 +566,7 @@
       </div>
     </section>
 
-    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
         class="
           flex
@@ -725,7 +731,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="bg-blue-300 py-20 text-blue-100 relative">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
