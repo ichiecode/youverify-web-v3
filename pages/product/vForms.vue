@@ -222,48 +222,54 @@
           <div class="my-10 justify-center flex item-center">
             <div class="">
               <button
-                class="
+                :class="`${showService === false ? 'bg-blue text-white' : null}
                   items-center
                   justify-center
                   disabled:curs
                   inline-flex
-
-                  text-white
                   py-3
                   px-3
                   rounded-full
                   text-sm
                   cursor-pointer
-                "
+                `"
                 @click="toggleService('without')"
               >
                 Without Youverify
               </button>
-              <button class="items-center
+              <button
+                :class="`${showService === true ? 'bg-blue text-white' : null}
+                items-center
                   justify-center
                   disabled:curs
                   inline-flex
-                  bg-blue
-                  text-white
                   py-3
                   px-3
                   rounded-full
                   text-sm
-                  cursor-pointer" @click="toggleService('with')">With Youverify</button>
+                  cursor-pointer`"
+                @click="toggleService('with')"
+              >
+                With Youverify
+              </button>
             </div>
           </div>
-          <div class="w-full" v-if="showService">
-            <img
-              src="../../assets/images/illustrations/with-yv.png"
-              alt="Mand holding a paper plane"
-            />
-          </div>
-          <div class="w-full" v-else>
-            <img
-              src="../../assets/images/illustrations/without-yv.png"
-              alt="Mand holding a paper plane"
-            />
-          </div>
+          <transition name="fade">
+            <div class="w-full" v-if="showService">
+              <img
+                src="../../assets/images/illustrations/with-yv.png"
+                alt="Mand holding a paper plane"
+              />
+            </div>
+          </transition>
+          <transition name="fade">
+            <div class="w-full" v-if="!showService">
+              <img
+                src="../../assets/images/illustrations/without-yv.png"
+                alt="Mand holding a paper plane"
+              />
+            </div>
+          </transition>
         </div>
       </section>
     </section>
@@ -1048,5 +1054,13 @@ export default {
 
 .custom-shape-divider-bottom-1636017048 .shape-fill {
   fill: #fff;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
