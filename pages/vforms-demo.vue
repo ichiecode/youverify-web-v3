@@ -39,7 +39,7 @@
                   </div>
                 </div>
                 <ul class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                  <li v-for="i in 6" :key="i">
+                  <li v-for="useCase in industries" :key="useCase.id">
                     <div class="relative bg-white">
                       <div
                         class="flex items-end justify-center overflow-hidden"
@@ -48,18 +48,11 @@
                         <div class="bg-white h-32 w-32"></div>
                       </div>
                       <div class="pt-4 pb-6 px-7">
-                        <h4 class="my-4">Customer Onboarding</h4>
-                        <p class="">More templates to take your business to the next level.</p>
+                        <h4 class="my-4">{{ useCase.name }}</h4>
+
                         <div class="mt-3 flex">
                           <NuxtLink
-                            :to="{
-                              name: 'demo',
-                              params: {
-                                link: 1,
-                                vformId: 1,
-                              },
-                            }"
-                            href="/vforms-demo"
+                            :to="`/use-case/${useCase.slug}`"
                             rel="noreferrer"
                             class="
                               text-base
@@ -95,7 +88,7 @@
                               ></path></svg
                           ></NuxtLink>
                           <a
-                            :href="`https://os.dev.youverify.co/v-forms/${11}/edit/add-fields`"
+                            :href="`https://os.dev.youverify.co/v-forms/${useCase.vFormId}/edit/add-fields`"
                             target="_blank"
                             rel="noreferrer"
                             class="
@@ -149,10 +142,26 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import getStarted from "~/components/common/getStarted.vue";
 export default {
   components: {
     getStarted,
+  },
+  methods: {
+    async getAllIndustries() {
+      const allIndustries = await this.$store.dispatch(
+        "industries/getIndustries"
+      );
+    },
+  },
+  mounted() {
+    this.getAllIndustries();
+  },
+  computed: {
+    ...mapState({
+      industries: (state) => state.industries.industries,
+    }),
   },
 };
 </script>
