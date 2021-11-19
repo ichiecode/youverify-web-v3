@@ -75,7 +75,7 @@
                   ></path></svg
               ></a>
             </div>
-            <div class="border-dashed border-2 border-blue p-4">
+            <div class="border-dashed border-2 border-blue p-4 shadow-iframe">
               <iframe
                 id="Iframe"
                 title="User Guarantor Form"
@@ -84,7 +84,7 @@
                 :src="link"
                 frameborder="0"
                 class=""
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; camera; microphone"
               ></iframe>
             </div>
           </div>

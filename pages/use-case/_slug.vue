@@ -18,7 +18,7 @@
               <h2 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h2>
             </div>
             
-            <div class="border-dashed border-2 border-blue p-4">
+            <div class="border-dashed border-2 border-blue p-4 shadow-iframe">
               <iframe
                 id="Iframe"
                 title="User Guarantor Form"
@@ -27,7 +27,7 @@
                 :src="formattedIndustries ? formattedIndustries.link: ''"
                 frameborder="0"
                 class=""
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; camera; microphone"
               ></iframe>
             </div>
             <div class="mt-3 justify-center sm:mt-4 lg:mt-6 flex flex-wrap">
