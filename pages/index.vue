@@ -386,7 +386,7 @@
           </div>
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
-          <img src="~/assets/images/illustrations/decision-flow.png" alt="">
+          <img src="../assets/images/illustrations/kyc-as-a-service.png" alt="">
         </div>
       </section>
     </section>

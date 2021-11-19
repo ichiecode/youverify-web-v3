@@ -219,9 +219,48 @@
           </div>
         </section>
         <div class="">
-          <div class="w-full">
+          <div class="my-10 justify-center flex item-center">
+            <div class="">
+              <button
+                class="
+                  items-center
+                  justify-center
+                  disabled:curs
+                  inline-flex
+
+                  text-white
+                  py-3
+                  px-3
+                  rounded-full
+                  text-sm
+                  cursor-pointer
+                "
+                @click="toggleService('without')"
+              >
+                Without Youverify
+              </button>
+              <button class="items-center
+                  justify-center
+                  disabled:curs
+                  inline-flex
+                  bg-blue
+                  text-white
+                  py-3
+                  px-3
+                  rounded-full
+                  text-sm
+                  cursor-pointer" @click="toggleService('with')">With Youverify</button>
+            </div>
+          </div>
+          <div class="w-full" v-if="showService">
             <img
-              src="../../assets/images/illustrations/unified-portal.png"
+              src="../../assets/images/illustrations/with-yv.png"
+              alt="Mand holding a paper plane"
+            />
+          </div>
+          <div class="w-full" v-else>
+            <img
+              src="../../assets/images/illustrations/without-yv.png"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -393,7 +432,7 @@
             <img
               width="504"
               height="545"
-              src="~/assets/images/illustrations/payments_api_account_funding-2x.webp"
+              src="../../assets/images/illustrations/smark-credit0check.png"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -417,7 +456,7 @@
             <img
               width="504"
               height="545"
-              src="~/assets/images/illustrations/payouts_api_auto_payouts-2x.webp"
+              src="../../assets/images/illustrations/Compliance_3.png"
               alt="Mand holding a paper plane"
             />
           </div>
@@ -440,9 +479,13 @@
             "
             >regulations</span
           >
-          <h2>Comply with  data <br> regulations seamlessly</h2>
+          <h2>
+            Comply with data <br />
+            regulations seamlessly
+          </h2>
           <p class="sm:my-8 my-4 sm:w-10/12">
-            Data privacy and protection is inbuilt into vForm allowing you to capture and save consent; securely archive and retrieve PIIs,
+            Data privacy and protection is inbuilt into vForm allowing you to
+            capture and save consent; securely archive and retrieve PIIs,
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
@@ -923,7 +966,7 @@
                 pl-6
                 py-12
               "
-              style="right: -10%;"
+              style="right: -10%"
             />
           </div>
         </section>
@@ -966,6 +1009,20 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
+  data() {
+    return {
+      showService: true,
+    };
+  },
+  methods: {
+    toggleService(params) {
+      if (params === "with") {
+        this.showService = true;
+      } else {
+        this.showService = false;
+      }
+    },
+  },
   components: {
     getStarted,
   },
