@@ -2,7 +2,7 @@
   <section class="bg-blue-200 for-a-reason">
     <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
       <h2 class="text-white font-display">Getting started</h2>
-      <div class="mt-15 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
+      <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
         <article
           class="
             bg-white

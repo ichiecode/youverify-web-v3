@@ -16,7 +16,16 @@ export default {
       },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-32x32.png" }],
+    script: [
+      {
+        charset: "utf-8",
+        src: "https://d3js.org/d3.v5.min.js",
+      },
+      {
+        src: "https://d3js.org/d3-queue.v3.min.js"
+      }
+    ],
   },
 
   loading: { color: "#333333", throttle: 0 },
@@ -29,7 +38,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@plugins/filters.js"],
+  plugins: ["@plugins/filters.js", "@plugins/vue-placeholders.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
