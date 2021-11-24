@@ -220,9 +220,11 @@
         </section>
         <div class="">
           <div class="my-10 justify-center flex item-center">
-            <div class="">
+            <div class="bg-blue-100 rounded-full">
               <button
-                :class="`${showService === false ? 'bg-blue text-white' : null}
+                :class="`${
+                  showService === false ? 'bg-blue-300 text-white' : 'text-blue'
+                }
                   items-center
                   justify-center
                   disabled:curs
@@ -231,6 +233,7 @@
                   px-3
                   rounded-full
                   text-sm
+                  font-bold
                   cursor-pointer
                 `"
                 @click="toggleService('without')"
@@ -238,13 +241,16 @@
                 Without Youverify
               </button>
               <button
-                :class="`${showService === true ? 'bg-blue text-white' : null}
+                :class="`${
+                  showService === true ? 'bg-blue-300 text-white' : 'text-blue'
+                }
                 items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
                   px-3
+                  font-bold
                   rounded-full
                   text-sm
                   cursor-pointer`"
@@ -257,7 +263,7 @@
           <transition name="fade">
             <div class="w-full" v-if="showService">
               <img
-                src="../../assets/images/illustrations/with-yv.png"
+                src="~/assets/images/illustrations/with-yv.png"
                 alt="Mand holding a paper plane"
               />
             </div>
@@ -265,7 +271,7 @@
           <transition name="fade">
             <div class="w-full" v-if="!showService">
               <img
-                src="../../assets/images/illustrations/without-yv.png"
+                src="~/assets/images/illustrations/without-yv.png"
                 alt="Mand holding a paper plane"
               />
             </div>
@@ -274,7 +280,7 @@
       </section>
     </section>
 
-    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
         class="
           flex
@@ -446,7 +452,7 @@
       </div>
     </section>
 
-    <section class="bg-blue-100 mb-10 max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="mb-10 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
         class="
           flex

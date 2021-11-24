@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <header
       class="
         bg-blue
@@ -10,12 +9,13 @@
         justify-start
         pt-20
         pb-32
-        md:pt-40 
-        md:pb-32
+        md:pt-40 md:pb-32
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="items-center flex-col-reverse md:flex-row flex justify-center">
+        <div
+          class="items-center flex-col-reverse md:flex-row flex justify-center"
+        >
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               KYC Automation for Banks and Startups
@@ -143,7 +143,7 @@
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/trusted/svg/Fidelity Bank Nigeria Logo.svg"
+                  src="../assets/images/logos/trusted/svg/fidelity.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -197,7 +197,7 @@
     </header>
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
-      <div class="mx-auto ">
+      <div class="mx-auto">
         <h5 class="font-medium pb-5">Trusted by the trustworthy</h5>
         <div
           class="
@@ -260,6 +260,90 @@
       </div>
     </section>
 
+    <section class="sm:pb-20 pt-20 pb-10">
+      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+        <section
+          class="
+            text-center
+            max-w-screen-lg
+            text-container
+            mx-auto
+            sm:px-8
+            px-6
+          "
+        >
+          <div class="text-center">
+            <h2>Approve more customers</h2>
+            <p class="pt-4">
+              Acquire more customers without waiting around for traditional
+              compliance systems. Youverify vForms onboarding lets you combine
+              300+ data sources into a single workflow and make automated
+              decisions with accuracy.
+            </p>
+          </div>
+        </section>
+        <div class="">
+          <div class="my-10 justify-center flex item-center">
+            <div class="bg-blue-100 rounded-full">
+              <button
+                :class="`${
+                  showService === false ? 'bg-blue-300 text-white' : 'text-blue'
+                }
+                  items-center
+                  justify-center
+                  disabled:curs
+                  inline-flex
+                  py-3
+                  font-bold
+                  px-3
+                  rounded-full
+                  text-sm
+                  cursor-pointer
+                `"
+                @click="toggleService('without')"
+              >
+                Without Youverify
+              </button>
+              <button
+                :class="`${
+                  showService === true ? 'bg-blue-300 text-white' : 'text-blue'
+                }
+                items-center
+                  justify-center
+                  disabled:curs
+                  inline-flex
+                  py-3
+                  px-3
+                  font-bold
+                  rounded-full
+                  text-sm
+                  cursor-pointer`"
+                @click="toggleService('with')"
+              >
+                With Youverify
+              </button>
+            </div>
+          </div>
+          <transition name="fade">
+            <div class="w-full" v-if="showService">
+              <img
+                src="~/assets/images/illustrations/with-yv.png"
+                alt="Mand holding a paper plane"
+              />
+            </div>
+          </transition>
+          <transition name="fade">
+            <div class="w-full" v-if="!showService">
+              <img
+                src="~/assets/images/illustrations/without-yv.png"
+                alt="Mand holding a paper plane"
+              />
+            </div>
+          </transition>
+        </div>
+      </section>
+    </section>
+
     <section class="">
       <div
         class="
@@ -289,7 +373,7 @@
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-10/12 mx-auto">
             <img
-            class="w-full"
+              class="w-full"
               width="505"
               height="545"
               src="../assets/images/illustrations/flow.gif"
@@ -386,7 +470,10 @@
           </div>
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
-          <img src="../assets/images/illustrations/kyc-as-a-service.png" alt="">
+          <img
+            src="../assets/images/illustrations/kyc-as-a-service.png"
+            alt=""
+          />
         </div>
       </section>
     </section>
@@ -396,12 +483,21 @@
         <div class="md:flex max-w-screen-xl mx-auto">
           <div class="md:w-2/6">
             <div
-              class="bg-blue-200 mb-10 text-white w-2/4 md:w-4/6 rounded-2xl text-center"
+              class="
+                bg-blue-200
+                mb-10
+                text-white
+                w-2/4
+                md:w-4/6
+                rounded-2xl
+                text-center
+              "
             >
               Case Management Portal
             </div>
             <h2 class="mb-8 text-blue-200">
-              Single view case <br> Management
+              Single view case <br />
+              Management
             </h2>
             <div>
               <p class="sm:mb-4 mb-4">
@@ -409,31 +505,42 @@
                 <br />
                 Centralised case management, alerts, audit trail, and reporting
               </p>
-              
-              <span class="cursor-pointer inline-block" role="button" tabindex="0"
-              ><button
-                class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
-              >
-                <a href="/contact-us">
-                  <svg
-                    width="8"
-                    height="14"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="transform inline-block mr-4 false"
-                  >
-                    <path
-                      d="M1 0.999999L7 7L1 13"
-                      stroke="#46B2C8"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path></svg
-                  >Request demo</a
+
+              <span
+                class="cursor-pointer inline-block"
+                role="button"
+                tabindex="0"
+                ><button
+                  class="
+                    bg-transparent
+                    text-blue
+                    rounded
+                    py-2
+                    sm:mb-0
+                    mb-4
+                    px-0
+                  "
                 >
-              </button></span
-            >
+                  <a href="/contact-us">
+                    <svg
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="transform inline-block mr-4 false"
+                    >
+                      <path
+                        d="M1 0.999999L7 7L1 13"
+                        stroke="#46B2C8"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg
+                    >Request demo</a
+                  >
+                </button></span
+              >
             </div>
           </div>
           <div class="md:w-4/6 md:ml-12">
@@ -476,9 +583,8 @@
         >
           <div class="text-center">
             <h3>
-              Things you can do with the Youverify<br
-                class="sm:block hidden"
-              /> Operating system
+              Things you can do with the Youverify<br class="sm:block hidden" />
+              Operating system
             </h3>
             <p class="pt-4">
               We aggregate over 5000 data points into one platform to help
@@ -1094,6 +1200,20 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
+  data() {
+    return {
+      showService: true,
+    };
+  },
+  methods: {
+    toggleService(params) {
+      if (params === "with") {
+        this.showService = true;
+      } else {
+        this.showService = false;
+      }
+    },
+  },
   components: {
     getStarted,
   },
@@ -1179,5 +1299,13 @@ export default {
 
 .custom-shape-divider-top-1636027032 .shape-fill {
   fill: #ffffff;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
