@@ -92,7 +92,6 @@ export default {
   },
   computed: {
     ...mapState({
-      dataSource: (state) => state.datasource.dataSource,
       loading: (state) => state.datasource.loading,
     }),
   },
@@ -105,110 +104,6 @@ export default {
       height: 500,
       width: d3.select("#chartMaps").node().getBoundingClientRect().width,
     };
-
-    const mapCenter = {
-      lat: 1.4,
-      lng: 117.5,
-    };
-
-    // var markers = [
-    //   {
-    //     long: 9.083,
-    //     lat: 42.149,
-    //     name: "Corsica",
-    //     n: 50,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   }, // corsica
-    //   {
-    //     long: 7.26,
-    //     lat: 43.71,
-    //     name: "Nice",
-    //     n: 30,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   }, // nice
-    //   {
-    //     long: 2.349,
-    //     lat: 48.864,
-    //     name: "Paris",
-    //     n: 50,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   }, // Paris
-    //   {
-    //     long: -1.397,
-    //     lat: 43.664,
-    //     name: "Hossegor",
-    //     n: 20,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   }, // Hossegor
-    //   {
-    //     long: 3.075,
-    //     lat: 50.64,
-    //     name: "Lille",
-    //     n: 50,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   }, // Lille
-    //   {
-    //     long: -3.83,
-    //     lat: 58,
-    //     name: "Morlaix",
-    //     n: 150,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   }, // Morlaix
-    //   {
-    //     long: -32.3,
-    //     lat: 26.4,
-    //     name: "Africa",
-    //     n: 150,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   },
-    //   {
-    //     long: 3.406448,
-    //     lat: 6.465422,
-    //     name: "Nigeria",
-    //     n: 120,
-    //     bvn: "30M+",
-    //     license: "30M+",
-    //     nin: "30M+",
-    //     address: "30M+",
-    //     pvc: "30M+",
-    //     card: "30M+",
-    //   },
-    // ];
     const svg = d3
       .select("#chartMaps")
       .append("svg")
@@ -225,19 +120,18 @@ export default {
 
     const projection = d3
       .geoMercator()
-      .scale(200)
-      // .center([mapCenter.lng, mapCenter.lat])
+      .scale(180)
       .translate([size.width / 2, size.height / 1.4]);
     const path = d3.geoPath(projection);
 
     const g = svg.append("g");
-    // create a tooltip
 
+    // create a tooltip
     var Tooltip = d3
-      .select("#mapLegend")
+      .select("#chartMaps")
       .append("div")
-      .attr("class", "tooltip")
-      .style("opacity", 1);
+      .attr("id", "tooltip")
+      .attr('style', 'position: absolute; opacity: 0; background: white; border-radius: 4px; padding: 8px');
 
     d3.queue()
       .defer(function foo(url, callback) {
@@ -346,7 +240,6 @@ export default {
     }
 
     let mouseOver = function (d) {
-      Tooltip.style("opacity", 1);
       d3.selectAll(".Country").transition().duration(200).style("opacity", 0.5);
       d3.select(this)
         .transition()
@@ -356,13 +249,14 @@ export default {
     };
 
     let mouseLeave = function (d) {
-      Tooltip.style("opacity", 0);
       d3.selectAll(".Country").transition().duration(200).style("opacity", 0.8);
       d3.select(this).transition().duration(200).style("stroke", "transparent");
     };
 
     var mouseover = function (d) {
-      Tooltip.style("opacity", 1);
+      Tooltip.style('opacity', 1)
+      .html(`<div class='text-black font-normal text-xs'>${d.country}</div>`)
+      .transition().duration(200);
     };
     var mousemove = function (d) {
       self.continent = d.Continent;
@@ -376,18 +270,10 @@ export default {
       self.pvc = d.pvc;
       self.card = d.card;
 
-      // Tooltip.html(
-      //   d.homecontinent +
-      //     "<br>" +
-      //     "long: " +
-      //     d.homelon +
-      //     "<br>" +
-      //     "lat: " +
-      //     d.homelat
-      // );
+      Tooltip.style('left', (d3.event.pageX+10) + 'px').style('top', (d3.event.pageY+10) + 'px')
     };
     var mouseleave = function (d) {
-      Tooltip.style("opacity", 0);
+      Tooltip.style('opacity', 1)
     };
   },
 };
@@ -410,13 +296,14 @@ export default {
   display: none;
 }
 
-div.tooltip {
+#chartMaps .tooltip {
   color: #222;
-  background-color: #fff;
+  background-color: red;
   padding: 0.5em;
+  height: 400px;
   text-shadow: #f5f5f5 0 1px 0;
   border-radius: 2px;
-  opacity: 0.9;
+  opacity: 1;
   position: absolute;
 }
 
