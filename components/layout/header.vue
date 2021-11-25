@@ -359,7 +359,7 @@
                               <NuxtLink
                                 class="link-header"
                                 v-for="industry in industries"
-                                :key="industry.id"
+                                :key="industry.name"
                                 v-show="industry.visible === true"
                                 :to="`/use-case/${industry.slug}`"
                               >
@@ -951,50 +951,15 @@
                 </div>
                 <div class="w-3/12 text-right">
                   <div
-                    data-gatsby-image-wrapper=""
-                    class="
-                      gatsby-image-wrapper gatsby-image-wrapper-constrained
-                    "
                   >
-                    <div style="max-width: 171px; display: block">
-                      <img
-                        alt=""
-                        role="presentation"
-                        aria-hidden="true"
-                        src="data:image/svg+xml;charset=utf-8,%3Csvg height='206' width='171' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                        style="
-                          max-width: 100%;
-                          display: block;
-                          position: static;
-                        "
-                      />
-                    </div>
+                  
                     <img
-                      aria-hidden="true"
-                      data-placeholder-image=""
-                      decoding="async"
-                      src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='171'%20height='206'%20viewBox='0%200%20171%20206'%20preserveAspectRatio='none'%3e%3cpath%20d='M78%205l-3%201c-2-2-9-1-11%202l-4%202c-5-1-9%202-9%206l-2%202c-3%200-8%205-8%208l-1%204c-2%202-2%203-2%206l-1%206c-3%202-3%208%200%2010%201%202%202%203%201%207%200%204%200%205%202%207s3%203%202%205l1%206c2%202%202%202%200%203-11%204-15%207-14%208l6-2c7-3%2021-7%2030-8%205-1%205-1%205%201l2%206%202%204H59v22c0%2020%200%2022-2%2022l-1-1v-14l-1-15-1%205-1%2014v10l-5-1c-3%200-5%200-6-2-6-9-12-13-18-13l-4-1h-2l-4-1c0-3-3-1-3%201l2%205c1%202%201%202-6%204-6%201-6%202-5%208a247%20247%200%20013%2013l1%203c0%207%204%207%2023%203l13-3%204%202c4%202%204%204%200%204-5%200-20%2010-20%2014%200%202%201%201%205-3%203-3%2012-9%2015-9l-3%204c-6%206-8%2019-4%2024%203%203%204%201%202-2-4-7-2-17%206-23%206-5%206-5%2012-1%204%202%207%202%204%200l-2-3%206-18%209%202a256%20256%200%200065%207h-6l3-6c3-7%205-17%204-18l-2%204-4%2011-2%205v-18l-1-19-6-6-6-6%203-4c1-2%203-5%203-8%201-4%202-4%204-3a105%20105%200%200130%2013c1-1-4-5-8-8-7-3-6-2-5-5%201-2%201-3-1-6l-2-4%203-2c4-5%201-14-5-14-2%200-2%200-1-3%201-4-1-9-4-10-2%200-4-1-5-3%200-2-2-3-4-4l-4-3c0-2-5-6-7-6s-3-1-4-3c-1-4-4-5-8-5l-6-3c-3-3-4-3-6-3-2%201-3%201-3-1s-5-6-8-6l-5%203m23%2049c-1%205-5%2011-10%2014l-4%202h3c3%201%209-1%2012-4%202-3%202-4%202-9-1-7-3-9-3-3M68%20162l39%2020%201%204c0%203-1%203-4%204-27%206-51%204-74-6-8-3-10-3-9-1%202%202%2025%2010%2034%2011%204%201%204%201%204%206l1%205h26c31%200%2028%201%2040-10%209-8%209-9%201-9-5%200-13-2-13-3l-6-3-23-11c-16-8-20-9-17-7'%20fill='%23d3d3d3'%20fill-rule='evenodd'/%3e%3c/svg%3e"
-                      alt=""
-                      style="
-                        opacity: 0;
-                        transition: opacity 500ms linear 0s;
-                        object-fit: cover;
-                      "
-                    /><img
                       width="171"
                       height="206"
-                      data-main-image=""
-                      sizes="(min-width: 171px) 171px, 100vw"
-                      decoding="async"
-                      src="/static/7f47a68054beb07b30c949a59c874725/e17bc/lady-hugging-sim-smiling.png"
-                      srcset="
-                        /static/7f47a68054beb07b30c949a59c874725/b8029/lady-hugging-sim-smiling.png  43w,
-                        /static/7f47a68054beb07b30c949a59c874725/1872b/lady-hugging-sim-smiling.png  86w,
-                        /static/7f47a68054beb07b30c949a59c874725/e17bc/lady-hugging-sim-smiling.png 171w
-                      "
+                      src="~/assets/images/illustrations/lady-hugging-sim-smiling.png"
                       alt="Solutions"
                       style="object-fit: cover; opacity: 1"
-                    /><noscript></noscript>
+                    />
                   </div>
                 </div>
               </div>
@@ -1126,7 +1091,7 @@
               ></a>
               <div style="" v-if="subMenuShowSolution">
                 <ul class="react-reveal pb-4">
-                  <div v-for="useCase in industries" :key="useCase.id">
+                  <div v-for="useCase in industries" :key="useCase.name">
                     <NuxtLink :to="`/use-case/${useCase.slug}`">
                       <li class="px-6 w-full mb-4">
                         <p class="text-sm my-2 text-blue font-medium">
