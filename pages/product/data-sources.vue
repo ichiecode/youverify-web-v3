@@ -43,39 +43,61 @@
                 </svg>
               </button>
             </div>
-            <div class="border border-gray-400 w-full md:w-3/6 rounded-md mt-3 p-4">
+            <div
+              class="border border-gray-400 w-full md:w-3/6 rounded-md mt-3 p-4"
+            >
               <div class="flex items-center justify-between mb-4">
                 <h3 class="">{{ country || "Worldwide" }}</h3>
                 <!-- <p>
                 latitude: {{ latitude || 0 }} , longitude: {{ longitude || 0 }}
               </p> -->
               </div>
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-10 border-gray-400 border-b py-4">
+              <div
+                class="
+                  grid grid-cols-2
+                  md:grid-cols-3
+                  gap-10
+                  border-gray-400 border-b
+                  py-4
+                "
+              >
                 <div>
                   <p class="uppercase text-xs">BVN Verification</p>
-                  <h3 class="mt-2 font-bold">{{ bvn ?  `${bvn}M+` : `${totalStats.bvn}M+` }}</h3>
+                  <h3 class="mt-2 font-bold">
+                    {{ bvn ? `${bvn}M+` : `${totalStats.bvn}M+` }}
+                  </h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">Drivers License</p>
-                  <h3 class="mt-2 font-bold">{{ license ?  `${license}M+` : `${totalStats.license}M+` }}</h3>
+                  <h3 class="mt-2 font-bold">
+                    {{ license ? `${license}M+` : `${totalStats.license}M+` }}
+                  </h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">NIN</p>
-                  <h3 class="mt-2 font-bold">{{ nin ?  `${nin}M+` : `${totalStats.nin}M+` }}</h3>
+                  <h3 class="mt-2 font-bold">
+                    {{ nin ? `${nin}M+` : `${totalStats.nin}M+` }}
+                  </h3>
                 </div>
               </div>
               <div class="grid grid-cols-2 md:grid-cols-3 gap-10 py-4">
                 <div>
                   <p class="uppercase text-xs">Address Verification</p>
-                  <h3 class="mt-2 font-bold">{{ address ?  `${address}M+` : `${totalStats.address}M+` }}</h3>
+                  <h3 class="mt-2 font-bold">
+                    {{ address ? `${address}M+` : `${totalStats.address}M+` }}
+                  </h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">Permanent Voters Card</p>
-                  <h3 class="mt-2 font-bold">{{ pvc ?  `${pvc}M+` : `${totalStats.pvc}M+` }}</h3>
+                  <h3 class="mt-2 font-bold">
+                    {{ pvc ? `${pvc}M+` : `${totalStats.pvc}M+` }}
+                  </h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">Card Verification</p>
-                  <h3 class="mt-2 font-bold">{{ card ?  `${card}M+` : `${totalStats.card}M+`}}</h3>
+                  <h3 class="mt-2 font-bold">
+                    {{ card ? `${card}M+` : `${totalStats.card}M+` }}
+                  </h3>
                 </div>
               </div>
             </div>
@@ -115,8 +137,8 @@ export default {
         country: 0,
         address: 0,
         pvc: 0,
-        card: 0, 
-      }
+        card: 0,
+      },
     };
   },
   methods: {
@@ -134,10 +156,12 @@ export default {
   },
   async mounted() {
     const markers = await this.getAllDataSource();
-    console.log(markers)
 
     const totalBvn = markers.reduce((a, b) => +a + +b.BVN, 0);
-    const totalAddress = markers.reduce((a, b) => +a + +b.addressVerification, 0);
+    const totalAddress = markers.reduce(
+      (a, b) => +a + +b.addressVerification,
+      0
+    );
     const totalPvc = markers.reduce((a, b) => +a + +b.pvc, 0);
     const totalNin = markers.reduce((a, b) => +a + +b.nin, 0);
     const totalLicence = markers.reduce((a, b) => +a + +b.driverLicense, 0);
@@ -150,7 +174,6 @@ export default {
     this.totalStats.license = totalLicence;
     this.totalStats.card = totalCard;
 
-
     let self = this;
     let centered = null;
     const size = {
@@ -161,15 +184,8 @@ export default {
       .select("#chartMaps")
       .append("svg")
       .attr("width", size.width)
+      .attr("style", "background: #115766")
       .attr("height", size.height);
-
-    // Add background
-    svg
-      .append("rect")
-      .attr("class", "mapBackground")
-      .attr("width", size.width)
-      .attr("height", size.height)
-      .style("background-color", "red");
 
     const projection = d3
       .geoMercator()
@@ -179,6 +195,16 @@ export default {
 
     const g = svg.append("g");
 
+    var zoom = d3
+      .zoom()
+      .scaleExtent([1, 8])
+      .on("zoom", function () {
+        
+        g.selectAll("circle").attr("transform", d3.event.transform);
+        g.selectAll("path").attr("transform", d3.event.transform);
+      });
+
+    svg.call(zoom);
     // create a tooltip
     var Tooltip = d3
       .select("#chartMaps")
@@ -186,7 +212,7 @@ export default {
       .attr("id", "tooltip")
       .attr(
         "style",
-        "position: absolute; opacity: 0; background: white; border-radius: 4px; padding: 8px"
+        "position: absolute; opacity: 0; width: 160px; z-index: 300; background: white; border-radius: 4px; padding: 10px;"
       );
 
     d3.queue()
@@ -213,18 +239,25 @@ export default {
           .append("path")
           .attr("class", "country")
           .attr("d", path)
-          .attr("vector-effect", "non-scaling-stroke")
           .attr("fill", "#46B2C8")
-          .attr("class", function (d) {
-            return "Country";
-          })
+          .attr("class", "Country")
           .style("opacity", 0.8)
-          .attr("stroke-width", 0.2)
+          .attr("stroke-width", 0.5)
           .attr("stroke", "#ffffff")
           .on("mouseover", mouseOver)
           .on("mouseleave", mouseLeave)
           .on("click", clicked);
 
+        g.selectAll("#chartMaps")
+          .data(dataGeo.features)
+          .enter()
+          .append("text")
+          .attr("class", "place-label")
+
+          .attr("dy", ".35em")
+          .text(function (d) {
+            return d.properties.name;
+          });
 
         g.selectAll("circle")
           .data(markers)
@@ -250,6 +283,7 @@ export default {
           .style("cursor", "pointer")
           .on("mouseover", mouseover)
           .on("mousemove", mousemove)
+          .on("click", clickedBubble)
           .on("mouseleave", mouseleave);
       });
 
@@ -302,7 +336,7 @@ export default {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("stroke", "black");
+        .style("stroke", "#0B4B58");
     };
 
     let mouseLeave = function (d) {
@@ -312,11 +346,36 @@ export default {
 
     var mouseover = function (d) {
       Tooltip.style("opacity", 1)
-        .html(`<div class='text-black font-normal text-xs'>${d.country}</div>`)
+        .html(
+          `
+          <div class="">
+            <h5 class='text-black font-bold'>
+              ${d.country}
+            </h5>
+            <div class="mt-2">
+              <div class="grid gap-x-3 grid-cols-2 items-center">
+                <div class='text-xs font-light'>
+                  Address
+                </div>
+                <div class='font-bold'>
+                  ${d.addressVerification}M+
+                </div>
+                <div class='text-xs font-light'>
+                  Licence
+                </div>
+                <div class='font-bold'>
+                  ${d.driverLicense}M+
+                </div>
+              </div>
+              
+            </div>
+          </div>`
+        )
         .transition()
         .duration(200);
     };
-    var mousemove = function (d) {
+
+    var clickedBubble = function (d) {
       self.continent = d.Continent;
       self.country = d.country;
       self.latitude = d.latitude;
@@ -327,7 +386,9 @@ export default {
       self.address = d.addressVerification;
       self.pvc = d.pvc;
       self.card = d.card;
+    };
 
+    var mousemove = function (d) {
       Tooltip.style("left", d3.event.pageX + 10 + "px").style(
         "top",
         d3.event.pageY + 10 + "px"
