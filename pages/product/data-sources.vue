@@ -16,7 +16,7 @@
         >
           <div class="border border-gray-400 w-3/6 rounded-md p-4">
             <div class="flex items-center justify-between mb-4">
-              <h3 class="">{{ continent || "Worldwide" }}</h3>
+              <h3 class="">{{ country || "Worldwide" }}</h3>
               <p>
                 latitude: {{ latitude || 0 }} , longitude: {{ longitude || 0 }}
               </p>
@@ -24,29 +24,29 @@
             <div class="grid grid-cols-3 border-gray-400 border-b py-4">
               <div>
                 <p class="uppercase text-xs">BVN Verification</p>
-                <h3 class="mt-2 font-bold">{{bvn || '34M+'}}</h3>
+                <h3 class="mt-2 font-bold">{{ bvn || "34M+" }}</h3>
               </div>
               <div>
                 <p class="uppercase text-xs">Drivers License</p>
-                <h3 class="mt-2 font-bold">{{license || '34M+'}}</h3>
+                <h3 class="mt-2 font-bold">{{ license || "34M+" }}</h3>
               </div>
               <div>
                 <p class="uppercase text-xs">NIN</p>
-                <h3 class="mt-2 font-bold">{{nin || '34M+'}}</h3>
+                <h3 class="mt-2 font-bold">{{ nin || "34M+" }}</h3>
               </div>
             </div>
             <div class="grid grid-cols-3 py-4">
               <div>
                 <p class="uppercase text-xs">Address Verification</p>
-                <h3 class="mt-2 font-bold">{{address || '34M+'}}</h3>
+                <h3 class="mt-2 font-bold">{{ address || "34M+" }}</h3>
               </div>
               <div>
                 <p class="uppercase text-xs">Permanent Voters Card</p>
-                <h3 class="mt-2 font-bold">{{pvc || '34M+'}}</h3>
+                <h3 class="mt-2 font-bold">{{ pvc || "34M+" }}</h3>
               </div>
               <div>
                 <p class="uppercase text-xs">Card Verification</p>
-                <h3 class="mt-2 font-bold">{{card || '34M+'}}</h3>
+                <h3 class="mt-2 font-bold">{{ card || "34M+" }}</h3>
               </div>
             </div>
           </div>
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import getStarted from "~/components/common/getStarted.vue";
 
 export default {
@@ -75,13 +76,29 @@ export default {
       bvn: null,
       license: null,
       nin: null,
+      country: null,
       address: null,
       pvc: null,
       card: null,
     };
   },
-  methods: {},
-  mounted() {
+  methods: {
+    async getAllDataSource() {
+      const allDataSource = await this.$store.dispatch(
+        "datasource/getDataSource"
+      );
+      return allDataSource;
+    },
+  },
+  computed: {
+    ...mapState({
+      dataSource: (state) => state.datasource.dataSource,
+      loading: (state) => state.datasource.loading,
+    }),
+  },
+  async mounted() {
+    const markers = await this.getAllDataSource();
+
     let self = this;
     let centered = null;
     const size = {
@@ -94,104 +111,104 @@ export default {
       lng: 117.5,
     };
 
-    var markers = [
-      {
-        long: 9.083,
-        lat: 42.149,
-        name: "Corsica",
-        n: 50,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      }, // corsica
-      {
-        long: 7.26,
-        lat: 43.71,
-        name: "Nice",
-        n: 30,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      }, // nice
-      {
-        long: 2.349,
-        lat: 48.864,
-        name: "Paris",
-        n: 50,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      }, // Paris
-      {
-        long: -1.397,
-        lat: 43.664,
-        name: "Hossegor",
-        n: 20,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      }, // Hossegor
-      {
-        long: 3.075,
-        lat: 50.64,
-        name: "Lille",
-        n: 50,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      }, // Lille
-      {
-        long: -3.83,
-        lat: 58,
-        name: "Morlaix",
-        n: 150,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      }, // Morlaix
-      {
-        long: -32.3,
-        lat: 26.4,
-        name: "Africa",
-        n: 150,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      },
-      {
-        long: 3.406448,
-        lat: 6.465422,
-        name: "Nigeria",
-        n: 120,
-        bvn: "30M+",
-        license: "30M+",
-        nin: "30M+",
-        address: "30M+",
-        pvc: "30M+",
-        card: "30M+",
-      },
-    ];
+    // var markers = [
+    //   {
+    //     long: 9.083,
+    //     lat: 42.149,
+    //     name: "Corsica",
+    //     n: 50,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   }, // corsica
+    //   {
+    //     long: 7.26,
+    //     lat: 43.71,
+    //     name: "Nice",
+    //     n: 30,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   }, // nice
+    //   {
+    //     long: 2.349,
+    //     lat: 48.864,
+    //     name: "Paris",
+    //     n: 50,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   }, // Paris
+    //   {
+    //     long: -1.397,
+    //     lat: 43.664,
+    //     name: "Hossegor",
+    //     n: 20,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   }, // Hossegor
+    //   {
+    //     long: 3.075,
+    //     lat: 50.64,
+    //     name: "Lille",
+    //     n: 50,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   }, // Lille
+    //   {
+    //     long: -3.83,
+    //     lat: 58,
+    //     name: "Morlaix",
+    //     n: 150,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   }, // Morlaix
+    //   {
+    //     long: -32.3,
+    //     lat: 26.4,
+    //     name: "Africa",
+    //     n: 150,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   },
+    //   {
+    //     long: 3.406448,
+    //     lat: 6.465422,
+    //     name: "Nigeria",
+    //     n: 120,
+    //     bvn: "30M+",
+    //     license: "30M+",
+    //     nin: "30M+",
+    //     address: "30M+",
+    //     pvc: "30M+",
+    //     card: "30M+",
+    //   },
+    // ];
     const svg = d3
       .select("#chartMaps")
       .append("svg")
@@ -214,6 +231,13 @@ export default {
     const path = d3.geoPath(projection);
 
     const g = svg.append("g");
+    // create a tooltip
+
+    var Tooltip = d3
+      .select("#mapLegend")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 1);
 
     d3.queue()
       .defer(function foo(url, callback) {
@@ -256,14 +280,14 @@ export default {
           .enter()
           .append("circle")
           .attr("cx", function (eachCircle) {
-            return projection([eachCircle.long, eachCircle.lat])[0];
+            return projection([eachCircle.longitude, eachCircle.latitude])[0];
           })
           .attr("cy", function (eachCircle) {
-            return projection([eachCircle.long, eachCircle.lat])[1];
+            return projection([eachCircle.longitude, eachCircle.latitude])[1];
           })
 
           .attr("r", function (eachCircle) {
-            return nToRadius(eachCircle.n);
+            return nToRadius(eachCircle.volume);
           })
           .attr("class", function (d) {
             return "circle-data";
@@ -341,16 +365,17 @@ export default {
       Tooltip.style("opacity", 1);
     };
     var mousemove = function (d) {
-      self.continent = d.name;
-      self.latitude = d.lat;
-      self.longitude = d.long;
-      self.bvn = d.bvn;
-      self.license = d.license;
+      self.continent = d.Continent;
+      self.country = d.country;
+      self.latitude = d.latitude;
+      self.longitude = d.longitude;
+      self.bvn = d.BVN;
+      self.license = d.driverLicense;
       self.nin = d.nin;
-      self.address = d.address;
+      self.address = d.addressVerification;
       self.pvc = d.pvc;
       self.card = d.card;
-      
+
       // Tooltip.html(
       //   d.homecontinent +
       //     "<br>" +
@@ -383,5 +408,19 @@ export default {
 }
 .hidden {
   display: none;
+}
+
+div.tooltip {
+  color: #222;
+  background-color: #fff;
+  padding: 0.5em;
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px;
+  opacity: 0.9;
+  position: absolute;
+}
+
+.Country .circle-data {
+  cursor: pointer;
 }
 </style>
