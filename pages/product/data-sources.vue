@@ -5,11 +5,11 @@
       <div class="pt-5 pb-12">
         <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <div class="flex items-center justify-center flex-col">
-            <div class="hidden relative text-gray-600 mb-10 border rounded-md w-4/12">
+            <div class="relative text-gray-600 mb-10 border rounded-md w-4/12">
               <input
                 type="search"
                 name="serch"
-                v-model="country"
+                v-model="tempCountry"
                 placeholder="Search"
                 class="
                   bg-white
@@ -43,39 +43,39 @@
                 </svg>
               </button>
             </div>
-            <div class="border border-gray-400 w-3/6 rounded-md mt-8 p-4">
+            <div class="border border-gray-400 w-full md:w-3/6 rounded-md mt-3 p-4">
               <div class="flex items-center justify-between mb-4">
                 <h3 class="">{{ country || "Worldwide" }}</h3>
                 <!-- <p>
                 latitude: {{ latitude || 0 }} , longitude: {{ longitude || 0 }}
               </p> -->
               </div>
-              <div class="grid grid-cols-3 border-gray-400 border-b py-4">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-10 border-gray-400 border-b py-4">
                 <div>
                   <p class="uppercase text-xs">BVN Verification</p>
-                  <h3 class="mt-2 font-bold">{{ bvn || "34M+" }}</h3>
+                  <h3 class="mt-2 font-bold">{{ bvn ?  `${bvn}M+` : `${totalStats.bvn}M+` }}</h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">Drivers License</p>
-                  <h3 class="mt-2 font-bold">{{ license || "34M+" }}</h3>
+                  <h3 class="mt-2 font-bold">{{ license ?  `${license}M+` : `${totalStats.license}M+` }}</h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">NIN</p>
-                  <h3 class="mt-2 font-bold">{{ nin || "34M+" }}</h3>
+                  <h3 class="mt-2 font-bold">{{ nin ?  `${nin}M+` : `${totalStats.nin}M+` }}</h3>
                 </div>
               </div>
-              <div class="grid grid-cols-3 py-4">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-10 py-4">
                 <div>
                   <p class="uppercase text-xs">Address Verification</p>
-                  <h3 class="mt-2 font-bold">{{ address || "34M+" }}</h3>
+                  <h3 class="mt-2 font-bold">{{ address ?  `${address}M+` : `${totalStats.address}M+` }}</h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">Permanent Voters Card</p>
-                  <h3 class="mt-2 font-bold">{{ pvc || "34M+" }}</h3>
+                  <h3 class="mt-2 font-bold">{{ pvc ?  `${pvc}M+` : `${totalStats.pvc}M+` }}</h3>
                 </div>
                 <div>
                   <p class="uppercase text-xs">Card Verification</p>
-                  <h3 class="mt-2 font-bold">{{ card || "34M+" }}</h3>
+                  <h3 class="mt-2 font-bold">{{ card ?  `${card}M+` : `${totalStats.card}M+`}}</h3>
                 </div>
               </div>
             </div>
@@ -97,8 +97,7 @@ export default {
   },
   data() {
     return {
-      province: undefined,
-      currentProvince: undefined,
+      tempCountry: null,
       continent: null,
       latitude: null,
       longitude: null,
@@ -109,6 +108,15 @@ export default {
       address: null,
       pvc: null,
       card: null,
+      totalStats: {
+        bvn: 0,
+        license: 0,
+        nin: 0,
+        country: 0,
+        address: 0,
+        pvc: 0,
+        card: 0, 
+      }
     };
   },
   methods: {
@@ -126,6 +134,22 @@ export default {
   },
   async mounted() {
     const markers = await this.getAllDataSource();
+    console.log(markers)
+
+    const totalBvn = markers.reduce((a, b) => +a + +b.BVN, 0);
+    const totalAddress = markers.reduce((a, b) => +a + +b.addressVerification, 0);
+    const totalPvc = markers.reduce((a, b) => +a + +b.pvc, 0);
+    const totalNin = markers.reduce((a, b) => +a + +b.nin, 0);
+    const totalLicence = markers.reduce((a, b) => +a + +b.driverLicense, 0);
+    const totalCard = markers.reduce((a, b) => +a + +b.card, 0);
+
+    this.totalStats.bvn = totalBvn;
+    this.totalStats.address = totalAddress;
+    this.totalStats.pvc = totalPvc;
+    this.totalStats.nin = totalNin;
+    this.totalStats.license = totalLicence;
+    this.totalStats.card = totalCard;
+
 
     let self = this;
     let centered = null;
