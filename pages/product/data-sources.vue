@@ -1,47 +1,105 @@
 <template>
   <div>
     <div>
-      <div id="chartMaps"></div>
+      <div id="chartMaps" class="relative">
+
+        <div class=" absolute bottom-7 right-7 bg-white rounded-md flex flex-col">
+          <button class="flex justify-center items-center border h-10 w-10" type="button" id="zoom-in">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus w-10 h-10" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+          </button>
+          <button class="flex justify-center items-center border h-10 w-10" type="button" id="zoom-out">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash w-10 h-10" viewBox="0 0 16 16">
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <div class="pt-5 pb-12">
+        
         <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <div class="flex items-center justify-center flex-col">
-            <div class="relative text-gray-600 mb-10 border rounded-md w-4/12">
-              <input
-                type="search"
-                name="serch"
-                v-model="tempCountry"
-                placeholder="Search"
+            <div class="w-3/6 mb-10">
+              <div
                 class="
-                  bg-white
+                  inline-flex
+                  flex-col
+                  justify-center
+                  relative
+                  text-gray-500
                   w-full
-                  h-10
-                  px-5
-                  pr-10
-                  rounded-full
-                  text-sm
-                  focus:outline-none
                 "
-              />
-              <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
-                <svg
-                  class="h-4 w-4 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  id="Capa_1"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 56.966 56.966"
-                  style="enable-background: new 0 0 56.966 56.966"
-                  xml:space="preserve"
-                  width="512px"
-                  height="512px"
-                >
-                  <path
-                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+              >
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="
+                      p-2
+                      w-full
+                      pl-8
+                      rounded
+                      border border-gray-200
+                      bg-gray-200
+                      focus:bg-white
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-yellow-600
+                      focus:border-transparent
+                    "
+                    placeholder="Search Countries..."
+                    v-model="tempCountry"
                   />
-                </svg>
-              </button>
+                  <svg
+                    class="w-4 h-4 absolute left-2.5 top-3.5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+                <ul class="bg-white border border-gray-100 w-full mt-2">
+                  <li
+                    v-for="post in filteredList"
+                    :key="post.id"
+                    @click="selectedCountry(post)"
+                    class="
+                      pl-8
+                      pr-2
+                      py-3
+                      border-gray-100
+                      relative
+                      cursor-pointer
+                      hover:bg-gray-100 hover:text-white
+                    "
+                  >
+                    <h4 class="text-gray-500">{{ post.country }}</h4>
+                  </li>
+                  <li
+                    v-if="tempCountry"
+                    @click="selectedCountry()"
+                    class="
+                      pl-8
+                      pr-2
+                      py-3
+                      border-gray-100
+                      relative
+                      cursor-pointer
+                      hover:bg-gray-100 hover:text-white
+                    "
+                  >
+                    <h4 class="text-gray-500">Worldwide</h4>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
               class="border border-gray-400 w-full md:w-3/6 rounded-md mt-3 p-4"
@@ -119,6 +177,7 @@ export default {
   },
   data() {
     return {
+      allMarkersData: null,
       tempCountry: null,
       continent: null,
       latitude: null,
@@ -148,15 +207,43 @@ export default {
       );
       return allDataSource;
     },
+    selectedCountry(params) {
+      if (params) {
+        this.clickedBubble(params);
+        this.tempCountry = null;
+      } else {
+        this.clickedBubble(this.totalStats);
+        this.tempCountry = null;
+      }
+    },
+    clickedBubble(d) {
+      this.continent = d.Continent;
+      this.country = d.country;
+      this.latitude = d.latitude;
+      this.longitude = d.longitude;
+      this.bvn = d.BVN;
+      this.license = d.driverLicense;
+      this.nin = d.nin;
+      this.address = d.addressVerification;
+      this.pvc = d.pvc;
+      this.card = d.card;
+    },
   },
   computed: {
     ...mapState({
       loading: (state) => state.datasource.loading,
     }),
+    filteredList() {
+      let data = this.allMarkersData ? this.allMarkersData : [];
+      return data.filter((post) => {
+        let search = this.tempCountry ? this.tempCountry.toLowerCase() : null;
+        return post.country.toLowerCase().includes(search);
+      });
+    },
   },
   async mounted() {
     const markers = await this.getAllDataSource();
-
+    this.allMarkersData = markers;
     const totalBvn = markers.reduce((a, b) => +a + +b.BVN, 0);
     const totalAddress = markers.reduce(
       (a, b) => +a + +b.addressVerification,
@@ -199,7 +286,6 @@ export default {
       .zoom()
       .scaleExtent([1, 8])
       .on("zoom", function () {
-        
         g.selectAll("circle").attr("transform", d3.event.transform);
         g.selectAll("path").attr("transform", d3.event.transform);
       });
@@ -283,9 +369,20 @@ export default {
           .style("cursor", "pointer")
           .on("mouseover", mouseover)
           .on("mousemove", mousemove)
-          .on("click", clickedBubble)
+          .on("click", function (eachCircle) {
+            self.clickedBubble(eachCircle);
+          })
+          .on("click", clicked)
           .on("mouseleave", mouseleave);
       });
+
+    d3.select("#zoom-in").on("click", function () {
+      zoom.scaleBy(svg.transition().duration(750), 1.3);
+    });
+
+    d3.select("#zoom-out").on("click", function () {
+      zoom.scaleBy(svg.transition().duration(750), 1 / 1.3);
+    });
 
     function clicked(d) {
       var x, y, k;
@@ -295,15 +392,13 @@ export default {
         var centroid = path.centroid(d);
         x = centroid[0];
         y = centroid[1];
-        k = 4;
+        k = 5;
         centered = d;
-        // app.openInfo(d.properties);
       } else {
         x = size.width / 2;
         y = size.height / 2;
         k = 1;
         centered = null;
-        // app.closeInfo();
       }
 
       // Highlight the clicked province
@@ -373,19 +468,6 @@ export default {
         )
         .transition()
         .duration(200);
-    };
-
-    var clickedBubble = function (d) {
-      self.continent = d.Continent;
-      self.country = d.country;
-      self.latitude = d.latitude;
-      self.longitude = d.longitude;
-      self.bvn = d.BVN;
-      self.license = d.driverLicense;
-      self.nin = d.nin;
-      self.address = d.addressVerification;
-      self.pvc = d.pvc;
-      self.card = d.card;
     };
 
     var mousemove = function (d) {
