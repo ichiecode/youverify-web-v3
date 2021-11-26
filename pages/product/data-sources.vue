@@ -1,8 +1,24 @@
 <template>
   <div>
     <div>
-      <div id="chartMaps"></div>
+      <div id="chartMaps" class="relative">
+
+        <div class=" absolute bottom-7 right-7 bg-white rounded-md flex flex-col">
+          <button class="flex justify-center items-center border h-10 w-10" type="button" id="zoom-in">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus w-10 h-10" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+          </button>
+          <button class="flex justify-center items-center border h-10 w-10" type="button" id="zoom-out">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash w-10 h-10" viewBox="0 0 16 16">
+              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <div class="pt-5 pb-12">
+        
         <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <div class="flex items-center justify-center flex-col">
             <div class="w-3/6 mb-10">
@@ -51,7 +67,6 @@
                   </svg>
                 </div>
                 <ul class="bg-white border border-gray-100 w-full mt-2">
-                  
                   <li
                     v-for="post in filteredList"
                     :key="post.id"
@@ -357,8 +372,17 @@ export default {
           .on("click", function (eachCircle) {
             self.clickedBubble(eachCircle);
           })
+          .on("click", clicked)
           .on("mouseleave", mouseleave);
       });
+
+    d3.select("#zoom-in").on("click", function () {
+      zoom.scaleBy(svg.transition().duration(750), 1.3);
+    });
+
+    d3.select("#zoom-out").on("click", function () {
+      zoom.scaleBy(svg.transition().duration(750), 1 / 1.3);
+    });
 
     function clicked(d) {
       var x, y, k;
@@ -368,15 +392,13 @@ export default {
         var centroid = path.centroid(d);
         x = centroid[0];
         y = centroid[1];
-        k = 4;
+        k = 5;
         centered = d;
-        // app.openInfo(d.properties);
       } else {
         x = size.width / 2;
         y = size.height / 2;
         k = 1;
         centered = null;
-        // app.closeInfo();
       }
 
       // Highlight the clicked province
