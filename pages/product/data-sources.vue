@@ -2,26 +2,52 @@
   <div>
     <div>
       <div id="chartMaps" class="relative">
-
-        <div class=" absolute bottom-7 right-7 bg-white rounded-md flex flex-col">
-          <button class="flex justify-center items-center border h-10 w-10" type="button" id="zoom-in">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus w-10 h-10" viewBox="0 0 16 16">
-              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        <div
+          class="absolute bottom-7 right-7 bg-white rounded-md flex flex-col"
+        >
+          <button
+            class="flex justify-center items-center border h-10 w-10"
+            type="button"
+            id="zoom-in"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus w-10 h-10"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
             </svg>
           </button>
-          <button class="flex justify-center items-center border h-10 w-10" type="button" id="zoom-out">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash w-10 h-10" viewBox="0 0 16 16">
-              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+          <button
+            class="flex justify-center items-center border h-10 w-10"
+            type="button"
+            id="zoom-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-dash w-10 h-10"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+              />
             </svg>
           </button>
         </div>
       </div>
 
       <div class="pt-5 pb-12">
-        
         <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <div class="flex items-center justify-center flex-col">
-            <div class="w-3/6 mb-10">
+            <div class="w-full md:w-3/6 mb-5 md:mb-10">
               <div
                 class="
                   inline-flex
@@ -48,6 +74,7 @@
                       focus:ring-yellow-600
                       focus:border-transparent
                     "
+                    @focus="handleFocus"
                     placeholder="Search Countries..."
                     v-model="tempCountry"
                   />
@@ -105,57 +132,99 @@
               class="border border-gray-400 w-full md:w-3/6 rounded-md mt-3 p-4"
             >
               <div class="flex items-center justify-between mb-4">
-                <h3 class="">{{ country || "Worldwide" }}</h3>
-                <!-- <p>
-                latitude: {{ latitude || 0 }} , longitude: {{ longitude || 0 }}
-              </p> -->
+                <h3 class="">
+                  {{ filteredSelectedList.country || "Worldwide" }}
+                </h3>
               </div>
-              <div
-                class="
-                  grid grid-cols-2
-                  md:grid-cols-3
-                  gap-10
-                  border-gray-400 border-b
-                  py-4
-                "
-              >
+              <div class="py-4 grid grid-cols-2 gap-10">
                 <div>
-                  <p class="uppercase text-xs">BVN Verification</p>
-                  <h3 class="mt-2 font-bold">
-                    {{ bvn ? `${bvn}M+` : `${totalStats.bvn}M+` }}
-                  </h3>
+                  <p class="font-bold uppercase text-sm mb-5">
+                    Identity Data Source
+                  </p>
+                  <div>
+                    <h5
+                      class="mt-2 font-bold"
+                      v-for="item in filteredSelectedList.IdentityDataSources"
+                      :key="item.id"
+                    >
+                      {{ item.title }}
+                    </h5>
+                  </div>
                 </div>
                 <div>
-                  <p class="uppercase text-xs">Drivers License</p>
-                  <h3 class="mt-2 font-bold">
-                    {{ license ? `${license}M+` : `${totalStats.license}M+` }}
-                  </h3>
+                  <p class="font-bold uppercase text-sm mb-5">
+                    Address verification
+                  </p>
+                  <div>
+                    <h5
+                      class="mt-2 font-bold"
+                      v-for="item in filteredSelectedList.AddressVerification"
+                      :key="item.id"
+                    >
+                      {{ item.title }}
+                    </h5>
+                  </div>
                 </div>
                 <div>
-                  <p class="uppercase text-xs">NIN</p>
-                  <h3 class="mt-2 font-bold">
-                    {{ nin ? `${nin}M+` : `${totalStats.nin}M+` }}
-                  </h3>
-                </div>
-              </div>
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-10 py-4">
-                <div>
-                  <p class="uppercase text-xs">Address Verification</p>
-                  <h3 class="mt-2 font-bold">
-                    {{ address ? `${address}M+` : `${totalStats.address}M+` }}
-                  </h3>
-                </div>
-                <div>
-                  <p class="uppercase text-xs">Permanent Voters Card</p>
-                  <h3 class="mt-2 font-bold">
-                    {{ pvc ? `${pvc}M+` : `${totalStats.pvc}M+` }}
-                  </h3>
+                  <p class="font-bold uppercase text-sm mb-5">
+                    University Certificate
+                  </p>
+                  <div>
+                    <h5
+                      class="mt-2 font-bold"
+                      v-for="item in filteredSelectedList.UniversityCertificate"
+                      :key="item.id"
+                    >
+                      {{ item.title }}
+                    </h5>
+                  </div>
                 </div>
                 <div>
-                  <p class="uppercase text-xs">Card Verification</p>
-                  <h3 class="mt-2 font-bold">
-                    {{ card ? `${card}M+` : `${totalStats.card}M+` }}
-                  </h3>
+                  <p class="font-bold uppercase text-sm mb-5">PEP/Sanction</p>
+                  <div>
+                    <h5
+                      class="mt-2 font-bold"
+                      v-for="item in filteredSelectedList.PEPSanctionList"
+                      :key="item.id"
+                    >
+                      {{ item.title }}
+                    </h5>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-bold uppercase text-sm mb-5">
+                    Corporate Registry
+                  </p>
+                  <h5 class="mt-2 font-bold">
+                    {{
+                      filteredSelectedList.CorporateRegistry === true
+                        ? "Yes"
+                        : "No"
+                    }}
+                  </h5>
+                </div>
+                <div>
+                  <p class="font-bold uppercase text-sm mb-5">Bank Statement</p>
+                  <h5 class="mt-2 font-bold">
+                    {{
+                      filteredSelectedList.BankStatement === true ? "Yes" : "No"
+                    }}
+                  </h5>
+                </div>
+                <div>
+                  <p class="font-bold uppercase text-sm mb-5">Liveness Test</p>
+                  <h5 class="mt-2 font-bold">
+                    {{
+                      filteredSelectedList.LivenessTest === true ? "Yes" : "No"
+                    }}
+                  </h5>
+                </div>
+                <div>
+                  <p class="font-bold uppercase text-sm mb-5">ID Capture</p>
+                  <h5 class="mt-2 font-bold">
+                    {{ filteredSelectedList.IDCapture === true ? "Yes" : "No" }}
+                  </h5>
                 </div>
               </div>
             </div>
@@ -179,24 +248,12 @@ export default {
     return {
       allMarkersData: null,
       tempCountry: null,
-      continent: null,
-      latitude: null,
-      longitude: null,
-      bvn: null,
-      license: null,
-      nin: null,
-      country: null,
-      address: null,
-      pvc: null,
-      card: null,
+      selectDataPoint: null,
       totalStats: {
-        bvn: 0,
-        license: 0,
-        nin: 0,
-        country: 0,
-        address: 0,
-        pvc: 0,
-        card: 0,
+        BankStatement: true,
+        CorporateRegistry: true,
+        LivenessTest:  true,
+        IDCapture: true
       },
     };
   },
@@ -217,22 +274,20 @@ export default {
       }
     },
     clickedBubble(d) {
-      this.continent = d.Continent;
-      this.country = d.country;
-      this.latitude = d.latitude;
-      this.longitude = d.longitude;
-      this.bvn = d.BVN;
-      this.license = d.driverLicense;
-      this.nin = d.nin;
-      this.address = d.addressVerification;
-      this.pvc = d.pvc;
-      this.card = d.card;
+      this.selectDataPoint = d;
     },
+    handleFocus() {
+      this.tempCountry = ''
+    }
   },
   computed: {
     ...mapState({
       loading: (state) => state.datasource.loading,
     }),
+    filteredSelectedList() {
+      let data = this.selectDataPoint ? this.selectDataPoint : [];
+      return data;
+    },
     filteredList() {
       let data = this.allMarkersData ? this.allMarkersData : [];
       return data.filter((post) => {
@@ -244,23 +299,26 @@ export default {
   async mounted() {
     const markers = await this.getAllDataSource();
     this.allMarkersData = markers;
-    const totalBvn = markers.reduce((a, b) => +a + +b.BVN, 0);
-    const totalAddress = markers.reduce(
-      (a, b) => +a + +b.addressVerification,
-      0
-    );
-    const totalPvc = markers.reduce((a, b) => +a + +b.pvc, 0);
-    const totalNin = markers.reduce((a, b) => +a + +b.nin, 0);
-    const totalLicence = markers.reduce((a, b) => +a + +b.driverLicense, 0);
-    const totalCard = markers.reduce((a, b) => +a + +b.card, 0);
+    const allIdentity = [];
+    const allAddress = [];
+    const allUniversity = [];
+    const allPEP = [];
+    markers.map((items) => {
+      allIdentity.push(...items.IdentityDataSources);
+      allAddress.push(...items.AddressVerification);
+      allUniversity.push(...items.UniversityCertificate);
+      allPEP.push(...items.PEPSanctionList);
+    });
 
-    this.totalStats.bvn = totalBvn;
-    this.totalStats.address = totalAddress;
-    this.totalStats.pvc = totalPvc;
-    this.totalStats.nin = totalNin;
-    this.totalStats.license = totalLicence;
-    this.totalStats.card = totalCard;
+    function getUniqueListBy(arr, key) {
+      return [...new Map(arr.map((item) => [item[key], item])).values()];
+    }
+    this.totalStats.IdentityDataSources = getUniqueListBy(allIdentity, "title");
+    this.totalStats.AddressVerification = getUniqueListBy(allAddress, "title");
+    this.totalStats.UniversityCertificate = getUniqueListBy(allUniversity, "title");
+    this.totalStats.PEPSanctionList = getUniqueListBy(allPEP, "title");
 
+    this.clickedBubble(this.totalStats)
     let self = this;
     let centered = null;
     const size = {
@@ -298,7 +356,7 @@ export default {
       .attr("id", "tooltip")
       .attr(
         "style",
-        "position: absolute; opacity: 0; width: 160px; z-index: 300; background: white; border-radius: 4px; padding: 10px;"
+        "position: absolute; left: 64px; opacity: 0; width: 290px; z-index: 300; background: white; border-radius: 4px; padding: 10px;"
       );
 
     d3.queue()
@@ -372,7 +430,6 @@ export default {
           .on("click", function (eachCircle) {
             self.clickedBubble(eachCircle);
           })
-          .on("click", clicked)
           .on("mouseleave", mouseleave);
       });
 
@@ -386,8 +443,6 @@ export default {
 
     function clicked(d) {
       var x, y, k;
-
-      // Compute centroid of the selected path
       if (d && centered !== d) {
         var centroid = path.centroid(d);
         x = centroid[0];
@@ -400,8 +455,6 @@ export default {
         k = 1;
         centered = null;
       }
-
-      // Highlight the clicked province
       g.selectAll("path").style("fill", function (d) {
         return centered && d === centered ? "#0B4B58" : "";
       });
@@ -440,6 +493,24 @@ export default {
     };
 
     var mouseover = function (d) {
+      let Identity = "";
+      let Address = "";
+      let University = "";
+      let PEP = "";
+
+      d.IdentityDataSources.forEach(function (item) {
+        Identity += "<div class='text-xs'>" + item.abbreviation + "</div>";
+      });
+      d.AddressVerification.forEach(function (item) {
+        Address += "<div class='text-xs'>" + item.abbreviation + "</div>";
+      });
+      d.UniversityCertificate.forEach(function (item) {
+        University += "<div class='text-xs'>" + item.abbreviation + "</div>";
+      });
+      d.PEPSanctionList.forEach(function (item) {
+        PEP += "<div class='text-xs'>" + item.abbreviation + "</div>";
+      });
+
       Tooltip.style("opacity", 1)
         .html(
           `
@@ -447,20 +518,66 @@ export default {
             <h5 class='text-black font-bold'>
               ${d.country}
             </h5>
-            <div class="mt-2">
-              <div class="grid gap-x-3 grid-cols-2 items-center">
-                <div class='text-xs font-light'>
-                  Address
+            <div class="mt-3 grid grid-cols-2 gap-3">
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  Identity Data source
                 </div>
-                <div class='font-bold'>
-                  ${d.addressVerification}M+
+                ${Identity}
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  Address Verification
                 </div>
-                <div class='text-xs font-light'>
-                  Licence
+                ${Address}
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  University Certificate
                 </div>
-                <div class='font-bold'>
-                  ${d.driverLicense}M+
+                ${University}
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  PEP/Sanction List
                 </div>
+                ${PEP}
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  Corporate Registry
+                </div>
+                <div class='text-xs'>${
+                  d.CorporateRegistry === true ? "Yes" : "No"
+                }</div>
+                
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  Bank Statement
+                </div>
+                <div class='text-xs'>${
+                  d.BankStatement === true ? "Yes" : "No"
+                }</div>
+                
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-1'>
+                  Liveness Test
+                </div>
+                <div class='text-xs'>${
+                  d.LivenessTest === true ? "Yes" : "No"
+                }</div>
+                
+              </div>
+              <div class="">
+                <div class='text-xs text-blue font-semibold mb-2'>
+                  ID Capture
+                </div>
+                <div class='text-xs'>${
+                  d.IDCapture === true ? "Yes" : "No"
+                }</div>
+                
               </div>
               
             </div>
@@ -476,6 +593,7 @@ export default {
         d3.event.pageY + 10 + "px"
       );
     };
+
     var mouseleave = function (d) {
       Tooltip.style("opacity", 0);
     };
@@ -498,17 +616,6 @@ export default {
 }
 .hidden {
   display: none;
-}
-
-#chartMaps .tooltip {
-  color: #222;
-  background-color: red;
-  padding: 0.5em;
-  height: 400px;
-  text-shadow: #f5f5f5 0 1px 0;
-  border-radius: 2px;
-  opacity: 1;
-  position: absolute;
 }
 
 .Country .circle-data {
