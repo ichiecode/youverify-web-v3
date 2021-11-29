@@ -6,24 +6,41 @@
         flex
         items-center
         justify-center
-        sm:pt-24
-        pt-36
-        sm:pb-0
-        pb-24
-        sm:min-h-screen
+        sm:pt-24 sm:pb-0 sm:min-h-screen
         min-h-header
         bg-blue-100
+        relative
       "
     >
-      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-        <h1 class="max-w-screen-lg">
-          <p>Close-knit.</p>
-          <p>Open-minded.</p>
-          <p>Mission-driven.</p>
-        </h1>
-        <p class="max-w-screen-sm mx-auto mt-6"></p>
-        <div class="mt-6"></div>
-      </section>
+      <img
+        class="sm:min-h-screen min-h-header w-full h-full object-cover"
+        src="../assets/images/team/aboutimage.jpeg"
+        alt=""
+      />
+      <div
+        class="
+          sm:min-h-screen
+          min-h-header
+          absolute
+          h-full
+          w-full
+          top-0
+          opaque
+          flex
+          justify-center
+          items-center
+        "
+      >
+        <section class="mx-auto sm:px-8 px-6">
+          <h1 class="text-blue-200">
+            <p>Close-knit.</p>
+            <p>Open-minded.</p>
+            <p>Mission-driven.</p>
+          </h1>
+          <p class="max-w-screen-sm mx-auto mt-6"></p>
+          <div class="mt-6"></div>
+        </section>
+      </div>
     </header>
 
     <section class="max-w-screen-md mx-auto sm:pt-40 pt-20 text-center px-10">
@@ -149,13 +166,16 @@
           </div>
         </section>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <article class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md" v-for="value in values" :key="value.id">
-            <h4 class="mb-4">{{value.title}}</h4>
+          <article
+            class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md"
+            v-for="value in values"
+            :key="value.id"
+          >
+            <h4 class="mb-4">{{ value.title }}</h4>
             <p class="">
-              {{value.teasers}}
+              {{ value.teasers }}
             </p>
           </article>
-          
         </div>
       </div>
     </section>
@@ -195,8 +215,7 @@ import { mapState } from "vuex";
 export default {
   name: "aboutUs",
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     async getAllTeam() {
@@ -226,5 +245,10 @@ export default {
 
 .partner:hover .partner-name {
   opacity: 1;
+}
+
+.opaque {
+  
+  background: rgba(239, 248, 249, 0.7);
 }
 </style>
