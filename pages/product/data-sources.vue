@@ -111,7 +111,7 @@
                     <h4 class="text-gray-500">{{ post.country }}</h4>
                   </li>
                   <li
-                    v-if="tempCountry"
+                    v-if="showDropDownWorldWide"
                     @click="selectedCountry()"
                     class="
                       pl-8
@@ -248,6 +248,7 @@ export default {
     return {
       allMarkersData: null,
       tempCountry: null,
+      showDropDownWorldWide: false,
       selectDataPoint: null,
       totalStats: {
         BankStatement: true,
@@ -267,9 +268,11 @@ export default {
     selectedCountry(params) {
       if (params) {
         this.clickedBubble(params);
+        this.showDropDownWorldWide = false
         this.tempCountry = null;
       } else {
         this.clickedBubble(this.totalStats);
+        this.showDropDownWorldWide = false
         this.tempCountry = null;
       }
     },
@@ -277,7 +280,7 @@ export default {
       this.selectDataPoint = d;
     },
     handleFocus() {
-      this.tempCountry = ''
+      this.showDropDownWorldWide = true
     }
   },
   computed: {

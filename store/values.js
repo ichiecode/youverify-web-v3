@@ -19,7 +19,6 @@ export const actions = {
     const response = await this.$axios
       .$get(`${process.env.baseUrl}/values`)
       .then((res) => {
-        console.log(res);
         commit("setValues", res);
         commit("setLoading", false);
         return res;
