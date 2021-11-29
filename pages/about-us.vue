@@ -99,7 +99,15 @@
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <h2>Meet the Youverify Team</h2>
         <div class="grid sm:grid-cols-5 grid-cols-2 sm:gap-12 gap-8 py-10">
-          <section v-for="team in teams" :key="team.id">
+          <content-placeholders
+            v-show="loadingTeams"
+            v-for="index in 5"
+            :key="index"
+          >
+            <content-placeholders-heading :img="true" />
+            <content-placeholders-text :lines="3" />
+          </content-placeholders>
+          <section v-show="!loadingTeams" v-for="team in teams" :key="team.id">
             <div class="block">
               <img
                 width="203"
@@ -165,7 +173,20 @@
             </p>
           </div>
         </section>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+        <div
+          v-show="loadingValues"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-10"
+        >
+          <content-placeholders v-for="index in 4" :key="index">
+            <content-placeholders-heading :img="true" />
+            <content-placeholders-text :lines="3" />
+          </content-placeholders>
+        </div>
+        <div
+          v-show="!loadingValues"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-5"
+        >
           <article
             class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md"
             v-for="value in values"
@@ -232,7 +253,9 @@ export default {
   computed: {
     ...mapState({
       teams: (state) => state.teams.teams,
+      loadingTeams: (state) => state.teams.loading,
       values: (state) => state.values.values,
+      loadingValues: (state) => state.values.loading,
     }),
   },
 };
@@ -248,7 +271,6 @@ export default {
 }
 
 .opaque {
-  
   background: rgba(239, 248, 249, 0.7);
 }
 </style>
