@@ -261,19 +261,27 @@
             </div>
           </div>
           <transition name="fade">
-            <div class="w-full" v-if="showService">
-              <img
-                src="~/assets/images/illustrations/with-yv.png"
-                alt="Mand holding a paper plane"
-              />
+            <div class="w-full flex justify-center items-center" v-if="showService">
+              <lottie-player
+                src="https://assets10.lottiefiles.com/packages/lf20_vgxxp1nq.json"
+                background="transparent"
+                speed="0.8"
+                class="h-full w-full"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </transition>
           <transition name="fade">
-            <div class="w-full" v-if="!showService">
-              <img
-                src="~/assets/images/illustrations/without-yv.png"
-                alt="Mand holding a paper plane"
-              />
+            <div class="w-full flex justify-center items-center" v-if="!showService">
+              <lottie-player
+                src="https://assets1.lottiefiles.com/packages/lf20_7yi0ptca.json"
+                background="transparent"
+                speed="0.8"
+                class="h-full w-full"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </transition>
         </div>
@@ -788,7 +796,7 @@
       </div>
     </section> -->
 
-    <section class="bg-blue-300 py-20 text-blue-100 relative">
+    <section class="bg-blue-300 py-20 text-blue-100 relative overflow-hidden ">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section class="grid sm:grid-cols-2 grid-cols-1">
           <div class="sm:mt-0 mt-96">

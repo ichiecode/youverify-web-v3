@@ -325,19 +325,27 @@
             </div>
           </div>
           <transition name="fade">
-            <div class="w-full" v-if="showService">
-              <img
-                src="~/assets/images/illustrations/with-yv.png"
-                alt="Mand holding a paper plane"
-              />
+            <div class="w-full flex justify-center items-center" v-if="showService">
+              <lottie-player
+                class="h-full w-full"
+                src="https://assets10.lottiefiles.com/packages/lf20_vgxxp1nq.json"
+                background="transparent"
+                speed="0.8"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </transition>
           <transition name="fade">
-            <div class="w-full" v-if="!showService">
-              <img
-                src="~/assets/images/illustrations/without-yv.png"
-                alt="Mand holding a paper plane"
-              />
+            <div class="w-full flex justify-center items-center" v-if="!showService">
+              <lottie-player
+                src="https://assets1.lottiefiles.com/packages/lf20_7yi0ptca.json"
+                background="transparent"
+                speed="0.8"
+                class="h-full w-full"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </transition>
         </div>
@@ -471,7 +479,7 @@
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
           <img
-            src="../assets/images/illustrations/kyc-as-a-service.png"
+            src="../assets/images/illustrations/kyc-as-a-service.svg"
             alt=""
           />
         </div>

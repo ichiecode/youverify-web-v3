@@ -24,6 +24,9 @@ export default {
       },
       {
         src: "https://d3js.org/d3-queue.v3.min.js"
+      },
+      {
+        src: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
       }
     ],
   },
