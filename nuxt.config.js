@@ -31,6 +31,8 @@ export default {
     ],
   },
 
+  // https://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@github.com/YouverifyHQ/youverify-web.git
+
   loading: { color: "#333333", throttle: 0 },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
