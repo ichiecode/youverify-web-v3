@@ -302,7 +302,7 @@
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <span
             class="
-              text-blue
+              text-white
               tracking-widest
               px-4
               py-2
@@ -313,7 +313,7 @@
               mb-3
               leading-none
               inline-block
-              bg-blue-100
+              bg-blue
             "
             >Data Driven</span
           >
@@ -395,7 +395,7 @@
                 font-medium
                 disabled:curs
                 inline-flex
-                bg-gray-100
+                bg-white
                 text-black
                 py-3
                 sm:py-4
@@ -460,7 +460,7 @@
       </div>
     </section>
 
-    <section class="mb-10 max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="sm:my-20 my-10 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
         class="
           flex
@@ -629,172 +629,6 @@
       </div>
     </section>
 
-    <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-      <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
-      >
-        <div class="sm:w-6/12 sm:pt-0 pt-8">
-          <span
-            class="
-              text-blue
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue-100
-            "
-            >Compliance</span
-          >
-          <h2>Determine your compliance rules</h2>
-          <p class="sm:my-8 my-4 sm:w-10/12">
-            Replicate your existing business workflow by setting custom
-            parameters with ease. Define simple or complex decision workflows
-            including relational data decisions.
-          </p>
-          <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-            <a
-              href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
-              data-v-6addea9c=""
-              >Video Demo<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
-              href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
-              data-v-6addea9c=""
-              >Contact Sales<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a>
-          </div>
-        </div>
-        <div class="sm:w-5/12">
-          <div class="sm:w-auto w-full mx-auto">
-            <img
-              width="504"
-              height="545"
-              src="~/assets/images/illustrations/en_account_verification.webp"
-              alt="Mand holding a paper plane"
-            />
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section class="bg-blue-300 py-20 text-blue-100 relative overflow-hidden ">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
@@ -917,7 +751,7 @@
                 font-medium
                 disabled:curs
                 inline-flex
-                bg-gray-100
+                bg-white
                 text-black
                 py-3
                 sm:py-4

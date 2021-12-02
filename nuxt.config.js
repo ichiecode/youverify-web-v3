@@ -33,8 +33,10 @@ export default {
 
   // https://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@github.com/YouverifyHQ/youverify-web.git
 
-  loading: { color: "#333333", throttle: 0 },
-
+  ssr: false,
+  
+  loading: { color: "#0F808C", height: '3px' },
+  // loading: '~/components/LoadingBar.vue'
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 

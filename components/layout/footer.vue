@@ -135,34 +135,34 @@
       "
     >
       <div class="sm:w-4/12 w-6/12 sm:text-left text-right flex">
-        <NuxtLink
+        <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
-          to="https://web.facebook.com/youverifyID"
+          href="https://web.facebook.com/youverifyID"
           target="_blank"
         >
           <img src="~/assets/images/icons/social/facebook.svg" alt="" />
-        </NuxtLink>
-        <NuxtLink
+        </a>
+        <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
-          to="https://www.linkedin.com/company/youcheckonline/"
+          href="https://www.linkedin.com/company/youcheckonline/"
           target="_blank"
         >
           <img src="~/assets/images/icons/social/linkedin.svg" alt="" />
-        </NuxtLink>
-        <NuxtLink
+        </a>
+        <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
-          to="https://www.instagram.com/youcheckonline/"
+          href="https://www.instagram.com/youcheckonline/"
           target="_blank"
         >
           <img src="~/assets/images/icons/social/instagram.svg" alt="" />
-        </NuxtLink>
-        <NuxtLink
+        </a>
+        <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
-          to="https://twitter.com/YoucheckOnline"
+          href="https://twitter.com/YoucheckOnline"
           target="_blank"
         >
           <img src="~/assets/images/icons/social/twitter.svg" alt="" />
-        </NuxtLink>
+        </a>
       </div>
       <div
         class="
