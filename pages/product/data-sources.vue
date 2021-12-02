@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div v-if="!loading">
       <div id="chartMaps" class="relative">
         <div
           class="absolute bottom-7 right-7 bg-white rounded-md flex flex-col"
@@ -142,12 +142,14 @@
                     Identity Data Source
                   </p>
                   <div>
+                    
                     <h5
-                      class="mt-2 font-bold"
+                      class="mt-2 font-bold cursor-default"
                       v-for="item in filteredSelectedList.IdentityDataSources"
                       :key="item.id"
                     >
-                      {{ item.title }}
+                      <abbr :title="item.title">{{item.abbreviation}}</abbr>
+                      <!-- {{ item.title }} -->
                     </h5>
                   </div>
                 </div>
@@ -175,7 +177,7 @@
                       v-for="item in filteredSelectedList.UniversityCertificate"
                       :key="item.id"
                     >
-                      {{ item.title }}
+                      <abbr :title="item.title">{{item.abbreviation}}</abbr>
                     </h5>
                   </div>
                 </div>
@@ -187,7 +189,7 @@
                       v-for="item in filteredSelectedList.PEPSanctionList"
                       :key="item.id"
                     >
-                      {{ item.title }}
+                     <abbr :title="item.title">{{item.abbreviation}}</abbr>
                     </h5>
                   </div>
                 </div>
@@ -232,6 +234,51 @@
         </div>
       </div>
     </div>
+    <div
+      class="
+        min-h-screen
+        relative
+        flex
+        items-center
+        justify-start
+        pt-20
+        pb-32
+        md:pt-20 md:pb-20
+      "
+      v-else
+    >
+      <section
+        class="
+          w-full
+          flex
+          justify-center
+          items-center
+          max-w-screen-xl
+          mx-auto
+          sm:px-8
+          px-6
+        "
+      >
+        <div
+          class="
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <div
+            class="
+              animate-spin
+              rounded-full
+              border-blue
+              h-20
+              w-20
+              border-t-4 border-b-4 border-gray-900
+            "
+          ></div>
+        </div>
+      </section>
+    </div>
     <get-started></get-started>
   </div>
 </template>
@@ -253,8 +300,8 @@ export default {
       totalStats: {
         BankStatement: true,
         CorporateRegistry: true,
-        LivenessTest:  true,
-        IDCapture: true
+        LivenessTest: true,
+        IDCapture: true,
       },
     };
   },
@@ -268,11 +315,11 @@ export default {
     selectedCountry(params) {
       if (params) {
         this.clickedBubble(params);
-        this.showDropDownWorldWide = false
+        this.showDropDownWorldWide = false;
         this.tempCountry = null;
       } else {
         this.clickedBubble(this.totalStats);
-        this.showDropDownWorldWide = false
+        this.showDropDownWorldWide = false;
         this.tempCountry = null;
       }
     },
@@ -280,8 +327,8 @@ export default {
       this.selectDataPoint = d;
     },
     handleFocus() {
-      this.showDropDownWorldWide = true
-    }
+      this.showDropDownWorldWide = true;
+    },
   },
   computed: {
     ...mapState({
@@ -318,15 +365,20 @@ export default {
     }
     this.totalStats.IdentityDataSources = getUniqueListBy(allIdentity, "title");
     this.totalStats.AddressVerification = getUniqueListBy(allAddress, "title");
-    this.totalStats.UniversityCertificate = getUniqueListBy(allUniversity, "title");
+    this.totalStats.UniversityCertificate = getUniqueListBy(
+      allUniversity,
+      "title"
+    );
     this.totalStats.PEPSanctionList = getUniqueListBy(allPEP, "title");
 
-    this.clickedBubble(this.totalStats)
+    this.clickedBubble(this.totalStats);
     let self = this;
     let centered = null;
     const size = {
       height: 600,
-      width: d3.select("#chartMaps").node().getBoundingClientRect().width,
+      width: d3.select("#chartMaps").node()
+        ? d3.select("#chartMaps").node().getBoundingClientRect().width
+        : "",
     };
     const svg = d3
       .select("#chartMaps")
@@ -359,7 +411,7 @@ export default {
       .attr("id", "tooltip")
       .attr(
         "style",
-        "position: absolute; left: 64px; opacity: 0; width: 290px; z-index: 300; background: white; border-radius: 4px; padding: 10px;"
+        "position: absolute; left: 64px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); opacity: 0; width: 290px; z-index: 300; background: white; border-radius: 4px; padding: 10px;"
       );
 
     d3.queue()

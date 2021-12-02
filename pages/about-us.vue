@@ -32,7 +32,7 @@
         "
       >
         <section class="mx-auto sm:px-8 px-6">
-          <h1 class="text-blue-200">
+          <h1 class="text-blue">
             <p>Close-knit.</p>
             <p>Open-minded.</p>
             <p>Mission-driven.</p>
@@ -97,7 +97,7 @@
 
     <section class="py-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-        <h2>Meet the Youverify Team</h2>
+        <h3>Meet the Youverify Team</h3>
         <div class="grid sm:grid-cols-5 grid-cols-2 sm:gap-12 gap-8 py-10">
           <content-placeholders
             v-show="loadingTeams"
@@ -139,25 +139,41 @@
           px-6
         "
       >
-        <h2>Join the Youverify Team</h2>
+        <h3>Join the Youverify Team</h3>
         <p class="py-4">
           We’re always looking for people that are excited about building the
           platform that helps empower people and businesses in Africa to make
           data driven decisions.
         </p>
-        <div class="py-20"><h2 class="text-grey">careers@youverify.co</h2></div>
+        <div class="py-20"><h3 class="text-grey">careers@youverify.co</h3></div>
       </section>
     </div>
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
-      <div class="mb-15 sm:mb-10 lg:mb-12">
+      <div class="sm:py-20 py-10 bg-blue-100 sm:px-20 px-4 rounded-md relative">
+        <svg
+          class="absolute left-0 right-0 mx-auto -top-5"
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M56 28.0315L51.2072 21.7883L52.2793 14.0315L44.964 11.1306L42.0631 3.81532L34.3063 4.88739L28 0.0315323L21.7568 4.82432L14 3.75225L11.0991 11.0676L3.78378 13.9685L4.85586 21.7252L0 28.0315L4.79279 34.2748L3.72072 42.0315L11.036 44.9324L13.9369 52.2477L21.6937 51.1757L27.9369 55.9685L34.1802 51.1757L41.9369 52.2477L44.8378 44.9324L52.1532 41.9685L51.0811 34.2117L56 28.0315ZM25.7297 37.1126L16.3964 29.4189L18.4144 26.9595L25.3514 32.6351L37.2072 18.9505L39.6036 21.0315L25.7297 37.1126Z"
+            fill="#46B2C8"
+          />
+        </svg>
+
         <section
           class="
             text-center
             max-w-screen-lg
             text-container
-            sm:py-20
-            py-10
+            sm:pb-20
+            pb-10
+            sm:pt-0
+            pt-10
             mx-auto
             sm:px-8
             px-6
@@ -188,11 +204,12 @@
           class="grid grid-cols-1 lg:grid-cols-2 gap-5"
         >
           <article
-            class="bg-gray-100 p-8 sm:p-10 lg:p-12 rounded-md"
+            class="bg-white p-8 sm:p-10 lg:p-12 rounded-md"
             v-for="value in values"
             :key="value.id"
           >
-            <h4 class="mb-4">{{ value.title }}</h4>
+            <img :src="value.icon.url" class="mb-8" />
+            <h4 class="mb-4 text-gray-700">{{ value.title }}</h4>
             <p class="">
               {{ value.teasers }}
             </p>
@@ -201,6 +218,63 @@
       </div>
     </section>
 
+    <section class="bg-blue-300">
+      <section
+        class="
+          text-center
+          bg-blue-300
+          max-w-screen-lg
+          text-container
+          sm:py-20
+          py-20
+          mx-auto
+          sm:px-8
+          px-6
+        "
+      >
+        <div class="flex flex-wrap justify-between">
+          <section class="w-full">
+            <h3 class="text-white">
+              Interested in joining the Youverify Team?
+            </h3>
+            <p class="text-white mt-4 mb-10">
+              We’re always looking for people that are excited about building
+              the platform that helps empower people and businesses in Africa to
+              make data driven decisions.
+            </p>
+            <a
+              class="
+                items-center
+                justify-center
+                font-medium
+                disabled:curs
+                inline-flex
+                bg-white
+                text-black
+                py-3
+                sm:py-4
+                px-4
+                sm:px-5
+                text-sm
+                sm:text-1sm
+                rounded-md
+                my-2
+                outline-none
+                focus:outline-none
+                hover:outline-none
+                transition-all
+                cursor-pointer
+                box-border
+                group
+                flex-shrink-0
+              "
+              href="/contact-us"
+              >Join the Team
+            </a>
+          </section>
+        </div>
+      </section>
+    </section>
     <section class="bg-blue-100 sm:py-20 py-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex flex-wrap justify-between">
@@ -271,6 +345,6 @@ export default {
 }
 
 .opaque {
-  background: rgba(239, 248, 249, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 </style>
