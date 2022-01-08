@@ -1,16 +1,7 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-40 md:pb-20
-      "
+      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-20"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
@@ -26,44 +17,12 @@
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue-300
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/vforms-demo"
                 >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -81,43 +40,12 @@
                   ></path></svg
               ></a>
               <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/contact-us"
                 >Contact Sales<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -165,7 +93,7 @@
             </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -177,7 +105,17 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              src="https://assets1.lottiefiles.com/packages/lf20_hgisx2ep.json"
+              background="transparent"
+              speed="1"
+              class="h-full"
+             
+              loop
+              
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -199,14 +137,7 @@
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h2>Approve more customers</h2>
@@ -261,7 +192,10 @@
             </div>
           </div>
           <transition name="fade">
-            <div class="w-full flex justify-center items-center" v-if="showService">
+            <div
+              class="w-full flex justify-center items-center"
+              v-if="showService"
+            >
               <lottie-player
                 src="https://assets10.lottiefiles.com/packages/lf20_vgxxp1nq.json"
                 background="transparent"
@@ -273,7 +207,10 @@
             </div>
           </transition>
           <transition name="fade">
-            <div class="w-full flex justify-center items-center" v-if="!showService">
+            <div
+              class="w-full flex justify-center items-center"
+              v-if="!showService"
+            >
               <lottie-player
                 src="https://assets1.lottiefiles.com/packages/lf20_7yi0ptca.json"
                 background="transparent"
@@ -290,31 +227,11 @@
 
     <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <span
-            class="
-              text-white
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue
-            "
+            class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >Data Driven</span
           >
           <h2>
@@ -331,44 +248,12 @@
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
               href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Video Demo<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -389,43 +274,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-white
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Contact Sales<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -462,14 +316,7 @@
 
     <section class="sm:my-20 my-10 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <div class="sm:w-auto w-full mx-auto">
@@ -483,20 +330,7 @@
         </div>
         <div class="sm:w-6/12">
           <span
-            class="
-              text-white
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue
-            "
+            class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >regulations</span
           >
           <h2>
@@ -510,44 +344,12 @@
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
               href="/vforms-demo"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >See how it works<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -568,43 +370,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Get in touch<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -629,8 +400,7 @@
       </div>
     </section>
 
-
-    <section class="bg-blue-300 py-20 text-blue-100 relative overflow-hidden ">
+    <section class="bg-blue-300 py-20 text-blue-100 relative overflow-hidden">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section class="grid sm:grid-cols-2 grid-cols-1">
           <div class="sm:mt-0 mt-96">
@@ -745,43 +515,12 @@
             </div>
             <a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-white
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Contact Sales<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -811,15 +550,7 @@
             <img
               src="../../assets/images/screenshots/vform-dashboard-new.jpg"
               alt="Youverify Dashboard"
-              class="
-                absolute
-                sm:h-full sm:w-auto
-                w-full
-                top-0
-                sm:pl-0
-                pl-6
-                py-12
-              "
+              class="absolute sm:h-full sm:w-auto w-full top-0 sm:pl-0 pl-6 py-12"
               style="right: -10%"
             />
           </div>
@@ -829,16 +560,7 @@
 
     <section
       id="how-it-works"
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
+      class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
     >
       <section class="text-center">
         <h3>See how vForm works</h3>

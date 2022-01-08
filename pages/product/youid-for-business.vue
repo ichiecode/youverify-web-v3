@@ -1,16 +1,7 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue-300
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-40 md:pb-20
-      "
+      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-20"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
@@ -26,44 +17,12 @@
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="#how-it-works"
                 >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -80,43 +39,12 @@
                     stroke-linejoin="round"
                   ></path></svg></a
               ><a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/contact-us"
                 >Contact Sales<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -136,7 +64,7 @@
             </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -148,7 +76,14 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_tc4mfa1o.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -170,16 +105,7 @@
     <section class="bg-blue-100 sm:pb-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            sm:py-20
-            py-10
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h3>How to create a YOUID marketplace template.</h3>
@@ -456,15 +382,7 @@
                     tabindex="0"
                     ><a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -574,15 +492,7 @@
                     tabindex="0"
                     ><a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -693,15 +603,7 @@
                     tabindex="0"
                     ><a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -740,16 +642,7 @@
     </section>
     <section
       id="how-it-works"
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
+      class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
     >
       <section class="text-center">
         <h3 class="mb-12">

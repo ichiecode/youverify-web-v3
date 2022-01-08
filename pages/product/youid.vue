@@ -1,21 +1,10 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue-300
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-48 md:pb-32
-      "
+      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div
-          class="flex-col-reverse md:flex-row flex justify-center"
-        >
+        <div class="flex-col-reverse md:flex-row flex justify-center">
           <div class="md:w-3/6">
             <h3 class="text-white max-w-screen-lg mt-8">
               Fill a KYC form once and forever.
@@ -76,7 +65,7 @@
             </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -88,7 +77,15 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_t0yoz1ta.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+              class="h-full"
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -109,31 +106,11 @@
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <span
-            class="
-              text-blue
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue-100
-            "
+            class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
             >machine-learning algorithm</span
           >
           <h3>
@@ -150,44 +127,12 @@
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
               href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Video Demo<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -208,43 +153,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Contact Sales<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -268,12 +182,20 @@
         </div>
         <div class="sm:w-5/12">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
-            <img
+            <!-- <img
               width="355"
               height="378"
               src="~/assets/images/illustrations/products/youid/credencescore.svg"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+            <lottie-player
+              src="https://assets6.lottiefiles.com/packages/lf20_gp1gfcsw.json"
+              background="transparent"
+              speed="1"
+              style="width: 355; height: 378"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </div>
@@ -281,41 +203,29 @@
 
     <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <!-- <img
               width="355"
               height="378"
               src="../../assets/images/illustrations/products/youid/secure.svg"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_xh8pfev9.json"
+              background="transparent"
+              speed="1"
+              style="width: 355; height: 378"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
         <div class="sm:w-5/12">
           <span
-            class="
-              text-white
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue
-            "
+            class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >Secured from breaches</span
           >
           <h3>Be sure with YOUID Secure</h3>
@@ -329,44 +239,12 @@
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
               href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >See how it works<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -387,43 +265,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Get in touch<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -450,31 +297,11 @@
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <span
-            class="
-              text-blue
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue-100
-            "
+            class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
             >multi-factor authentication</span
           >
           <h3>Never get stranded with YOU ID Key</h3>
@@ -487,44 +314,12 @@
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
               href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Video Demo<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -545,43 +340,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Contact Sales<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -603,56 +367,54 @@
             ></a>
           </div>
         </div>
-        <div class="sm:w-6/12">
-          <div class="sm:w-auto w-full mx-auto flex justify-end">
-            <img
+        <transition name="fade">
+          <div class="sm:w-6/12">
+            <div class="sm:w-auto w-full mx-auto flex justify-end">
+              <!-- <img
               width="355"
               height="378"
-              src="../../assets/images/illustrations/products/youid/never-get-stranded.svg"
+              src="https://lottiefiles.com/share/tbqzhtm4"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+              <lottie-player
+                src="https://assets2.lottiefiles.com/packages/lf20_tbqzhtm4.json"
+                background="transparent"
+                speed="1"
+                style="width: 355px; height: 378px"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
           </div>
-        </div>
+        </transition>
       </div>
     </section>
 
     <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <!-- <img
               width="355"
               height="378"
               src="../../assets/images/illustrations/products/youid/trusworthiness.svg"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+            <lottie-player
+              src="https://assets6.lottiefiles.com/packages/lf20_c3i6doow.json"
+              background="transparent"
+              speed="1"
+              style="width: 355; height: 378"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
         <div class="sm:w-5/12">
           <span
-            class="
-              text-white
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue
-            "
+            class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >Address verification</span
           >
           <h3>Increase Trustworthiness with AddressTrack</h3>
@@ -666,44 +428,12 @@
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
             <a
               href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >See how it works<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -724,43 +454,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Get in touch<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -787,19 +486,12 @@
 
     <section
       id="how-it-works"
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
+      class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
     >
       <section class="text-center">
-        <h3 class="mb-12">Protect your personal identity with a secure digital ID</h3>
+        <h3 class="mb-12">
+          Protect your personal identity with a secure digital ID
+        </h3>
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/oWitV8UeiqM"
@@ -818,6 +510,11 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
+  data() {
+    return {
+      showService: true,
+    };
+  },
   getStarted,
 };
 </script>
