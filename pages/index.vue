@@ -1,16 +1,7 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-40 md:pb-32
-      "
+      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
@@ -26,44 +17,12 @@
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue-300
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/vforms-demo"
                 >View Demo<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -80,44 +39,13 @@
                     stroke-linejoin="round"
                   ></path></svg></a
               ><a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 target="_blank"
                 href="https://os.dev.youverify.co/auth/create-account"
                 >Sign-up<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -165,7 +93,7 @@
             </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -177,7 +105,15 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              src="https://assets2.lottiefiles.com/packages/lf20_wu2exiph.json"
+              background="transparent"
+              speed="1"
+              class="h-full w-full"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -200,18 +136,7 @@
       <div class="mx-auto">
         <h5 class="font-medium pb-5">Trusted by the trustworthy</h5>
         <div
-          class="
-            grid
-            gap-6
-            sm:gap-8
-            lg:gap-10
-            mt-4
-            sm:mt-10
-            lg:mt-12
-            grid-cols-2
-            md:grid-cols-5
-            lg:grid-cols-6
-          "
+          class="grid gap-6 sm:gap-8 lg:gap-10 mt-4 sm:mt-10 lg:mt-12 grid-cols-2 md:grid-cols-5 lg:grid-cols-6"
         >
           <figure class="h-12 flex">
             <img
@@ -263,14 +188,7 @@
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h2>Approve more customers</h2>
@@ -325,7 +243,10 @@
             </div>
           </div>
           <transition name="fade">
-            <div class="w-full flex justify-center items-center" v-if="showService">
+            <div
+              class="w-full flex justify-center items-center"
+              v-if="showService"
+            >
               <lottie-player
                 class="h-full w-full"
                 src="https://assets10.lottiefiles.com/packages/lf20_vgxxp1nq.json"
@@ -337,7 +258,10 @@
             </div>
           </transition>
           <transition name="fade">
-            <div class="w-full flex justify-center items-center" v-if="!showService">
+            <div
+              class="w-full flex justify-center items-center"
+              v-if="!showService"
+            >
               <lottie-player
                 src="https://assets1.lottiefiles.com/packages/lf20_7yi0ptca.json"
                 background="transparent"
@@ -354,20 +278,7 @@
 
     <section class="">
       <div
-        class="
-          flex
-          max-w-screen-xl
-          mx-auto
-          sm:px-8
-          px-6
-          md:flex-row
-          flex-col-reverse
-          sm:text-left
-          text-center
-          justify-between
-          items-center
-          py-20
-        "
+        class="flex max-w-screen-xl mx-auto sm:px-8 px-6 md:flex-row flex-col-reverse sm:text-left text-center justify-between items-center py-20"
       >
         <div class="sm:w-2/5 sm:pt-0 pt-8">
           <h2>Fraud mitigation</h2>
@@ -380,13 +291,21 @@
         </div>
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-10/12 mx-auto">
-            <img
+            <!-- <img
               class="w-full"
               width="505"
               height="545"
               src="../assets/images/illustrations/flow.gif"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_rod5jzuw.json"
+              background="transparent"
+              speed="1"
+              style="width: 505; height: 545"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </div>
@@ -394,30 +313,25 @@
 
     <section class="">
       <div
-        class="
-          flex
-          max-w-screen-xl
-          mx-auto
-          sm:px-8
-          px-6
-          sm:flex-row
-          flex-col
-          sm:text-left
-          text-center
-          justify-between
-          items-center
-          py-20
-        "
+        class="flex max-w-screen-xl mx-auto sm:px-8 px-6 sm:flex-row flex-col sm:text-left text-center justify-between items-center py-20"
       >
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-3/4 mx-auto">
-            <img
+            <!-- <img
               width="505"
               height="545"
               class="w-full"
               src="../assets/images/illustrations/frictionless.gif"
               alt="Man holding SIM for verification"
-            /><noscript></noscript>
+            /><noscript></noscript> -->
+            <lottie-player
+              src="https://assets9.lottiefiles.com/packages/lf20_cvruqprn.json"
+              background="transparent"
+              speed="1"
+              style="width: 505; height: 545"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
         <div class="sm:w-2/4 ml-10 sm:mt-0 mt-8">
@@ -491,15 +405,7 @@
         <div class="md:flex max-w-screen-xl mx-auto">
           <div class="md:w-2/6">
             <div
-              class="
-                bg-blue-200
-                mb-10
-                text-white
-                w-2/4
-                md:w-4/6
-                rounded-2xl
-                text-center
-              "
+              class="bg-blue-200 mb-10 text-white w-2/4 md:w-4/6 rounded-2xl text-center"
             >
               Case Management Portal
             </div>
@@ -519,15 +425,7 @@
                 role="button"
                 tabindex="0"
                 ><button
-                  class="
-                    bg-transparent
-                    text-blue
-                    rounded
-                    py-2
-                    sm:mb-0
-                    mb-4
-                    px-0
-                  "
+                  class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                 >
                   <a href="/contact-us">
                     <svg
@@ -578,16 +476,7 @@
       </div>
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            sm:py-20
-            py-10
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h3>
@@ -1093,20 +982,7 @@
 
     <section class="my-20 max-w-screen-lg mx-auto text-center">
       <span
-        class="
-          text-blue
-          tracking-widest
-          px-4
-          py-2
-          uppercase
-          sm:text-sm
-          text-xs
-          rounded
-          mb-3
-          leading-none
-          inline-block
-          bg-blue-100
-        "
+        class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
         >As featured on</span
       >
       <div class="flex justify-between sm:flex-row flex-col items-center mt-6">
@@ -1184,14 +1060,7 @@
     </section>
 
     <section
-      class="
-        text-center
-        bg-blue-200
-        py-20
-        text-blue-100
-        relative
-        overflow-hidden
-      "
+      class="text-center bg-blue-200 py-20 text-blue-100 relative overflow-hidden"
     >
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
