@@ -110,7 +110,7 @@
               src="https://assets1.lottiefiles.com/packages/lf20_hgisx2ep.json"
               background="transparent"
               speed="1"
-              class="h-full"
+              
              
               loop
               

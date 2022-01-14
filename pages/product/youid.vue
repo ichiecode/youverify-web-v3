@@ -84,7 +84,7 @@
               speed="1"
               loop
               autoplay
-              class="h-full"
+              style="width:100%; height:100%"
             ></lottie-player>
           </div>
         </div>
@@ -192,7 +192,7 @@
               src="https://assets6.lottiefiles.com/packages/lf20_gp1gfcsw.json"
               background="transparent"
               speed="1"
-              style="width: 355; height: 378"
+              style="width:355px; height:378px"
               loop
               autoplay
             ></lottie-player>
@@ -205,8 +205,9 @@
       <div
         class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
-        <div class="sm:w-6/12 sm:pt-0 pt-8">
-          <div class="sm:w-auto w-full mx-auto">
+        <div class=" sm:w-6/12 sm:pt-0 pt-8 ">
+          <!-- -->
+          <div class="sm:w-auto w-full mx-auto flex">
             <!-- <img
               width="355"
               height="378"
@@ -217,13 +218,13 @@
               src="https://assets2.lottiefiles.com/packages/lf20_xh8pfev9.json"
               background="transparent"
               speed="1"
-              style="width: 355; height: 378"
+              style="width: 355px; height: 378px"
               loop
               autoplay
             ></lottie-player>
           </div>
         </div>
-        <div class="sm:w-5/12">
+        <div class="sm:w-4/12">
           <span
             class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >Secured from breaches</span
@@ -367,8 +368,8 @@
             ></a>
           </div>
         </div>
-        <transition name="fade">
-          <div class="sm:w-6/12">
+        
+          <div class="sm:w-5/12">
             <div class="sm:w-auto w-full mx-auto flex justify-end">
               <!-- <img
               width="355"
@@ -386,7 +387,7 @@
               ></lottie-player>
             </div>
           </div>
-        </transition>
+        
       </div>
     </section>
 
@@ -394,8 +395,8 @@
       <div
         class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
-        <div class="sm:w-6/12 sm:pt-0 pt-8">
-          <div class="sm:w-auto w-full mx-auto">
+        <div class="sm:w-6/12 sm:pt-0 pt-8 ">
+          <div class="sm:w-auto w-full mx-auto flex">
             <!-- <img
               width="355"
               height="378"
@@ -406,7 +407,7 @@
               src="https://assets6.lottiefiles.com/packages/lf20_c3i6doow.json"
               background="transparent"
               speed="1"
-              style="width: 355; height: 378"
+              style="width: 355px; height: 378px"
               loop
               autoplay
             ></lottie-player>
@@ -510,12 +511,7 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
-  data() {
-    return {
-      showService: true,
-    };
-  },
-  getStarted,
+  
 };
 </script>
 
