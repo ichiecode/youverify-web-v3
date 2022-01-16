@@ -107,13 +107,11 @@
               Sorry, your browser doesn't support embedded videos.
             </video> -->
             <lottie-player
+              class="w-full h-full"
               src="https://assets1.lottiefiles.com/packages/lf20_hgisx2ep.json"
               background="transparent"
               speed="1"
-              
-             
               loop
-              
               autoplay
             ></lottie-player>
           </div>
