@@ -202,46 +202,55 @@
         </section>
         <div class="">
           <div class="my-10 justify-center flex item-center">
-            <div class="bg-blue-100 rounded-full">
+            <div class="bg-blue-100 rounded-full relative">
+              <div
+                class="absolute h-full w-1/2 rounded-full bg-blue-300 transition-transform duration-500 transform z-10"
+                :class="`${showService === true ? 'translate-x-full' : ''}`"
+              ></div>
+
               <button
-                :class="`${
-                  showService === false ? 'bg-blue-300 text-white' : 'text-blue'
-                }
+                :class="`${showService === false ? ' text-white' : 'text-blue'}
+                  
                   items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
                   font-bold
-                  px-3
+                  px-4
                   rounded-full
                   text-sm
                   cursor-pointer
+                  z-20
+                relative
                 `"
                 @click="toggleService('without')"
               >
                 Without Youverify
               </button>
+
               <button
-                :class="`${
-                  showService === true ? 'bg-blue-300 text-white' : 'text-blue'
-                }
+                :class="`${showService === true ? ' text-white' : 'text-blue '}
                 items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
-                  px-3
+                  px-8
                   font-bold
                   rounded-full
                   text-sm
-                  cursor-pointer`"
+                  cursor-pointer
+                   z-20
+                  relative
+                  `"
                 @click="toggleService('with')"
               >
                 With Youverify
               </button>
             </div>
           </div>
+
           <transition name="fade">
             <div
               class="w-full flex justify-center items-center"
@@ -1185,4 +1194,33 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+/* .slide-in-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.v-enter-from {
+}
+.v-enter-active {
+  animation: slide-scale 0.3s ease-out;
+}
+.v-enter-to {
+}
+.v-leave-from {
+}
+.v-leave-active {
+  animation: slide-scale 0.3s ease-out;
+}
+.v-leave-to {
+}
+@keyframes slide-scale {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    transform: translateX(-120px) scale(1.1);
+  }
+  100% {
+    transform: translateX(-150px) scale(1);
+  } */
+/* } */
 </style>
