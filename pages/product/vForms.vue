@@ -149,40 +149,48 @@
         </section>
         <div class="">
           <div class="my-10 justify-center flex item-center">
-            <div class="bg-blue-100 rounded-full">
+            <div class="bg-blue-100 rounded-full relative">
+              <div
+                class="absolute h-full w-1/2 rounded-full bg-blue-300 transition-transform duration-500 transform z-10"
+                :class="`${showService === true ? 'translate-x-full' : ''}`"
+              ></div>
+
               <button
-                :class="`${
-                  showService === false ? 'bg-blue-300 text-white' : 'text-blue'
-                }
+                :class="`${showService === false ? ' text-white' : 'text-blue'}
+                  
                   items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
-                  px-3
+                  font-bold
+                  px-4
                   rounded-full
                   text-sm
-                  font-bold
                   cursor-pointer
+                  z-20
+                relative
                 `"
                 @click="toggleService('without')"
               >
                 Without Youverify
               </button>
+
               <button
-                :class="`${
-                  showService === true ? 'bg-blue-300 text-white' : 'text-blue'
-                }
+                :class="`${showService === true ? ' text-white' : 'text-blue '}
                 items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
-                  px-3
+                  px-8
                   font-bold
                   rounded-full
                   text-sm
-                  cursor-pointer`"
+                  cursor-pointer
+                   z-20
+                  relative
+                  `"
                 @click="toggleService('with')"
               >
                 With Youverify
@@ -301,12 +309,20 @@
         </div>
         <div class="sm:w-5/12">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <!-- <img
               width="504"
               height="545"
               src="../../assets/images/illustrations/smark-credit0check.png"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+            <lottie-player
+              class="w-full h-full"
+              src="https://assets9.lottiefiles.com/packages/lf20_foppdwfa.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </div>
