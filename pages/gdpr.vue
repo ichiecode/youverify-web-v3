@@ -29,7 +29,7 @@
           "
           >updated
           {{
-            gdpr ? this.$root.$options.filters.formatDate(gdpr.updated_at) : ""
+            gdpr ? this.$root.$options.filters.formatDate(gdpr.updatedAt) : ""
           }}</span
         >
         <h1>{{ gdpr ? gdpr.title : "" }}</h1>

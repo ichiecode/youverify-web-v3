@@ -1,19 +1,12 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue-300
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-48 md:pb-20
-      "
+      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-20"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="flex-col-reverse md:flex-row flex justify-center">
+        <div
+          class="flex-col-reverse md:flex-row flex justify-center items-center"
+        >
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Do business with pre-verified customers
@@ -24,44 +17,12 @@
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="#how-it-works"
                 >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -78,43 +39,12 @@
                     stroke-linejoin="round"
                   ></path></svg></a
               ><a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/contact-us"
                 >Contact Sales<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -132,37 +62,9 @@
                   ></path></svg
               ></a>
             </div>
-
-            <div class="mt-10 flex items-center">
-              <h4 class="text-white">Building with Youverify OS</h4>
-              <div class="ml-3 border w-3/6"></div>
-            </div>
-            <div class="mt-3 grid grid-cols-3">
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/cazoo_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/leovegas_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-              <figure class="relative" style="width: 100px; height: 62px">
-                <img
-                  src="~/assets/images/logos/trusted/casumo_white.svg"
-                  alt="Carbon logo"
-                  class="h-full w-full object-contain"
-                />
-              </figure>
-            </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -174,7 +76,14 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_tc4mfa1o.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -196,16 +105,7 @@
     <section class="bg-blue-100 sm:pb-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            sm:py-20
-            py-10
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h3>How to create a YOUID marketplace template.</h3>
@@ -480,17 +380,9 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/product/youid-for-business/#!"
+                    ><a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -598,17 +490,9 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/product/youid-for-business/#!"
+                    ><a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -717,17 +601,9 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/product/youid-for-business/#!"
+                    ><a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -758,7 +634,7 @@
           <p class="my-4">More than 2000 Transactions</p>
           <span class="cursor-pointer inline-block" role="button" tabindex="0"
             ><button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
-              Contact sales
+              <NuxtLink to="/contact-us">Contact sales</NuxtLink>
             </button></span
           >
         </div>
@@ -766,23 +642,13 @@
     </section>
     <section
       id="how-it-works"
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
+      class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
     >
       <section class="text-center">
-        <h3>See how youid for business works</h3>
-        <p class="mb-12">
+        <h3 class="mb-12">
           Create market templates and publish it to YOUID users and track the
           performance of your template in easy-to-read reports.
-        </p>
+        </h3>
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/oWitV8UeiqM"
@@ -794,221 +660,17 @@
       </section>
     </section>
 
-    <section class="bg-blue-200 for-a-reason">
-      <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 mx-auto max-w-300">
-        <h2 class="text-white font-display">Getting started</h2>
-        <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
-          <article
-            class="
-              bg-white
-              col-span-full
-              rounded-2xl
-              py-10
-              px-6
-              sm:py-15 sm:px-10
-              lg:px-15 lg:pt-20
-              pb-0
-              gap-10
-              lg:gap-10
-              xl:gap-20
-              grid grid-cols-1
-              items-end
-            "
-            style="grid-template-columns: minmax(350px, 1fr) 1.2fr"
-          >
-            <div
-              class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start"
-            >
-              <img
-                src="~/assets/images/icons/for-a-reason-and-more/zero-bottlenecks.svg"
-                alt=""
-                class="inline-block mb-5 w-20 h-20"
-              />
-              <h2 class="text-center lg:text-left mb-8">
-                Powerful APIs and easy-to-use resources
-              </h2>
-
-              <a
-                href="https://docs.mono.co"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                >Read our API Docs<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-            <div class="flex justify-center flex-1">
-              <figure class="w-full max-w-lg relative">
-                <img
-                  src="https://monoassets.com/f/118499/540x380/1298b7c253/api-response-frame.png"
-                  alt=""
-                  class="w-full"
-                />
-              </figure>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="~/assets/images/icons/for-a-reason-and-more/ease-of-enrollment.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">Plug-and-play SDKs</h4>
-              <a
-                href="https://docs.mono.co"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  text-base
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  group
-                  hover:text-black
-                "
-                >Explore our SDKs<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="~/assets/images/icons/for-a-reason-and-more/reliable-datatabase.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">
-                Beautiful seamless UX
-              </h4>
-              <a
-                class="
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                target="_blank"
-                href="https://os.dev.youverify.co/auth/create-account"
-                >Signup<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
-            <div class="flex flex-col items-center lg:items-start">
-              <img
-                src="~/assets/images/icons/for-a-reason-and-more/standards-compliant.svg"
-                alt=""
-                class="inline-block mb-5 w-16 h-16"
-              />
-              <h4 class="text-center lg:text-left mb-8">Always-on support</h4>
-              <a
-                href="/contact-us"
-                target="_blank"
-                rel="noreferrer"
-                class="
-                  text-base
-                  sm:text-base
-                  lg:text-base
-                  font-bold
-                  inline-flex
-                  items-center
-                  hover:text-black
-                "
-                >Contact Support Team<svg
-                  viewBox="0 0 25 25"
-                  fill="none"
-                  class="w-5 lg:w-6.25"
-                >
-                  <path
-                    d="M8 18L18 8"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 8H18V18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <get-started></get-started>
   </div>
 </template>
 
 <script>
-export default {};
+import getStarted from "~/components/common/getStarted.vue";
+export default {
+  components: {
+    getStarted,
+  },
+};
 </script>
 
 <style scoped>
@@ -1029,6 +691,6 @@ export default {};
 }
 
 .custom-shape-divider-bottom-1636017048 .shape-fill {
-  fill: #EFF8F9;
+  fill: #eff8f9;
 }
 </style>

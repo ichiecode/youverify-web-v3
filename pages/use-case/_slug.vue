@@ -6,18 +6,31 @@
         flex
         items-center
         justify-start
-        pt-20
+        pt-40
         pb-32
-        md:pt-40 md:pb-20
+        md:pt-48 md:pb-20
       "
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
-        <div class="r">
+        <div class="">
           <div class="">
-            <div class="text-center mb-8">
-              <h2 class="">vForms Demo</h2>
+            <div class="text-center mb-8 bg-white w-full py-5 sticky" style="top: 79px;">
+              <h3 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h3>
             </div>
-            <div class="mt-3 justify-end sm:mt-8 lg:mt-10 flex flex-wrap">
+            
+            <div class="border-solid border-2 border-blue p-4 shadow-iframe">
+              <iframe
+                id="Iframe"
+                title="User Guarantor Form"
+                width="100%"
+                height="800px"
+                :src="formattedIndustries ? formattedIndustries.link: ''"
+                frameborder="0"
+                class=""
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; camera; microphone"
+              ></iframe>
+            </div>
+            <div class="mt-3 justify-center sm:mt-4 lg:mt-6 flex flex-wrap">
               <a
                 class="
                   items-center
@@ -32,7 +45,6 @@
                   px-4
                   sm:px-5
                   text-sm
-                  sm:text-1sm
                   rounded-md
                   mr-4
                   my-2
@@ -46,7 +58,7 @@
                   flex-shrink-0
                 "
                 target="_blank"
-                :href="`https://os.dev.youverify.co/v-forms/${vformId}/edit/add-fields`"
+                :href="`https://os.dev.youverify.co/v-forms/${formattedIndustries ? formattedIndustries.vFormId: ''}/edit/add-fields`"
                 >Use Template<svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -75,18 +87,6 @@
                   ></path></svg
               ></a>
             </div>
-            <div class="border-solid border-2 border-blue p-4 shadow-iframe">
-              <iframe
-                id="Iframe"
-                title="User Guarantor Form"
-                width="100%"
-                height="800px"
-                :src="link"
-                frameborder="0"
-                class=""
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen; camera; microphone"
-              ></iframe>
-            </div>
           </div>
         </div>
       </section>
@@ -97,23 +97,31 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import getStarted from "~/components/common/getStarted.vue";
+
 export default {
   components: {
     getStarted,
   },
-  data() {
-    return {
-      link: null,
-    };
+  methods: {
+    async getSingleIndustry() {
+      const singleIndustries = await this.$store.dispatch(
+        "industries/getSingleIndustries",
+        this.$route.params.slug
+      );
+    },
   },
   mounted() {
-    if (!this.$route.params.link) {
-      this.$router.go(-1);
-    } else {
-      this.link = this.$route.params.link;
-      this.vformId = this.$route.params.vformId;
-    }
+    this.getSingleIndustry();
+  },
+  computed: {
+    ...mapState({
+      singleIndustries: (state) => state.industries.singleIndustries,
+    }),
+    formattedIndustries() {
+      return this.singleIndustries ? this.singleIndustries[0] : [];
+    },
   },
 };
 </script>

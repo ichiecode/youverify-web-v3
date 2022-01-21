@@ -60,84 +60,6 @@
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                              <a href="/product/youverify-operating-system"
-                                ><section class="flex text-left">
-                                  <header class="w-14 mr-5">
-                                    <span>
-                                      <svg
-                                        width="29"
-                                        height="28"
-                                        viewBox="0 0 29 28"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <mask
-                                          id="mask0"
-                                          mask-type="alpha"
-                                          maskUnits="userSpaceOnUse"
-                                          x="0"
-                                          y="0"
-                                          width="29"
-                                          height="28"
-                                        >
-                                          <path
-                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
-                                            fill="#115766"
-                                          ></path>
-                                        </mask>
-                                        <g mask="url(#mask0)">
-                                          <path
-                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                        </g>
-                                      </svg>
-                                    </span>
-                                  </header>
-                                  <div>
-                                    <h4>Youverify Operating System</h4>
-                                    <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
-                                    >
-                                      Meet the superefficient verification tool
-                                      your team needs
-                                    </p>
-                                  </div>
-                                </section></a
-                              >
                               <a href="/product/vforms"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
@@ -295,7 +217,8 @@
                                     </p>
                                   </div>
                                 </section></a
-                              ><a href="/agent"
+                              >
+                              <a href="/product/data-sources"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
@@ -306,29 +229,59 @@
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
-                                        <path
-                                          d="M28.0892 9.88812V25.6363C28.0892 26.9413 27.0505 28 25.7703 28H18.2645H2.31886C1.03868 28 0 26.9413 0 25.6363V2.36365C0 1.05874 1.03868 2.82319e-07 2.31886 2.82319e-07H17.5699C18.1427 2.82319e-07 18.6962 0.21567 19.1215 0.607796L27.3219 8.13227C27.8092 8.57885 28.0892 9.21715 28.0892 9.88812Z"
-                                          fill="#115766"
-                                        ></path>
-                                        <path
-                                          d="M14.0448 14C9.77041 14 6.14484 16.7779 4.87497 20.6269C4.34236 22.2412 5.76892 23.6539 7.46882 23.6539H20.6208C22.3207 23.6539 23.7472 22.2412 23.2146 20.6269C21.9448 16.7779 18.3192 14 14.0448 14Z"
-                                          fill="#46B2C8"
-                                        ></path>
-                                        <path
-                                          d="M11.4464 12.621H16.6433C17.4932 12.621 18.1823 11.932 18.1823 11.082V7.04205C18.1823 6.6348 18.0208 6.24414 17.7334 5.95568L16.5804 4.7988C16.2916 4.50905 15.8994 4.34619 15.4903 4.34619H11.4464C10.5965 4.34619 9.90747 5.03522 9.90747 5.88517V11.082C9.90747 11.932 10.5965 12.621 11.4464 12.621Z"
-                                          fill="#C2E2E9"
-                                        ></path>
-                                        <path
-                                          fill-rule="evenodd"
-                                          clip-rule="evenodd"
-                                          d="M14.0448 5.53271C14.178 5.53271 14.2861 5.64077 14.2861 5.77406V6.3602H15.6997C15.833 6.3602 15.9411 6.46825 15.9411 6.60155C15.9411 6.73484 15.833 6.84289 15.6997 6.84289H14.2861V8.29099H14.7343C15.4008 8.29099 15.9411 8.83127 15.9411 9.49774C15.9411 10.1642 15.4008 10.7045 14.7343 10.7045H14.2861V11.2906C14.2861 11.4239 14.178 11.532 14.0448 11.532C13.9115 11.532 13.8034 11.4239 13.8034 11.2906V10.7045H12.3898C12.2565 10.7045 12.1484 10.5964 12.1484 10.4631C12.1484 10.3298 12.2565 10.2218 12.3898 10.2218H13.8034V8.77369H13.3552C12.6887 8.77369 12.1484 8.23341 12.1484 7.56694C12.1484 6.90047 12.6887 6.3602 13.3552 6.3602H13.8034V5.77406C13.8034 5.64077 13.9115 5.53271 14.0448 5.53271ZM13.8034 6.84289H13.3552C12.9553 6.84289 12.6311 7.16706 12.6311 7.56694C12.6311 7.96682 12.9553 8.29099 13.3552 8.29099H13.8034V6.84289ZM14.2861 8.77369V10.2218H14.7343C15.1342 10.2218 15.4584 9.89762 15.4584 9.49774C15.4584 9.09785 15.1342 8.77369 14.7343 8.77369H14.2861Z"
-                                          fill="#46B2C8"
-                                        ></path>
+                                        <mask
+                                          id="mask0"
+                                          mask-type="alpha"
+                                          maskUnits="userSpaceOnUse"
+                                          x="0"
+                                          y="0"
+                                          width="29"
+                                          height="28"
+                                        >
+                                          <path
+                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
+                                            fill="#115766"
+                                          ></path>
+                                        </mask>
+                                        <g mask="url(#mask0)">
+                                          <path
+                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                        </g>
                                       </svg>
                                     </span>
                                   </header>
                                   <div>
-                                    <h4>Become an Agent</h4>
+                                    <h4>Data Sources</h4>
                                     <p
                                       class="
                                         text-sm
@@ -337,7 +290,7 @@
                                         leading-loose
                                       "
                                     >
-                                      Join our force for good
+                                      Discover our over 300+ data sources
                                     </p>
                                   </div>
                                 </section></a
@@ -372,7 +325,7 @@
                     hover:text-blue-200
                     false
                   "
-                  >Industries<svg
+                  >Use Cases<svg
                     width="9"
                     height="6"
                     viewBox="0 0 9 6"
@@ -403,16 +356,36 @@
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                             
-                              <NuxtLink class="link-header" v-for="industry in industries" :key="industry.id" v-show="industry.visible === true" :to="`/industries/${industry.slug}`">
+                              <NuxtLink
+                                class="link-header"
+                                v-for="industry in industries"
+                                :key="industry.name"
+                                v-show="industry.visible === true"
+                                :to="`/use-case/${industry.slug}`"
+                              >
                                 <section class="flex text-left">
-                                  <header class="w-14 mr-5">
+                                  <header class="w-14 mr-3">
                                     <span>
-                                      <img :src="industry.icons.url" class="h-8 w-8" alt="">
+                                      <img
+                                        :src="industry.icons.url"
+                                        class="h-7 w-7"
+                                        alt=""
+                                      />
                                     </span>
                                   </header>
                                   <div>
-                                    <h4>{{industry.name}}</h4><h4 v-show="industry.visible === false" class="coming-soon text-xs mt-2 text-red-500">Coming Soon</h4>
+                                    <h4>{{ industry.name }}</h4>
+                                    <h4
+                                      v-show="industry.visible === false"
+                                      class="
+                                        coming-soon
+                                        text-xs
+                                        mt-2
+                                        text-red-500
+                                      "
+                                    >
+                                      Coming Soon
+                                    </h4>
                                     <p
                                       class="
                                         text-sm
@@ -421,20 +394,40 @@
                                         leading-loose
                                       "
                                     >
-                                      {{industry.teaser}}
+                                      {{ industry.teaser }}
                                     </p>
                                   </div>
                                 </section>
                               </NuxtLink>
-                              <NuxtLink class="link-header" v-for="industry in industries" :key="industry.id" v-show="industry.visible === false" to="#">
+                              <NuxtLink
+                                class="link-header"
+                                v-for="industry in industries"
+                                :key="industry.id"
+                                v-show="industry.visible === false"
+                                to="#"
+                              >
                                 <section class="flex text-left">
-                                  <header class="w-14 mr-5">
+                                  <header class="w-14 mr-3">
                                     <span>
-                                      <img :src="industry.icons.url" class="h-8 w-8" alt="">
+                                      <img
+                                        :src="industry.icons.url"
+                                        class="h-7 w-7"
+                                        alt=""
+                                      />
                                     </span>
                                   </header>
                                   <div>
-                                    <h4>{{industry.name}}</h4><h4 class="coming-soon text-xs mt-2 text-red-500">Coming Soon</h4>
+                                    <h4>{{ industry.name }}</h4>
+                                    <h4
+                                      class="
+                                        coming-soon
+                                        text-xs
+                                        mt-2
+                                        text-red-500
+                                      "
+                                    >
+                                      Coming Soon
+                                    </h4>
                                     <p
                                       class="
                                         text-sm
@@ -443,11 +436,11 @@
                                         leading-loose
                                       "
                                     >
-                                      {{industry.teaser}}
+                                      {{ industry.teaser }}
                                     </p>
                                   </div>
                                 </section>
-                              </NuxtLink>    
+                              </NuxtLink>
                             </div>
                             <div class="w-3/12 text-right flex justify-end">
                               <div>
@@ -455,6 +448,291 @@
                                   width="171"
                                   height="206"
                                   src="~/assets/images/illustrations/lady-hugging-sim-smiling.png"
+                                  alt="Solutions"
+                                /><noscript></noscript>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
+                <a
+                  href="#"
+                  class="
+                    inline-flex
+                    cursor-pointer
+                    items-center
+                    mx-8
+                    py-8
+                    hover:text-blue-200
+                    false
+                  "
+                  >Developer<svg
+                    width="9"
+                    height="6"
+                    viewBox="0 0 9 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-3 transform rotate rotate-180"
+                  >
+                    <path
+                      d="M5.23715 0.804168C4.84082 0.371801 4.15918 0.371801 3.76285 0.804168L0.536082 4.32427C-0.0518692 4.96568 0.40313 6 1.27324 6L7.72676 6C8.59687 6 9.05187 4.96568 8.46392 4.32427L5.23715 0.804168Z"
+                      fill="#46B2C8"
+                    ></path>
+                  </svg>
+                </a>
+                <div class="mega-menu sm:mb-0 shadow-xl">
+                  <div
+                    class="
+                      container
+                      mx-auto
+                      w-full
+                      flex flex-wrap
+                      justify-between
+                      mx-2
+                      border-t-2
+                    "
+                  >
+                    <div class="w-full text-white">
+                      <div>
+                        <div class="pt-10 pb-20">
+                          <div class="flex">
+                            <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
+                              <a href="https://docs.youverify.co/"
+                                ><section class="flex text-left">
+                                  <header class="w-14 mr-5">
+                                    <span>
+                                      <svg
+                                        width="29"
+                                        height="28"
+                                        viewBox="0 0 29 28"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <mask
+                                          id="mask0"
+                                          mask-type="alpha"
+                                          maskUnits="userSpaceOnUse"
+                                          x="0"
+                                          y="0"
+                                          width="29"
+                                          height="28"
+                                        >
+                                          <path
+                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
+                                            fill="#115766"
+                                          ></path>
+                                        </mask>
+                                        <g mask="url(#mask0)">
+                                          <path
+                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </span>
+                                  </header>
+                                  <div>
+                                    <h4>API Doc</h4>
+                                    <p
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
+                                    >
+                                      Meet the superefficient verification tool
+                                      your team needs
+                                    </p>
+                                  </div>
+                                </section></a
+                              >
+                              <a href="https://doc.youverify.co/"
+                                ><section class="flex text-left">
+                                  <header class="w-14 mr-5">
+                                    <span>
+                                      <svg
+                                        width="39"
+                                        height="28"
+                                        viewBox="0 0 39 28"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M9.82935 28H36.041C37.4696 28 38.6277 26.8482 38.6277 25.4196V6.48347C38.6277 5.89387 38.4263 5.32293 38.0568 4.86346L34.9224 0.965702C34.4314 0.355126 33.6927 0 32.9092 0H9.82358C8.395 0 7.24268 1.1581 7.24268 2.58668V25.4133C7.24268 26.8419 8.40077 28 9.82935 28Z"
+                                          fill="#115766"
+                                        ></path>
+                                        <path
+                                          d="M25.7897 7.8623C25.606 7.8623 25.457 8.00797 25.457 8.18757C25.457 8.36716 25.606 8.51283 25.7897 8.51283H34.1448C34.3285 8.51283 34.4775 8.36716 34.4775 8.18757C34.4775 8.00797 34.3285 7.8623 34.1448 7.8623L25.7897 7.8623Z"
+                                          fill="#46B2C8"
+                                        ></path>
+                                        <path
+                                          d="M25.7897 13.2993C25.606 13.2993 25.457 13.445 25.457 13.6246C25.457 13.8042 25.606 13.9498 25.7897 13.9498H34.1448C34.3285 13.9498 34.4775 13.8042 34.4775 13.6246C34.4775 13.445 34.3285 13.2993 34.1448 13.2993L25.7897 13.2993Z"
+                                          fill="#46B2C8"
+                                        ></path>
+                                        <path
+                                          d="M25.7897 19.748C25.606 19.748 25.457 19.8937 25.457 20.0733C25.457 20.2529 25.606 20.3986 25.7897 20.3986H34.1448C34.3285 20.3986 34.4775 20.2529 34.4775 20.0733C34.4775 19.8937 34.3285 19.748 34.1448 19.748L25.7897 19.748Z"
+                                          fill="#46B2C8"
+                                        ></path>
+                                        <path
+                                          d="M20.8267 9.30024C20.8924 9.36404 20.9794 9.39657 21.0667 9.39657C21.1408 9.39657 21.2152 9.37315 21.2772 9.32566L23.5848 7.55478C23.7307 7.44283 23.7547 7.23819 23.6385 7.09767C23.5223 6.95722 23.3098 6.93401 23.1638 7.04601L21.0932 8.63497L20.4864 8.04516C20.3551 7.91755 20.1412 7.91663 20.0087 8.04305C19.8762 8.16952 19.8752 8.37541 20.0065 8.50302L20.8267 9.30024Z"
+                                          fill="#C2E2E9"
+                                        ></path>
+                                        <path
+                                          d="M23.6377 12.5894C23.5216 12.4489 23.3091 12.4257 23.1631 12.5377L21.0924 14.1267L20.4856 13.5369C20.3543 13.4093 20.1405 13.4084 20.008 13.5348C19.8755 13.6613 19.8745 13.8672 20.0058 13.9948L20.826 14.7919C20.8917 14.8557 20.9786 14.8882 21.066 14.8882C21.1401 14.8882 21.2145 14.8648 21.2764 14.8173L23.5841 13.0465C23.7299 12.9345 23.754 12.7299 23.6377 12.5894Z"
+                                          fill="#C2E2E9"
+                                        ></path>
+                                        <path
+                                          d="M23.1633 18.9345L21.0926 20.5209L20.4856 19.931C20.3543 19.8034 20.1405 19.8025 20.008 19.9289C19.8755 20.0553 19.8745 20.2612 20.0058 20.3888L20.826 21.1859C20.8917 21.2498 20.9786 21.2822 21.066 21.2822C21.14 21.2822 21.2143 21.2589 21.2762 21.2115L23.5839 19.4435C23.7298 19.3317 23.754 19.1271 23.6379 18.9865C23.5217 18.8459 23.3093 18.8227 23.1633 18.9345Z"
+                                          fill="#C2E2E9"
+                                        ></path>
+                                        <path
+                                          d="M14.3063 21.4964H1.29329C0.578995 21.4964 -5.34058e-05 20.9198 -5.34058e-05 20.2055V9.83365C-5.34058e-05 9.55624 0.0891418 9.28653 0.254365 9.06369L1.83981 6.92538C2.08376 6.59636 2.46765 6.40234 2.87724 6.40234H14.3089C15.0232 6.40234 15.5996 6.98139 15.5996 7.69568V20.2031C15.5996 20.9174 15.0206 21.4964 14.3063 21.4964Z"
+                                          fill="#46B2C8"
+                                        ></path>
+                                        <path
+                                          fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M12.0158 11.0904C12.2776 11.3425 12.2776 11.7512 12.0158 12.0033L7.02626 16.8083C6.76448 17.0604 6.34007 17.0604 6.0783 16.8083L3.58354 14.4058C3.32176 14.1538 3.32176 13.745 3.58354 13.4929C3.84531 13.2409 4.26972 13.2409 4.53149 13.4929L6.55228 15.439L11.0678 11.0904C11.3296 10.8383 11.754 10.8383 12.0158 11.0904Z"
+                                          fill="#C2E2E9"
+                                        ></path>
+                                      </svg>
+                                    </span>
+                                  </header>
+                                  <div>
+                                    <h4>SDKs</h4>
+                                    <p
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
+                                    >
+                                      Discover the no-code tool to manage and
+                                      verify data
+                                    </p>
+                                  </div>
+                                </section></a
+                              >
+                              <a href="https://status.youverify.co/"
+                                ><section class="flex text-left">
+                                  <header class="w-14 mr-5">
+                                    <span>
+                                      <svg
+                                        width="29"
+                                        height="28"
+                                        viewBox="0 0 29 28"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <mask
+                                          id="mask0"
+                                          mask-type="alpha"
+                                          maskUnits="userSpaceOnUse"
+                                          x="0"
+                                          y="0"
+                                          width="29"
+                                          height="28"
+                                        >
+                                          <path
+                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
+                                            fill="#115766"
+                                          ></path>
+                                        </mask>
+                                        <g mask="url(#mask0)">
+                                          <path
+                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                          <path
+                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
+                                            fill="#115766"
+                                          ></path>
+                                          <path
+                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
+                                            fill="#46B2C8"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </span>
+                                  </header>
+                                  <div>
+                                    <h4>API Status</h4>
+                                    <p
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
+                                    >
+                                      Read more about storing and managing your
+                                      personal data
+                                    </p>
+                                  </div>
+                                </section></a
+                              >
+                            </div>
+                            <div class="w-3/12 text-right flex justify-end">
+                              <div>
+                                <img
+                                  width="171"
+                                  height="206"
+                                  src="../../assets/images/illustrations/bridging-gap.png"
                                   alt="Solutions"
                                 /><noscript></noscript>
                               </div>
@@ -673,50 +951,15 @@
                 </div>
                 <div class="w-3/12 text-right">
                   <div
-                    data-gatsby-image-wrapper=""
-                    class="
-                      gatsby-image-wrapper gatsby-image-wrapper-constrained
-                    "
                   >
-                    <div style="max-width: 171px; display: block">
-                      <img
-                        alt=""
-                        role="presentation"
-                        aria-hidden="true"
-                        src="data:image/svg+xml;charset=utf-8,%3Csvg height='206' width='171' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                        style="
-                          max-width: 100%;
-                          display: block;
-                          position: static;
-                        "
-                      />
-                    </div>
+                  
                     <img
-                      aria-hidden="true"
-                      data-placeholder-image=""
-                      decoding="async"
-                      src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='171'%20height='206'%20viewBox='0%200%20171%20206'%20preserveAspectRatio='none'%3e%3cpath%20d='M78%205l-3%201c-2-2-9-1-11%202l-4%202c-5-1-9%202-9%206l-2%202c-3%200-8%205-8%208l-1%204c-2%202-2%203-2%206l-1%206c-3%202-3%208%200%2010%201%202%202%203%201%207%200%204%200%205%202%207s3%203%202%205l1%206c2%202%202%202%200%203-11%204-15%207-14%208l6-2c7-3%2021-7%2030-8%205-1%205-1%205%201l2%206%202%204H59v22c0%2020%200%2022-2%2022l-1-1v-14l-1-15-1%205-1%2014v10l-5-1c-3%200-5%200-6-2-6-9-12-13-18-13l-4-1h-2l-4-1c0-3-3-1-3%201l2%205c1%202%201%202-6%204-6%201-6%202-5%208a247%20247%200%20013%2013l1%203c0%207%204%207%2023%203l13-3%204%202c4%202%204%204%200%204-5%200-20%2010-20%2014%200%202%201%201%205-3%203-3%2012-9%2015-9l-3%204c-6%206-8%2019-4%2024%203%203%204%201%202-2-4-7-2-17%206-23%206-5%206-5%2012-1%204%202%207%202%204%200l-2-3%206-18%209%202a256%20256%200%200065%207h-6l3-6c3-7%205-17%204-18l-2%204-4%2011-2%205v-18l-1-19-6-6-6-6%203-4c1-2%203-5%203-8%201-4%202-4%204-3a105%20105%200%200130%2013c1-1-4-5-8-8-7-3-6-2-5-5%201-2%201-3-1-6l-2-4%203-2c4-5%201-14-5-14-2%200-2%200-1-3%201-4-1-9-4-10-2%200-4-1-5-3%200-2-2-3-4-4l-4-3c0-2-5-6-7-6s-3-1-4-3c-1-4-4-5-8-5l-6-3c-3-3-4-3-6-3-2%201-3%201-3-1s-5-6-8-6l-5%203m23%2049c-1%205-5%2011-10%2014l-4%202h3c3%201%209-1%2012-4%202-3%202-4%202-9-1-7-3-9-3-3M68%20162l39%2020%201%204c0%203-1%203-4%204-27%206-51%204-74-6-8-3-10-3-9-1%202%202%2025%2010%2034%2011%204%201%204%201%204%206l1%205h26c31%200%2028%201%2040-10%209-8%209-9%201-9-5%200-13-2-13-3l-6-3-23-11c-16-8-20-9-17-7'%20fill='%23d3d3d3'%20fill-rule='evenodd'/%3e%3c/svg%3e"
-                      alt=""
-                      style="
-                        opacity: 0;
-                        transition: opacity 500ms linear 0s;
-                        object-fit: cover;
-                      "
-                    /><img
                       width="171"
                       height="206"
-                      data-main-image=""
-                      sizes="(min-width: 171px) 171px, 100vw"
-                      decoding="async"
-                      src="/static/7f47a68054beb07b30c949a59c874725/e17bc/lady-hugging-sim-smiling.png"
-                      srcset="
-                        /static/7f47a68054beb07b30c949a59c874725/b8029/lady-hugging-sim-smiling.png  43w,
-                        /static/7f47a68054beb07b30c949a59c874725/1872b/lady-hugging-sim-smiling.png  86w,
-                        /static/7f47a68054beb07b30c949a59c874725/e17bc/lady-hugging-sim-smiling.png 171w
-                      "
+                      src="~/assets/images/illustrations/lady-hugging-sim-smiling.png"
                       alt="Solutions"
                       style="object-fit: cover; opacity: 1"
-                    /><noscript></noscript>
+                    />
                   </div>
                 </div>
               </div>
@@ -830,9 +1073,9 @@
               <a
                 @click="toggleSubMenuShow('solution')"
                 class="w-full text-left text-blue"
-                href="/#"
+                href="#"
                 ><li class="text-base leading-loose mb-4 flex items-center">
-                  Industries<svg
+                  Use Cases<svg
                     width="9"
                     height="6"
                     viewBox="0 0 9 6"
@@ -848,22 +1091,21 @@
               ></a>
               <div style="" v-if="subMenuShowSolution">
                 <ul class="react-reveal pb-4">
-                  <NuxtLink v-for="industry in industries" :key="industry.id" v-show="industry.visible === true" :to="`/industries/${industry.slug}`" href="/industries/digital-banking">
-                    <li class="px-6 w-full mb-4">
-                      <p class="text-sm my-2 text-blue font-medium">
-                        {{industry.name}}
-                      </p>
-                      <p class="text-grey text-xs leading-loose">
-                        {{industry.teaser}}
-                      </p>
-                    </li>
-                  </NuxtLink>
+                  <div v-for="useCase in industries" :key="useCase.name">
+                    <NuxtLink :to="`/use-case/${useCase.slug}`">
+                      <li class="px-6 w-full mb-4">
+                        <p class="text-sm my-2 text-blue font-medium">
+                          {{ useCase.name }}
+                        </p>
+                      </li>
+                    </NuxtLink>
+                  </div>
                 </ul>
               </div>
               <a
                 @click="toggleSubMenuShow('product')"
                 class="w-full text-left text-blue"
-                href="/#"
+                href="#"
                 ><li class="text-base leading-loose mb-4 flex items-center">
                   Products<svg
                     width="9"
@@ -879,19 +1121,10 @@
                     ></path>
                   </svg></li
               ></a>
+
               <div style="" v-if="subMenuShowProduct">
                 <ul class="react-reveal pb-4" style="">
-                  <a href="/product/youverify-operating-system"
-                    ><li class="px-6 w-full mb-4">
-                      <p class="text-sm my-2 text-blue font-medium">
-                        Youverify Operating System
-                      </p>
-                      <p class="text-grey text-xs leading-loose">
-                        Meet the superefficient verification tool your team
-                        needs
-                      </p>
-                    </li></a
-                  ><a href="/product/vforms"
+                  <a href="/product/vforms"
                     ><li class="px-6 w-full mb-4">
                       <p class="text-sm my-2 text-blue font-medium">vForms</p>
                       <p class="text-grey text-xs leading-loose">
@@ -916,13 +1149,62 @@
                       </p>
                     </li></a
                   >
-                  <a href="/agent"
+                  <a href="/product/data-sources"
                     ><li class="px-6 w-full mb-4">
                       <p class="text-sm my-2 text-blue font-medium">
-                        Become an Agent
+                        Data Sources
                       </p>
                       <p class="text-grey text-xs leading-loose">
-                        Join our force for good
+                        Discover our over 300+ data sources
+                      </p>
+                    </li></a
+                  >
+                </ul>
+              </div>
+              <a
+                @click="toggleSubMenuShow('developer')"
+                class="w-full text-left text-blue"
+                href="#"
+                ><li class="text-base leading-loose mb-4 flex items-center">
+                  Developer<svg
+                    width="9"
+                    height="6"
+                    viewBox="0 0 9 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-3 transform rotate rotate-180"
+                  >
+                    <path
+                      d="M5.23715 0.804168C4.84082 0.371801 4.15918 0.371801 3.76285 0.804168L0.536082 4.32427C-0.0518692 4.96568 0.40313 6 1.27324 6L7.72676 6C8.59687 6 9.05187 4.96568 8.46392 4.32427L5.23715 0.804168Z"
+                      fill="#46B2C8"
+                    ></path>
+                  </svg></li
+              ></a>
+
+              <div style="" v-if="subMenuShowDeveloper">
+                <ul class="react-reveal pb-4" style="">
+                  <a href="https://doc.youverify.co/"
+                    ><li class="px-6 w-full mb-4">
+                      <p class="text-sm my-2 text-blue font-medium">API Docs</p>
+                      <p class="text-grey text-xs leading-loose">
+                        Discover the no-code tool to manage and verify data
+                      </p>
+                    </li></a
+                  ><a href="https://doc.youverify.co/"
+                    ><li class="px-6 w-full mb-4">
+                      <p class="text-sm my-2 text-blue font-medium">SDKs</p>
+                      <p class="text-grey text-xs leading-loose">
+                        Read more about storing and managing your personal data
+                      </p>
+                    </li></a
+                  ><a href="https://status.youverify.co/"
+                    ><li class="px-6 w-full mb-4">
+                      <p class="text-sm my-2 text-blue font-medium">
+                        API Status
+                      </p>
+                      <p class="text-grey text-xs leading-loose">
+                        Find out how to sell your products online in a secure
+                        way
                       </p>
                     </li></a
                   >
@@ -986,7 +1268,7 @@
 import MegaMenu from "./menu/MegaMenu.vue";
 import { mapState } from "vuex";
 export default {
-  name: 'headerComponent',
+  name: "headerComponent",
   components: {
     MegaMenu,
   },
@@ -995,11 +1277,14 @@ export default {
       showmobileMenu: false,
       subMenuShowSolution: false,
       subMenuShowProduct: false,
+      subMenuShowDeveloper: false
     };
   },
   methods: {
     async getAllIndustries() {
-      const allIndustries = await this.$store.dispatch("industries/getIndustries");
+      const allIndustries = await this.$store.dispatch(
+        "industries/getIndustries"
+      );
     },
     toggleMobileMenu() {
       this.showmobileMenu = !this.showmobileMenu;
@@ -1008,9 +1293,15 @@ export default {
       if (param === "solution") {
         this.subMenuShowSolution = !this.subMenuShowSolution;
         this.subMenuShowProduct = false;
+        this.subMenuShowDeveloper = false;
       } else if (param === "product") {
         this.subMenuShowProduct = !this.subMenuShowProduct;
         this.subMenuShowSolution = false;
+        this.subMenuShowDeveloper = false;
+      } else if (param === "developer") {
+        this.subMenuShowDeveloper = !this.subMenuShowProduct;
+        this.subMenuShowSolution = false;
+        this.subMenuShowProduct = false;
       } else {
         return;
       }
@@ -1049,7 +1340,7 @@ export default {
   transition: all 0.5s;
 }
 
-.link-header:hover .coming-soon{
-    display: block;
+.link-header:hover .coming-soon {
+  display: block;
 }
 </style>

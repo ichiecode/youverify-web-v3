@@ -1,5 +1,5 @@
 {
-  "name": "YV-website",
+  "name": "yv-website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "vue-content-placeholders": "^0.2.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.0",
