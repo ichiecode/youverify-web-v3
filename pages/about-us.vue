@@ -14,7 +14,7 @@
     >
       <img
         class="sm:min-h-screen min-h-header w-full h-full object-cover"
-        src="../assets/images/team/aboutimage.jpeg"
+        src="../assets/images/team/about-image.jpeg"
         alt=""
       />
       <div
