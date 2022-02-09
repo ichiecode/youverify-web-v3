@@ -25,7 +25,63 @@
               right customers and fight fraud using data
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
-              <a
+				<AppButton buttonText="View Demo" buttoncolor="darkbluebutton" href="/vforms-demo">
+					<svg slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="
+                    w-5
+                    ml-1.25
+                    transition-transform
+                    duration-75
+                    transform
+                    group-hover:translate-x-0.5
+                  "
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" 
+                  ></path></svg>
+				</AppButton>
+				<AppButton buttonText="Sign-up" buttoncolor="whitebutton" href="https://os.dev.youverify.co/auth/create-account">
+					<svg slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="
+                    w-5
+                    ml-1.25
+                    transition-transform
+                    duration-75
+                    transform
+                    group-hover:translate-x-0.5
+                  "
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg>
+				</AppButton>
+              <!-- <a
                 class="
                   items-center
                   justify-center
@@ -79,7 +135,8 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg></a
-              ><a
+              <
+			  <a 
                 class="
                   items-center
                   justify-center
@@ -133,7 +190,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg
-              ></a>
+              ></a> -->
             </div>
 
             <div class="mt-10 flex items-center">
@@ -567,7 +624,25 @@
                 class="cursor-pointer inline-block"
                 role="button"
                 tabindex="0"
-                ><button
+                 >
+				 <AppButton buttonText="Request demo"  buttoncolor="textbluebutton" href="/contact-us">
+					  <svg slot="prepend"
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="transform inline-block mr-4 false"
+                    >
+                      <path
+                        d="M1 0.999999L7 7L1 13"
+                        stroke="#46B2C8"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg>
+				 </AppButton>
+				<!-- <button
                   class="
                     bg-transparent
                     text-blue
@@ -596,8 +671,9 @@
                       ></path></svg
                     >Request demo</a
                   >
-                </button></span
-              >
+                </button> -->
+				</span>
+              
             </div>
           </div>
           <div class="md:w-4/6 md:ml-12">
@@ -1258,9 +1334,12 @@
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
         <span class="cursor-pointer inline-block" role="button" tabindex="0"
-          ><button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
+          >
+		  <!-- <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
             <NuxtLink to="/contact-us">Request more info</NuxtLink>
-          </button></span
+          </button> -->
+		  <AppButton buttonText="Request more info" buttoncolor="bluebutton" to="/contact-us"  />
+		  </span
         >
       </section>
     </section>
@@ -1269,6 +1348,7 @@
 
 <script>
 import getStarted from "~/components/common/getStarted.vue";
+import AppButton from "../components/global/AppButton.vue";
 export default {
   data() {
     return {
@@ -1286,7 +1366,8 @@ export default {
   },
   components: {
     getStarted,
-  },
+    AppButton
+},
 };
 </script>
 
