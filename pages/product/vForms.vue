@@ -416,7 +416,7 @@
           </div>
         </div>
         <div class="sm:w-5/12">
-          <div class="sm:w-auto w-full mx-auto">
+          <div class="sm:w-auto w-full mx-auto"> 
             <!-- <img
               width="504"
               height="545"
@@ -687,9 +687,39 @@
                   </svg>
                 </div>
                 <p class="-mt-1">Real-time analytics</p>
+				
               </div>
-			  
+			 
             </div>
+			<AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
+				class="min-w-max"
+				
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
             <!-- <a
               href="/contact-us"
               class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
@@ -717,33 +747,7 @@
                   data-v-6addea9c=""
                 ></path></svg> 
             </a> -->
-			<AppButton
-                buttonText="Contact Sales"
-                buttoncolor="whitebutton"
-                href="/contact-us"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
+			
           </div>
           <div class="">
             <img

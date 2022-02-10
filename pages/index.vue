@@ -1307,16 +1307,16 @@
         </a>
       </div>
     </section>
-    <section class="my-20 mx-auto">
-      <div class="flex justify-evenly items-center flex-wrap">
-        <div class="flex justify-center">
-          <img src="~/assets/images/logos/NdprLogos/code-of-practice.png" alt="" />
+    <section class="my-10 px-28">
+      <div class="flex justify-between items-center flex-col md:flex-row">
+        <div class="flex justify-center mt-8 md:mt-0">
+          <img src="~/assets/images/logos/NdprLogos/code-of-practice.png" class="object-cover h-full w-36" alt="" />
         </div>
-        <div class="flex justify-center">
-          <img src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.jpg" class="object-cover h-48 w-96" alt="" />
+        <div class="flex justify-center mt-8 md:mt-0">
+          <img src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.jpg" class="object-cover h-28 w-full" alt="" />
         </div>
-        <div class="flex justify-center">
-          <img src="~/assets/images/logos/NdprLogos/management-system.png" alt="" />
+        <div class="flex justify-center mt-8 md:mt-0">
+          <img src="~/assets/images/logos/NdprLogos/management-system.png" class="object-cover h-full w-36" alt="" />
         </div>
       </div>
     </section>
