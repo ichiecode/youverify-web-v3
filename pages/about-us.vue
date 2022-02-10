@@ -242,6 +242,7 @@
               the platform that helps empower people and businesses in Africa to
               make data driven decisions.
             </p>
+			
 			<AppButton buttonText="Join the Team"  buttoncolor="whitebutton" href="/contact-us" />
             <!-- <a
               class="
