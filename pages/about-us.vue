@@ -14,7 +14,7 @@
     >
       <img
         class="sm:min-h-screen min-h-header w-full h-full object-cover"
-        src="../assets/images/team/aboutimage.jpeg"
+        src="../assets/images/team/about-image.jpeg"
         alt=""
       />
       <div
@@ -242,7 +242,9 @@
               the platform that helps empower people and businesses in Africa to
               make data driven decisions.
             </p>
-            <a
+			
+			<AppButton buttonText="Join the Team"  buttoncolor="whitebutton" href="/contact-us" />
+            <!-- <a
               class="
                 items-center
                 justify-center
@@ -270,7 +272,7 @@
               "
               href="/contact-us"
               >Join the Team
-            </a>
+            </a> -->
           </section>
         </div>
       </section>

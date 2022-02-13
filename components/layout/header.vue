@@ -776,7 +776,7 @@
               </a>
             </ul>
             <div class="lg:block hidden">
-              <a
+              <!-- <a
                 href="https://app.youverify.co/#/auth/login"
                 target="_blank"
                 rel="noreferrer"
@@ -785,7 +785,9 @@
                 >
                   Sign in
                 </button></a
-              >
+              > -->
+			  <AppButton buttonText="Sign in" buttoncolor="bluebutton" href="https://app.youverify.co/#/auth/login" />
+			  
             </div>
           </div>
         </section>
