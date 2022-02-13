@@ -786,7 +786,7 @@
                   Sign in
                 </button></a
               > -->
-			  <AppButton buttonText="Sign in" buttoncolor="bluebutton" href="https://app.youverify.co/#/auth/login" />
+			  <AppButton buttonText="Sign in" buttoncolor="bluebutton" href="https://os.youverify.co/auth/login" />
 			  
             </div>
           </div>
@@ -1240,7 +1240,7 @@
             </ul>
             <div class="block w-full">
               <a
-                href="https://app.youverify.co/#/auth/login"
+                href="https://os.youverify.co/auth/login"
                 target="_blank"
                 rel="noreferrer"
                 ><button
