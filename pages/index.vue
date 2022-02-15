@@ -1227,7 +1227,7 @@
               <div class="flex justify-center">
                 <img
                   src="~/assets/images/logos/NdprLogos/code-of-practice.png"
-                  class="object-cover h-full w-36"
+                  class="object-cover h-auto max-w-full"
                   alt=""
                 />
               </div>
@@ -1235,14 +1235,14 @@
               <div class="flex justify-center">
                 <img
                   src="~/assets/images/logos/NdprLogos/management-system.png"
-                  class="object-cover h-full w-36"
+                  class="object-cover h-auto max-w-full"
                   alt=""
                 />
               </div>
-              <div class="flex justify-center ">
+              <div class="flex justify-center">
                 <img
                   src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.png"
-                  class="object-cover h-36 w-full"
+                  class="object-cover h-auto max-w-full"
                   alt=""
                 />
               </div>
