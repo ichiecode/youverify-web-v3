@@ -345,11 +345,9 @@
           </div>
           <div class="">
             <span class="cursor-pointer inline-block" role="button" tabindex="0"
-              ><button
-                class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8"
               >
-                Submit
-              </button></span
+			   <AppButton buttonText="Submit" buttoncolor="bluebutton" href="https://app.youverify.co/#/auth/login" />
+			  </span
             >
           </div>
         </div>
@@ -359,7 +357,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+	
+};
 </script>
 
 <style></style>
