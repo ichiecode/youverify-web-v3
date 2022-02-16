@@ -1,16 +1,7 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-40 md:pb-32
-      "
+      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
@@ -25,46 +16,16 @@
               right customers and fight fraud using data
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
-				<AppButton buttonText="View Demo" buttoncolor="darkbluebutton" href="/vforms-demo">
-					<svg slot="append"
+              <AppButton
+                buttonText="View Demo"
+                buttoncolor="darkbluebutton"
+                href="/vforms-demo"
+              >
+                <svg
+                  slot="append"
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round" 
-                  ></path></svg>
-				</AppButton>
-				<AppButton buttonText="Sign-up" buttoncolor="whitebutton" href="https://os.dev.youverify.co/auth/create-account">
-					<svg slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -79,8 +40,36 @@
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  ></path></svg>
-				</AppButton>
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Sign-up"
+                buttoncolor="whitebutton"
+                href="https://os.dev.youverify.co/auth/create-account"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
               <!-- <a
                 class="
                   items-center
@@ -265,18 +254,7 @@
       <div class="mx-auto">
         <h5 class="font-medium pb-5">Trusted by the trustworthy</h5>
         <div
-          class="
-            grid
-            gap-6
-            sm:gap-8
-            lg:gap-10
-            mt-4
-            sm:mt-10
-            lg:mt-12
-            grid-cols-2
-            md:grid-cols-5
-            lg:grid-cols-6
-          "
+          class="grid gap-6 sm:gap-8 lg:gap-10 mt-4 sm:mt-10 lg:mt-12 grid-cols-2 md:grid-cols-5 lg:grid-cols-6"
         >
           <figure class="h-12 flex">
             <img
@@ -328,14 +306,7 @@
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h2>Approve more customers</h2>
@@ -351,17 +322,7 @@
           <div class="my-10 justify-center flex item-center">
             <div class="bg-blue-100 rounded-full relative">
               <div
-                class="
-                  absolute
-                  h-full
-                  w-1/2
-                  rounded-full
-                  bg-blue-300
-                  transition-transform
-                  duration-500
-                  transform
-                  z-10
-                "
+                class="absolute h-full w-1/2 rounded-full bg-blue-300 transition-transform duration-500 transform z-10"
                 :class="`${showService === true ? 'translate-x-full' : ''}`"
               ></div>
 
@@ -444,20 +405,7 @@
 
     <section class="">
       <div
-        class="
-          flex
-          max-w-screen-xl
-          mx-auto
-          sm:px-8
-          px-6
-          md:flex-row
-          flex-col-reverse
-          sm:text-left
-          text-center
-          justify-between
-          items-center
-          py-20
-        "
+        class="flex max-w-screen-xl mx-auto sm:px-8 px-6 md:flex-row flex-col-reverse sm:text-left text-center justify-between items-center py-20"
       >
         <div class="sm:w-2/5 sm:pt-0 pt-8">
           <h2>Fraud mitigation</h2>
@@ -492,20 +440,7 @@
 
     <section class="">
       <div
-        class="
-          flex
-          max-w-screen-xl
-          mx-auto
-          sm:px-8
-          px-6
-          sm:flex-row
-          flex-col
-          sm:text-left
-          text-center
-          justify-between
-          items-center
-          py-20
-        "
+        class="flex max-w-screen-xl mx-auto sm:px-8 px-6 sm:flex-row flex-col sm:text-left text-center justify-between items-center py-20"
       >
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-3/4 mx-auto">
@@ -597,15 +532,7 @@
         <div class="md:flex max-w-screen-xl mx-auto">
           <div class="md:w-2/6">
             <div
-              class="
-                bg-blue-200
-                mb-10
-                text-white
-                w-2/4
-                md:w-4/6
-                rounded-2xl
-                text-center
-              "
+              class="bg-blue-200 mb-10 text-white w-2/4 md:w-4/6 rounded-2xl text-center"
             >
               Case Management Portal
             </div>
@@ -624,25 +551,31 @@
                 class="cursor-pointer inline-block"
                 role="button"
                 tabindex="0"
-                 >
-				 <AppButton buttonText="Request demo"  buttoncolor="textbluebutton" href="/contact-us">
-					  <svg slot="prepend"
-                      width="8"
-                      height="14"
-                      viewBox="0 0 8 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="transform inline-block mr-4 false"
-                    >
-                      <path
-                        d="M1 0.999999L7 7L1 13"
-                        stroke="#46B2C8"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path></svg>
-				 </AppButton>
-				<!-- <button
+              >
+                <AppButton
+                  buttonText="Request demo"
+                  buttoncolor="textbluebutton"
+                  href="/contact-us"
+                >
+                  <svg
+                    slot="prepend"
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transform inline-block mr-4 false"
+                  >
+                    <path
+                      d="M1 0.999999L7 7L1 13"
+                      stroke="#46B2C8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </AppButton>
+                <!-- <button
                   class="
                     bg-transparent
                     text-blue
@@ -672,8 +605,7 @@
                     >Request demo</a
                   >
                 </button> -->
-				</span>
-              
+              </span>
             </div>
           </div>
           <div class="md:w-4/6 md:ml-12">
@@ -703,16 +635,7 @@
       </div>
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            sm:py-20
-            py-10
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h3>
@@ -1218,20 +1141,7 @@
 
     <section class="my-20 max-w-screen-lg mx-auto text-center">
       <span
-        class="
-          text-blue
-          tracking-widest
-          px-4
-          py-2
-          uppercase
-          sm:text-sm
-          text-xs
-          rounded
-          mb-3
-          leading-none
-          inline-block
-          bg-blue-100
-        "
+        class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
         >As featured on</span
       >
       <div class="flex justify-between sm:flex-row flex-col items-center mt-6">
@@ -1307,8 +1217,73 @@
         </a>
       </div>
     </section>
-    <section class="my-10 px-28">
-      <div class="flex justify-between items-center flex-col md:flex-row">
+    <section class="bg-blue-100">
+      <div class="max-w-screen-xl mx-auto sm:px-8">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center gap-8 py-20  mt-20"
+        >
+          <div class="w-3/5">
+            <div class="flex items-center flex-col sm:flex-row gap-4">
+              <div class="flex justify-center">
+                <img
+                  src="~/assets/images/logos/NdprLogos/code-of-practice.png"
+                  class="object-cover h-auto max-w-full"
+                  alt=""
+                />
+              </div>
+
+              <div class="flex justify-center">
+                <img
+                  src="~/assets/images/logos/NdprLogos/management-system.png"
+                  class="object-cover h-auto max-w-full"
+                  alt=""
+                />
+              </div>
+              <div class="flex justify-center">
+                <img
+                  src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.png"
+                  class="object-cover h-auto max-w-full"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="w-2/5 sm:mt-0 mt-8">
+            <h3>Optimized for security</h3>
+            <p class="sm:my-8 my-4 sm:w-11/12">
+              With ISO 27001 and ISO 27018 certifications, as well as a NITDA
+              NDPR assessment, the security of your data is our top priority.
+            </p>
+			<AppButton
+                  buttonText="More about Youverify"
+                  buttoncolor="textbluebutton"
+                  href="/about-us"
+                >
+                  <svg
+                    slot="prepend"
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transform inline-block mr-4 false"
+                  >
+                    <path
+                      d="M1 0.999999L7 7L1 13"
+                      stroke="#46B2C8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </AppButton>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="my-10 md:px-80">
+      <div class="flex justify-around items-center flex-col md:flex-row">
         <div class="flex justify-center mt-8 md:mt-0">
           <img src="~/assets/images/logos/NdprLogos/code-of-practice.png" class="object-cover h-full w-36" alt="" />
         </div>
@@ -1319,28 +1294,23 @@
           <img src="~/assets/images/logos/NdprLogos/management-system.png" class="object-cover h-full w-36" alt="" />
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section
-      class="
-        text-center
-        bg-blue-200
-        py-20
-        text-blue-100
-        relative
-        overflow-hidden
-      "
+      class="text-center bg-blue-200 py-20 text-blue-100 relative overflow-hidden"
     >
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
-        <span class="cursor-pointer inline-block" role="button" tabindex="0"
-          >
-		  <!-- <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
+        <span class="cursor-pointer inline-block" role="button" tabindex="0">
+          <!-- <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
             <NuxtLink to="/contact-us">Request more info</NuxtLink>
           </button> -->
-		  <AppButton buttonText="Request more info" buttoncolor="bluebutton" to="/contact-us"  />
-		  </span
-        >
+          <AppButton
+            buttonText="Request more info"
+            buttoncolor="bluebutton"
+            to="/contact-us"
+          />
+        </span>
       </section>
     </section>
   </div>
@@ -1366,8 +1336,8 @@ export default {
   },
   components: {
     getStarted,
-    AppButton
-},
+    AppButton,
+  },
 };
 </script>
 

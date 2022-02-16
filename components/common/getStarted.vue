@@ -13,7 +13,7 @@
               alt=""
               class="inline-block mb-5 w-20 h-20"
             />
-            <h2 class="text-center lg:text-left mb-8">
+            <h2 class="text-center lg:text-left  mb-8">
               Powerful APIs and easy-to-use resources
             </h2>
 
