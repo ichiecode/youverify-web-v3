@@ -481,7 +481,7 @@
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="grid sm:grid-cols-2 grid-cols-1 max-w-screen-lg mx-auto">
           <div>
-            <div class="bg-blue mb-10 text-white w-2/6 rounded-2xl text-center">
+            <div class="bg-blue mb-10 text-white rounded-2xl  text-center w-2/6">
               Youverify OS
             </div>
             <h2 class="sm:mb-0 mb-4">KYC-as-a Service</h2>
@@ -1218,16 +1218,17 @@
       </div>
     </section>
     <section class="bg-blue-100">
-      <div class="max-w-screen-xl mx-auto sm:px-8">
+      <div class="max-w-screen-xl mx-auto px-8">
         <div
           class="flex flex-col sm:flex-row justify-between items-center gap-8 py-20  mt-20"
         >
-          <div class="w-3/5">
+          <div class="md:w-5/12">
             <div class="flex items-center flex-col sm:flex-row gap-4">
-              <div class="flex justify-center">
+              <div class="flex justify-between gap-x-6">
+				  <div class="flex justify-center">
                 <img
                   src="~/assets/images/logos/NdprLogos/code-of-practice.png"
-                  class="object-cover h-auto max-w-full"
+                  class="object-cover"
                   alt=""
                 />
               </div>
@@ -1235,22 +1236,24 @@
               <div class="flex justify-center">
                 <img
                   src="~/assets/images/logos/NdprLogos/management-system.png"
-                  class="object-cover h-auto max-w-full"
+                  class="object-cover"
                   alt=""
                 />
               </div>
+			  </div>
+
               <div class="flex justify-center">
                 <img
                   src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.png"
-                  class="object-cover h-auto max-w-full"
+                  class="object-cover h-full"
                   alt=""
                 />
               </div>
             </div>
           </div>
-          <div class="w-2/5 sm:mt-0 mt-8">
+          <div class="md:w-6/12 sm:mt-0 mt-8 ">
             <h3>Optimized for security</h3>
-            <p class="sm:my-8 my-4 sm:w-11/12">
+            <p class="sm:my-8 my-4 sm:w-10/12">
               With ISO 27001 and ISO 27018 certifications, as well as a NITDA
               NDPR assessment, the security of your data is our top priority.
             </p>
