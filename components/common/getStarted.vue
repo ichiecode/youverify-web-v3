@@ -4,8 +4,8 @@
       <h2 class="text-white font-display">Getting started</h2>
       <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
         <article
-          class="bg-white col-span-full rounded-2xl py-10 px-6 sm:py-15 sm:px-10 lg:px-15 lg:pt-20 pb-0 gap-10 lg:gap-10 xl:gap-20 grid grid-cols-1 items-end"
-          style="grid-template-columns: minmax(350px, 1fr) 1.2fr"
+          class="gridpicture bg-white col-span-full rounded-2xl py-10 px-6 sm:py-15 sm:px-10 lg:px-15 lg:pt-20 pb-0 gap-10 lg:gap-10 xl:gap-20 md:grid grid-cols-1 items-end"
+          style=""
         >
           <div class="pb-6 lg:pb-24 flex flex-col items-center lg:items-start">
             <img
@@ -13,7 +13,7 @@
               alt=""
               class="inline-block mb-5 w-20 h-20"
             />
-            <h2 class="text-center lg:text-left  mb-8">
+            <h2 class="text-center lg:text-left mb-8">
               Powerful APIs and easy-to-use resources
             </h2>
 
@@ -70,7 +70,7 @@
                 ></path></svg
             ></a> -->
           </div>
-          <div class="flex justify-center flex-1">
+          <div class="hidden md:flex justify-center flex-1">
             <figure class="w-full max-w-lg relative">
               <img
                 src="~/assets/images/screenshots/code-snippet.png"
@@ -159,7 +159,7 @@
               class="inline-block mb-5 w-16 h-16"
             />
             <h4 class="text-center lg:text-left mb-8">Beautiful seamless UX</h4>
-			<AppButton
+            <AppButton
               buttonText="Signup"
               buttoncolor="textgraybutton"
               href="https://os.dev.youverify.co/auth/create-account"
@@ -216,7 +216,7 @@
               class="inline-block mb-5 w-16 h-16"
             />
             <h4 class="text-center lg:text-left mb-8">Always-on support</h4>
-			<AppButton
+            <!-- <AppButton
               buttonText="Contact Support Team"
               buttoncolor="textgraybutton"
 			  to="/contact-us"
@@ -243,8 +243,8 @@
                   stroke-linejoin="round"
                 ></path>
               </svg>
-            </AppButton>
-            <!-- <NuxtLink
+            </AppButton> -->
+            <NuxtLink
               to="/contact-us"
               rel="noreferrer"
               class="text-base sm:text-base lg:text-base font-bold inline-flex items-center hover:text-black"
@@ -267,10 +267,19 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path></svg
-            ></NuxtLink> -->
+            ></NuxtLink>
           </div>
         </article>
       </div>
     </div>
   </section>
 </template>
+<style>
+.gridpicture {
+  grid-template-columns: minmax(350px, 1fr) 1.2fr;
+
+  
+}
+
+
+</style>
