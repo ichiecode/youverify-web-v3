@@ -189,7 +189,7 @@
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/trusted/svg/fidelity.svg"
+                  src="~/assets/images/logos/trusted/svg/fidelity.svg" 
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -203,7 +203,7 @@
               </figure>
               <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/trusted/svg/Wema Bank Logo.svg"
+                  src="~/assets/images/logos/trusted/svg/Wema Bank Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -248,7 +248,7 @@
           ></path>
         </svg>
       </div>
-    </header>
+    </header> 
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
       <div class="mx-auto">
@@ -257,44 +257,44 @@
           class="grid gap-6 sm:gap-8 lg:gap-10 mt-4 sm:mt-10 lg:mt-12 grid-cols-2 md:grid-cols-5 lg:grid-cols-6"
         >
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/Bolt_logo (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/Bolt_logo (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
 
           <figure class="flex h-12">
-            <img
-              src="../assets/images/logos/trusted/fidelity (1).jpeg"
+            <LazyImage
+              src="~/assets/images/logos/trusted/fidelity (1).jpeg"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/leadway (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/leadway (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/sterling-logo-balanced (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/sterling-logo-balanced (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/wema-bank-plc-logo-vector (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/wema-bank-plc-logo-vector (1).png"
               alt="Carbon logo"
               class=""
             />
@@ -418,7 +418,7 @@
         </div>
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-10/12 mx-auto">
-            <!-- <img
+            <!-- <LazyImage
               class="w-full"
               width="505"
               height="545"
@@ -444,7 +444,7 @@
       >
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-3/4 mx-auto">
-            <!-- <img
+            <!-- <LazyImage
               width="505"
               height="545"
               class="w-full"
@@ -520,7 +520,7 @@
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
           <img
-            src="../assets/images/illustrations/kyc-as-a-service.svg"
+            src="~/assets/images/illustrations/kyc-as-a-service.svg"
             alt=""
           />
         </div>
@@ -609,9 +609,9 @@
             </div>
           </div>
           <div class="md:w-4/6 md:ml-12">
-            <img
+            <LazyImage
               class="h-full object-contain"
-              src="../assets/images/screenshots/youverifyos-vform-case-management.jpg"
+              src="~/assets/images/screenshots/youverifyos-vform-case-management.jpg"
               alt="Youverify Dashboard"
             />
           </div>
@@ -1151,7 +1151,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/biometric-update.png"
@@ -1165,7 +1165,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/techpoint.png"
@@ -1179,7 +1179,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/techcabal.png"
@@ -1193,7 +1193,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/crunchbase.png"
@@ -1207,7 +1207,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/venture-burn.png"
@@ -1226,7 +1226,7 @@
             <div class="flex items-center flex-col sm:flex-row gap-4">
               <div class="flex justify-between gap-x-6">
 				  <div class="flex justify-center">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/NdprLogos/code-of-practice.png"
                   class="object-cover"
                   alt=""
@@ -1234,7 +1234,7 @@
               </div>
 
               <div class="flex justify-center">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/NdprLogos/management-system.png"
                   class="object-cover"
                   alt=""
@@ -1243,7 +1243,7 @@
 			  </div>
 
               <div class="flex justify-center">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.png"
                   class="object-cover h-full"
                   alt=""
@@ -1288,13 +1288,13 @@
     <!-- <section class="my-10 md:px-80">
       <div class="flex justify-around items-center flex-col md:flex-row">
         <div class="flex justify-center mt-8 md:mt-0">
-          <img src="~/assets/images/logos/NdprLogos/code-of-practice.png" class="object-cover h-full w-36" alt="" />
+          <LazyImage src="~/assets/images/logos/NdprLogos/code-of-practice.png" class="object-cover h-full w-36" alt="" />
         </div>
         <div class="flex justify-center mt-8 md:mt-0">
-          <img src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.jpg" class="object-cover h-28 w-full" alt="" />
+          <LazyImage src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.jpg" class="object-cover h-28 w-full" alt="" />
         </div>
         <div class="flex justify-center mt-8 md:mt-0">
-          <img src="~/assets/images/logos/NdprLogos/management-system.png" class="object-cover h-full w-36" alt="" />
+          <LazyImage src="~/assets/images/logos/NdprLogos/management-system.png" class="object-cover h-full w-36" alt="" />
         </div>
       </div>
     </section> -->
@@ -1321,7 +1321,7 @@
 
 <script>
 import getStarted from "~/components/common/getStarted.vue";
-import AppButton from "../components/global/AppButton.vue";
+
 export default {
   data() {
     return {
@@ -1339,7 +1339,6 @@ export default {
   },
   components: {
     getStarted,
-    AppButton,
   },
 };
 </script>
