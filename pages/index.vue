@@ -16,13 +16,99 @@
               right customers and fight fraud using data
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
-              <a
-                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
+              <AppButton
+                buttonText="View Demo"
+                buttoncolor="darkbluebutton"
+                href="/vforms-demo"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Sign-up"
+                buttoncolor="whitebutton"
+                href="https://os.dev.youverify.co/auth/create-account"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <!-- <a
+                class="
+                  items-center
+                  justify-center
+                  font-medium
+                  disabled:curs
+                  inline-flex
+                  bg-blue-300
+                  text-white
+                  py-3
+                  sm:py-4
+                  px-4
+                  sm:px-5
+                  text-sm
+                  sm:text-1sm
+                  rounded-md
+                  mr-4
+                  my-2
+                  outline-none
+                  focus:outline-none
+                  hover:outline-none
+                  transition-all
+                  cursor-pointer
+                  box-border
+                  group
+                  flex-shrink-0
+                "
                 href="/vforms-demo"
                 >View Demo<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                  class="
+                    w-5
+                    ml-1.25
+                    transition-transform
+                    duration-75
+                    transform
+                    group-hover:translate-x-0.5
+                  "
                 >
                   <path
                     d="M6 10H14"
@@ -38,14 +124,46 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg></a
-              ><a
-                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
+              <
+			  <a 
+                class="
+                  items-center
+                  justify-center
+                  font-medium
+                  disabled:curs
+                  inline-flex
+                  bg-gray-100
+                  text-black
+                  py-3
+                  sm:py-4
+                  px-4
+                  sm:px-5
+                  text-sm
+                  sm:text-1sm
+                  rounded-md
+                  my-2
+                  outline-none
+                  focus:outline-none
+                  hover:outline-none
+                  transition-all
+                  cursor-pointer
+                  box-border
+                  group
+                  flex-shrink-0
+                "
                 target="_blank"
                 href="https://os.dev.youverify.co/auth/create-account"
                 >Sign-up<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                  class="
+                    w-5
+                    ml-1.25
+                    transition-transform
+                    duration-75
+                    transform
+                    group-hover:translate-x-0.5
+                  "
                 >
                   <path
                     d="M6 10H14"
@@ -61,7 +179,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg
-              ></a>
+              ></a> -->
             </div>
 
             <div class="mt-10 flex items-center">
@@ -71,7 +189,7 @@
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/trusted/svg/fidelity.svg"
+                  src="~/assets/images/logos/trusted/svg/fidelity.svg" 
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -85,7 +203,7 @@
               </figure>
               <figure class="relative w-16 h-16">
                 <img
-                  src="../assets/images/logos/trusted/svg/Wema Bank Logo.svg"
+                  src="~/assets/images/logos/trusted/svg/Wema Bank Logo.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -130,7 +248,7 @@
           ></path>
         </svg>
       </div>
-    </header>
+    </header> 
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
       <div class="mx-auto">
@@ -139,44 +257,44 @@
           class="grid gap-6 sm:gap-8 lg:gap-10 mt-4 sm:mt-10 lg:mt-12 grid-cols-2 md:grid-cols-5 lg:grid-cols-6"
         >
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/Bolt_logo (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/Bolt_logo (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
 
           <figure class="flex h-12">
-            <img
-              src="../assets/images/logos/trusted/fidelity (1).jpeg"
+            <LazyImage
+              src="~/assets/images/logos/trusted/fidelity (1).jpeg"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/leadway (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/leadway (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/sterling-logo-balanced (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/sterling-logo-balanced (1).png"
               alt="Carbon logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
-            <img
-              src="../assets/images/logos/trusted/wema-bank-plc-logo-vector (1).png"
+            <LazyImage
+              src="~/assets/images/logos/trusted/wema-bank-plc-logo-vector (1).png"
               alt="Carbon logo"
               class=""
             />
@@ -300,7 +418,7 @@
         </div>
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-10/12 mx-auto">
-            <!-- <img
+            <!-- <LazyImage
               class="w-full"
               width="505"
               height="545"
@@ -326,7 +444,7 @@
       >
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-3/4 mx-auto">
-            <!-- <img
+            <!-- <LazyImage
               width="505"
               height="545"
               class="w-full"
@@ -363,7 +481,7 @@
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="grid sm:grid-cols-2 grid-cols-1 max-w-screen-lg mx-auto">
           <div>
-            <div class="bg-blue mb-10 text-white w-2/6 rounded-2xl text-center">
+            <div class="bg-blue mb-10 text-white rounded-2xl  text-center w-2/6">
               Youverify OS
             </div>
             <h2 class="sm:mb-0 mb-4">KYC-as-a Service</h2>
@@ -402,7 +520,7 @@
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
           <img
-            src="../assets/images/illustrations/kyc-as-a-service.svg"
+            src="~/assets/images/illustrations/kyc-as-a-service.svg"
             alt=""
           />
         </div>
@@ -433,8 +551,40 @@
                 class="cursor-pointer inline-block"
                 role="button"
                 tabindex="0"
-                ><button
-                  class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
+              >
+                <AppButton
+                  buttonText="Request demo"
+                  buttoncolor="textbluebutton"
+                  href="/contact-us"
+                >
+                  <svg
+                    slot="prepend"
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transform inline-block mr-4 false"
+                  >
+                    <path
+                      d="M1 0.999999L7 7L1 13"
+                      stroke="#46B2C8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </AppButton>
+                <!-- <button
+                  class="
+                    bg-transparent
+                    text-blue
+                    rounded
+                    py-2
+                    sm:mb-0
+                    mb-4
+                    px-0
+                  "
                 >
                   <a href="/contact-us">
                     <svg
@@ -454,14 +604,14 @@
                       ></path></svg
                     >Request demo</a
                   >
-                </button></span
-              >
+                </button> -->
+              </span>
             </div>
           </div>
           <div class="md:w-4/6 md:ml-12">
-            <img
+            <LazyImage
               class="h-full object-contain"
-              src="../assets/images/screenshots/youverifyos-vform-case-management.jpg"
+              src="~/assets/images/screenshots/youverifyos-vform-case-management.jpg"
               alt="Youverify Dashboard"
             />
           </div>
@@ -1001,7 +1151,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/biometric-update.png"
@@ -1015,7 +1165,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/techpoint.png"
@@ -1029,7 +1179,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/techcabal.png"
@@ -1043,7 +1193,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/crunchbase.png"
@@ -1057,7 +1207,7 @@
           rel="noreferrer"
           class="sm:mb-0 mb-10 last:mb-0"
           ><div>
-            <img
+            <LazyImage
               width="156"
               height="33"
               src="~/assets/images/logos/features/venture-burn.png"
@@ -1067,17 +1217,103 @@
         </a>
       </div>
     </section>
+    <section class="bg-blue-100">
+      <div class="max-w-screen-xl mx-auto px-8">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center gap-8 py-20  mt-20"
+        >
+          <div class="md:w-5/12">
+            <div class="flex items-center flex-col sm:flex-row gap-4">
+              <div class="flex justify-between gap-x-6">
+				  <div class="flex justify-center">
+                <LazyImage
+                  src="~/assets/images/logos/NdprLogos/code-of-practice.png"
+                  class="object-cover"
+                  alt=""
+                />
+              </div>
+
+              <div class="flex justify-center">
+                <LazyImage
+                  src="~/assets/images/logos/NdprLogos/management-system.png"
+                  class="object-cover"
+                  alt=""
+                />
+              </div>
+			  </div>
+
+              <div class="flex justify-center">
+                <LazyImage
+                  src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.png"
+                  class="object-cover h-full"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="md:w-6/12 sm:mt-0 mt-8 ">
+            <h3>Optimized for security</h3>
+            <p class="sm:my-8 my-4 sm:w-10/12">
+              With ISO 27001 and ISO 27018 certifications, as well as a NITDA
+              NDPR assessment, the security of your data is our top priority.
+            </p>
+			<AppButton
+                  buttonText="More about Youverify"
+                  buttoncolor="textbluebutton"
+                  href="/about-us"
+                >
+                  <svg
+                    slot="prepend"
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transform inline-block mr-4 false"
+                  >
+                    <path
+                      d="M1 0.999999L7 7L1 13"
+                      stroke="#46B2C8"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </AppButton>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="my-10 md:px-80">
+      <div class="flex justify-around items-center flex-col md:flex-row">
+        <div class="flex justify-center mt-8 md:mt-0">
+          <LazyImage src="~/assets/images/logos/NdprLogos/code-of-practice.png" class="object-cover h-full w-36" alt="" />
+        </div>
+        <div class="flex justify-center mt-8 md:mt-0">
+          <LazyImage src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.jpg" class="object-cover h-28 w-full" alt="" />
+        </div>
+        <div class="flex justify-center mt-8 md:mt-0">
+          <LazyImage src="~/assets/images/logos/NdprLogos/management-system.png" class="object-cover h-full w-36" alt="" />
+        </div>
+      </div>
+    </section> -->
 
     <section
       class="text-center bg-blue-200 py-20 text-blue-100 relative overflow-hidden"
     >
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
-        <span class="cursor-pointer inline-block" role="button" tabindex="0"
-          ><button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
+        <span class="cursor-pointer inline-block" role="button" tabindex="0">
+          <!-- <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
             <NuxtLink to="/contact-us">Request more info</NuxtLink>
-          </button></span
-        >
+          </button> -->
+          <AppButton
+            buttonText="Request more info"
+            buttoncolor="bluebutton"
+            to="/contact-us"
+          />
+        </span>
       </section>
     </section>
   </div>
@@ -1085,6 +1321,7 @@
 
 <script>
 import getStarted from "~/components/common/getStarted.vue";
+
 export default {
   data() {
     return {

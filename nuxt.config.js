@@ -45,7 +45,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@plugins/filters.js", "@plugins/vue-placeholders.js"],
+  plugins: ["@plugins/filters.js", "@plugins/vue-placeholders.js", '@/plugins/vue-lazysizes.client.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -61,5 +61,9 @@ export default {
   modules: ["@nuxtjs/axios"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+	extend(config, { isClient, isDev, loaders: { vue } }) {
+		vue.transformAssetUrls.LazyImage = ["src"]; 
+	 }
+  },
 };
