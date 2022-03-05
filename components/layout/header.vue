@@ -580,7 +580,7 @@
                                   </div>
                                 </section></a
                               >
-                              <a href="https://doc.youverify.co/"
+                              <a href="https://www.npmjs.com/package/youverify-web-sdk"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
@@ -642,7 +642,7 @@
                                         leading-loose
                                       "
                                     >
-                                      Discover the no-code tool to manage and
+                                      Discover the no-code tool to manage and 
                                       verify data
                                     </p>
                                   </div>
