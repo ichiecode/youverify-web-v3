@@ -24,12 +24,19 @@ export default {
       },
       {
         src: "https://d3js.org/d3-queue.v3.min.js"
+      },
+      {
+        src: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
       }
     ],
   },
 
-  loading: { color: "#333333", throttle: 0 },
+  // https://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@github.com/YouverifyHQ/youverify-web.git
 
+  ssr: false,
+  
+  loading: { color: "#0F808C", height: '3px' },
+  // loading: '~/components/LoadingBar.vue'
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -38,7 +45,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@plugins/filters.js", "@plugins/vue-placeholders.js"],
+  plugins: ["@plugins/filters.js", "@plugins/vue-placeholders.js", '@/plugins/vue-lazysizes.client.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -54,5 +61,9 @@ export default {
   modules: ["@nuxtjs/axios"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+	extend(config, { isClient, isDev, loaders: { vue } }) {
+		vue.transformAssetUrls.LazyImage = ["src"]; 
+	 }
+  },
 };

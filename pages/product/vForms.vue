@@ -1,16 +1,7 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-40 md:pb-20
-      "
+      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-20"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
@@ -25,45 +16,67 @@
               160 authoritative data sources without coding
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
-              <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue-300
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+              <AppButton
+                buttonText="See how it works"
+                buttoncolor="darkbluebutton"
+                href="/vforms-demo"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <!-- <a
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/vforms-demo"
                 >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -79,45 +92,14 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg
-              ></a>
-              <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+              ></a> -->
+              <!-- <a
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/contact-us"
                 >Contact Sales<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -133,7 +115,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg
-              ></a>
+              ></a> -->
             </div>
 
             <div class="mt-10 flex items-center">
@@ -165,7 +147,7 @@
             </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -177,7 +159,15 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              class="w-full h-full"
+              src="https://assets1.lottiefiles.com/packages/lf20_hgisx2ep.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -199,14 +189,7 @@
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h2>Approve more customers</h2>
@@ -220,40 +203,48 @@
         </section>
         <div class="">
           <div class="my-10 justify-center flex item-center">
-            <div class="bg-blue-100 rounded-full">
+            <div class="bg-blue-100 rounded-full relative">
+              <div
+                class="absolute h-full w-1/2 rounded-full bg-blue-300 transition-transform duration-500 transform z-10"
+                :class="`${showService === true ? 'translate-x-full' : ''}`"
+              ></div>
+
               <button
-                :class="`${
-                  showService === false ? 'bg-blue-300 text-white' : 'text-blue'
-                }
+                :class="`${showService === false ? ' text-white' : 'text-blue'}
+                  
                   items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
-                  px-3
+                  font-bold
+                  px-4
                   rounded-full
                   text-sm
-                  font-bold
                   cursor-pointer
+                  z-20
+                relative
                 `"
                 @click="toggleService('without')"
               >
                 Without Youverify
               </button>
+
               <button
-                :class="`${
-                  showService === true ? 'bg-blue-300 text-white' : 'text-blue'
-                }
+                :class="`${showService === true ? ' text-white' : 'text-blue '}
                 items-center
                   justify-center
                   disabled:curs
                   inline-flex
                   py-3
-                  px-3
+                  px-8
                   font-bold
                   rounded-full
                   text-sm
-                  cursor-pointer`"
+                  cursor-pointer
+                   z-20
+                  relative
+                  `"
                 @click="toggleService('with')"
               >
                 With Youverify
@@ -261,19 +252,33 @@
             </div>
           </div>
           <transition name="fade">
-            <div class="w-full" v-if="showService">
-              <img
-                src="~/assets/images/illustrations/with-yv.png"
-                alt="Mand holding a paper plane"
-              />
+            <div
+              class="w-full flex justify-center items-center"
+              v-if="showService"
+            >
+              <lottie-player
+                src="https://assets10.lottiefiles.com/packages/lf20_vgxxp1nq.json"
+                background="transparent"
+                speed="0.8"
+                class="h-full w-full"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </transition>
           <transition name="fade">
-            <div class="w-full" v-if="!showService">
-              <img
-                src="~/assets/images/illustrations/without-yv.png"
-                alt="Mand holding a paper plane"
-              />
+            <div
+              class="w-full flex justify-center items-center"
+              v-if="!showService"
+            >
+              <lottie-player
+                src="https://assets1.lottiefiles.com/packages/lf20_7yi0ptca.json"
+                background="transparent"
+                speed="0.8"
+                class="h-full w-full"
+                loop
+                autoplay
+              ></lottie-player>
             </div>
           </transition>
         </div>
@@ -282,31 +287,11 @@
 
     <section class="bg-blue-100 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <span
-            class="
-              text-blue
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue-100
-            "
+            class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >Data Driven</span
           >
           <h2>
@@ -321,46 +306,68 @@
             credit offering, while mitigating risk to your business.
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-            <a
+			   <AppButton
+                buttonText="Video Demo"
+                buttoncolor="darkbluebutton"
+                href="#how-it-works"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+            <!-- <a
               href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Video Demo<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -381,43 +388,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Contact Sales<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -436,32 +412,33 @@
                   stroke-linejoin="round"
                   data-v-6addea9c=""
                 ></path></svg
-            ></a>
+            ></a> -->
           </div>
         </div>
         <div class="sm:w-5/12">
-          <div class="sm:w-auto w-full mx-auto">
-            <img
+          <div class="sm:w-auto w-full mx-auto"> 
+            <!-- <img
               width="504"
               height="545"
               src="../../assets/images/illustrations/smark-credit0check.png"
               alt="Mand holding a paper plane"
-            />
+            /> -->
+            <lottie-player
+              class="w-full h-full"
+              src="https://assets9.lottiefiles.com/packages/lf20_foppdwfa.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mb-10 max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="sm:my-20 my-10 max-w-screen-xl mx-auto sm:px-8 px-6">
       <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
+        class="flex sm:flex-row flex-col-reverse justify-evenly items-center py-20"
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <div class="sm:w-auto w-full mx-auto">
@@ -475,20 +452,7 @@
         </div>
         <div class="sm:w-6/12">
           <span
-            class="
-              text-white
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue
-            "
+            class="text-white tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue"
             >regulations</span
           >
           <h2>
@@ -500,46 +464,68 @@
             capture and save consent; securely archive and retrieve PIIs,
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-            <a
+			  <AppButton
+                buttonText="See how it works"
+                buttoncolor="darkbluebutton"
+                href="/vforms-demo"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Get in touch"
+                buttoncolor="whitebutton"
+                href="/contact-us"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+            <!-- <a
               href="/vforms-demo"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >See how it works<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -560,43 +546,12 @@
                 ></path></svg></a
             ><a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3.5
-                sm:py-3.75
-                px-3.75
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Get in touch<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -615,180 +570,13 @@
                   stroke-linejoin="round"
                   data-v-6addea9c=""
                 ></path></svg
-            ></a>
+            ></a> -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-      <div
-        class="
-          flex
-          sm:flex-row
-          flex-col-reverse
-          justify-evenly
-          items-center
-          py-20
-        "
-      >
-        <div class="sm:w-6/12 sm:pt-0 pt-8">
-          <span
-            class="
-              text-blue
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue-100
-            "
-            >Compliance</span
-          >
-          <h2>Determine your compliance rules</h2>
-          <p class="sm:my-8 my-4 sm:w-10/12">
-            Replicate your existing business workflow by setting custom
-            parameters with ease. Define simple or complex decision workflows
-            including relational data decisions.
-          </p>
-          <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-            <a
-              href="#how-it-works"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-blue-300
-                text-white
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                mr-4
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
-              data-v-6addea9c=""
-              >Video Demo<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
-              href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
-              data-v-6addea9c=""
-              >Contact Sales<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a>
-          </div>
-        </div>
-        <div class="sm:w-5/12">
-          <div class="sm:w-auto w-full mx-auto">
-            <img
-              width="504"
-              height="545"
-              src="~/assets/images/illustrations/en_account_verification.webp"
-              alt="Mand holding a paper plane"
-            />
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section class="bg-blue-300 py-20 text-blue-100 relative">
+    <section class="bg-blue-300 py-20 text-blue-100 relative overflow-hidden">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section class="grid sm:grid-cols-2 grid-cols-1">
           <div class="sm:mt-0 mt-96">
@@ -899,47 +687,47 @@
                   </svg>
                 </div>
                 <p class="-mt-1">Real-time analytics</p>
+				
               </div>
+			 
             </div>
-            <a
+			<AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
+				class="min-w-max"
+				
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+            <!-- <a
               href="/contact-us"
-              class="
-                items-center
-                justify-center
-                font-medium
-                disabled:curs
-                inline-flex
-                bg-gray-100
-                text-black
-                py-3
-                sm:py-4
-                px-4
-                sm:px-5
-                text-sm
-                sm:text-1sm
-                rounded-md
-                my-2
-                outline-none
-                focus:outline-none
-                hover:outline-none
-                transition-all
-                cursor-pointer
-                box-border
-                group
-                flex-shrink-0
-              "
+              class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
               data-v-6addea9c=""
               >Contact Sales<svg
                 viewBox="0 0 20 20"
                 fill="none"
-                class="
-                  w-5
-                  ml-1.25
-                  transition-transform
-                  duration-75
-                  transform
-                  group-hover:translate-x-0.5
-                "
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 data-v-6addea9c=""
               >
                 <path
@@ -957,8 +745,9 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   data-v-6addea9c=""
-                ></path></svg
-            ></a>
+                ></path></svg> 
+            </a> -->
+			
           </div>
           <div class="">
             <img
@@ -969,15 +758,7 @@
             <img
               src="../../assets/images/screenshots/vform-dashboard-new.jpg"
               alt="Youverify Dashboard"
-              class="
-                absolute
-                sm:h-full sm:w-auto
-                w-full
-                top-0
-                sm:pl-0
-                pl-6
-                py-12
-              "
+              class="absolute sm:h-full sm:w-auto w-full top-0 sm:pl-0 pl-6 py-12"
               style="right: -10%"
             />
           </div>
@@ -987,16 +768,7 @@
 
     <section
       id="how-it-works"
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
+      class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
     >
       <section class="text-center">
         <h3>See how vForm works</h3>

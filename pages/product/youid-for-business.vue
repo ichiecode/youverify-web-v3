@@ -1,16 +1,7 @@
 <template>
   <div>
     <header
-      class="
-        bg-blue-300
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-40 md:pb-20
-      "
+      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-20"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
@@ -25,45 +16,67 @@
               your products or services online with targeted customers.
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
-              <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+				<AppButton
+                buttonText="See how it works"
+                buttoncolor="bigbluebutton"
+                 href="#how-it-works"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20" 
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
+              >
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+				</AppButton>
+              <!-- <a
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="#how-it-works"
                 >See how it works<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -80,43 +93,12 @@
                     stroke-linejoin="round"
                   ></path></svg></a
               ><a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
+                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="/contact-us"
                 >Contact Sales<svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
                   <path
                     d="M6 10H14"
@@ -132,11 +114,11 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path></svg
-              ></a>
+              ></a> -->
             </div>
           </div>
           <div class="md:w-3/6">
-            <video
+            <!-- <video
               playsinline=""
               autoplay=""
               loop=""
@@ -148,7 +130,14 @@
                 type="video/webm"
               />
               Sorry, your browser doesn't support embedded videos.
-            </video>
+            </video> -->
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_tc4mfa1o.json"
+              background="transparent"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
           </div>
         </div>
       </section>
@@ -170,16 +159,7 @@
     <section class="bg-blue-100 sm:pb-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            sm:py-20
-            py-10
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
         >
           <div class="text-center">
             <h3>How to create a YOUID marketplace template.</h3>
@@ -454,17 +434,27 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/contact-us"
+                    >
+					<AppButton buttonText="Get a Free demo"  buttoncolor="textbluebutton" href="/contact-us">
+					  <svg slot="prepend"
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="transform inline-block mr-4 false"
+                    >
+                      <path
+                        d="M1 0.999999L7 7L1 13"
+                        stroke="#46B2C8"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg>
+				 </AppButton>
+					<!-- <a href="/contact-us"
                       ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
+                        class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
                         <svg
                           width="8"
@@ -483,7 +473,8 @@
                           ></path></svg
                         >Get a Free Demo
                       </button></a
-                    ></span
+                    > -->
+					</span
                   >
                 </p>
               </div>
@@ -572,36 +563,23 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/contact-us"
-                      ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
-                      >
-                        <svg
-                          width="8"
-                          height="14"
-                          viewBox="0 0 8 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="transform inline-block mr-4 false"
-                        >
-                          <path
-                            d="M1 0.999999L7 7L1 13"
-                            stroke="#46B2C8"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path></svg
-                        >Get a Free Demo
-                      </button></a
-                    ></span
+                    ><AppButton buttonText="Get a Free demo"  buttoncolor="textbluebutton" href="/contact-us">
+					  <svg slot="prepend"
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="transform inline-block mr-4 false"
+                    >
+                      <path
+                        d="M1 0.999999L7 7L1 13"
+                        stroke="#46B2C8"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg>
+				 </AppButton></span
                   >
                 </p>
               </div>
@@ -691,36 +669,23 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><a href="/contact-us"
-                      ><button
-                        class="
-                          bg-transparent
-                          text-blue
-                          rounded
-                          py-2
-                          sm:mb-0
-                          mb-4
-                          px-0
-                        "
-                      >
-                        <svg
-                          width="8"
-                          height="14"
-                          viewBox="0 0 8 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="transform inline-block mr-4 false"
-                        >
-                          <path
-                            d="M1 0.999999L7 7L1 13"
-                            stroke="#46B2C8"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path></svg
-                        >Get a Free Demo
-                      </button></a
-                    ></span
+                    ><AppButton buttonText="Get a Free demo"  buttoncolor="textbluebutton" href="/contact-us">
+					  <svg slot="prepend"
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="transform inline-block mr-4 false"
+                    >
+                      <path
+                        d="M1 0.999999L7 7L1 13"
+                        stroke="#46B2C8"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg>
+				 </AppButton></span
                   >
                 </p>
               </div>
@@ -731,25 +696,15 @@
           <h4>Option 4</h4>
           <p class="my-4">More than 2000 Transactions</p>
           <span class="cursor-pointer inline-block" role="button" tabindex="0"
-            ><button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
-              <NuxtLink to="/contact-us">Contact sales</NuxtLink>
-            </button></span
+            ><AppButton  buttonText="Contact sales" buttoncolor="bluebutton" to="/contact-us" />
+			</span
           >
         </div>
       </section>
     </section>
     <section
       id="how-it-works"
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
+      class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
     >
       <section class="text-center">
         <h3 class="mb-12">
@@ -773,10 +728,12 @@
 
 <script>
 import getStarted from "~/components/common/getStarted.vue";
+import AppButton from "../../components/global/AppButton.vue";
 export default {
   components: {
     getStarted,
-  },
+    AppButton
+},
 };
 </script>
 

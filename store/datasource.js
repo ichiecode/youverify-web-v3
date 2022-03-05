@@ -1,5 +1,5 @@
 export const state = () => ({
-  values: null,
+  dataSource: null,
   loading: false,
 });
 
@@ -8,18 +8,18 @@ export const mutations = {
     state.loading = payload;
   },
 
-  setValues(state, payload) {
-    state.values = payload;
+  setDataSource(state, payload) {
+    state.dataSource = payload;
   },
 };
 
 export const actions = {
-  async getValues({ state, commit }) {
+  async getDataSource({ state, commit }) {
     commit("setLoading", true);
     const response = await this.$axios
-      .$get(`${process.env.baseUrl}/values`)
+      .$get(`${process.env.baseUrl}/data-sources`)
       .then((res) => {
-        commit("setValues", res);
+        commit("setDataSource", res);
         commit("setLoading", false);
         return res;
       })
