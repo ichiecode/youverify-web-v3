@@ -46,7 +46,7 @@
                   flex-shrink-0
                 "
                 target="_blank"
-                :href="`https://os.dev.youverify.co/v-forms/${vformId}/edit/add-fields`"
+                :href="`https://os.youverify.co/v-forms/${vformId}/edit/add-fields`"
                 >Use Template<svg
                   viewBox="0 0 20 20"
                   fill="none"
