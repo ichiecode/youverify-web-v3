@@ -46,7 +46,7 @@
               <AppButton
                 buttonText="Sign-up"
                 buttoncolor="whitebutton"
-                href="https://os.dev.youverify.co/auth/create-account"
+                href="https://os.youverify.co/auth/create-account"
               >
                 <svg
                   slot="append"
@@ -152,7 +152,7 @@
                   flex-shrink-0
                 "
                 target="_blank"
-                href="https://os.dev.youverify.co/auth/create-account"
+                href="https://os.youverify.co/auth/create-account"
                 >Sign-up<svg
                   viewBox="0 0 20 20"
                   fill="none"
