@@ -20,15 +20,7 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    false
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
                   >Products<svg
                     width="9"
                     height="6"
@@ -45,15 +37,7 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="
-                      container
-                      mx-auto
-                      w-full
-                      flex flex-wrap
-                      justify-between
-                      mx-2
-                      border-t-2
-                    "
+                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
                   >
                     <div class="w-full text-white">
                       <div>
@@ -115,12 +99,7 @@
                                   <div>
                                     <h4>vForms</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Discover the no-code tool to manage and
                                       verify data
@@ -157,12 +136,7 @@
                                   <div>
                                     <h4>YOUID</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Read more about storing and managing your
                                       personal data
@@ -205,12 +179,7 @@
                                   <div>
                                     <h4>YOUID for Business</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Find out how to sell your products online
                                       in a secure way
@@ -283,12 +252,7 @@
                                   <div>
                                     <h4>Data Sources</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Discover our over 300+ data sources
                                     </p>
@@ -316,15 +280,7 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    false
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
                   >Use Cases<svg
                     width="9"
                     height="6"
@@ -341,15 +297,7 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="
-                      container
-                      mx-auto
-                      w-full
-                      flex flex-wrap
-                      justify-between
-                      mx-2
-                      border-t-2
-                    "
+                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
                   >
                     <div class="w-full text-white">
                       <div>
@@ -377,22 +325,12 @@
                                     <h4>{{ industry.name }}</h4>
                                     <h4
                                       v-show="industry.visible === false"
-                                      class="
-                                        coming-soon
-                                        text-xs
-                                        mt-2
-                                        text-red-500
-                                      "
+                                      class="coming-soon text-xs mt-2 text-red-500"
                                     >
                                       Coming Soon
                                     </h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       {{ industry.teaser }}
                                     </p>
@@ -419,22 +357,12 @@
                                   <div>
                                     <h4>{{ industry.name }}</h4>
                                     <h4
-                                      class="
-                                        coming-soon
-                                        text-xs
-                                        mt-2
-                                        text-red-500
-                                      "
+                                      class="coming-soon text-xs mt-2 text-red-500"
                                     >
                                       Coming Soon
                                     </h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       {{ industry.teaser }}
                                     </p>
@@ -462,15 +390,7 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    false
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
                   >Developer<svg
                     width="9"
                     height="6"
@@ -487,15 +407,7 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="
-                      container
-                      mx-auto
-                      w-full
-                      flex flex-wrap
-                      justify-between
-                      mx-2
-                      border-t-2
-                    "
+                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
                   >
                     <div class="w-full text-white">
                       <div>
@@ -567,12 +479,7 @@
                                   <div>
                                     <h4>API Doc</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Meet the superefficient verification tool
                                       your team needs
@@ -580,7 +487,8 @@
                                   </div>
                                 </section></a
                               >
-                              <a href="https://www.npmjs.com/package/youverify-web-sdk"
+                              <a
+                                href="https://www.npmjs.com/package/youverify-web-sdk"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
@@ -635,14 +543,9 @@
                                   <div>
                                     <h4>SDKs</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
-                                      Discover the no-code tool to manage and 
+                                      Discover the no-code tool to manage and
                                       verify data
                                     </p>
                                   </div>
@@ -713,12 +616,7 @@
                                   <div>
                                     <h4>API Status</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Read more about storing and managing your
                                       personal data
@@ -746,30 +644,14 @@
               </li>
               <a href="/about-us">
                 <li
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    falsefalse
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 falsefalse"
                 >
                   About us
                 </li>
               </a>
               <a href="/blogs">
                 <li
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    falsefalse
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 falsefalse"
                 >
                   Blog
                 </li>
@@ -786,8 +668,11 @@
                   Sign in
                 </button></a
               > -->
-			  <AppButton buttonText="Sign in" buttoncolor="bluebutton" href="https://os.youverify.co/auth/login" />
-			  
+              <AppButton
+                buttonText="Sign in"
+                buttoncolor="bluebutton"
+                href="https://os.youverify.co/auth/login"
+              />
             </div>
           </div>
         </section>
@@ -952,9 +837,7 @@
                   >
                 </div>
                 <div class="w-3/12 text-right">
-                  <div
-                  >
-                  
+                  <div>
                     <img
                       width="171"
                       height="206"
@@ -976,19 +859,7 @@
         ></span></div
     ></span>
     <nav
-      class="
-        transform
-        z-40
-        w-full
-        lg:hidden
-        block
-        top-0
-        overflow-scroll
-        duration-700
-        fixed
-        right-0
-        min-h-auto
-      "
+      class="transform z-40 w-full lg:hidden block top-0 overflow-scroll duration-700 fixed right-0 min-h-auto"
     >
       <section class="bg-white max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex justify-between text-blue py-6 items-center false">
@@ -1061,15 +932,7 @@
         <div>
           <div
             v-show="showmobileMenu"
-            class="
-              react-reveal
-              border-black border-t
-              flex
-              justify-between
-              h-screen
-              flex-wrap
-              pt-4
-            "
+            class="react-reveal border-black border-t flex justify-between h-screen flex-wrap pt-4"
           >
             <ul class="block w-full">
               <a
@@ -1214,25 +1077,13 @@
               </div>
               <a href="/about-us">
                 <li
-                  class="
-                    text-base text-blue
-                    leading-loose
-                    mb-4
-                    flex
-                    items-center
-                  "
+                  class="text-base text-blue leading-loose mb-4 flex items-center"
                 >
                   About us
                 </li></a
               ><a href="/blogs">
                 <li
-                  class="
-                    text-base text-blue
-                    leading-loose
-                    mb-4
-                    flex
-                    items-center
-                  "
+                  class="text-base text-blue leading-loose mb-4 flex items-center"
                 >
                   Blog
                 </li></a
@@ -1244,16 +1095,7 @@
                 target="_blank"
                 rel="noreferrer"
                 ><button
-                  class="
-                    bg-blue
-                    text-white
-                    rounded
-                    py-2
-                    sm:mb-0
-                    mb-4
-                    px-8
-                    w-full
-                  "
+                  class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8 w-full"
                 >
                   Sign in
                 </button></a
@@ -1279,17 +1121,19 @@ export default {
       showmobileMenu: false,
       subMenuShowSolution: false,
       subMenuShowProduct: false,
-      subMenuShowDeveloper: false
+      subMenuShowDeveloper: false,
     };
   },
   methods: {
     async getAllIndustries() {
-      const allIndustries = await this.$store.dispatch(
-        "industries/getIndustries"
-      );
+      await this.$store.dispatch("industries/getIndustries");
     },
-    toggleMobileMenu() {
+    toggleMobileMenu(e) {
+      console.log(e)
+      console.log("got herere")
+      console.log("before", this.showmobileMenu)
       this.showmobileMenu = !this.showmobileMenu;
+      console.log("after", this.showmobileMenu)
     },
     toggleSubMenuShow(param) {
       if (param === "solution") {
