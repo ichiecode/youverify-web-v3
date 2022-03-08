@@ -21,7 +21,8 @@
                 <a
                   href="#"
                   class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
-                  >Products<svg
+                  >Products
+                  <svg
                     width="9"
                     height="6"
                     viewBox="0 0 9 6"
@@ -304,7 +305,7 @@
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                              <NuxtLink
+                              <!-- <NuxtLink
                                 class="link-header"
                                 v-for="industry in industries"
                                 :key="industry.name"
@@ -368,7 +369,7 @@
                                     </p>
                                   </div>
                                 </section>
-                              </NuxtLink>
+                              </NuxtLink> -->
                             </div>
                             <div class="w-3/12 text-right flex justify-end">
                               <div>
@@ -658,16 +659,6 @@
               </a>
             </ul>
             <div class="lg:block hidden">
-              <!-- <a
-                href="https://app.youverify.co/#/auth/login"
-                target="_blank"
-                rel="noreferrer"
-                ><button
-                  class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8"
-                >
-                  Sign in
-                </button></a
-              > -->
               <AppButton
                 buttonText="Sign in"
                 buttoncolor="bluebutton"
@@ -931,8 +922,8 @@
         </div>
         <div>
           <div
-            v-show="showmobileMenu"
-            class="react-reveal border-black border-t flex justify-between h-screen flex-wrap pt-4"
+            :class="{ 'hidden' : !showmobileMenu }"
+            class="border-black border-t flex justify-between h-screen flex-wrap pt-4"
           >
             <ul class="block w-full">
               <a
@@ -954,7 +945,7 @@
                     ></path>
                   </svg></li
               ></a>
-              <div style="" v-if="subMenuShowSolution">
+              <!-- <div style="" v-if="subMenuShowSolution">
                 <ul class="react-reveal pb-4">
                   <div v-for="useCase in industries" :key="useCase.name">
                     <NuxtLink :to="`/use-case/${useCase.slug}`">
@@ -966,7 +957,7 @@
                     </NuxtLink>
                   </div>
                 </ul>
-              </div>
+              </div> -->
               <a
                 @click="toggleSubMenuShow('product')"
                 class="w-full text-left text-blue"
@@ -1129,11 +1120,7 @@ export default {
       await this.$store.dispatch("industries/getIndustries");
     },
     toggleMobileMenu(e) {
-      console.log(e)
-      console.log("got herere")
-      console.log("before", this.showmobileMenu)
       this.showmobileMenu = !this.showmobileMenu;
-      console.log("after", this.showmobileMenu)
     },
     toggleSubMenuShow(param) {
       if (param === "solution") {
@@ -1145,7 +1132,7 @@ export default {
         this.subMenuShowSolution = false;
         this.subMenuShowDeveloper = false;
       } else if (param === "developer") {
-        this.subMenuShowDeveloper = !this.subMenuShowProduct;
+        this.subMenuShowDeveloper = !this.subMenuShowDeveloper;
         this.subMenuShowSolution = false;
         this.subMenuShowProduct = false;
       } else {
@@ -1189,4 +1176,5 @@ export default {
 .link-header:hover .coming-soon {
   display: block;
 }
+
 </style>
