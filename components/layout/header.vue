@@ -305,7 +305,7 @@
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                              <NuxtLink
+                              <!-- <NuxtLink
                                 class="link-header"
                                 v-for="industry in industries"
                                 :key="industry.name"
@@ -369,7 +369,7 @@
                                     </p>
                                   </div>
                                 </section>
-                              </NuxtLink>
+                              </NuxtLink> -->
                             </div>
                             <div class="w-3/12 text-right flex justify-end">
                               <div>
