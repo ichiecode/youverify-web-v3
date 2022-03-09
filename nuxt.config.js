@@ -41,7 +41,7 @@ export default {
   css: [],
 
   env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:1337",
+    baseUrl: 'https://cms.dev.youverify.co' || "http://localhost:1337",
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
