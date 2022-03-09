@@ -305,7 +305,7 @@
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                              <!-- <NuxtLink
+                              <NuxtLink
                                 class="link-header"
                                 v-for="industry in industries"
                                 :key="industry.name"
@@ -369,7 +369,7 @@
                                     </p>
                                   </div>
                                 </section>
-                              </NuxtLink> -->
+                              </NuxtLink>
                             </div>
                             <div class="w-3/12 text-right flex justify-end">
                               <div>
@@ -945,9 +945,9 @@
                     ></path>
                   </svg></li
               ></a>
-              <!-- <div style="" v-if="subMenuShowSolution">
+              <div style="" v-if="subMenuShowSolution">
                 <ul class="react-reveal pb-4">
-                  <div v-for="useCase in industries" :key="useCase.name">
+                  <div v-for="useCase in (industries || [])" :key="useCase.name">
                     <NuxtLink :to="`/use-case/${useCase.slug}`">
                       <li class="px-6 w-full mb-4">
                         <p class="text-sm my-2 text-blue font-medium">
@@ -957,7 +957,7 @@
                     </NuxtLink>
                   </div>
                 </ul>
-              </div> -->
+              </div>
               <a
                 @click="toggleSubMenuShow('product')"
                 class="w-full text-left text-blue"
