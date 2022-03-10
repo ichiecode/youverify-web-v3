@@ -415,7 +415,7 @@
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                              <a href="https://docs.youverify.co/"
+                              <a href="https://doc.youverify.co/"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>

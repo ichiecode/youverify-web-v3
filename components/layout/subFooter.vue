@@ -72,7 +72,7 @@
           ><a class="mb-2 block w-full" href="/gdpr"
             ><li>GDPR Compliance Statement</li></a
           ><a
-            href="https://docs.youverify.co/"
+            href="https://doc.youverify.co/"
             target="_blank"
             rel="noreferrer"
             class="mb-2 block w-full"
