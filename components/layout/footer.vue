@@ -79,7 +79,7 @@
           >
           
           <a
-            href="https://docs.youverify.co/"
+            href="https://doc.youverify.co/"
             target="_blank"
             rel="noreferrer"
             class="mb-2 block w-full"
