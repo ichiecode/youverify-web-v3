@@ -109,9 +109,9 @@
             class="mb-2 block w-full"
             ><li>API Status</li></a
           >
-          <a aria-current="page" class="mb-2 block w-full" href="/resources">
+          <!-- <a aria-current="page" class="mb-2 block w-full" href="/resources">
             <li>Resources</li>
-          </a>
+          </a> -->
         </ul>
       </section>
       <section class="sm:w-0/12"></section>

@@ -36,7 +36,7 @@
             <img
               :src="formattedPost.image ? formattedPost.image.url : ''"
               class="w-full"
-              alt="A Definitive Guide to Avoiding Identity Theft and Fraud in the Digital Age"
+              :alt="formattedPost.image ? formattedPost.image.caption : ''"
               style="object-fit: cover; opacity: 1; height: 350px"
             />
           </div>
@@ -135,6 +135,7 @@
                         width="880"
                         class="h-full object-cover rounded"
                         :src="blog.image.url"
+                        :alt="blog.image.caption"
                       />
                     </div>
                     <span class="absolute top-3 left-3 text-sm"
@@ -155,7 +156,9 @@
                   </div>
                 </article>
 
-                <p v-if="formattedRelatedBlogs.length === 0">No related articles</p>
+                <p v-if="formattedRelatedBlogs.length === 0">
+                  No related articles
+                </p>
               </div>
             </section>
           </aside>
@@ -170,58 +173,45 @@ import { mapState } from "vuex";
 import SEO from "~/mixins/SEO.js";
 
 export default {
-  mixins: [SEO],
+  // mixins: [SEO],
   name: "singleBlogPost",
   data() {
+    return {};
+  },
+
+  async asyncData({ store, params }) {
+    try {
+      const blogDetails = await store.dispatch(
+        "blogs/getSingleBlogPost",
+        params.slug
+      );
+      await store.dispatch(
+        "blogs/getRelatedBlogs",
+        blogDetails[0].blog_categories[0].slug
+      );
+      return {
+        blogDetails,
+      };
+    } catch (e) {
+      console.log(e);
+    }
+  },
+  head() {
     return {
-      relatedBloged: [
+      title: this.blogDetails[0].title,
+      meta: [
         {
-          id: 1,
-          url: "https://res.cloudinary.com/youverify/image/upload/v1637060313/Definitive_Guide_to_Avoiding_Identity_Theft_and_Fraud_in_the_Digital_Age_You_ID_scaled_d90abc1003.webp",
-          categoriesName: "Cybersecurity",
-          date: "2021-11-16T11:07:09.679Z",
-          title:
-            "A Definitive Guide to Avoiding Identity Theft and Fraud in the Digital Age",
-          slug: "a-definitive-guide-to-avoiding-identity-theft-and-fraud-in-the-digital-age",
-          author: "Chinedu Ohagwu",
+          hid: "og-title",
+          property: "og:title",
+          content: this.blogDetails[0].title,
         },
         {
-          id: 2,
-          url: "https://res.cloudinary.com/youverify/image/upload/v1637060313/Definitive_Guide_to_Avoiding_Identity_Theft_and_Fraud_in_the_Digital_Age_You_ID_scaled_d90abc1003.webp",
-          categoriesName: "Cybersecurity",
-          date: "2021-11-16T11:07:09.679Z",
-          title:
-            "A Definitive Guide to Avoiding Identity Theft and Fraud in the Digital Age",
-          slug: "a-definitive-guide-to-avoiding-identity-theft-and-fraud-in-the-digital-age",
-          author: "Chinedu Ohagwu",
-        },
-        {
-          id: 3,
-          url: "https://res.cloudinary.com/youverify/image/upload/v1637060313/Definitive_Guide_to_Avoiding_Identity_Theft_and_Fraud_in_the_Digital_Age_You_ID_scaled_d90abc1003.webp",
-          categoriesName: "Cybersecurity",
-          date: "2021-11-16T11:07:09.679Z",
-          title:
-            "A Definitive Guide to Avoiding Identity Theft and Fraud in the Digital Age",
-          slug: "a-definitive-guide-to-avoiding-identity-theft-and-fraud-in-the-digital-age",
-          author: "Chinedu Ohagwu",
+          hid: "description",
+          property: "description",
+          content: this.blogDetails[0].teaser,
         },
       ],
     };
-  },
-  methods: {
-    async getSingleBlogPost() {
-      const singleBlogPost = await this.$store.dispatch(
-        "blogs/getSingleBlogPost",
-        this.$route.params.slug
-      );
-      const relatedBlog = await this.$store.dispatch(
-        "blogs/getRelatedBlogs",
-        singleBlogPost[0].blog_categories[0].slug
-      );
-    },
-  },
-  async mounted() {
-    await this.getSingleBlogPost();
   },
   computed: {
     ...mapState({

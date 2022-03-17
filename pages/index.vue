@@ -1310,14 +1310,14 @@
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
         <span class="cursor-pointer inline-block" role="button" tabindex="0">
-          <!-- <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
+          <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
             <NuxtLink to="/contact-us">Request more info</NuxtLink>
-          </button> -->
-          <AppButton
+          </button>
+          <!-- <AppButton
             buttonText="Request more info"
             buttoncolor="bluebutton"
             to="/contact-us"
-          />
+          /> -->
         </span>
       </section>
     </section>

@@ -795,6 +795,17 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
+  head: {
+    title: "vForms",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Verify and approve more customers for your business in seconds with our online identity verification form. Achieve seamless KYC and AML compliance with vForms.",
+      },
+    ],
+  },
   data() {
     return {
       showService: true,
