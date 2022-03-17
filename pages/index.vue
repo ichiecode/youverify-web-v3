@@ -189,7 +189,7 @@
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-16 h-16">
                 <img
-                  src="~/assets/images/logos/trusted/svg/fidelity.svg" 
+                  src="~/assets/images/logos/trusted/svg/fidelity.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -248,7 +248,7 @@
           ></path>
         </svg>
       </div>
-    </header> 
+    </header>
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
       <div class="mx-auto">
@@ -333,11 +333,14 @@
                   justify-center
                   disabled:curs
                   inline-flex
+				
                   py-3
                   font-bold
-                  px-4
+				  px-2
+                  md:px-4
                   rounded-full
-                  text-sm
+				  text-xs
+                  md:text-sm
                   cursor-pointer
                   z-20
                 relative
@@ -353,11 +356,14 @@
                   justify-center
                   disabled:curs
                   inline-flex
+				  
                   py-3
-                  px-8
+				  px-4
+                  md:px-8
                   font-bold
                   rounded-full
-                  text-sm
+				  text-xs
+                  md:text-sm
                   cursor-pointer
                    z-20
                   relative
@@ -481,7 +487,7 @@
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="grid sm:grid-cols-2 grid-cols-1 max-w-screen-lg mx-auto">
           <div>
-            <div class="bg-blue mb-10 text-white rounded-2xl  text-center w-2/6">
+            <div class="bg-blue mb-10 text-white rounded-2xl text-center w-2/6">
               Youverify OS
             </div>
             <h2 class="sm:mb-0 mb-4">KYC-as-a Service</h2>
@@ -1220,27 +1226,27 @@
     <section class="bg-blue-100">
       <div class="max-w-screen-xl mx-auto px-8">
         <div
-          class="flex flex-col sm:flex-row justify-between items-center gap-8 py-20  mt-20"
+          class="flex flex-col sm:flex-row justify-between items-center gap-8 py-20 mt-20"
         >
           <div class="md:w-5/12">
             <div class="flex items-center flex-col sm:flex-row gap-4">
               <div class="flex justify-between gap-x-6">
-				  <div class="flex justify-center">
-                <LazyImage
-                  src="~/assets/images/logos/NdprLogos/code-of-practice.png"
-                  class="object-cover"
-                  alt=""
-                />
-              </div>
+                <div class="flex justify-center">
+                  <LazyImage
+                    src="~/assets/images/logos/NdprLogos/code-of-practice.png"
+                    class="object-cover"
+                    alt=""
+                  />
+                </div>
 
-              <div class="flex justify-center">
-                <LazyImage
-                  src="~/assets/images/logos/NdprLogos/management-system.png"
-                  class="object-cover"
-                  alt=""
-                />
+                <div class="flex justify-center">
+                  <LazyImage
+                    src="~/assets/images/logos/NdprLogos/management-system.png"
+                    class="object-cover"
+                    alt=""
+                  />
+                </div>
               </div>
-			  </div>
 
               <div class="flex justify-center">
                 <LazyImage
@@ -1251,36 +1257,35 @@
               </div>
             </div>
           </div>
-          <div class="md:w-6/12 sm:mt-0 mt-8 ">
+          <div class="md:w-6/12 sm:mt-0 mt-8">
             <h3>Optimized for security</h3>
             <p class="sm:my-8 my-4 sm:w-10/12">
               With ISO 27001 and ISO 27018 certifications, as well as a NITDA
               NDPR assessment, the security of your data is our top priority.
             </p>
-			<AppButton
-                  buttonText="More about Youverify"
-                  buttoncolor="textbluebutton"
-                  href="/about-us"
-                >
-                  <svg
-                    slot="prepend"
-                    width="8"
-                    height="14"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="transform inline-block mr-4 false"
-                  >
-                    <path
-                      d="M1 0.999999L7 7L1 13"
-                      stroke="#46B2C8"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </AppButton>
-           
+            <AppButton
+              buttonText="More about Youverify"
+              buttoncolor="textbluebutton"
+              href="/about-us"
+            >
+              <svg
+                slot="prepend"
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transform inline-block mr-4 false"
+              >
+                <path
+                  d="M1 0.999999L7 7L1 13"
+                  stroke="#46B2C8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </AppButton>
           </div>
         </div>
       </div>

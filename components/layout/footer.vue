@@ -1,6 +1,28 @@
 <template>
   <div>
+	  <section class="md:pb-20 pb-5">
+		<div class="md:flex items-center gap-2 "> 
+      <div class="w-full md:w-1/2">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get information about our product and coupons</p>
+      </div>
+      <div class="w-full md:w-1/2">
+        <form class="my-4 md:my-0 flex ">
+          <input
+            class="w-full p-2 rounded-l-lg outline-none border-t mr-0 border-b outline text-gray-800  bg-white"
+            placeholder="Email address"
+          />
+          <button
+            class="px-4 rounded-r-lg bg-blue text-white font-bold border-t border-b border-r"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+	</section>
     <div class="flex pb-16 sm:flex-nowrap flex-wrap">
+		
       <section class="sm:w-4/12 w-full sm:mb-0 mb-12">
         <div class="">
           <p class="mb-8">
@@ -23,13 +45,7 @@
               viewBox="0 0 18 17"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="
-                flex-shrink-0 flex-grow-0
-                absolute
-                sm:-left-6
-                -left-5
-                top-2
-              "
+              class="flex-shrink-0 flex-grow-0 absolute sm:-left-6 -left-5 top-2"
             >
               <path
                 d="M5.39802 9.63933L1.85075 13.9963L5.74504 16.7724L8.82963 12.0684L11.8757 16.811L15.7699 14.0349L12.2612 9.63933L17.6978 8.21271L16.1941 3.62439L10.9503 5.62937L11.2202 0H6.43907L6.70897 5.62937L1.50374 3.58583L0 8.17415L5.39802 9.63933Z"
@@ -69,15 +85,15 @@
           <a aria-current="page" class="mb-2 block w-full" href="/about-us"
             ><li>About us</li>
             <a aria-current="page" class="mb-2 block w-full" href="/agent">
-            <li>Become an Agent</li>
-          </a></a
+              <li>Become an Agent</li>
+            </a></a
           ><a class="mb-2 block w-full" href="/blogs"><li>Blog</li></a
           ><a class="mb-2 block w-full" href="/about-us#career"
             ><li>Career</li></a
           ><a class="mb-2 block w-full" href="/gdpr"
             ><li>GDPR Compliance Statement</li></a
           >
-          
+
           <a
             href="https://doc.youverify.co/"
             target="_blank"
@@ -118,21 +134,11 @@
         </div>
       </section>
     </div>
+    
     <hr class="border-grey sm:mb-0 mb-8" />
 
     <div
-      class="
-        flex
-        sm:flex-row
-        flex-row-reverse
-        sm:flex-nowrap
-        flex-wrap
-        justify-between
-        items-center
-        pt-5
-        sm:text-sm
-        text-xs
-      "
+      class="flex sm:flex-row flex-row-reverse sm:flex-nowrap flex-wrap justify-between items-center pt-5 sm:text-sm text-xs"
     >
       <div class="sm:w-4/12 w-6/12 sm:text-left text-right flex">
         <a
@@ -165,18 +171,7 @@
         </a>
       </div>
       <div
-        class="
-          sm:text-center
-          text-left
-          sm:w-4/12
-          w-full
-          sm:mb-0
-          mb-2
-          sm:mt-0
-          -mt-20
-          flex flex-row
-          justify-between
-        "
+        class="sm:text-center text-left sm:w-4/12 w-full sm:mb-0 mb-2 sm:mt-0 -mt-20 flex flex-row justify-between"
       >
         <ul class="flex justify-between w-full">
           <a class="inline-block" href="/terms-of-use"><li>Terms of Use</li></a
