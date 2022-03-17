@@ -12,7 +12,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "The Youverify operating system (OS) allows you to automate due diligence on one platform, in a convenient and the most effective way. Request demo",
+          "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. ",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
