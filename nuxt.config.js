@@ -59,7 +59,7 @@ export default {
     gzip: true,
     exclude: ["/secret", "/admin/**"],
     routes: async () => {
-      let baseUrl = process.env.BASE_URL || "http://0.0.0.0:1337";
+      let baseUrl = process.env.BASE_URL;
 
       let { data: industriesData } = await axios.get(`${baseUrl}/industries`);
       const industriesArray = industriesData.map(v => `/use-case/${v.slug}`)
