@@ -52,7 +52,7 @@ export default {
 
   buildModules: ["@nuxtjs/tailwindcss"],
 
-  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots"],
 
   sitemap: {
     hostname: "https://youverify.co",
@@ -69,6 +69,12 @@ export default {
 
       return [...industriesArray, ...blogArray]
     }
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/admin',
+    Allow: '/'
   },
 
   build: {
