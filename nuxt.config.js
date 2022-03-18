@@ -59,12 +59,11 @@ export default {
     gzip: true,
     exclude: ["/secret", "/admin/**"],
     routes: async () => {
-      let baseUrl = process.env.BASE_URL;
 
-      let { data: industriesData } = await axios.get(`${baseUrl}/industries`);
+      let { data: industriesData } = await axios.get(`https://cms.dev.youverify.co/industries`);
       const industriesArray = industriesData.map(v => `/use-case/${v.slug}`)
 
-      let { data: blogData } = await axios.get(`${baseUrl}/blogs`);
+      let { data: blogData } = await axios.get(`https://cms.dev.youverify.co/blogs`);
       const blogArray = blogData.map(v => `/blog/${v.slug}`)
 
       return [...industriesArray, ...blogArray]
