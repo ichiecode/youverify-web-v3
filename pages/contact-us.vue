@@ -358,7 +358,17 @@
 
 <script>
 export default {
-	
+	head: {
+    title: "Contact us",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Contact us at Youverify @ 1st Floor, Sum House, 350 Borno Way, Yaba, 101212 Lagos, Nigeria. Phone @ +234 (814) 797 3350.",
+      },
+    ],
+  },
 };
 </script>
 

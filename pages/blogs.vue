@@ -44,6 +44,7 @@
               <div class="rounded w-full sm:h-72 h-60">
                 <img
                   width="880"
+                  :alt="blog.image.caption"
                   class="h-full object-cover rounded"
                   :src="blog.image.url"
                 />
@@ -109,6 +110,17 @@ import { mapState } from "vuex";
 
 export default {
   name: "blogPost",
+  head: {
+    title: "Blog",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Learn about Online identity verification for your business and how to store and manage your personal data on our blog.",
+      },
+    ],
+  },
   methods: {
     async getAllBlogPost() {
       const allBlogPost = await this.$store.dispatch("blogs/getBlogs");

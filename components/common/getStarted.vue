@@ -20,7 +20,7 @@
             <AppButton
               buttonText="Read our API Docs"
               buttoncolor="textgraybutton"
-              href="https://docs.youverify.co/"
+              href="https://doc.youverify.co/"
             >
               <svg
                 slot="append"
@@ -45,7 +45,7 @@
               </svg>
             </AppButton>
             <!-- <a
-              href="https://docs.youverify.co/"
+              href="https://doc.youverify.co/"
               target="_blank"
               rel="noreferrer"
               class="sm:text-base lg:text-base font-bold inline-flex items-center hover:text-black"
@@ -91,7 +91,7 @@
             <AppButton
               buttonText="Explore our SDKs"
               buttoncolor="textgraybutton"
-              href="https://docs.youverify.co/"
+              href="https://doc.youverify.co/"
             >
               <svg
                 slot="append"
@@ -116,7 +116,7 @@
               </svg>
             </AppButton>
             <!-- <a
-              href="https://docs.youverify.co/"
+              href="https://doc.youverify.co/"
               target="_blank"
               rel="noreferrer"
               class="
@@ -162,7 +162,7 @@
             <AppButton
               buttonText="Signup"
               buttoncolor="textgraybutton"
-              href="https://os.dev.youverify.co/auth/create-account"
+              href="https://os.youverify.co/auth/create-account"
             >
               <svg
                 slot="append"
@@ -189,7 +189,7 @@
             <!-- <a
               class="sm:text-base lg:text-base font-bold inline-flex items-center hover:text-black"
               target="_blank"
-              href="https://os.dev.youverify.co/auth/create-account"
+              href="https://os.youverify.co/auth/create-account"
               >Signup<svg viewBox="0 0 25 25" fill="none" class="w-5 lg:w-6.25">
                 <path
                   d="M8 18L18 8"

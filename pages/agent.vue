@@ -330,6 +330,17 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
+  head: {
+    title: "About Us",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Youverify is Africa’s Number 1 online identity verification service that helps businesses meet KYC/ AML requirements and individuals manage personal data. Read more about us.",
+      },
+    ],
+  },
   components: {
     getStarted
   }

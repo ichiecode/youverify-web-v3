@@ -58,7 +58,7 @@
                   flex-shrink-0
                 "
                 target="_blank"
-                :href="`https://os.dev.youverify.co/v-forms/${formattedIndustries ? formattedIndustries.vFormId: ''}/edit/add-fields`"
+                :href="`https://os.youverify.co/v-forms/${formattedIndustries ? formattedIndustries.vFormId: ''}/edit/add-fields`"
                 >Use Template<svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -104,6 +104,18 @@ export default {
   components: {
     getStarted,
   },
+  head() {
+      return {
+        title: this.formattedIndustries.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.formattedIndustries.name
+          }
+        ]
+      }
+    },
   methods: {
     async getSingleIndustry() {
       const singleIndustries = await this.$store.dispatch(

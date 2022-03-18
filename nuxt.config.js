@@ -1,5 +1,6 @@
+const axios = require("axios");
+
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Youverify",
     htmlAttrs: {
@@ -12,7 +13,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "The Youverify operating system (OS) allows you to automate due diligence on one platform, in a convenient and the most effective way. Request demo",
+          "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. ",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
@@ -23,47 +24,62 @@ export default {
         src: "https://d3js.org/d3.v5.min.js",
       },
       {
-        src: "https://d3js.org/d3-queue.v3.min.js"
+        src: "https://d3js.org/d3-queue.v3.min.js",
       },
       {
-        src: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-      }
+        src: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js",
+      },
     ],
   },
 
-  // https://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@github.com/YouverifyHQ/youverify-web.git
+  loading: { color: "#0F808C", height: "3px" },
 
-  ssr: false,
-  
-  loading: { color: "#0F808C", height: '3px' },
-  // loading: '~/components/LoadingBar.vue'
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:1337",
+    baseUrl: "https://cms.dev.youverify.co" || "http://localhost:1337",
   },
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@plugins/filters.js", "@plugins/vue-placeholders.js", '@/plugins/vue-lazysizes.client.js'],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss",
+  plugins: [
+    "@plugins/filters.js",
+    "@plugins/vue-placeholders.js",
+    "@/plugins/vue-lazysizes.client.js",
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
+  axios: {},
 
-  modules: ["@nuxtjs/axios"],
+  components: true,
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  buildModules: ["@nuxtjs/tailwindcss"],
+
+  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots"],
+
+  sitemap: {
+    hostname: "https://youverify.co",
+    gzip: true,
+    exclude: ["/secret", "/admin/**"],
+    routes: async () => {
+      let baseUrl = process.env.BASE_URL || "http://0.0.0.0:1337";
+
+      let { data: industriesData } = await axios.get(`${baseUrl}/industries`);
+      const industriesArray = industriesData.map(v => `/use-case/${v.slug}`)
+
+      let { data: blogData } = await axios.get(`${baseUrl}/blogs`);
+      const blogArray = blogData.map(v => `/blog/${v.slug}`)
+
+      return [...industriesArray, ...blogArray]
+    }
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/admin',
+    Allow: '/'
+  },
+
   build: {
-	extend(config, { isClient, isDev, loaders: { vue } }) {
-		vue.transformAssetUrls.LazyImage = ["src"]; 
-	 }
+    extend(config, { isClient, isDev, loaders: { vue } }) {
+      vue.transformAssetUrls.LazyImage = ["src"];
+    },
   },
 };

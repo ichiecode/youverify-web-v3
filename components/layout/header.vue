@@ -20,16 +20,9 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    false
-                  "
-                  >Products<svg
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
+                  >Products
+                  <svg
                     width="9"
                     height="6"
                     viewBox="0 0 9 6"
@@ -45,15 +38,7 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="
-                      container
-                      mx-auto
-                      w-full
-                      flex flex-wrap
-                      justify-between
-                      mx-2
-                      border-t-2
-                    "
+                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
                   >
                     <div class="w-full text-white">
                       <div>
@@ -115,12 +100,7 @@
                                   <div>
                                     <h4>vForms</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Discover the no-code tool to manage and
                                       verify data
@@ -157,12 +137,7 @@
                                   <div>
                                     <h4>YOUID</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Read more about storing and managing your
                                       personal data
@@ -205,12 +180,7 @@
                                   <div>
                                     <h4>YOUID for Business</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Find out how to sell your products online
                                       in a secure way
@@ -222,73 +192,21 @@
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
-                                      <svg
-                                        width="29"
-                                        height="28"
-                                        viewBox="0 0 29 28"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <mask
-                                          id="mask0"
-                                          mask-type="alpha"
-                                          maskUnits="userSpaceOnUse"
-                                          x="0"
-                                          y="0"
-                                          width="29"
-                                          height="28"
-                                        >
-                                          <path
-                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
-                                            fill="#115766"
-                                          ></path>
-                                        </mask>
-                                        <g mask="url(#mask0)">
-                                          <path
-                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                        </g>
-                                      </svg>
-                                    </span>
+                                      
+                                      <span>
+                                      <LazyImage
+                                        src="~/assets/images/developer/data-source.png"
+                                        alt="data-source-image"
+										class="h-8 w-10"
+                                      />
+                                    </span>                 
+                                      
+                                        </span>
                                   </header>
                                   <div>
                                     <h4>Data Sources</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Discover our over 300+ data sources
                                     </p>
@@ -316,15 +234,7 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    false
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
                   >Use Cases<svg
                     width="9"
                     height="6"
@@ -341,15 +251,7 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="
-                      container
-                      mx-auto
-                      w-full
-                      flex flex-wrap
-                      justify-between
-                      mx-2
-                      border-t-2
-                    "
+                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
                   >
                     <div class="w-full text-white">
                       <div>
@@ -377,22 +279,12 @@
                                     <h4>{{ industry.name }}</h4>
                                     <h4
                                       v-show="industry.visible === false"
-                                      class="
-                                        coming-soon
-                                        text-xs
-                                        mt-2
-                                        text-red-500
-                                      "
+                                      class="coming-soon text-xs mt-2 text-red-500"
                                     >
                                       Coming Soon
                                     </h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       {{ industry.teaser }}
                                     </p>
@@ -419,22 +311,12 @@
                                   <div>
                                     <h4>{{ industry.name }}</h4>
                                     <h4
-                                      class="
-                                        coming-soon
-                                        text-xs
-                                        mt-2
-                                        text-red-500
-                                      "
+                                      class="coming-soon text-xs mt-2 text-red-500"
                                     >
                                       Coming Soon
                                     </h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       {{ industry.teaser }}
                                     </p>
@@ -462,15 +344,7 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    false
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
                   >Developer<svg
                     width="9"
                     height="6"
@@ -487,92 +361,27 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="
-                      container
-                      mx-auto
-                      w-full
-                      flex flex-wrap
-                      justify-between
-                      mx-2
-                      border-t-2
-                    "
+                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
                   >
                     <div class="w-full text-white">
                       <div>
                         <div class="pt-10 pb-20">
                           <div class="flex">
                             <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                              <a href="https://docs.youverify.co/"
+                              <a href="https://doc.youverify.co/"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
-                                      <svg
-                                        width="29"
-                                        height="28"
-                                        viewBox="0 0 29 28"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <mask
-                                          id="mask0"
-                                          mask-type="alpha"
-                                          maskUnits="userSpaceOnUse"
-                                          x="0"
-                                          y="0"
-                                          width="29"
-                                          height="28"
-                                        >
-                                          <path
-                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
-                                            fill="#115766"
-                                          ></path>
-                                        </mask>
-                                        <g mask="url(#mask0)">
-                                          <path
-                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                        </g>
-                                      </svg>
+                                      <LazyImage
+                                        src="~/assets/images/developer/api-doc.png"
+                                        alt="api-doc-image"
+                                      />
                                     </span>
                                   </header>
                                   <div>
                                     <h4>API Doc</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Meet the superefficient verification tool
                                       your team needs
@@ -580,69 +389,23 @@
                                   </div>
                                 </section></a
                               >
-                              <a href="https://www.npmjs.com/package/youverify-web-sdk"
+                              <a
+                                href="https://www.npmjs.com/package/youverify-web-sdk"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
-                                      <svg
-                                        width="39"
-                                        height="28"
-                                        viewBox="0 0 39 28"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M9.82935 28H36.041C37.4696 28 38.6277 26.8482 38.6277 25.4196V6.48347C38.6277 5.89387 38.4263 5.32293 38.0568 4.86346L34.9224 0.965702C34.4314 0.355126 33.6927 0 32.9092 0H9.82358C8.395 0 7.24268 1.1581 7.24268 2.58668V25.4133C7.24268 26.8419 8.40077 28 9.82935 28Z"
-                                          fill="#115766"
-                                        ></path>
-                                        <path
-                                          d="M25.7897 7.8623C25.606 7.8623 25.457 8.00797 25.457 8.18757C25.457 8.36716 25.606 8.51283 25.7897 8.51283H34.1448C34.3285 8.51283 34.4775 8.36716 34.4775 8.18757C34.4775 8.00797 34.3285 7.8623 34.1448 7.8623L25.7897 7.8623Z"
-                                          fill="#46B2C8"
-                                        ></path>
-                                        <path
-                                          d="M25.7897 13.2993C25.606 13.2993 25.457 13.445 25.457 13.6246C25.457 13.8042 25.606 13.9498 25.7897 13.9498H34.1448C34.3285 13.9498 34.4775 13.8042 34.4775 13.6246C34.4775 13.445 34.3285 13.2993 34.1448 13.2993L25.7897 13.2993Z"
-                                          fill="#46B2C8"
-                                        ></path>
-                                        <path
-                                          d="M25.7897 19.748C25.606 19.748 25.457 19.8937 25.457 20.0733C25.457 20.2529 25.606 20.3986 25.7897 20.3986H34.1448C34.3285 20.3986 34.4775 20.2529 34.4775 20.0733C34.4775 19.8937 34.3285 19.748 34.1448 19.748L25.7897 19.748Z"
-                                          fill="#46B2C8"
-                                        ></path>
-                                        <path
-                                          d="M20.8267 9.30024C20.8924 9.36404 20.9794 9.39657 21.0667 9.39657C21.1408 9.39657 21.2152 9.37315 21.2772 9.32566L23.5848 7.55478C23.7307 7.44283 23.7547 7.23819 23.6385 7.09767C23.5223 6.95722 23.3098 6.93401 23.1638 7.04601L21.0932 8.63497L20.4864 8.04516C20.3551 7.91755 20.1412 7.91663 20.0087 8.04305C19.8762 8.16952 19.8752 8.37541 20.0065 8.50302L20.8267 9.30024Z"
-                                          fill="#C2E2E9"
-                                        ></path>
-                                        <path
-                                          d="M23.6377 12.5894C23.5216 12.4489 23.3091 12.4257 23.1631 12.5377L21.0924 14.1267L20.4856 13.5369C20.3543 13.4093 20.1405 13.4084 20.008 13.5348C19.8755 13.6613 19.8745 13.8672 20.0058 13.9948L20.826 14.7919C20.8917 14.8557 20.9786 14.8882 21.066 14.8882C21.1401 14.8882 21.2145 14.8648 21.2764 14.8173L23.5841 13.0465C23.7299 12.9345 23.754 12.7299 23.6377 12.5894Z"
-                                          fill="#C2E2E9"
-                                        ></path>
-                                        <path
-                                          d="M23.1633 18.9345L21.0926 20.5209L20.4856 19.931C20.3543 19.8034 20.1405 19.8025 20.008 19.9289C19.8755 20.0553 19.8745 20.2612 20.0058 20.3888L20.826 21.1859C20.8917 21.2498 20.9786 21.2822 21.066 21.2822C21.14 21.2822 21.2143 21.2589 21.2762 21.2115L23.5839 19.4435C23.7298 19.3317 23.754 19.1271 23.6379 18.9865C23.5217 18.8459 23.3093 18.8227 23.1633 18.9345Z"
-                                          fill="#C2E2E9"
-                                        ></path>
-                                        <path
-                                          d="M14.3063 21.4964H1.29329C0.578995 21.4964 -5.34058e-05 20.9198 -5.34058e-05 20.2055V9.83365C-5.34058e-05 9.55624 0.0891418 9.28653 0.254365 9.06369L1.83981 6.92538C2.08376 6.59636 2.46765 6.40234 2.87724 6.40234H14.3089C15.0232 6.40234 15.5996 6.98139 15.5996 7.69568V20.2031C15.5996 20.9174 15.0206 21.4964 14.3063 21.4964Z"
-                                          fill="#46B2C8"
-                                        ></path>
-                                        <path
-                                          fill-rule="evenodd"
-                                          clip-rule="evenodd"
-                                          d="M12.0158 11.0904C12.2776 11.3425 12.2776 11.7512 12.0158 12.0033L7.02626 16.8083C6.76448 17.0604 6.34007 17.0604 6.0783 16.8083L3.58354 14.4058C3.32176 14.1538 3.32176 13.745 3.58354 13.4929C3.84531 13.2409 4.26972 13.2409 4.53149 13.4929L6.55228 15.439L11.0678 11.0904C11.3296 10.8383 11.754 10.8383 12.0158 11.0904Z"
-                                          fill="#C2E2E9"
-                                        ></path>
-                                      </svg>
+                                      <LazyImage
+                                        src="~/assets/images/developer/tools.png"
+                                        alt="tools-image"
+                                      />
                                     </span>
                                   </header>
                                   <div>
                                     <h4>SDKs</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
-                                      Discover the no-code tool to manage and 
+                                      Discover the no-code tool to manage and
                                       verify data
                                     </p>
                                   </div>
@@ -652,73 +415,16 @@
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
-                                      <svg
-                                        width="29"
-                                        height="28"
-                                        viewBox="0 0 29 28"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <mask
-                                          id="mask0"
-                                          mask-type="alpha"
-                                          maskUnits="userSpaceOnUse"
-                                          x="0"
-                                          y="0"
-                                          width="29"
-                                          height="28"
-                                        >
-                                          <path
-                                            d="M3.6849 28H24.3949C26.43 28 28.0798 26.3555 28.0798 24.3203V6.75837C28.0798 5.98605 27.8372 5.23613 27.3861 4.6092L25.1728 1.53286C24.4804 0.570458 23.368 0 22.1824 0H3.68473C1.64961 0 0 1.64979 0 3.6849V24.3151C0 26.3502 1.64978 28 3.6849 28Z"
-                                            fill="#115766"
-                                          ></path>
-                                        </mask>
-                                        <g mask="url(#mask0)">
-                                          <path
-                                            d="M18.4416 4.3811L19.4565 -2.64794L15.7866 -3.17938L-6.5308 -6.40723L-8.01392 3.86014L14.3767 7.09848L18.4416 4.3811Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M33.9124 2.82522L32.237 -4.07397L28.6326 -3.19864L17.0417 -0.383789L19.4901 9.69789L31.1521 6.86575L33.9124 2.82522Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M49.2341 7.21626L48.0622 0.213379L44.4055 0.825974L25.771 3.94913L27.4843 14.1799L46.1894 11.0462L49.2341 7.21626Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M41.4601 18.9262L41.6197 11.8265L37.9132 11.7427L15.7396 11.2427L15.5068 21.6148L37.7536 22.1174L41.4601 18.9262Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M17.7774 9.98879L16.2132 3.06445L12.5983 3.88124L-13.8677 9.86836L-11.5841 19.9865L14.9524 13.9837L17.7774 9.98879Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M13.7101 21.2142V14.1118H10.001H-1.92676V24.4865H10.0742L13.7101 21.2142Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                          <path
-                                            d="M15.313 29.3169L13.7488 22.3926L10.1312 23.2094L-16.3347 29.1965L-14.0486 39.3146L12.488 33.3118L15.313 29.3169Z"
-                                            fill="#115766"
-                                          ></path>
-                                          <path
-                                            d="M40.8872 32.983L41.9021 25.9566L38.2349 25.4251L15.9175 22.1973L14.4343 32.4647L36.8224 35.703L40.8872 32.983Z"
-                                            fill="#46B2C8"
-                                          ></path>
-                                        </g>
-                                      </svg>
+                                      <LazyImage
+                                        src="~/assets/images/developer/api-status.png"
+                                        alt="api-status-image"
+                                      />
                                     </span>
                                   </header>
                                   <div>
                                     <h4>API Status</h4>
                                     <p
-                                      class="
-                                        text-sm
-                                        mt-3
-                                        text-grey
-                                        leading-loose
-                                      "
+                                      class="text-sm mt-3 text-grey leading-loose"
                                     >
                                       Read more about storing and managing your
                                       personal data
@@ -746,55 +452,32 @@
               </li>
               <a href="/about-us">
                 <li
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    falsefalse
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 falsefalse"
                 >
                   About us
                 </li>
               </a>
               <a href="/blogs">
                 <li
-                  class="
-                    inline-flex
-                    cursor-pointer
-                    items-center
-                    mx-8
-                    py-8
-                    hover:text-blue-200
-                    falsefalse
-                  "
+                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 falsefalse"
                 >
                   Blog
                 </li>
               </a>
             </ul>
             <div class="lg:block hidden">
-              <!-- <a
-                href="https://app.youverify.co/#/auth/login"
-                target="_blank"
-                rel="noreferrer"
-                ><button
-                  class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8"
-                >
-                  Sign in
-                </button></a
-              > -->
-			  <AppButton buttonText="Sign in" buttoncolor="bluebutton" href="https://os.youverify.co/auth/login" />
-			  
+              <AppButton
+                buttonText="Sign in"
+                buttoncolor="bluebutton"
+                href="https://os.youverify.co/auth/login"
+              />
             </div>
           </div>
         </section>
       </nav>
       <div class="react-reveal" style="opacity: 0">
         <nav class="bg-white absolute w-full hidden">
-          <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+          <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
             <hr />
             <div class="pt-10 pb-20">
               <div class="flex">
@@ -952,9 +635,7 @@
                   >
                 </div>
                 <div class="w-3/12 text-right">
-                  <div
-                  >
-                  
+                  <div>
                     <img
                       width="171"
                       height="206"
@@ -966,7 +647,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         </nav>
         <span
           aria-label="button"
@@ -976,19 +657,7 @@
         ></span></div
     ></span>
     <nav
-      class="
-        transform
-        z-40
-        w-full
-        lg:hidden
-        block
-        top-0
-        overflow-scroll
-        duration-700
-        fixed
-        right-0
-        min-h-auto
-      "
+      class="transform z-40 w-full lg:hidden block top-0 overflow-scroll duration-700 fixed right-0 min-h-auto"
     >
       <section class="bg-white max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex justify-between text-blue py-6 items-center false">
@@ -1060,16 +729,8 @@
         </div>
         <div>
           <div
-            v-show="showmobileMenu"
-            class="
-              react-reveal
-              border-black border-t
-              flex
-              justify-between
-              h-screen
-              flex-wrap
-              pt-4
-            "
+            :class="{ hidden: !showmobileMenu }"
+            class="border-black border-t flex justify-between h-screen flex-wrap pt-4"
           >
             <ul class="block w-full">
               <a
@@ -1093,7 +754,7 @@
               ></a>
               <div style="" v-if="subMenuShowSolution">
                 <ul class="react-reveal pb-4">
-                  <div v-for="useCase in industries" :key="useCase.name">
+                  <div v-for="useCase in industries || []" :key="useCase.name">
                     <NuxtLink :to="`/use-case/${useCase.slug}`">
                       <li class="px-6 w-full mb-4">
                         <p class="text-sm my-2 text-blue font-medium">
@@ -1214,25 +875,13 @@
               </div>
               <a href="/about-us">
                 <li
-                  class="
-                    text-base text-blue
-                    leading-loose
-                    mb-4
-                    flex
-                    items-center
-                  "
+                  class="text-base text-blue leading-loose mb-4 flex items-center"
                 >
                   About us
                 </li></a
               ><a href="/blogs">
                 <li
-                  class="
-                    text-base text-blue
-                    leading-loose
-                    mb-4
-                    flex
-                    items-center
-                  "
+                  class="text-base text-blue leading-loose mb-4 flex items-center"
                 >
                   Blog
                 </li></a
@@ -1244,16 +893,7 @@
                 target="_blank"
                 rel="noreferrer"
                 ><button
-                  class="
-                    bg-blue
-                    text-white
-                    rounded
-                    py-2
-                    sm:mb-0
-                    mb-4
-                    px-8
-                    w-full
-                  "
+                  class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8 w-full"
                 >
                   Sign in
                 </button></a
@@ -1279,16 +919,14 @@ export default {
       showmobileMenu: false,
       subMenuShowSolution: false,
       subMenuShowProduct: false,
-      subMenuShowDeveloper: false
+      subMenuShowDeveloper: false,
     };
   },
   methods: {
     async getAllIndustries() {
-      const allIndustries = await this.$store.dispatch(
-        "industries/getIndustries"
-      );
+      await this.$store.dispatch("industries/getIndustries");
     },
-    toggleMobileMenu() {
+    toggleMobileMenu(e) {
       this.showmobileMenu = !this.showmobileMenu;
     },
     toggleSubMenuShow(param) {
@@ -1301,7 +939,7 @@ export default {
         this.subMenuShowSolution = false;
         this.subMenuShowDeveloper = false;
       } else if (param === "developer") {
-        this.subMenuShowDeveloper = !this.subMenuShowProduct;
+        this.subMenuShowDeveloper = !this.subMenuShowDeveloper;
         this.subMenuShowSolution = false;
         this.subMenuShowProduct = false;
       } else {

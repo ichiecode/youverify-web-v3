@@ -15,20 +15,7 @@
         <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <header>
             <span
-              class="
-                text-blue
-                tracking-widest
-                px-4
-                py-2
-                uppercase
-                sm:text-sm
-                text-xs
-                rounded
-                mb-3
-                leading-none
-                inline-block
-                bg-blue-100
-              "
+              class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
               >{{
                 formattedPost.blog_categories
                   ? formattedPost.blog_categories[0].categoriesName
@@ -44,44 +31,27 @@
           </header>
           <div
             data-gatsby-image-wrapper=""
-            class="
-              gatsby-image-wrapper
-              w-full
-              object-cover object-center
-              rounded-xl
-              block
-              sm:h-96
-              h-72
-              mt-6
-              mb-20
-            "
+            class="gatsby-image-wrapper w-full object-cover object-center rounded-xl block sm:h-96 h-72 mt-6 mb-20"
           >
             <img
               :src="formattedPost.image ? formattedPost.image.url : ''"
               class="w-full"
-              alt="A Definitive Guide to Avoiding Identity Theft and Fraud in the Digital Age"
+              :alt="formattedPost.image ? formattedPost.image.caption : ''"
               style="object-fit: cover; opacity: 1; height: 350px"
             />
           </div>
         </section>
       </article>
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-        <section class="flex sm:flex-nowrap flex-wrap sm:mb-40 mb-20">
+        <section class="flex sm:flex-nowrap flex-wrap sm:mb-40">
           <div
-            class="
-              sm:w-48
-              w-full
-              flex-grow-0 flex-shrink-0
-              sticky
-              sm:top-40
-              block
-              h-16
-              sm:mt-0
-            "
+            class="sm:w-48 w-full flex-grow-0 flex-shrink-0 sticky sm:top-40 block h-16 sm:mt-0"
           >
             <p class="text-xs uppercase font-semibold">Share this Article</p>
             <div class="flex mt-4 justify-between sm:w-2/4 w-2/5">
-              <a target="_blank" :href="`http://twitter.com/share?text=${formattedPost.title}`"
+              <a
+                target="_blank"
+                :href="`http://twitter.com/share?text=${formattedPost.title}`"
                 ><span
                   ><svg
                     width="18"
@@ -94,9 +64,11 @@
                       d="M17.5342 0.384948C16.7728 0.92202 15.9298 1.33279 15.0376 1.60145C14.5587 1.05085 13.9223 0.660603 13.2144 0.483482C12.5066 0.306361 11.7614 0.350915 11.0796 0.611117C10.3979 0.87132 9.81253 1.33462 9.40269 1.93835C8.99284 2.54208 8.77831 3.25712 8.78809 3.98675V4.78185C7.39081 4.81808 6.00625 4.50819 4.75774 3.87977C3.50922 3.25135 2.43549 2.32391 1.63219 1.18005C1.63219 1.18005 -1.54821 8.33595 5.60769 11.5163C3.9702 12.6279 2.01953 13.1852 0.0419922 13.1065C7.19789 17.082 15.944 13.1065 15.944 3.9629C15.9433 3.74142 15.922 3.5205 15.8804 3.30296C16.6919 2.50269 17.2645 1.49229 17.5342 0.384948V0.384948Z"
                       fill="#0B4B58"
                     ></path>
-                  </svg> </span></a
-              >
-              <a target="_blank" :href="`https://facebook.com/sharer/sharer.php?u=${formattedPost.title}`"
+                  </svg> </span
+              ></a>
+              <a
+                target="_blank"
+                :href="`https://facebook.com/sharer/sharer.php?u=${formattedPost.title}`"
                 ><span
                   ><svg
                     width="10"
@@ -109,9 +81,11 @@
                       d="M9.31177 0.589844H6.92647C5.8721 0.589844 4.86092 1.00869 4.11537 1.75424C3.36982 2.49979 2.95097 3.51097 2.95097 4.56534V6.95064H0.565674V10.131H2.95097V16.4918H6.13137V10.131H8.51667L9.31177 6.95064H6.13137V4.56534C6.13137 4.35447 6.21514 4.15223 6.36425 4.00312C6.51336 3.85401 6.7156 3.77024 6.92647 3.77024H9.31177V0.589844Z"
                       fill="#0B4B58"
                     ></path>
-                  </svg> </span></a
-              >
-              <a target="_blank" :href="`https://www.linkedin.com/shareArticle?title=${formattedPost.title}`"
+                  </svg> </span
+              ></a>
+              <a
+                target="_blank"
+                :href="`https://www.linkedin.com/shareArticle?title=${formattedPost.title}`"
                 ><span
                   ><svg
                     width="17"
@@ -140,6 +114,55 @@
             <section v-html="formattedPost.content"></section>
           </article>
         </section>
+        <div class="px-5 px-md-4 py-md-5 container">
+          <aside class="">
+            <h3 class="mb-5">Related Articles</h3>
+            <section class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
+              <content-placeholders
+                v-show="loading"
+                v-for="index in 3"
+                :key="index"
+                style="width: 390px"
+              >
+                <content-placeholders-heading :img="true" />
+                <content-placeholders-text :lines="3" />
+              </content-placeholders>
+              <div v-show="!loading">
+                <article v-for="blog in formattedRelatedBlogs" :key="blog.id">
+                  <header class="relative mb-6 border">
+                    <div class="rounded w-full sm:h-72 h-60">
+                      <img
+                        width="880"
+                        class="h-full object-cover rounded"
+                        :src="blog.image.url"
+                        :alt="blog.image.caption"
+                      />
+                    </div>
+                    <span class="absolute top-3 left-3 text-sm"
+                      ><span
+                        class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
+                      >
+                        {{ blog.createdAt | formatDate }}</span
+                      ></span
+                    >
+                  </header>
+                  <div>
+                    <NuxtLink :to="`/blog/${blog.slug}`"
+                      ><h3 class="hover:text-blue-300">
+                        {{ blog.title }}
+                      </h3>
+                    </NuxtLink>
+                    <p class="mt-1">by {{ blog.author }}</p>
+                  </div>
+                </article>
+
+                <p v-if="formattedRelatedBlogs.length === 0">
+                  No related articles
+                </p>
+              </div>
+            </section>
+          </aside>
+        </div>
       </section>
     </div>
   </div>
@@ -152,24 +175,59 @@ import SEO from "~/mixins/SEO.js";
 export default {
   mixins: [SEO],
   name: "singleBlogPost",
-  methods: {
-    async getSingleBlogPost() {
-      const singleBlogPost = await this.$store.dispatch(
-        "blogs/getSingleBlogPost",
-        this.$route.params.slug
-      );
-    },
+  data() {
+    return {};
   },
-  mounted() {
-    this.getSingleBlogPost();
+
+  async asyncData({ store, params }) {
+    try {
+      const blogDetails = await store.dispatch(
+        "blogs/getSingleBlogPost",
+        params.slug
+      );
+      await store.dispatch(
+        "blogs/getRelatedBlogs",
+        blogDetails[0].blog_categories[0].slug
+      );
+      return {
+        blogDetails,
+      };
+    } catch (e) {
+      console.log(e);
+    }
+  },
+  head() {
+    return {
+      title: this.$data.blogDetails[0].title,
+      meta: [
+        {
+          hid: "og-title",
+          property: "og:title",
+          content: this.$data.blogDetails[0].title,
+        },
+        {
+          hid: "description",
+          property: "description",
+          content: this.$data.blogDetails[0].teaser,
+        },
+      ],
+    };
   },
   computed: {
     ...mapState({
       singlePost: (state) => state.blogs.singleblogPost,
       loading: (state) => state.blogs.loading,
+      relatedBlogs: (state) => state.blogs.relatedBlogs,
     }),
     formattedPost() {
       return this.singlePost ? this.singlePost[0] : [];
+    },
+    formattedRelatedBlogs() {
+      return this.relatedBlogs
+        ? this.relatedBlogs[0].blogs.filter(
+            (item) => this.formattedPost.title !== item.title
+          )
+        : [];
     },
   },
 };

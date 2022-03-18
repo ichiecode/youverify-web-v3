@@ -88,7 +88,7 @@
                               ></path></svg
                           ></NuxtLink>
                           <a
-                            :href="`https://os.dev.youverify.co/v-forms/${useCase.vFormId}/edit/add-fields`"
+                            :href="`https://os.youverify.co/v-forms/${useCase.vFormId}/edit/add-fields`"
                             target="_blank"
                             rel="noreferrer"
                             class="
