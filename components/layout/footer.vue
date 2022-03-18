@@ -1,5 +1,48 @@
 <template>
   <div>
+    <section class="md:pb-20 pb-5">
+      <div class="md:flex items-center gap-2">
+        <div class="w-full md:w-1/2">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get information about our product and coupons</p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <form class="my-4 md:my-0 flex">
+            <input
+              class="w-full p-2 rounded-l-lg outline-none border-t mr-0 border-b outline text-gray-800 bg-white"
+              placeholder="Email address"
+              v-model="email"
+            />
+            <button
+              @click.prevent="subscriber"
+              class="px-4 rounded-r-lg  inline-flex items-center bg-blue text-white font-bold border-t border-b border-r"
+            >
+
+              Subscribe
+              <svg
+                v-if="loading"
+                role="status"
+                class="inline mr-3 w-4 h-4 text-white animate-spin"
+                viewBox="0 0 100 101"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="#E5E7EB"
+                />
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </form>
+          <pre class="text-sm mt-1 text-red-400">{{error}}</pre>
+          <pre class="text-sm mt-1 text-green-400">{{message}}</pre>
+        </div>
+      </div>
+    </section>
     <div class="flex pb-16 sm:flex-nowrap flex-wrap">
       <section class="sm:w-4/12 w-full sm:mb-0 mb-12">
         <div class="">
@@ -23,13 +66,7 @@
               viewBox="0 0 18 17"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="
-                flex-shrink-0 flex-grow-0
-                absolute
-                sm:-left-6
-                -left-5
-                top-2
-              "
+              class="flex-shrink-0 flex-grow-0 absolute sm:-left-6 -left-5 top-2"
             >
               <path
                 d="M5.39802 9.63933L1.85075 13.9963L5.74504 16.7724L8.82963 12.0684L11.8757 16.811L15.7699 14.0349L12.2612 9.63933L17.6978 8.21271L16.1941 3.62439L10.9503 5.62937L11.2202 0H6.43907L6.70897 5.62937L1.50374 3.58583L0 8.17415L5.39802 9.63933Z"
@@ -69,15 +106,15 @@
           <a aria-current="page" class="mb-2 block w-full" href="/about-us"
             ><li>About us</li>
             <a aria-current="page" class="mb-2 block w-full" href="/agent">
-            <li>Become an Agent</li>
-          </a></a
+              <li>Become an Agent</li>
+            </a></a
           ><a class="mb-2 block w-full" href="/blogs"><li>Blog</li></a
           ><a class="mb-2 block w-full" href="/about-us#career"
             ><li>Career</li></a
           ><a class="mb-2 block w-full" href="/gdpr"
             ><li>GDPR Compliance Statement</li></a
           >
-          
+
           <a
             href="https://doc.youverify.co/"
             target="_blank"
@@ -93,9 +130,9 @@
             class="mb-2 block w-full"
             ><li>API Status</li></a
           >
-          <a aria-current="page" class="mb-2 block w-full" href="/resources">
+          <!-- <a aria-current="page" class="mb-2 block w-full" href="/resources">
             <li>Resources</li>
-          </a>
+          </a> -->
         </ul>
       </section>
       <section class="sm:w-0/12"></section>
@@ -118,21 +155,11 @@
         </div>
       </section>
     </div>
+
     <hr class="border-grey sm:mb-0 mb-8" />
 
     <div
-      class="
-        flex
-        sm:flex-row
-        flex-row-reverse
-        sm:flex-nowrap
-        flex-wrap
-        justify-between
-        items-center
-        pt-5
-        sm:text-sm
-        text-xs
-      "
+      class="flex sm:flex-row flex-row-reverse sm:flex-nowrap flex-wrap justify-between items-center pt-5 sm:text-sm text-xs"
     >
       <div class="sm:w-4/12 w-6/12 sm:text-left text-right flex">
         <a
@@ -165,18 +192,7 @@
         </a>
       </div>
       <div
-        class="
-          sm:text-center
-          text-left
-          sm:w-4/12
-          w-full
-          sm:mb-0
-          mb-2
-          sm:mt-0
-          -mt-20
-          flex flex-row
-          justify-between
-        "
+        class="sm:text-center text-left sm:w-4/12 w-full sm:mb-0 mb-2 sm:mt-0 -mt-20 flex flex-row justify-between"
       >
         <ul class="flex justify-between w-full">
           <a class="inline-block" href="/terms-of-use"><li>Terms of Use</li></a
@@ -196,11 +212,35 @@
 import { mapState } from "vuex";
 export default {
   name: "footerComponent",
+  data() {
+    return {
+      email: "",
+      error: "",
+      message: ""
+    };
+  },
   methods: {
     async getAllIndustries() {
       const allIndustries = await this.$store.dispatch(
         "industries/getIndustries"
       );
+    },
+    async subscriber() {
+      const payload = {
+        email: this.email,
+      };
+      const response = await this.$store.dispatch(
+        "subscriber/subscribe",
+        payload
+      );
+      if (response.error) {
+        this.error = response.error
+        this.message = ""
+      } else {
+        this.email = ""
+        this.error = ""
+        this.message = response.message
+      }
     },
   },
   mounted() {
@@ -209,6 +249,7 @@ export default {
   computed: {
     ...mapState({
       industries: (state) => state.industries.industries,
+      loading: (state) => state.subscriber.loading
     }),
   },
 };

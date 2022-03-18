@@ -1,6 +1,7 @@
 export const state = () => ({
   blogs: null,
   singleblogPost: null,
+  relatedBlogs: null,
   total: 0,
   loading: false,
   page: 0,
@@ -24,6 +25,10 @@ export const mutations = {
   setTotalBlog(state, payload) {
     state.total = payload;
   },
+
+  setRelatedBlogs(state, payload) {
+    state.relatedBlogs = payload
+  }
 };
 
 export const actions = {
@@ -71,4 +76,19 @@ export const actions = {
       .catch((error) => ({ error: JSON.stringify(error) }));
     return response;
   },
+  
+  async getRelatedBlogs({ state, commit }, slug) {
+    commit("setLoading", true);
+    const response = await this.$axios
+      .$get(`${process.env.baseUrl}/blog-categories?slug=${slug}`)
+      .then((res) => {
+        commit("setRelatedBlogs", res);
+        commit("setLoading", false);
+        return res;
+      })
+      .catch((error) => ({ error: JSON.stringify(error) }));
+    return response;
+  },
+
+
 };
