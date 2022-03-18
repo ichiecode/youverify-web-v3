@@ -477,7 +477,7 @@
       </nav>
       <div class="react-reveal" style="opacity: 0">
         <nav class="bg-white absolute w-full hidden">
-          <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+          <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
             <hr />
             <div class="pt-10 pb-20">
               <div class="flex">
@@ -647,7 +647,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         </nav>
         <span
           aria-label="button"

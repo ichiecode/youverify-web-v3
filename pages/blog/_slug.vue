@@ -173,7 +173,7 @@ import { mapState } from "vuex";
 import SEO from "~/mixins/SEO.js";
 
 export default {
-  // mixins: [SEO],
+  mixins: [SEO],
   name: "singleBlogPost",
   data() {
     return {};
@@ -198,17 +198,17 @@ export default {
   },
   head() {
     return {
-      title: this.blogDetails[0].title,
+      title: this.$data.blogDetails[0].title,
       meta: [
         {
           hid: "og-title",
           property: "og:title",
-          content: this.blogDetails[0].title,
+          content: this.$data.blogDetails[0].title,
         },
         {
           hid: "description",
           property: "description",
-          content: this.blogDetails[0].teaser,
+          content: this.$data.blogDetails[0].teaser,
         },
       ],
     };
