@@ -46,6 +46,7 @@
                   width="880"
                   class="h-full object-cover rounded"
                   :src="blog.image.url"
+				  alt="blog-img"
                 />
               </div>
               <span class="absolute top-3 left-3 text-sm"

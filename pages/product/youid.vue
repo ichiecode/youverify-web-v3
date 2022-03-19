@@ -22,14 +22,14 @@
                     class="sm:mr-4 mr-2"
                     target="_blank"
                     rel="noreferrer"
-                    ><img
+                    ><LazyImage
                       src="@/assets/images/icons/menu/apple.svg"
                       alt="Download on Apple Store" /></a
                   ><a
                     href="https://play.google.com/store/apps/details?id=com.youid"
                     target="_blank"
                     rel="noreferrer"
-                    ><img
+                    ><LazyImage
                       src="@/assets/images/icons/menu/google.svg"
                       alt="Download on Google Play"
                   /></a>
@@ -42,42 +42,30 @@
             </div>
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-20 h-20">
-                <img
+                <LazyImage
                   src="../../assets/images/logos/trusted/svg/Wema Bank Logo.svg"
-                  alt="Carbon logo"
+                  alt="wema-bank logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
-                  alt="Carbon logo"
+                  alt="bolt-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Sterling Bank Plc Logo.svg"
-                  alt="Carbon logo"
+                  alt="sterling-bank logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
             </div>
           </div>
           <div class="md:w-3/6">
-            <!-- <video
-              playsinline=""
-              autoplay=""
-              loop=""
-              controlslist="nodownload"
-              class="h-full"
-            >
-              <source
-                src="~/assets/images/illustrations/api-box-1-loop-2x.webm"
-                type="video/webm"
-              />
-              Sorry, your browser doesn't support embedded videos.
-            </video> -->
+            
             <lottie-player
               src="https://assets10.lottiefiles.com/packages/lf20_t0yoz1ta.json"
               background="transparent"
@@ -179,69 +167,12 @@
                   ></path>
                 </svg>
               </AppButton>
-            <!-- <a
-              href="#how-it-works"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Video Demo<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
-              href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Contact Sales<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a> -->
+            
           </div>
         </div>
         <div class="sm:w-5/12 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
-            <!-- <img
-              width="355"
-              height="378"
-              src="~/assets/images/illustrations/products/youid/credencescore.svg"
-              alt="Mand holding a paper plane"
-            /> -->
+            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets6.lottiefiles.com/packages/lf20_gp1gfcsw.json"
@@ -260,12 +191,7 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
-            <!-- <img
-              width="355"
-              height="378"
-              src="../../assets/images/illustrations/products/youid/secure.svg"
-              alt="Mand holding a paper plane"
-            /> -->
+            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_xh8pfev9.json"
@@ -474,70 +400,13 @@
                   ></path>
                 </svg>
 				</AppButton>
-            <!-- <a
-              href="#how-it-works"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Video Demo<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
-              href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Contact Sales<svg
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
-              >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a> -->
+            
           </div>
         </div>
 
         <div class="sm:w-5/12 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
-            <!-- <img
-              width="355"
-              height="378"
-              src="https://lottiefiles.com/share/tbqzhtm4"
-              alt="Mand holding a paper plane"
-            /> -->
+            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_tbqzhtm4.json"
@@ -556,12 +425,7 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
-            <!-- <img
-              width="355"
-              height="378"
-              src="../../assets/images/illustrations/products/youid/trusworthiness.svg"
-              alt="Mand holding a paper plane"
-            /> -->
+           
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets6.lottiefiles.com/packages/lf20_c3i6doow.json"

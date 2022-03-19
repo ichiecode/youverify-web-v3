@@ -11,6 +11,7 @@
           <input
             class="w-full p-2 rounded-l-lg outline-none border-t mr-0 border-b outline text-gray-800  bg-white"
             placeholder="Email address"
+			v-model="email"
           />
           <button
             class="px-4 rounded-r-lg bg-blue text-white font-bold border-t border-b border-r"
@@ -27,7 +28,7 @@
         <div class="">
           <p class="mb-8">
             <a href="/"
-              ><img
+              ><LazyImage
                 src="~/assets/images/logos/youverify.svg"
                 alt="Youverify"
                 class="sm:w-32 w-24"
@@ -146,28 +147,28 @@
           href="https://web.facebook.com/youverifyID"
           target="_blank"
         >
-          <img src="~/assets/images/icons/social/facebook.svg" alt="" />
+          <LazyImage src="~/assets/images/icons/social/facebook.svg" alt="facebook-svg" />
         </a>
         <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           href="https://www.linkedin.com/company/youcheckonline/"
           target="_blank"
         >
-          <img src="~/assets/images/icons/social/linkedin.svg" alt="" />
+          <LazyImage src="~/assets/images/icons/social/linkedin.svg" alt="linkdln-svg" />
         </a>
         <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           href="https://www.instagram.com/youcheckonline/"
           target="_blank"
         >
-          <img src="~/assets/images/icons/social/instagram.svg" alt="" />
+          <LazyImage src="~/assets/images/icons/social/instagram.svg" alt="instagram-svg" />
         </a>
         <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           href="https://twitter.com/YoucheckOnline"
           target="_blank"
         >
-          <img src="~/assets/images/icons/social/twitter.svg" alt="" />
+          <LazyImage src="~/assets/images/icons/social/twitter.svg" alt="twitter-svg" />
         </a>
       </div>
       <div
@@ -191,12 +192,14 @@
 import { mapState } from "vuex";
 export default {
   name: "footerComponent",
+  
   methods: {
     async getAllIndustries() {
       const allIndustries = await this.$store.dispatch(
         "industries/getIndustries"
       );
     },
+	
   },
   mounted() {
     this.getAllIndustries();
