@@ -15,7 +15,7 @@
         <span
           class="
             text-blue
-            tracking-widest
+            tracking-widest 
             px-4
             py-2
             uppercase

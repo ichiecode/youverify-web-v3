@@ -14,6 +14,7 @@
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="r">
           <div class="">
+			  <h1 class="hidden"></h1>
             <div class="text-center mb-8">
               <h2 class="">vForms Demo</h2>
             </div>

@@ -7,6 +7,7 @@
           class="text-center w-full mb-12 sm:mb-16 lg:mb-20"
         >
           <header>
+			  <h1 class="hidden"></h1>
             <span
               class="
                 text-blue

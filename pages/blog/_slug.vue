@@ -13,6 +13,7 @@
     <div v-else>
       <article class="text-center min-h-header pt-40">
         <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+			<h1 class="hidden"></h1>
           <header>
             <span
               class="

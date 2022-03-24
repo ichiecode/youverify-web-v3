@@ -14,6 +14,7 @@
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex-col-reverse md:flex-row flex justify-center">
+		<h1 class="hidden"></h1>
           <div class="md:w-3/6">
             <h2 class="text-white max-w-screen-lg mt-8">
               Profile and screen customer identity on the go!
@@ -1323,6 +1324,7 @@
                 alt="icon-reg-azure-gaming"
                 srcset=""
               />
+			  <h1 class="hidden"></h1>
               <h4
                 class="
                   text-center

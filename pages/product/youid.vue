@@ -4,6 +4,7 @@
       class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
+		  <h1 class="hidden"></h1>
         <div class="flex-col-reverse md:flex-row flex justify-center">
           <div class="md:w-3/6">
             <h3 class="text-white max-w-screen-lg mt-8">

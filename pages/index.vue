@@ -895,6 +895,8 @@
       class="text-center bg-blue-200 py-20 text-blue-100 relative overflow-hidden"
     >
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
+		 
+        <h1 class="hidde"></h1>
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
         <span class="cursor-pointer inline-block" role="button" tabindex="0">
           
@@ -918,7 +920,7 @@ export default {
       showService: true,
     };
   },
-  methods: {
+  methods: { 
     toggleService(params) {
       if (params === "with") {
         this.showService = true;

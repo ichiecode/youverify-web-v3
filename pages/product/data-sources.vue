@@ -4,7 +4,7 @@
       <div id="chartMaps" class="relative">
         <div
           class="absolute bottom-7 right-7 bg-white rounded-md flex flex-col"
-        >
+        > <h1 class="hidden"></h1>
           <button
             class="flex justify-center items-center border h-10 w-10"
             type="button"

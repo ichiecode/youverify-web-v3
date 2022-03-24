@@ -4,6 +4,7 @@
 		<div class="md:flex items-center gap-2 "> 
       <div class="w-full md:w-1/2">
         <h3>Newsletter</h3>
+		<h1 class="hidden"></h1>
         <p>Subscribe to get information about our product and coupons</p>
       </div>
       <div class="w-full md:w-1/2">
@@ -11,7 +12,7 @@
           <input
             class="w-full p-2 rounded-l-lg outline-none border-t mr-0 border-b outline text-gray-800  bg-white"
             placeholder="Email address"
-			v-model="email"
+			
           />
           <button
             class="px-4 rounded-r-lg bg-blue text-white font-bold border-t border-b border-r"

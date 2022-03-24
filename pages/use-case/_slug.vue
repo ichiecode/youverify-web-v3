@@ -15,6 +15,7 @@
         <div class="">
           <div class="">
             <div class="text-center mb-8 bg-white w-full py-5 sticky" style="top: 79px;">
+				<h1 class="hidden"></h1>
               <h3 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h3>
             </div>
             
