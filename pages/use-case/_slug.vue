@@ -105,6 +105,18 @@ export default {
   components: {
     getStarted,
   },
+  head() {
+      return {
+        title: this.formattedIndustries.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.formattedIndustries.name
+          }
+        ]
+      }
+    },
   methods: {
     async getSingleIndustry() {
       const singleIndustries = await this.$store.dispatch(

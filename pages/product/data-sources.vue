@@ -291,6 +291,17 @@ export default {
   components: {
     getStarted,
   },
+  head: {
+    title: "Data Sources",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Discover Youverify’s connection to over 300+ data sources all across Africa to digitally verify identities of customers for businesses.",
+      },
+    ],
+  },
   data() {
     return {
       allMarkersData: null,

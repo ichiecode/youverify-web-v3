@@ -44,6 +44,17 @@ import { mapState } from "vuex";
 
 export default {
   name: "gdpr",
+  head: {
+    title: "GDPR compliance statement",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Youverify operations are 100% GDPR compliant, which makes us trusted by top businesses around the world including Standard Chartered, Bolt, and Leadway Insurance. ",
+      },
+    ],
+  },
   methods: {
     async getGDPR() {
       const gdpr = await this.$store.dispatch("documents/getGDPR");

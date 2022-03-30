@@ -49,7 +49,7 @@
         </div>
       </section>
       <section class="sm:w-1/12"></section>
-      <section class="sm:w-2/12 w-6/12">
+      <!-- <section class="sm:w-2/12 w-6/12">
         <h4 class="py-3 mb-4">Solutions</h4>
         <ul class="">
           <a class="mb-2 block w-full" href="/solution/individuals"
@@ -60,7 +60,7 @@
             ><li>Government</li></a
           ><a class="mb-2 block w-full" href="/agent"><li>Agents</li></a>
         </ul>
-      </section>
+      </section> -->
       <section class="sm:w-3/12 w-6/12">
         <h4 class="py-3 mb-4">Company</h4>
         <ul class="">

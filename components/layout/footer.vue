@@ -1,18 +1,18 @@
 <template>
   <div>
-	  <section class="md:pb-20 pb-5">
-		<div class="md:flex items-center gap-2 "> 
-      <div class="w-full md:w-1/2">
-        <h3>Newsletter</h3>
-		<h1 class="hidden"></h1>
-        <p>Subscribe to get information about our product and coupons</p>
+    <section class="md:pb-20 pb-5">
+      <div class="md:flex items-center gap-2">
+        <div class="w-full md:w-1/2">
+          <h3>Newsletter</h3>
+          <h1 class="hidden"></h1>
+          <p>Subscribe to get information about our product and coupons</p>
+        </div>
       </div>
       <div class="w-full md:w-1/2">
-        <form class="my-4 md:my-0 flex ">
+        <form class="my-4 md:my-0 flex">
           <input
-            class="w-full p-2 rounded-l-lg outline-none border-t mr-0 border-b outline text-gray-800  bg-white"
+            class="w-full p-2 rounded-l-lg outline-none border-t mr-0 border-b outline text-gray-800 bg-white"
             placeholder="Email address"
-			
           />
           <button
             class="px-4 rounded-r-lg bg-blue text-white font-bold border-t border-b border-r"
@@ -21,10 +21,8 @@
           </button>
         </form>
       </div>
-    </div>
-	</section>
+    </section>
     <div class="flex pb-16 sm:flex-nowrap flex-wrap">
-		
       <section class="sm:w-4/12 w-full sm:mb-0 mb-12">
         <div class="">
           <p class="mb-8">
@@ -111,9 +109,9 @@
             class="mb-2 block w-full"
             ><li>API Status</li></a
           >
-          <a aria-current="page" class="mb-2 block w-full" href="/resources">
+          <!-- <a aria-current="page" class="mb-2 block w-full" href="/resources">
             <li>Resources</li>
-          </a>
+          </a> -->
         </ul>
       </section>
       <section class="sm:w-0/12"></section>
@@ -136,7 +134,7 @@
         </div>
       </section>
     </div>
-    
+
     <hr class="border-grey sm:mb-0 mb-8" />
 
     <div
@@ -148,28 +146,40 @@
           href="https://web.facebook.com/youverifyID"
           target="_blank"
         >
-          <LazyImage src="~/assets/images/icons/social/facebook.svg" alt="facebook-svg" />
+          <LazyImage
+            src="~/assets/images/icons/social/facebook.svg"
+            alt="facebook-svg"
+          />
         </a>
         <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           href="https://www.linkedin.com/company/youcheckonline/"
           target="_blank"
         >
-          <LazyImage src="~/assets/images/icons/social/linkedin.svg" alt="linkdln-svg" />
+          <LazyImage
+            src="~/assets/images/icons/social/linkedin.svg"
+            alt="linkdln-svg"
+          />
         </a>
         <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           href="https://www.instagram.com/youcheckonline/"
           target="_blank"
         >
-          <LazyImage src="~/assets/images/icons/social/instagram.svg" alt="instagram-svg" />
+          <LazyImage
+            src="~/assets/images/icons/social/instagram.svg"
+            alt="instagram-svg"
+          />
         </a>
         <a
           class="inline-block sm:w-5 w-4 sm:mr-5 sm:ml-0 ml-4"
           href="https://twitter.com/YoucheckOnline"
           target="_blank"
         >
-          <LazyImage src="~/assets/images/icons/social/twitter.svg" alt="twitter-svg" />
+          <LazyImage
+            src="~/assets/images/icons/social/twitter.svg"
+            alt="twitter-svg"
+          />
         </a>
       </div>
       <div
@@ -193,14 +203,13 @@
 import { mapState } from "vuex";
 export default {
   name: "footerComponent",
-  
+
   methods: {
     async getAllIndustries() {
       const allIndustries = await this.$store.dispatch(
         "industries/getIndustries"
       );
     },
-	
   },
   mounted() {
     this.getAllIndustries();
@@ -208,6 +217,7 @@ export default {
   computed: {
     ...mapState({
       industries: (state) => state.industries.industries,
+      loading: (state) => state.subscriber.loading,
     }),
   },
 };

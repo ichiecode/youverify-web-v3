@@ -66,10 +66,7 @@
             </div>
           </div>
           <div class="md:w-3/6">
-            
             <lottie-player
-              src="https://assets10.lottiefiles.com/packages/lf20_t0yoz1ta.json"
-              background="transparent"
               speed="1"
               loop
               autoplay
@@ -218,69 +215,16 @@
             breached, enable YOUID Secure for free on YOUID app
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-			  <AppButton
-                buttonText="See how it works"
-                buttoncolor="darkbluebutton"
-                href="/vforms-demo"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-              <AppButton
-                buttonText="Get in touch"
-                buttoncolor="whitebutton"
-                href="/contact-us"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-            <!-- <a
-              href="#how-it-works"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >See how it works<svg
+            <AppButton
+              buttonText="See how it works"
+              buttoncolor="darkbluebutton"
+              href="/vforms-demo"
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -288,7 +232,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -296,17 +239,19 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
+                ></path>
+              </svg>
+            </AppButton>
+            <AppButton
+              buttonText="Get in touch"
+              buttoncolor="whitebutton"
               href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Get in touch<svg
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -314,7 +259,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -322,9 +266,9 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a> -->
+                ></path>
+              </svg>
+            </AppButton>
           </div>
         </div>
       </div>
@@ -452,69 +396,16 @@
             store it on their digital ID - YOUID.
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-			  <AppButton
-                buttonText="See how it works"
-                buttoncolor="darkbluebutton"
-                href="/vforms-demo"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-              <AppButton
-                buttonText="Get in touch"
-                buttoncolor="whitebutton"
-                href="/contact-us"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-            <!-- <a
-              href="#how-it-works"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >See how it works<svg
+            <AppButton
+              buttonText="See how it works"
+              buttoncolor="darkbluebutton"
+              href="/vforms-demo"
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -522,7 +413,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -530,17 +420,19 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
+                ></path>
+              </svg>
+            </AppButton>
+            <AppButton
+              buttonText="Get in touch"
+              buttoncolor="whitebutton"
               href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Get in touch<svg
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -548,7 +440,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -556,9 +447,9 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg 
-            ></a>-->
+                ></path>
+              </svg>
+            </AppButton>
           </div>
         </div>
       </div>
@@ -588,8 +479,19 @@
 </template>
 
 <script>
-import getStarted from "~/components/common/getStarted.vue";
-export default {};
+export default {
+  head: {
+    title: "YOUID",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Store, manage and share your personal data using the YOUID app. Seamlessly complete KYC forms, with uttermost privacy and 100% control over your data.",
+      },
+    ],
+  },
+};
 </script>
 
 <style scoped>
