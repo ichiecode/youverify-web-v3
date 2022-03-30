@@ -7,6 +7,7 @@
           class="text-center w-full mb-12 sm:mb-16 lg:mb-20"
         >
           <header>
+			  <h1 class="hidden"></h1>
             <span
               class="
                 text-blue
@@ -47,6 +48,7 @@
                   :alt="blog.image.caption"
                   class="h-full object-cover rounded"
                   :src="blog.image.url"
+				  alt="blog-img"
                 />
               </div>
               <span class="absolute top-3 left-3 text-sm"

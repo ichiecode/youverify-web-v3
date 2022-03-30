@@ -4,6 +4,7 @@
       class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
+		  <h1 class="hidden"></h1>
         <div class="flex-col-reverse md:flex-row flex justify-center">
           <div class="md:w-3/6">
             <h3 class="text-white max-w-screen-lg mt-8">
@@ -22,14 +23,14 @@
                     class="sm:mr-4 mr-2"
                     target="_blank"
                     rel="noreferrer"
-                    ><img
+                    ><LazyImage
                       src="@/assets/images/icons/menu/apple.svg"
                       alt="Download on Apple Store" /></a
                   ><a
                     href="https://play.google.com/store/apps/details?id=com.youid"
                     target="_blank"
                     rel="noreferrer"
-                    ><img
+                    ><LazyImage
                       src="@/assets/images/icons/menu/google.svg"
                       alt="Download on Google Play"
                   /></a>
@@ -42,23 +43,23 @@
             </div>
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-20 h-20">
-                <img
+                <LazyImage
                   src="../../assets/images/logos/trusted/svg/Wema Bank Logo.svg"
-                  alt="Carbon logo"
+                  alt="wema-bank logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
-                  alt="Carbon logo"
+                  alt="bolt-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Sterling Bank Plc Logo.svg"
-                  alt="Carbon logo"
+                  alt="sterling-bank logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
@@ -66,8 +67,6 @@
           </div>
           <div class="md:w-3/6">
             <lottie-player
-              src="https://assets10.lottiefiles.com/packages/lf20_t0yoz1ta.json"
-              background="transparent"
               speed="1"
               loop
               autoplay
@@ -112,64 +111,66 @@
             better offers you get from our marketplace
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-            <AppButton
-              buttonText="Video Demo"
-              buttoncolor="darkbluebutton"
-              href="#how-it-works"
-            >
-              <svg
-                slot="append"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+			  <AppButton
+                buttonText="Video Demo"
+                buttoncolor="darkbluebutton"
+                 href="#how-it-works"
               >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </AppButton>
-            <AppButton
-              buttonText="Contact Sales"
-              buttoncolor="whitebutton"
-              href="/contact-us"
-            >
-              <svg
-                slot="append"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
               >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </AppButton>
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+            
           </div>
         </div>
         <div class="sm:w-5/12 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
+            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets6.lottiefiles.com/packages/lf20_gp1gfcsw.json"
@@ -188,12 +189,7 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
-            <!-- <img
-              width="355"
-              height="378"
-              src="../../assets/images/illustrations/products/youid/secure.svg"
-              alt="Mand holding a paper plane"
-            /> -->
+            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_xh8pfev9.json"
@@ -295,65 +291,67 @@
             standards for time-based one-time passcodes (TOTP or OTP).
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-            <AppButton
-              buttonText="Video Demo"
-              buttoncolor="darkbluebutton"
-              href="#how-it-works"
-            >
-              <svg
-                slot="append"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+			  <AppButton
+                buttonText="Video Demo"
+                buttoncolor="darkbluebutton"
+                 href="#how-it-works"
               >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </AppButton>
-            <AppButton
-              buttonText="Contact Sales"
-              buttoncolor="whitebutton"
-              href="/contact-us"
-            >
-              <svg
-                slot="append"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </AppButton>
+              <AppButton
+                buttonText="Contact Sales"
+                buttoncolor="whitebutton"
+                href="/contact-us"
               >
-                <path
-                  d="M6 10H14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M10 6L14 10L10 14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </AppButton>
+                <svg
+                  slot="append"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M6 10H14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M10 6L14 10L10 14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+				</AppButton>
+            
           </div>
         </div>
 
         <div class="sm:w-5/12 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
+            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_tbqzhtm4.json"
@@ -372,6 +370,7 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
+           
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets6.lottiefiles.com/packages/lf20_c3i6doow.json"

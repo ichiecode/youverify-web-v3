@@ -31,6 +31,7 @@
             tou ? this.$root.$options.filters.formatDate(tou.updatedAt) : ""
           }}</span
         >
+		
         <h1>{{ tou ? tou.title : "" }}</h1>
       </header>
       
