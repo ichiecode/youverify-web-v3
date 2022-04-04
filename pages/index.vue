@@ -8,9 +8,9 @@
           class="items-center flex-col-reverse md:flex-row flex justify-center"
         >
           <div class="md:w-3/6">
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               KYC Automation for Banks and Startups
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               Youverify helps companies automate their decisions, onboard the
               right customers and fight fraud using data
@@ -896,7 +896,6 @@
     >
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
 		 
-        <h1 class="hidde"></h1>
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
         <span class="cursor-pointer inline-block" role="button" tabindex="0">
           

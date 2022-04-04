@@ -7,7 +7,6 @@
           class="text-center w-full mb-12 sm:mb-16 lg:mb-20"
         >
           <header>
-			  <h1 class="hidden"></h1>
             <span
               class="
                 text-blue
@@ -25,7 +24,7 @@
               "
               >Latest Article</span
             >
-            <div><h2>Blog Post</h2></div>
+            <div><h1>Blog Post</h1></div>
             <p><i>by</i> Youverify</p>
           </header>
         </div>
