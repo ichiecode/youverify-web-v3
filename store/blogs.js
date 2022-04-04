@@ -5,7 +5,7 @@ export const state = () => ({
   total: 0,
   loading: false,
   page: 0,
-  perPage: 9,
+  perPage: 90,
   sort_by: "created_at:desc",
 });
 

@@ -7,9 +7,9 @@
 		  <h1 class="hidden"></h1>
         <div class="flex-col-reverse md:flex-row flex justify-center">
           <div class="md:w-3/6">
-            <h3 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Fill a KYC form once and forever.
-            </h3>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               YOUID’s secure digital ID lets you safely store personal details
               in an encrypted format and use it to access online services
@@ -479,7 +479,11 @@
 </template>
 
 <script>
+import GetStarted from "../../components/common/getStarted";
 export default {
+  components: {
+    GetStarted
+  },
   head: {
     title: "YOUID",
     meta: [

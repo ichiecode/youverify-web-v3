@@ -13,7 +13,6 @@
     <div v-else>
       <article class="text-center min-h-header pt-40">
         <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-			<h1 class="hidden"></h1>
           <header>
             <span
               class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
@@ -24,9 +23,9 @@
               }}
               | {{ formattedPost.date | formatDate }}</span
             ><a href="/blog/#"
-              ><h2>
+              ><h1>
                 {{ formattedPost.title }}
-              </h2></a
+              </h1></a
             >
             <p><i>by</i> {{ formattedPost.author }}</p>
           </header>
@@ -115,7 +114,7 @@
             <section v-html="formattedPost.content"></section>
           </article>
         </section>
-        <div class="px-5 px-md-4 py-md-5 container">
+        <div class=" container">
           <aside class="">
             <h3 class="mb-5">Related Articles</h3>
             <section class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
@@ -211,6 +210,70 @@ export default {
           property: "description",
           content: this.$data.blogDetails[0].teaser,
         },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        { hid: "twitter:site", name: "twitter:site", content: "@nuxt_js" },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: `https://youverify.co/blog/${this.$data.blogDetails[0].slug}`,
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.$data.blogDetails[0].title,
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.$data.blogDetails[0].teaser,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: this.$data.blogDetails[0].image.url,
+        },
+
+        // Open Graph
+        {
+          hid: "og:site_name",
+          property: "og:site_name",
+          content: "Youverify website",
+        },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: `https://youverify.co/blog/${this.$data.blogDetails[0].slug}`,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.$data.blogDetails[0].title,
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$data.blogDetails[0].teaser,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.$data.blogDetails[0].image.url,
+        },
+        {
+          hid: "og:image:secure_url",
+          property: "og:image:secure_url",
+          content: this.$data.blogDetails[0].image.url,
+        },
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: this.$data.blogDetails[0].image.name,
+        },
       ],
     };
   },
@@ -234,4 +297,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+
+h2 {
+  font-size: 30px !important;
+}
+</style>

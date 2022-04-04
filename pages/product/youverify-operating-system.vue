@@ -14,11 +14,10 @@
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex-col-reverse md:flex-row flex justify-center">
-		<h1 class="hidden"></h1>
           <div class="md:w-3/6">
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Profile and screen customer identity on the go!
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               With the Youverify Operating System, businesses can verify one
               customer per time or tens of thousands simultaneously without

@@ -14,9 +14,9 @@
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="r">
           <div class="">
-			  <h1 class="hidden"></h1>
+
             <div class="text-center mb-8">
-              <h2 class="">vForms Demo</h2>
+              <h1 class="">vForms Demo</h1>
             </div>
             <div class="mt-3 justify-end sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
