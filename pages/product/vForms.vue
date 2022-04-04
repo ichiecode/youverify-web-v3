@@ -8,10 +8,9 @@
           class="flex-col-reverse md:flex-row flex justify-center items-center"
         >
           <div class="md:w-3/6">
-		  <h1 class="hidden"></h1>
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Scale your business operations with vForms
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               Simplify compliance data acquisition and verification from over
               160 authoritative data sources without coding

@@ -4,7 +4,7 @@
       <div id="chartMaps" class="relative">
         <div
           class="absolute bottom-7 right-7 bg-white rounded-md flex flex-col"
-        > <h1 class="hidden"></h1>
+        >
           <button
             class="flex justify-center items-center border h-10 w-10"
             type="button"
@@ -49,31 +49,12 @@
           <div class="flex items-center justify-center flex-col">
             <div class="w-full md:w-3/6 mb-5 md:mb-10">
               <div
-                class="
-                  inline-flex
-                  flex-col
-                  justify-center
-                  relative
-                  text-gray-500
-                  w-full
-                "
+                class="inline-flex flex-col justify-center relative text-gray-500 w-full"
               >
                 <div class="relative">
                   <input
                     type="text"
-                    class="
-                      p-2
-                      w-full
-                      pl-8
-                      rounded
-                      border border-gray-200
-                      bg-gray-200
-                      focus:bg-white
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-yellow-600
-                      focus:border-transparent
-                    "
+                    class="p-2 w-full pl-8 rounded border border-gray-200 bg-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
                     @focus="handleFocus"
                     placeholder="Search Countries..."
                     v-model="tempCountry"
@@ -98,32 +79,16 @@
                     v-for="post in filteredList"
                     :key="post.id"
                     @click="selectedCountry(post)"
-                    class="
-                      pl-8
-                      pr-2
-                      py-3
-                      border-gray-100
-                      relative
-                      cursor-pointer
-                      hover:bg-gray-100 hover:text-white
-                    "
+                    class="pl-8 pr-2 py-3 border-gray-100 relative cursor-pointer hover:bg-gray-100 hover:text-white"
                   >
                     <h4 class="text-gray-500">{{ post.country }}</h4>
                   </li>
                   <li
                     v-if="showDropDownWorldWide"
                     @click="selectedCountry()"
-                    class="
-                      pl-8
-                      pr-2
-                      py-3
-                      border-gray-100
-                      relative
-                      cursor-pointer
-                      hover:bg-gray-100 hover:text-white
-                    "
+                    class="pl-8 pr-2 py-3 border-gray-100 relative cursor-pointer hover:bg-gray-100 hover:text-white"
                   >
-                    <h4 class="text-gray-500">Worldwide</h4>
+                    <h1 class="text-gray-500">Worldwide</h1>
                   </li>
                 </ul>
               </div>
@@ -142,13 +107,12 @@
                     Identity Data Source
                   </p>
                   <div>
-                    
                     <h5
                       class="mt-2 font-bold cursor-default"
                       v-for="item in filteredSelectedList.IdentityDataSources"
                       :key="item.id"
                     >
-                      <abbr :title="item.title">{{item.abbreviation}}</abbr>
+                      <abbr :title="item.title">{{ item.abbreviation }}</abbr>
                       <!-- {{ item.title }} -->
                     </h5>
                   </div>
@@ -177,7 +141,7 @@
                       v-for="item in filteredSelectedList.UniversityCertificate"
                       :key="item.id"
                     >
-                      <abbr :title="item.title">{{item.abbreviation}}</abbr>
+                      <abbr :title="item.title">{{ item.abbreviation }}</abbr>
                     </h5>
                   </div>
                 </div>
@@ -189,7 +153,7 @@
                       v-for="item in filteredSelectedList.PEPSanctionList"
                       :key="item.id"
                     >
-                     <abbr :title="item.title">{{item.abbreviation}}</abbr>
+                      <abbr :title="item.title">{{ item.abbreviation }}</abbr>
                     </h5>
                   </div>
                 </div>
@@ -235,46 +199,15 @@
       </div>
     </div>
     <div
-      class="
-        min-h-screen
-        relative
-        flex
-        items-center
-        justify-start
-        pt-20
-        pb-32
-        md:pt-20 md:pb-20
-      "
+      class="min-h-screen relative flex items-center justify-start pt-20 pb-32 md:pt-20 md:pb-20"
       v-else
     >
       <section
-        class="
-          w-full
-          flex
-          justify-center
-          items-center
-          max-w-screen-xl
-          mx-auto
-          sm:px-8
-          px-6
-        "
+        class="w-full flex justify-center items-center max-w-screen-xl mx-auto sm:px-8 px-6"
       >
-        <div
-          class="
-            flex
-            justify-center
-            items-center
-          "
-        >
+        <div class="flex justify-center items-center">
           <div
-            class="
-              animate-spin
-              rounded-full
-              border-blue
-              h-20
-              w-20
-              border-t-4 border-b-4 border-gray-900
-            "
+            class="animate-spin rounded-full border-blue h-20 w-20 border-t-4 border-b-4 border-gray-900"
           ></div>
         </div>
       </section>
