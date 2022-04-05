@@ -117,7 +117,7 @@
         <div class=" container">
           <aside class="">
             <h3 class="mb-5">Related Articles</h3>
-            <section class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
+            <section class="mb-20">
               <content-placeholders
                 v-show="loading"
                 v-for="index in 3"
@@ -127,8 +127,8 @@
                 <content-placeholders-heading :img="true" />
                 <content-placeholders-text :lines="3" />
               </content-placeholders>
-              <div v-show="!loading">
-                <article v-for="blog in formattedRelatedBlogs" :key="blog.id">
+              <div class="grid sm:grid-cols-3 grid-cols-1 gap-10" v-show="!loading">
+                <article v-for="blog in formattedRelatedBlogs.slice(0, 3)" :key="blog.id">
                   <header class="relative mb-6 border">
                     <div class="rounded w-full sm:h-72 h-60">
                       <img
@@ -193,7 +193,6 @@ export default {
         blogDetails,
       };
     } catch (e) {
-      console.log(e);
     }
   },
   head() {
