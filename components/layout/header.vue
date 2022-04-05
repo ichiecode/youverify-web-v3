@@ -20,7 +20,15 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
+                  class="
+                    inline-flex
+                    cursor-pointer
+                    items-center
+                    mx-8
+                    py-8
+                    hover:text-blue-200
+                    false
+                  "
                   >Products
                   <svg
                     width="9"
@@ -38,7 +46,15 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
+                    class="
+                      container
+                      mx-auto
+                      w-full
+                      flex flex-wrap
+                      justify-between
+                      mx-2
+                      border-t-2
+                    "
                   >
                     <div class="w-full text-white">
                       <div>
@@ -100,7 +116,12 @@
                                   <div>
                                     <h4>vForms</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Discover the no-code tool to manage and
                                       verify data
@@ -137,7 +158,12 @@
                                   <div>
                                     <h4>YOUID</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Read more about storing and managing your
                                       personal data
@@ -180,7 +206,12 @@
                                   <div>
                                     <h4>YOUID for Business</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Find out how to sell your products online
                                       in a secure way
@@ -192,21 +223,24 @@
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
-                                      
                                       <span>
-                                      <LazyImage
-                                        src="~/assets/images/developer/data-source.png"
-                                        alt="data-source-image"
-										class="h-8 w-10"
-                                      />
-                                    </span>                 
-                                      
-                                        </span>
+                                        <LazyImage
+                                          src="~/assets/images/developer/data-source.png"
+                                          alt="data-source-image"
+                                          class="h-8 w-10"
+                                        />
+                                      </span>
+                                    </span>
                                   </header>
                                   <div>
                                     <h4>Data Sources</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Discover our over 300+ data sources
                                     </p>
@@ -234,7 +268,15 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
+                  class="
+                    inline-flex
+                    cursor-pointer
+                    items-center
+                    mx-8
+                    py-8
+                    hover:text-blue-200
+                    false
+                  "
                   >Use Cases<svg
                     width="9"
                     height="6"
@@ -251,7 +293,15 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
+                    class="
+                      container
+                      mx-auto
+                      w-full
+                      flex flex-wrap
+                      justify-between
+                      mx-2
+                      border-t-2
+                    "
                   >
                     <div class="w-full text-white">
                       <div>
@@ -279,12 +329,22 @@
                                     <h4>{{ industry.name }}</h4>
                                     <h4
                                       v-show="industry.visible === false"
-                                      class="coming-soon text-xs mt-2 text-red-500"
+                                      class="
+                                        coming-soon
+                                        text-xs
+                                        mt-2
+                                        text-red-500
+                                      "
                                     >
                                       Coming Soon
                                     </h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       {{ industry.teaser }}
                                     </p>
@@ -311,12 +371,22 @@
                                   <div>
                                     <h4>{{ industry.name }}</h4>
                                     <h4
-                                      class="coming-soon text-xs mt-2 text-red-500"
+                                      class="
+                                        coming-soon
+                                        text-xs
+                                        mt-2
+                                        text-red-500
+                                      "
                                     >
                                       Coming Soon
                                     </h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       {{ industry.teaser }}
                                     </p>
@@ -344,7 +414,15 @@
               <li class="hoverable hover:bg-blue-800 hover:bg-blue-800">
                 <a
                   href="#"
-                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 false"
+                  class="
+                    inline-flex
+                    cursor-pointer
+                    items-center
+                    mx-8
+                    py-8
+                    hover:text-blue-200
+                    false
+                  "
                   >Developer<svg
                     width="9"
                     height="6"
@@ -361,7 +439,15 @@
                 </a>
                 <div class="mega-menu sm:mb-0 shadow-xl">
                   <div
-                    class="container mx-auto w-full flex flex-wrap justify-between mx-2 border-t-2"
+                    class="
+                      container
+                      mx-auto
+                      w-full
+                      flex flex-wrap
+                      justify-between
+                      mx-2
+                      border-t-2
+                    "
                   >
                     <div class="w-full text-white">
                       <div>
@@ -381,7 +467,12 @@
                                   <div>
                                     <h4>API Doc</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Meet the superefficient verification tool
                                       your team needs
@@ -403,7 +494,12 @@
                                   <div>
                                     <h4>SDKs</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Discover the no-code tool to manage and
                                       verify data
@@ -424,7 +520,12 @@
                                   <div>
                                     <h4>API Status</h4>
                                     <p
-                                      class="text-sm mt-3 text-grey leading-loose"
+                                      class="
+                                        text-sm
+                                        mt-3
+                                        text-grey
+                                        leading-loose
+                                      "
                                     >
                                       Read more about storing and managing your
                                       personal data
@@ -452,14 +553,30 @@
               </li>
               <a href="/about-us">
                 <li
-                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 falsefalse"
+                  class="
+                    inline-flex
+                    cursor-pointer
+                    items-center
+                    mx-8
+                    py-8
+                    hover:text-blue-200
+                    falsefalse
+                  "
                 >
                   About us
                 </li>
               </a>
               <a href="/blogs">
                 <li
-                  class="inline-flex cursor-pointer items-center mx-8 py-8 hover:text-blue-200 falsefalse"
+                  class="
+                    inline-flex
+                    cursor-pointer
+                    items-center
+                    mx-8
+                    py-8
+                    hover:text-blue-200
+                    falsefalse
+                  "
                 >
                   Blog
                 </li>
@@ -476,179 +593,7 @@
         </section>
       </nav>
       <div class="react-reveal" style="opacity: 0">
-        <nav class="bg-white absolute w-full hidden">
-          <!-- <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-            <hr />
-            <div class="pt-10 pb-20">
-              <div class="flex">
-                <div class="w-9/12 grid grid-cols-3 gap-12 mt-8">
-                  <a href="/solution/individuals"
-                    ><section class="flex text-left">
-                      <header class="w-14 mr-5">
-                        <span
-                          ><svg
-                            width="30"
-                            height="30"
-                            viewBox="0 0 30 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M14.5124 14.5122C7.03391 14.5122 0.876657 20.1689 0.0858471 27.4369C-0.00914831 28.31 0.71194 29.0246 1.59016 29.0246H27.4345C28.3128 29.0246 29.0339 28.31 28.9389 27.4369C28.1481 20.1689 21.9908 14.5122 14.5124 14.5122Z"
-                              fill="#115766"
-                            ></path>
-                            <path
-                              d="M10.4699 9.6749H18.5546C18.9937 9.6749 19.3497 9.31893 19.3497 8.87982V2.73701C19.3497 2.52661 19.2663 2.32479 19.1178 2.17576L17.1824 0.233829C17.0333 0.0841382 16.8306 0 16.6193 0H10.4699C10.0308 0 9.6748 0.35597 9.6748 0.795081V8.87982C9.6748 9.31893 10.0308 9.6749 10.4699 9.6749Z"
-                              fill="#46B2C8"
-                            ></path>
-                          </svg>
-                        </span>
-                      </header>
-                      <div>
-                        <h4>Individual</h4>
-                        <p class="text-sm mt-3 leading-loose">
-                          Find out how Youverify helps you take charge of your
-                          identity
-                        </p>
-                      </div>
-                    </section></a
-                  ><a href="/solution/businesses"
-                    ><section class="flex text-left">
-                      <header class="w-14 mr-5">
-                        <span
-                          ><svg
-                            width="30"
-                            height="30"
-                            viewBox="0 0 30 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M14.5123 14.5122C7.14659 14.5122 1.0625 19.9997 0.125233 27.1095C-0.0133207 28.1605 0.859398 29.0246 1.91952 29.0246H27.1052C28.1653 29.0246 29.038 28.1605 28.8995 27.1095C27.9622 19.9997 21.8781 14.5122 14.5123 14.5122Z"
-                              fill="#46B2C8"
-                            ></path>
-                            <path
-                              d="M9.25248 12.4392H19.7721C20.3022 12.4392 20.7319 12.0095 20.7319 11.4794V3.49319C20.7319 3.23921 20.6312 2.99559 20.4519 2.81569L17.9271 0.28226C17.747 0.101565 17.5024 0 17.2473 0H9.25248C8.72242 0 8.29272 0.429699 8.29272 0.95976V11.4794C8.29272 12.0095 8.72242 12.4392 9.25248 12.4392Z"
-                              fill="#115766"
-                            ></path>
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M14.5123 1.7832C14.7126 1.7832 14.8751 1.94564 14.8751 2.14601V3.02712H17.0001C17.2005 3.02712 17.3629 3.18956 17.3629 3.38993C17.3629 3.59031 17.2005 3.75274 17.0001 3.75274H14.8751V5.9296H15.5489C16.5507 5.9296 17.3629 6.74178 17.3629 7.74365C17.3629 8.74552 16.5507 9.5577 15.5489 9.5577H14.8751V10.4388C14.8751 10.6392 14.7126 10.8016 14.5123 10.8016C14.3119 10.8016 14.1495 10.6392 14.1495 10.4388V9.5577H12.0244C11.8241 9.5577 11.6616 9.39526 11.6616 9.19489C11.6616 8.99452 11.8241 8.83208 12.0244 8.83208H14.1495V6.65522H13.4757C12.4738 6.65522 11.6616 5.84304 11.6616 4.84117C11.6616 3.8393 12.4738 3.02712 13.4757 3.02712H14.1495V2.14601C14.1495 1.94564 14.3119 1.7832 14.5123 1.7832ZM14.1495 3.75274H13.4757C12.8745 3.75274 12.3872 4.24005 12.3872 4.84117C12.3872 5.4423 12.8745 5.9296 13.4757 5.9296H14.1495V3.75274ZM14.8751 6.65522V8.83208H15.5489C16.15 8.83208 16.6373 8.34478 16.6373 7.74365C16.6373 7.14253 16.15 6.65522 15.5489 6.65522H14.8751Z"
-                              fill="#C2E2E9"
-                            ></path>
-                          </svg>
-                        </span>
-                      </header>
-                      <div>
-                        <h4>Business</h4>
-                        <p class="text-sm mt-3 leading-loose">
-                          Check out our verification tools for businesses like
-                          yours
-                        </p>
-                      </div>
-                    </section></a
-                  ><a href="/solution/government"
-                    ><section class="flex text-left">
-                      <header class="w-14 mr-5">
-                        <span
-                          ><svg
-                            width="28"
-                            height="30"
-                            viewBox="0 0 28 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M13.513 0L27.0261 9.72038H0L13.513 0Z"
-                              fill="#46B2C8"
-                            ></path>
-                            <rect
-                              x="3.86084"
-                              y="11.6509"
-                              width="3.86086"
-                              height="12.605"
-                              fill="#115766"
-                            ></rect>
-                            <path
-                              d="M19.3044 24.2558H23.1653V14.6593C23.1653 14.0756 22.9461 13.5132 22.5512 13.0834L21.927 12.4041C21.4859 11.9241 20.8639 11.6509 20.2119 11.6509H19.3044V24.2558Z"
-                              fill="#115766"
-                            ></path>
-                            <rect
-                              x="11.5825"
-                              y="11.6509"
-                              width="3.86086"
-                              height="12.605"
-                              fill="#115766"
-                            ></rect>
-                            <path
-                              d="M0 24.2559H27.0261V25.8455V29.0248H0V24.2559Z"
-                              fill="#115766"
-                            ></path>
-                          </svg>
-                        </span>
-                      </header>
-                      <div>
-                        <h4>Government</h4>
-                        <p class="text-sm mt-3 leading-loose">
-                          Discover how governments use our tools to optimize
-                          social programs
-                        </p>
-                      </div>
-                    </section></a
-                  ><a href="/agent"
-                    ><section class="flex text-left">
-                      <header class="w-14 mr-5">
-                        <span
-                          ><svg
-                            width="28"
-                            height="30"
-                            viewBox="0 0 28 30"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M13.8213 15.2031C6.7567 15.2031 0.930068 20.5034 0.101081 27.3443C-0.0107517 28.2672 0.753598 29.0244 1.68321 29.0244H25.9594C26.889 29.0244 27.6533 28.2672 27.5415 27.3443C26.7125 20.5034 20.8859 15.2031 13.8213 15.2031Z"
-                              fill="#115766"
-                            ></path>
-                            <path
-                              d="M7.75225 12.4388H15.2832C15.748 12.4388 16.1248 12.062 16.1248 11.5972V5.86615C16.1248 5.64344 16.0366 5.42981 15.8793 5.27206L14.0855 3.47212C13.9276 3.31367 13.7131 3.22461 13.4894 3.22461H7.75225C7.28744 3.22461 6.91064 3.60141 6.91064 4.06621V11.5972C6.91064 12.062 7.28744 12.4388 7.75225 12.4388Z"
-                              fill="#46B2C8"
-                            ></path>
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M11.5178 2.09757H14.0575C14.2812 2.09757 14.4957 2.18663 14.6536 2.34508L17.0069 4.70636C17.1641 4.8641 17.2523 5.07774 17.2523 5.30045V9.21419H19.8904C20.3552 9.21419 20.732 8.83739 20.732 8.37259V2.64155C20.732 2.41883 20.6437 2.2052 20.4865 2.04745L18.6927 0.247511C18.5348 0.0890614 18.3203 0 18.0966 0H12.3594C11.8946 0 11.5178 0.376798 11.5178 0.841603V2.09757Z"
-                              fill="#C2E2E9"
-                            ></path>
-                          </svg>
-                        </span>
-                      </header>
-                      <div>
-                        <h4>Agents</h4>
-                        <p class="text-sm mt-3 leading-loose">
-                          Learn how we enrol, pay &amp; equip you as a part of
-                          our mission
-                        </p>
-                      </div>
-                    </section></a
-                  >
-                </div>
-                <div class="w-3/12 text-right">
-                  <div>
-                    <img
-                      width="171"
-                      height="206"
-                      src="~/assets/images/illustrations/lady-hugging-sim-smiling.png"
-                      alt="Solutions"
-                      style="object-fit: cover; opacity: 1"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
-        </nav>
+        <nav class="bg-white absolute w-full hidden"></nav>
         <span
           aria-label="button"
           class="h-screen w-full bg-opacity-70 bg-black hidden"
@@ -657,7 +602,19 @@
         ></span></div
     ></span>
     <nav
-      class="transform z-40 w-full lg:hidden block top-0 overflow-scroll duration-700 fixed right-0 min-h-auto"
+      class="
+        transform
+        z-40
+        w-full
+        lg:hidden
+        block
+        top-0
+        overflow-scroll
+        duration-700
+        fixed
+        right-0
+        min-h-auto
+      "
     >
       <section class="bg-white max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex justify-between text-blue py-6 items-center false">
@@ -730,7 +687,14 @@
         <div>
           <div
             :class="{ hidden: !showmobileMenu }"
-            class="border-black border-t flex justify-between h-screen flex-wrap pt-4"
+            class="
+              border-black border-t
+              flex
+              justify-between
+              h-screen
+              flex-wrap
+              pt-4
+            "
           >
             <ul class="block w-full">
               <a
@@ -875,13 +839,25 @@
               </div>
               <a href="/about-us">
                 <li
-                  class="text-base text-blue leading-loose mb-4 flex items-center"
+                  class="
+                    text-base text-blue
+                    leading-loose
+                    mb-4
+                    flex
+                    items-center
+                  "
                 >
                   About us
                 </li></a
               ><a href="/blogs">
                 <li
-                  class="text-base text-blue leading-loose mb-4 flex items-center"
+                  class="
+                    text-base text-blue
+                    leading-loose
+                    mb-4
+                    flex
+                    items-center
+                  "
                 >
                   Blog
                 </li></a
@@ -893,7 +869,16 @@
                 target="_blank"
                 rel="noreferrer"
                 ><button
-                  class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8 w-full"
+                  class="
+                    bg-blue
+                    text-white
+                    rounded
+                    py-2
+                    sm:mb-0
+                    mb-4
+                    px-8
+                    w-full
+                  "
                 >
                   Sign in
                 </button></a
