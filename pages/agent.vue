@@ -1,36 +1,11 @@
 <template>
   <div>
     <header
-      class="
-        text-center
-        flex
-        items-center
-        justify-center
-        sm:pt-24
-        pt-36
-        sm:pb-0
-        pb-24
-        sm:min-h-screen
-        min-h-header
-        false
-      "
+      class="text-center flex items-center justify-center sm:pt-24 pt-36 sm:pb-0 pb-24 sm:min-h-screen min-h-header false"
     >
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <span
-          class="
-            text-blue
-            tracking-widest
-            px-4
-            py-2
-            uppercase
-            sm:text-sm
-            text-xs
-            rounded
-            mb-3
-            leading-none
-            inline-block
-            bg-blue-100
-          "
+          class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
           >Become An Agent</span
         >
         <h1 class="max-w-screen-lg">Join our force for good</h1>
@@ -48,19 +23,7 @@
     <section>
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
-          class="
-            bg-blue-100
-            rounded-xl
-            sm:px-20
-            px-10
-            sm:py-24
-            py-10
-            grid
-            sm:grid-cols-3
-            grid-cols-1
-            sm:my-20
-            my-10
-          "
+          class="bg-blue-100 rounded-xl sm:px-20 px-10 sm:py-24 py-10 grid sm:grid-cols-3 grid-cols-1 sm:my-20 my-10"
         >
           <div>
             <h3 class="sm:mb-0 mb-8">To apply, <br />you must be</h3>
@@ -198,14 +161,7 @@
               </div>
             </div>
             <div
-              class="
-                w-full
-                absolute
-                sm:-bottom-60
-                left-0
-                -bottom-36
-                text-center
-              "
+              class="w-full absolute sm:-bottom-60 left-0 -bottom-36 text-center"
             >
               <div
                 data-gatsby-image-wrapper=""
@@ -266,16 +222,7 @@
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
       <section class="sm:mt-80 mt-52 sm:mb-20 mb-10 text-center">
         <section
-          class="
-            text-center
-            max-w-screen-lg
-            text-container
-            sm:py-20
-            py-10
-            mx-auto
-            sm:px-8
-            px-6
-          "
+          class="text-center max-w-screen-lg text-container sm:py-20 py-10 mx-auto sm:px-8 px-6"
         >
           <section class="text-center">
             <h3 class="mb-12">
@@ -302,20 +249,7 @@
         </div>
         <div class="mt-8">
           <span
-            class="
-              text-blue
-              tracking-widest
-              px-4
-              py-2
-              uppercase
-              sm:text-sm
-              text-xs
-              rounded
-              mb-3
-              leading-none
-              inline-block
-              bg-blue-100
-            "
+            class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
             >Sign in to the agent training portal</span
           >
         </div>
@@ -323,7 +257,6 @@
     </section>
 
     <get-started></get-started>
-
   </div>
 </template>
 
@@ -331,19 +264,19 @@
 import getStarted from "~/components/common/getStarted.vue";
 export default {
   head: {
-    title: "About Us",
+    title: "Become an Agent",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "Youverify is Africa’s Number 1 online identity verification service that helps businesses meet KYC/ AML requirements and individuals manage personal data. Read more about us.",
+          "As our agent, you help us fulfil our mission for data accuracy and trustworthiness across Africa while we pay you for your dutiful service. With over 2000 agents at the moment, we are able to help organizations get on the ground to verify physical addresses and assets",
       },
     ],
   },
   components: {
-    getStarted
-  }
+    getStarted,
+  },
 };
 </script>
 
