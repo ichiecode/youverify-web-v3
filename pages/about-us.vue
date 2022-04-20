@@ -15,7 +15,7 @@
       <img
         class="sm:min-h-screen min-h-header w-full h-full object-cover"
         src="../assets/images/team/about-image.jpeg"
-        alt="about-image"
+        alt="about-img"
       />
       <div
         class="
@@ -104,12 +104,12 @@
             v-for="index in 5"
             :key="index"
           >
-            <content-placeholders-heading :="true" />
+            <content-placeholders-heading :img="true" />
             <content-placeholders-text :lines="3" />
           </content-placeholders>
           <section v-show="!loadingTeams" v-for="team in teams" :key="team.id">
             <div class="block">
-              <
+              <img
                 width="203"
                 height="331.99999999999994"
                 :src="team.images.url"
@@ -195,7 +195,7 @@
           class="grid grid-cols-1 lg:grid-cols-2 gap-10"
         >
           <content-placeholders v-for="index in 4" :key="index">
-            <content-placeholders-heading :="true" />
+            <content-placeholders-heading :img="true" />
             <content-placeholders-text :lines="3" />
           </content-placeholders>
         </div>
@@ -208,7 +208,7 @@
             v-for="value in values"
             :key="value.id"
           >
-            < :src="value.icon.url" class="mb-8" />
+            <img :src="value.icon.url" class="mb-8" />
             <h4 class="mb-4 text-gray-700">{{ value.title }}</h4>
             <p class="">
               {{ value.teasers }}
