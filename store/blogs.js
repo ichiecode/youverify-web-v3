@@ -37,10 +37,11 @@ export const actions = {
     let payload = {
       _start: startPage ? startPage: state.page,
       _limit: limitPage ? limitPage: state.perPage,
+      _sort: "createdAt:DESC"
     };
     const response = await this.$axios
       .$get(
-        `${process.env.baseUrl}/blogs?_start=${payload._start}&_limit=${payload._limit}`
+        `${process.env.baseUrl}/blogs?_start=${payload._start}&_limit=${payload._limit}&_sort=${payload._sort}`
       )
       .then((res) => {
         commit("setBlogs", res);
