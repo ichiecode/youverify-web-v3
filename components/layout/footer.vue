@@ -102,13 +102,14 @@
             ><li>API Documentation</li></a
           ><a aria-current="page" class="mb-2 block w-full" href="/about-us"
             ><li>Support</li></a
-          ><a
+          >
+          <!-- <a
             href="https://status.youverify.co/"
             target="_blank"
             rel="noreferrer"
             class="mb-2 block w-full"
             ><li>API Status</li></a
-          >
+          > -->
           <!-- <a aria-current="page" class="mb-2 block w-full" href="/resources">
             <li>Resources</li>
           </a> -->
