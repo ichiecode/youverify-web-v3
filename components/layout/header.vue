@@ -507,7 +507,7 @@
                                   </div>
                                 </section></a
                               >
-                              <a href="https://status.youverify.co/"
+                              <!-- <a href="https://status.youverify.co/"
                                 ><section class="flex text-left">
                                   <header class="w-14 mr-5">
                                     <span>
@@ -532,7 +532,7 @@
                                     </p>
                                   </div>
                                 </section></a
-                              >
+                              > -->
                             </div>
                             <div class="w-3/12 text-right flex justify-end">
                               <div>
@@ -824,7 +824,8 @@
                         Read more about storing and managing your personal data
                       </p>
                     </li></a
-                  ><a href="https://status.youverify.co/"
+                  >
+                  <!-- <a href="https://status.youverify.co/"
                     ><li class="px-6 w-full mb-4">
                       <p class="text-sm my-2 text-blue font-medium">
                         API Status
@@ -834,7 +835,7 @@
                         way
                       </p>
                     </li></a
-                  >
+                  > -->
                 </ul>
               </div>
               <a href="/about-us">
