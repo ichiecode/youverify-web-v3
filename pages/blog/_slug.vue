@@ -22,11 +22,11 @@
                   : "Youverify"
               }}
               | {{ formattedPost.date | formatDate }}</span
-            ><a href="/blog/#"
+            >
+            <a href="/blog/#"
               ><h1>
                 {{ formattedPost.title }}
-              </h1></a
-            >
+              </h1></a>
             <p><i>by</i> {{ formattedPost.author }}</p>
           </header>
           <div
@@ -110,11 +110,11 @@
               ></a>
             </div>
           </div>
-          <article>
+          <article class="article-body">
             <section v-html="formattedPost.content"></section>
           </article>
         </section>
-        <div class=" container">
+        <div class="container">
           <aside class="">
             <h3 class="mb-5">Related Articles</h3>
             <section class="mb-20">
@@ -296,8 +296,10 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style>
+.article-body h1 {
+  display: none; 
+}
 h2 {
   font-size: 30px !important;
 }

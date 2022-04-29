@@ -47,29 +47,26 @@
                   :alt="blog.image.caption"
                   class="h-full object-cover rounded"
                   :src="blog.image.url"
-				  alt="blog-img"
                 />
               </div>
               <span class="absolute top-3 left-3 text-sm"
                 ><span
                   class="
                     text-blue
-                    tracking-widest
                     px-4
+                    leading-widest
                     py-2
                     uppercase
                     sm:text-sm
                     text-xs
                     rounded
                     mb-3
+                    font-semibold
                     leading-none
                     inline-block
                     bg-blue-100
                   "
-                  >{{ blog.blog_categories[0].categoriesName }} |
-                  {{ blog.date | formatDate }}</span
-                ></span
-              >
+                  >{{ blog.blog_categories[0].categoriesName }}</span></span>
             </header>
             <div>
               <NuxtLink :to="`/blog/${blog.slug}`"
@@ -77,7 +74,8 @@
                   {{ blog.title }}
                 </h3>
               </NuxtLink>
-              <p class="mt-1">by {{ blog.author }}</p>
+              <p class="mt-1"> {{ blog.author }} | {{ blog.date | formatDate }}</p> 
+              <!-- <p>by {{ blog.author }}</p> -->
             </div>
           </article>
         </section>
