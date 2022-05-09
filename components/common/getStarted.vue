@@ -1,7 +1,9 @@
 <template>
   <section class="bg-blue-200 for-a-reason">
-	  <h1 class="hidden"></h1>
-    <div class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 md::mx-auto max-w-300">
+    <h1 class="hidden"></h1>
+    <div
+      class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 md::mx-auto max-w-300"
+    >
       <h2 class="text-white font-display">Getting started</h2>
       <div class="mt-14 lg:mt-20 grid gap-5 grid-cols-1 md:grid-cols-3">
         <article
@@ -45,8 +47,6 @@
                 ></path>
               </svg>
             </AppButton>
-           
-             
           </div>
           <div class="hidden md:flex justify-center flex-1">
             <figure class="w-full max-w-lg relative">
@@ -93,8 +93,6 @@
                 ></path>
               </svg>
             </AppButton>
-           
-             
           </div>
         </article>
         <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
@@ -132,7 +130,6 @@
                 ></path>
               </svg>
             </AppButton>
-            
           </div>
         </article>
         <article class="bg-white rounded-2xl p-6 sm:p-10 lg:p-11.25 xl:p-15">
@@ -143,29 +140,7 @@
               class="inline-block mb-5 w-16 h-16"
             />
             <h4 class="text-center lg:text-left mb-8">Always-on support</h4>
-           
-              <svg
-                slot="append"
-                viewBox="0 0 25 25"
-                fill="none"
-                class="w-5 lg:w-6.25"
-              >
-                <path
-                  d="M8 18L18 8"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M8 8H18V18"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </AppButton> -->
+
             <NuxtLink
               to="/contact-us"
               rel="noreferrer"
@@ -199,9 +174,5 @@
 <style>
 .gridpicture {
   grid-template-columns: minmax(350px, 1fr) 1.2fr;
-
-  
 }
-
-
 </style>

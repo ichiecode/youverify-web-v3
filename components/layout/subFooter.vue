@@ -79,13 +79,14 @@
             ><li>API Documentation</li></a
           ><a aria-current="page" class="mb-2 block w-full" href="/about-us"
             ><li>Support</li></a
-          ><a
+          >
+          <!-- <a
             href="https://status.youverify.co/"
             target="_blank"
             rel="noreferrer"
             class="mb-2 block w-full"
             ><li>API Status</li></a
-          >
+          > -->
         </ul>
       </section>
       <section class="sm:w-0/12"></section>
