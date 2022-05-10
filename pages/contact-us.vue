@@ -16,7 +16,11 @@
             method="POST"
           >
             <input type="hidden" name="oid" value="00D8c000007B8H4" />
-            <input type="hidden" name="retURL" value="null" />
+            <input
+              type="hidden"
+              name="retURL"
+              value="https://www.youverify.co/contact-us-success"
+            />
             <div class="form-group md:w-8/12">
               <label for="first_name"> <h4>First name</h4> </label>
               <input
@@ -29,7 +33,7 @@
               />
             </div>
             <div class="form-group md:w-8/12">
-              <label for="last_name"><h4>Last name</h4> </label>
+              <label for="last_name"><h4>Last name</h4></label>
               <input
                 class=""
                 placeholder="Last name"
@@ -86,11 +90,7 @@
                 role="button"
                 tabindex="0"
               >
-                <AppButton
-                  buttonText="Submit"
-                  buttoncolor="bluebutton"
-                  href="https://app.youverify.co/#/auth/login"
-                />
+                <AppButton buttonText="Submit" buttoncolor="bluebutton" />
               </span>
             </div>
           </form>
@@ -101,6 +101,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   head: {
     title: "Contact us",
