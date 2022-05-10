@@ -19,7 +19,7 @@
             <input
               type="hidden"
               name="retURL"
-              value="https://www.youverify.co/contact-us-success"
+              value="/contact-us-success"
             />
             <div class="form-group md:w-8/12">
               <label for="first_name"> <h4>First name</h4> </label>
