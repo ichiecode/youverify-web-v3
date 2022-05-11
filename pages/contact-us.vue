@@ -19,10 +19,10 @@
             <input
               type="hidden"
               name="retURL"
-              value="/contact-us-success"
+              value="https://www.youverify.co/contact-us-success"
             />
             <div class="form-group md:w-8/12">
-              <label for="first_name"> <h4>First name</h4> </label>
+              <label for="first_name"><h4>First name</h4></label>
               <input
                 class=""
                 id="first_name"
@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import axios from "axios";
+
 export default {
   head: {
     title: "Contact us",
