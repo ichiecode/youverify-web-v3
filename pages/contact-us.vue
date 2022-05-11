@@ -101,7 +101,6 @@
 </template>
 
 <script>
-
 export default {
   head: {
     title: "Contact us",

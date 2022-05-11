@@ -75,10 +75,17 @@ export default {
     Disallow: '/admin',
     Allow: '/'
   },
-
+  
+  render: {
+	static: {
+	  setHeaders(res) {
+		res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+   }
+ }
+},
   build: {
     extend(config, { isClient, isDev, loaders: { vue } }) {
       vue.transformAssetUrls.LazyImage = ["src"];
     },
   },
-};
+}
