@@ -51,9 +51,10 @@ export default {
   components: true,
 
   buildModules: ["@nuxtjs/tailwindcss"],
+  serverMiddleware: ['~/api/index'],
 
   modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots"],
-
+  
   sitemap: {
     hostname: "https://youverify.co",
     gzip: true,
@@ -75,14 +76,8 @@ export default {
     Disallow: '/admin',
     Allow: '/'
   },
-  
-  render: {
-	static: {
-	  setHeaders(res) {
-		res.setHeader('X-Frame-Options', 'SAMEORIGIN')
-   }
- }
-},
+ 
+
   build: {
     extend(config, { isClient, isDev, loaders: { vue } }) {
       vue.transformAssetUrls.LazyImage = ["src"];
