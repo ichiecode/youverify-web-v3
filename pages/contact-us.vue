@@ -66,22 +66,25 @@
               />
             </div>
             <div class="form-group md:w-8/12">
-              <label for="phone_number"><h4>Phone number</h4></label>
+              <label for="phone"><h4>Phone number</h4></label>
               <input
                 placeholder="Enter your phone number"
                 id="phone"
                 maxlength="20"
-                name="phone_number"
+                name="phone"
                 type="tel"
+				required
               />
             </div>
             <div class="form-group md:w-8/12">
-              <label for="MESSAGE"><h4>Message</h4> </label>
+              <label for="description"><h4>Message</h4> </label>
               <textarea
                 placeholder="Type your message or enquiry here"
                 id="description"
-                name="message"
+                name="description"
                 rows="5"
+				required
+				
               ></textarea>
             </div>
             <div class="">
