@@ -125,7 +125,7 @@
                     stroke-linejoin="round"
                   ></path></svg></a
               <
-			  <a 
+			  <a
                 class="
                   items-center
                   justify-center
@@ -189,7 +189,7 @@
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-16 h-16">
                 <img
-                  src="~/assets/images/logos/trusted/svg/fidelity.svg" 
+                  src="~/assets/images/logos/trusted/svg/fidelity.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
@@ -248,7 +248,7 @@
           ></path>
         </svg>
       </div>
-    </header> 
+    </header>
 
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6 pb-20">
       <div class="mx-auto">
@@ -303,6 +303,7 @@
       </div>
     </section>
 
+    <div id="target">
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
@@ -328,7 +329,7 @@
 
               <button
                 :class="`${showService === false ? ' text-white' : 'text-blue'}
-                  
+
                   items-center
                   justify-center
                   disabled:curs
@@ -1280,7 +1281,7 @@
                     ></path>
                   </svg>
                 </AppButton>
-           
+
           </div>
         </div>
       </div>
@@ -1316,17 +1317,50 @@
         </span>
       </section>
     </section>
+    </div>
+
+    <transition name="slide-in">
+      <NotificationPopup v-if="showNotifPopup" :text="popup.text" :link="popup.link" @close-popup="closePopUp">
+        <template #image>
+          <LazyImage
+            src="~/assets/images/gatsby-astronaut.png"
+            :alt="popup.text"
+            class="object-cover w-full h-full align-middle border-0"
+          />
+        </template>
+      </NotificationPopup>
+    </transition>
   </div>
 </template>
 
 <script>
 import getStarted from "~/components/common/getStarted.vue";
+import NotificationPopup from "~/components/NotificationPopup.vue";
 
 export default {
   data() {
     return {
       showService: true,
+      showNotifPopup: false,
+      popup: {
+        text: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
+        link: "#",
+      },
+      observer: null,
     };
+  },
+  created() {
+    this.observer = new IntersectionObserver(
+      this.onElementObserved,
+      {
+        root: null,
+        threshold: 0.01,
+      }
+    );
+  },
+  mounted() {
+    const el = document.getElementById('target')
+    this.observer.observe(el)
   },
   methods: {
     toggleService(params) {
@@ -1336,9 +1370,23 @@ export default {
         this.showService = false;
       }
     },
+    closePopUp() {
+      this.showNotifPopup = false
+      this.observer.disconnect();
+    },
+    onElementObserved(entries) {
+      entries.forEach(({ isIntersecting}) => {
+        if (isIntersecting) {
+          this.showNotifPopup = true;
+        } else {
+          this.showNotifPopup = false;
+        }
+      });
+    },
   },
   components: {
     getStarted,
+    NotificationPopup
   },
 };
 </script>
@@ -1430,6 +1478,12 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+.slide-in-enter-active, .slide-in-leave-active {
+  transition: transform .3s ease-out;
+}
+.slide-in-enter, .slide-in-leave-to {
+  transform: translateX(-500px);
 }
 /* .slide-in-image {
   transition: transform 0.3s ease-in-out;
