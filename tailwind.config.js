@@ -24,6 +24,8 @@ module.exports = {
         },
         grey: {
           DEFAULT: "#6E7E82",
+          100: "F6F5FA",
+          200: "D4D4D4"
         },
       },
 
@@ -144,7 +146,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
-      120: '30rem',
+      128: '32rem',
     },
     animation: {
       none: 'none',

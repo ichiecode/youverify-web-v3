@@ -1319,48 +1319,47 @@
     </section>
     </div>
 
-    <transition name="slide-in">
-      <NotificationPopup v-if="showNotifPopup" :text="popup.text" :link="popup.link" @close-popup="closePopUp">
-        <template #image>
-          <LazyImage
-            src="~/assets/images/gatsby-astronaut.png"
-            :alt="popup.text"
-            class="object-cover w-full h-full align-middle border-0"
-          />
-        </template>
-      </NotificationPopup>
-    </transition>
+    <ReportsPopup>
+      <Carousel v-slot="{ slide }" :slidesCount="reports.length">
+        <ReportSlide
+          v-for="(report, index) in reports"
+          v-show="slide === index"
+          :key="index"
+          :report="report"
+        />
+      </Carousel>
+    </ReportsPopup>
   </div>
 </template>
 
 <script>
 import getStarted from "~/components/common/getStarted.vue";
-import NotificationPopup from "~/components/NotificationPopup.vue";
+import Carousel from "~/components/global/Carousel";
+import ReportsPopup from "~/components/reports/Popup.vue";
+import ReportSlide from "~/components/reports/Slide.vue";
 
 export default {
   data() {
     return {
       showService: true,
-      showNotifPopup: false,
-      popup: {
-        text: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
-        link: "#",
-      },
-      observer: null,
+      reports: [
+        {
+          image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+1+image",
+          title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+2+image",
+          title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
+          link: "#",
+        },
+        {
+          image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+3+image",
+          title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
+          link: "#",
+        }
+      ],
     };
-  },
-  created() {
-    this.observer = new IntersectionObserver(
-      this.onElementObserved,
-      {
-        root: null,
-        threshold: 0.01,
-      }
-    );
-  },
-  mounted() {
-    const el = document.getElementById('target')
-    this.observer.observe(el)
   },
   methods: {
     toggleService(params) {
@@ -1370,23 +1369,12 @@ export default {
         this.showService = false;
       }
     },
-    closePopUp() {
-      this.showNotifPopup = false
-      this.observer.disconnect();
-    },
-    onElementObserved(entries) {
-      entries.forEach(({ isIntersecting}) => {
-        if (isIntersecting) {
-          this.showNotifPopup = true;
-        } else {
-          this.showNotifPopup = false;
-        }
-      });
-    },
   },
   components: {
     getStarted,
-    NotificationPopup
+    Carousel,
+    ReportsPopup,
+    ReportSlide
   },
 };
 </script>
@@ -1472,19 +1460,6 @@ export default {
   fill: #ffffff;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.slide-in-enter-active, .slide-in-leave-active {
-  transition: transform .3s ease-out;
-}
-.slide-in-enter, .slide-in-leave-to {
-  transform: translateX(-500px);
-}
 /* .slide-in-image {
   transition: transform 0.3s ease-in-out;
 }
