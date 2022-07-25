@@ -34,7 +34,7 @@ export default {
   // https://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@github.com/YouverifyHQ/youverify-web.git
 
   ssr: false,
-  
+
   loading: { color: "#0F808C", height: '3px' },
   // loading: '~/components/LoadingBar.vue'
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -58,12 +58,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
 
-  modules: ["@nuxtjs/axios"],
+  modules: ["@nuxtjs/axios", 'vue-social-sharing/nuxt'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
 	extend(config, { isClient, isDev, loaders: { vue } }) {
-		vue.transformAssetUrls.LazyImage = ["src"]; 
+		vue.transformAssetUrls.LazyImage = ["src"];
 	 }
   },
 };
