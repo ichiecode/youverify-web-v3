@@ -40,7 +40,7 @@ COPY . .
 ARG BASE_URL=some_default_value 
 ENV BASE_URL=${BASE_URL}
 
-RUN NODE_ENV=production yarn build
+RUN NODE_ENV=production  yarn build && yarn generate
 
 EXPOSE 30079
 

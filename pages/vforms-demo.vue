@@ -29,7 +29,7 @@
                 <div class="text-container">
                   <div class="mx-auto">
                     <div class="text-center w-full mb-12 sm:mb-16 lg:mb-20">
-                      <h2 class="">vForms Demos</h2>
+                      <h1 class="text-2xl">vForms Demos</h1>
                       <p class="mt-5 md:mt-7">
                         More templates to take your business to the next level.
                         Custom made templates to fit your needs and get you
@@ -86,9 +86,9 @@
                                 stroke-linejoin="round"
                                 data-v-7c7bbed2=""
                               ></path></svg
-                          ></NuxtLink>
+                          ></NuxtLink> 
                           <a
-                            :href="`https://os.dev.youverify.co/v-forms/${useCase.vFormId}/edit/add-fields`"
+                            :href="`https://os.youverify.co/v-forms/${useCase.vFormId}/edit/add-fields`"
                             target="_blank"
                             rel="noreferrer"
                             class="

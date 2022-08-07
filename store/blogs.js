@@ -1,10 +1,11 @@
 export const state = () => ({
   blogs: null,
   singleblogPost: null,
+  relatedBlogs: null,
   total: 0,
   loading: false,
   page: 0,
-  perPage: 9,
+  perPage: 90,
   sort_by: "created_at:desc",
 });
 
@@ -24,6 +25,10 @@ export const mutations = {
   setTotalBlog(state, payload) {
     state.total = payload;
   },
+
+  setRelatedBlogs(state, payload) {
+    state.relatedBlogs = payload
+  }
 };
 
 export const actions = {
@@ -32,10 +37,11 @@ export const actions = {
     let payload = {
       _start: startPage ? startPage: state.page,
       _limit: limitPage ? limitPage: state.perPage,
+      _sort: "createdAt:DESC"
     };
     const response = await this.$axios
       .$get(
-        `${process.env.baseUrl}/blogs?_start=${payload._start}&_limit=${payload._limit}`
+        `${process.env.baseUrl}/blogs?_start=${payload._start}&_limit=${payload._limit}&_sort=${payload._sort}`
       )
       .then((res) => {
         commit("setBlogs", res);
@@ -71,4 +77,19 @@ export const actions = {
       .catch((error) => ({ error: JSON.stringify(error) }));
     return response;
   },
+  
+  async getRelatedBlogs({ state, commit }, slug) {
+    commit("setLoading", true);
+    const response = await this.$axios
+      .$get(`${process.env.baseUrl}/blog-categories?slug=${slug}`)
+      .then((res) => {
+        commit("setRelatedBlogs", res);
+        commit("setLoading", false);
+        return res;
+      })
+      .catch((error) => ({ error: JSON.stringify(error) }));
+    return response;
+  },
+
+
 };

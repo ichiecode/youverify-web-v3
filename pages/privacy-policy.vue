@@ -31,6 +31,7 @@
             policy ? this.$root.$options.filters.formatDate(policy.updatedAt) : ""
           }}</span
         >
+		
         <h1>{{ policy ? policy.title : "" }}</h1>
       </header>
       

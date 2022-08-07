@@ -40,7 +40,7 @@
     <slot name="prepend"></slot>
     <slot name="default">{{ buttonText }} </slot>
     <slot name="append"></slot>
-    <!-- <slot>{{ buttonText }}</slot> -->
+  
   </button>
 </template>
 
