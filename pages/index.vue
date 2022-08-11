@@ -1320,9 +1320,9 @@
     </div>
 
     <ReportsPopup>
-      <Carousel v-slot="{ slide }" :slidesCount="reports.length">
+      <Carousel v-slot="{ slide }" :slidesCount="reports_list.length">
         <ReportSlide
-          v-for="(report, index) in reports"
+          v-for="(report, index) in reports_list"
           v-show="slide === index"
           :key="index"
           :report="report"
@@ -1333,6 +1333,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import getStarted from "~/components/common/getStarted.vue";
 import Carousel from "~/components/global/Carousel";
 import ReportsPopup from "~/components/reports/Popup.vue";
@@ -1342,7 +1343,7 @@ export default {
   data() {
     return {
       showService: true,
-      reports: [
+      reports_list: [
         {
           image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+1+image",
           title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
@@ -1361,7 +1362,18 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapGetters({
+      reports: "reports/featuredReports",
+    }),
+  },
+  async created() {
+    await this.getFeaturedReports()
+  },
   methods: {
+    ...mapActions({
+      getFeaturedReports: "reports/fetchFeaturedReport",
+    }),
     toggleService(params) {
       if (params === "with") {
         this.showService = true;
