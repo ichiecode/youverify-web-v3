@@ -149,7 +149,6 @@ export default {
     Report,
     TextInput,
     GetReportForm,
-    PDFComponent,
   },
   data() {
     return {

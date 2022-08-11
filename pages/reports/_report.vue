@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions, mapState } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import SocialShare from "@/components/reports/SocialShare"
 
