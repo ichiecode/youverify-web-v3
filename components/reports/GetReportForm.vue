@@ -1,5 +1,5 @@
 <template>
-  <form class="" @submit.prevent="handleSubmit">
+  <form class="" @submit.prevent="$emit('download-report', getFieldValues)">
     <div v-for="(arr, index) in pickInputFields" :key="index" class="sm:flex items-center gap-4 block">
       <text-input
         v-for="field in arr"
@@ -93,7 +93,7 @@ export default {
         },
       },
       isSubmitting: false,
-      error: false
+      values: null
     }
   },
   computed: {
@@ -108,21 +108,19 @@ export default {
       return this.isSubmitting
         ? "text-gray-200 bg-gray-400 hover:bg-gray-400"
         : " bg-blue text-white hover:bg-blue-300"
+    },
+    getFieldValues() {
+      const values = {};
+      Object.entries(this.fields).forEach((field) => {
+        values[field[0]] = field[1].value;
+      });
+      return values
     }
   },
   methods: {
     sliceFields(obj, fields) {
       return {...fields.reduce((res, key) => ({ ...res, [key]: obj[key] }), { })}
     },
-    handleSubmit() {
-      this.isSubmitting = true
-      const values = {};
-      Object.entries(this.fields).forEach((field) => {
-        values[field[0]] = field[1].value;
-      });
-      console.log(values)
-      this.isSubmitting = false
-    }
   }
 }
 </script>

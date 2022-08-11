@@ -5,16 +5,16 @@
         {{ article.title}}
       </h1>
       <small class="text-grey">
-        {{ article.date}}
+        {{ formatDate(article.published_at) }}
       </small>
       <span class="text-grey">
         &nbsp;|&nbsp;
       </span>
       <small class="text-grey">
-        {{ article.readTime/60 }} mins
+        {{ computeReadTime(article.word_count) }} mins
       </small>
     </nuxt-link>
-    <nuxt-link :to="`/reports/${article.slug}`" class="w-32 h-auto">
+    <nuxt-link v-if="article.image" :to="`/reports/${article.slug}`" class="w-32 h-auto">
       <LazyImage
         :src="article.image"
         :alt="article.title"
@@ -31,10 +31,18 @@ export default {
       type: Object,
       required: true,
     }
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'short', day: 'numeric' }
+      return new Date(date).toLocaleDateString("en-US", options)
+    },
+    computeReadTime(wordCount) {
+      const WORDS_PER_MIN = 238
+      const readTimeMins = Math.floor(wordCount / WORDS_PER_MIN)
+      const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
+      return secs > 30 ? readTimeMins + 1 : readTimeMins
+    }
   }
 }
 </script>
-
-<style>
-
-</style>

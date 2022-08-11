@@ -17,176 +17,189 @@
     </div>
   </header>
   <main class="max-w-5xl mx-auto w-full pt-4 md:pt-14">
-    <header class="my-2 md:my-4 px-4">
-      <h1 class="font-semibold text-xl md:text-3xl">
-        <nuxt-link :to="`/reports/${featuredReport.slug}`" class="hover:text-blue-200 text-gray-800">
-          {{ featuredReport.title }}
-        </nuxt-link>
-      </h1>
-      <small class="text-grey">
-        {{ featuredReport.date}}
-      </small>
-      <span class="text-grey">
-        &nbsp;|&nbsp;
-      </span>
-      <small class="text-grey">
-        {{ featuredReport.readTime/60 }} mins
-      </small>
-    </header>
-    <!-- Report -->
-    <section class="my-8 block md:flex">
-      <div class="px-4 w-full md:w-2/3">
-        <div class="w-full max-h-120">
-          <LazyImage
-            :src="featuredReport.image"
-            :alt="featuredReport.title"
-            class="object-cover w-full h-full align-middle border-0"
-          />
-        </div>
-        <!-- Report excerpt -->
-        <div class="my-6">
-          <p class="text-gray-800">{{ featuredReport.excerpt }}</p>
-        </div>
-        <!-- Report insights -->
-        <div class="mt-8">
-          <h2 class="font-bold text-base text-gray-800">
-            📝 In this report, you'll learn about:
-          </h2>
-          <ul class="my-4 list-disc list-inside">
-            <li
-              v-for="(ins, index) in featuredReport.insights"
-              :key="index"
-              class="text-gray-800"
-            >
-              {{ ins }}
-            </li>
-          </ul>
-        </div>
-        <!-- Form -->
-        <section class="my-12">
-          <h1 class="font-bold text-base text-gray-800">
-            👇 Enter your information for immediate access to this report
-          </h1>
-          <hr class="mb-6 border-gray-200 mt-4">
-          <GetReportForm />
-        </section>
-      </div>
-      <!-- Popular articles -->
-      <aside class="w-full md:w-1/3 px-4">
-        <h1 class="text-gray-800 capitalize text-xl font-semibold">
-          Popular Articles
+    <content-placeholders
+      v-if="loading"
+      class="w-full"
+    >
+      <content-placeholders-heading />
+      <content-placeholders-img />
+      <content-placeholders-text :lines="5" />
+    </content-placeholders>
+    <div v-else-if="errors" class="w-full">
+      <h2 class="text-center text-grey">
+        A error occured, please try again later
+      </h2>
+    </div>
+    <article v-else class="">
+      <header class="my-2 md:my-4 px-4">
+        <h1 class="font-semibold text-xl md:text-3xl">
+          <nuxt-link :to="`/reports/${featuredReport.slug}`" class="hover:text-blue-200 text-gray-800">
+            {{ featuredReport.title }}
+          </nuxt-link>
         </h1>
-        <hr class="mb-6 w-1/3 border-blue-200 border mt-2 rounded-sm">
-        <PopularReport v-for="(article, index) in popularArticles" :key="index" :article="article" />
-      </aside>
-    </section>
+        <small class="text-grey">
+          {{ formatDate(featuredReport.published_at) }}
+        </small>
+        <span class="text-grey">
+          &nbsp;|&nbsp;
+        </span>
+        <small class="text-grey">
+          {{ computeReadTime(featuredReport.word_count) }} mins
+        </small>
+      </header>
+      <!-- Report -->
+      <section class="my-8 block md:flex">
+        <div class="px-4 w-full md:w-2/3">
+          <div v-if="featuredReport.image" class="w-full max-h-120">
+            <LazyImage
+              :src="featuredReport.image"
+              :alt="featuredReport.title"
+              class="object-cover w-full h-full align-middle border-0"
+            />
+          </div>
+          <!-- Report excerpt -->
+          <section v-html="featuredReport.excerpt" class="my-6 text-gray-800"></section>
+          <!-- Form -->
+          <section class="my-12">
+            <h1 class="font-bold text-base text-gray-800">
+              👇 Enter your information for immediate access to this report
+            </h1>
+            <hr class="mb-6 border-gray-200 mt-4">
+            <GetReportForm @download-report="downloadReport" />
+          </section>
+        </div>
+        <!-- Popular articles -->
+        <aside class="w-full md:w-1/3 px-4">
+          <h1 class="text-gray-800 capitalize text-xl font-semibold">
+            Popular Articles
+          </h1>
+          <hr class="mb-6 w-1/3 border-blue-200 border mt-2 rounded-sm">
+          <Report v-for="article in popularArticles" :key="article.id" :article="article" />
+        </aside>
+      </section>
+    </article>
   </main>
   <!-- Search -->
   <section class="mt-8 mb-24 mx-4">
     <div class="w-full max-w-5xl rounded-lg bg-blue-100 px-4 py-8 md:py-12 flex flex-col mx-auto">
-      <h1 class="md:text-4xl text-2xl mb-2 md:mb-4 font-bold text-center text-blue-200">
-        Search for Articles
-      </h1>
-      <h2 class="md:text-lg text-base font-normal text-black text-center">
-        Read articles, updates and announcements from the team at Yoverify. If you have an
-      </h2>
-      <form class="flex gap-3 w-full items-center justify-center max-w-xl mt-6 mx-auto">
-        <text-input
-          v-model="searchTerm"
-          type="text"
-          name="search term"
-          placeholder="Search Article"
-          required
-          class="flex-grow !bg-white"
-        />
-        <button
-          type="submit"
-          class="outline-0 m-0 select-none capitalize whitespace-nowrap font-semibold px-4 sm:px-8 py-3 text-sm shadow-sm transition-colors rounded"
-          :class="[buttonStyles]"
-          :disabled="isSubmitting"
-        >
-          search
-        </button>
-      </form>
+      <div class="mx-auto max-w-3xl">
+        <h1 class="md:text-4xl text-2xl mb-2 md:mb-4 font-bold text-center text-blue-200">
+          Search for Articles
+        </h1>
+        <h2 class="text-base font-normal text-gray-800 text-center">
+          Read articles, updates and announcements from the team at Yoverify. If you have an
+        </h2>
+        <form class="flex gap-3 w-full items-center justify-center mt-6 mx-auto">
+          <text-input
+            v-model="searchTerm"
+            type="text"
+            name="search term"
+            placeholder="Search Article"
+            required
+            class="flex-grow !bg-white"
+          />
+          <button
+            type="submit"
+            class="outline-0 m-0 select-none capitalize whitespace-nowrap font-semibold px-4 sm:px-8 py-3 text-sm shadow-sm transition-colors rounded"
+            :class="[buttonStyles]"
+            :disabled="searching"
+            @click="getReports(searchTerm)"
+          >
+            search
+          </button>
+        </form>
+        <!-- Search results -->
+        <section class="my-4">
+          <content-placeholders v-if="searching">
+            <content-placeholders-heading />
+          </content-placeholders>
+          <div v-else-if="searchError" class="w-full">
+            <h2 class="text-center text-grey">
+              A error occured, please try again later
+            </h2>
+          </div>
+          <template v-else>
+            <div class="w-full mt-2 flex justify-end">
+              <button v-if="searchResults.length > 0" class="box-border outline-0 m-0 select-none whitespace-nowrap px-4 py-1.5 text-sm border-gray-300 rounded transition-colors hover:border-gray-500 text-gray-800 border" @click="clearSearch()">
+                Clear
+              </button>
+            </div>
+            <Report
+              v-for="article in searchResults"
+              :key="article.id"
+              :article="article"
+            />
+          </template>
+        </section>
+      </div>
     </div>
   </section>
 </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
-import PopularReport from "@/components/reports/PopularReport"
+import Report from "@/components/reports/Report"
 import TextInput from "@/components/form/TextInput"
 
 export default {
   layout: 'reports',
   components: {
-    PopularReport,
+    Report,
     TextInput,
-    GetReportForm
+    GetReportForm,
+    PDFComponent,
   },
   data() {
     return {
-      featuredReport: {
-        title: "Address Verification in Nigeria, a report by Youverify",
-        slug: "address_verification_in_nigeria_a_report_by _youverify",
-        date: "Jun 28, 2021",
-        readTime: 300,
-        image: "https://picsum.photos/300/200",
-        excerpt: "If you have an experience that leaves you jumping for joy, you want to share that feeling. And that time you ordered a “killer outfit” right before a big party and received something that looked like it came off of a cheap halloween rack, well… you want to make sure no one else ever has that experience. And that time you ordered a “killer outfit” right before a big party and received something that looked like it came off of a cheap halloween rack, well… you want to make sure no one else ever has that experience.",
-        insights: [
-          'The current state of digital ID in Nigeria.',
-          'How it can streamline government and private sector relations.',
-          'Why unlocking universal coverage is important.'
-        ]
-      },
-      popularArticles: [
-        {
-          title: "The 8 best landing page builders, reviewed",
-          slug: "the_8_best_landing_page_builders_reviewed",
-          date: "Jun 28, 2021",
-          readTime: 300,
-          image: "https://picsum.photos/200"
-        },
-        {
-          title: "Create engaging online courses your student",
-          slug: "create_engaging_online_courses_your_student",
-          date: "Jun 28, 2021",
-          readTime: 300,
-          image: "https://picsum.photos/200"
-        },
-        {
-          title: "The ultimate formula for launching online course",
-          slug: "the_ultimate_formula_for_launching_online_course",
-          date: "Jun 28, 2021",
-          readTime: 300,
-          image: "https://picsum.photos/200"
-        },
-        {
-          title: "How to sell digital products using social media",
-          slug: "how_to_sell_digital_products_using_social_media",
-          date: "Jun 28, 2021",
-          readTime: 300,
-          image: "https://picsum.photos/200"
-        }
-      ],
-      loading: false,
-      error: null,
-      isSubmitting: false,
       searchTerm: ""
     }
   },
   computed: {
+    ...mapGetters({
+      featuredReport: "reports/featuredReport",
+      popularArticles: "reports/popularReports",
+      errors: "reports/errors",
+      loading: "reports/loading",
+      searchResults: "reports/searchResults",
+      searching: "reports/searching",
+      searchError: "reports/searchError"
+    }),
     buttonStyles() {
-      return this.isSubmitting
+      return this.searching
         ? "text-gray-200 bg-gray-400 hover:bg-gray-400"
         : "bg-blue text-white hover:bg-blue-300"
     }
   },
+  async created() {
+    await this.getFeaturedReport()
+    await this.getPopularReports()
+  },
   methods: {
-    handleSubmit() {
+    ...mapActions({
+      getPopularReports: "reports/fetchPopularReports",
+      getFeaturedReport: "reports/fetchFeaturedReport",
+      getReports: "reports/searchReport",
+      clearSearch: "reports/clearSearch"
+    }),
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'short', day: 'numeric' }
+      return new Date(date).toLocaleDateString("en-US", options)
+    },
+    computeReadTime(wordCount) {
+      const WORDS_PER_MIN = 238
+      const readTimeMins = Math.floor(wordCount / WORDS_PER_MIN)
+      const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
+      return secs > 30 ? readTimeMins + 1 : readTimeMins
+    },
+    clearSearch() {
+      this.searchTerm = ''
+      this.$store.commit("reports/setSearchResults", [])
+    },
+    downloadReport(values) {
       this.isSubmitting = true
-      console.log(searchTerm)
+      console.log(values)
       this.isSubmitting = false
     }
   }

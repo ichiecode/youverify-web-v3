@@ -11,7 +11,7 @@
     </div>
   </header>
   <div class="px-4 md:px-0 max-w-3xl mx-auto w-full mt-8">
-    <button class="inline-flex items-center justify-center relative box-border outline-0 m-0 select-none gap-2 whitespace-nowrap px-4 py-1.5 text-sm no-underline rounded transition-colors bg-transparent hover:bg-gray-100 text-gray-800 border-0" @click="goBack">
+    <button class="inline-flex items-center justify-center relative box-border outline-0 m-0 select-none gap-2 whitespace-nowrap px-4 py-1.5 text-sm no-underline rounded transition-colors bg-transparent hover:bg-gray-100 text-gray-800 border-0" @click="$router.back()">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10.05 16.94V12.94H18.97L19 10.93H10.05V6.94L5.05 11.94Z" />
       </svg>
@@ -19,67 +19,67 @@
     </button>
   </div>
   <main class="max-w-3xl mx-auto w-full pt-4 md:pt-10">
-    <header class="my-2 md:my-4 px-4">
-      <h1 class="font-semibold text-xl md:text-3xl text-gray-800">
-        {{ article.title }}
-      </h1>
-      <div class="flex items-center w-full">
-        <div class="flex items-center flex-grow">
-          <small class="text-grey">
-            {{ article.date}}
-          </small>
-          <span class="text-grey">
-            &nbsp;|&nbsp;
-          </span>
-          <small class="text-grey">
-            {{ article.readTime/60 }} mins
-          </small>
-        </div>
-        <social-share
-          :url="getUrl"
-          :title="article.title"
-          :description="article.description"
-          :quote="article.quote"
-          :hashtags="article.hashtags"
-          twitter-user="YouCheckOnline"
-        ></social-share>
-      </div>
-    </header>
-    <!-- Report -->
-    <article class="px-4 my-8 w-full">
-      <div class="w-full max-h-120">
-        <LazyImage
-          :src="article.image"
-          :alt="article.title"
-          class="object-cover w-full h-full align-middle border-0"
-        />
-      </div>
-      <!-- Report excerpt -->
-      <div class="my-8">
-        <p class="text-gray-800">{{ article.excerpt }}</p>
-      </div>
-      <!-- Report insights -->
-      <div class="mt-8">
-        <h2 class="font-bold text-base text-gray-800">
-          📝 In this report, you'll learn about:
-        </h2>
-        <ul class="my-4 list-disc list-inside">
-          <li
-            v-for="(insight, index) in article.insights"
-            :key="index"
-            class="text-gray-800"
-          >
-            {{ insight }}
-          </li>
-        </ul>
-      </div>
-      <!-- Form -->
-      <section class="my-12">
-        <h1 class="font-bold text-base text-gray-800">
-          👇 Enter your information for immediate access to this report
+    <content-placeholders
+      v-if="loading"
+      class="w-full"
+    >
+      <content-placeholders-heading />
+      <content-placeholders-img />
+      <content-placeholders-text :lines="5" />
+    </content-placeholders>
+    <div v-else-if="errors" class="w-full">
+      <h2 class="text-center text-grey">
+        A error occured, please try again later
+      </h2>
+    </div>
+    <article v-else class="">
+      <header class="my-2 md:my-4 px-4">
+        <h1 class="font-semibold text-xl md:text-3xl text-gray-800">
+          {{ article.title }}
         </h1>
-        <hr class="mb-6 border-gray-200 mt-4">
-        <GetReportForm />
+        <div class="flex items-center w-full">
+          <div class="flex items-center flex-grow">
+            <small class="text-grey">
+              {{ formatDate(article.published_at) }}
+            </small>
+            <span class="text-grey">
+              &nbsp;|&nbsp;
+            </span>
+            <small class="text-grey">
+              {{ computeReadTime(article.word_count) }} mins
+            </small>
+          </div>
+          <social-share
+            :url="getUrl"
+            :title="article.title"
+            :description="article.description"
+            :quote="article.quote"
+            :hashtags="article.hashtags"
+            twitter-user="YouCheckOnline"
+          ></social-share>
+        </div>
+      </header>
+      <!-- Report -->
+      <section class="px-4 my-8 w-full">
+        <div v-if="article.image" class="w-full max-h-120">
+          <LazyImage
+            :src="article.image"
+            :alt="article.title"
+            class="object-cover w-full h-full align-middle border-0"
+          />
+        </div>
+        <!-- Report excerpt -->
+        <div class="my-8">
+          <section v-html="article.excerpt" class="my-6 text-gray-800"></section>
+        </div>
+        <!-- Form -->
+        <section class="my-12">
+          <h1 class="font-bold text-base text-gray-800">
+            👇 Enter your information for immediate access to this report
+          </h1>
+          <hr class="mb-6 border-gray-200 mt-4">
+          <GetReportForm @download-report="downloadReport" />
+        </section>
       </section>
     </article>
     <hr class="border-gray-200 my-4 mx-4">
@@ -98,6 +98,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions, mapState } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import SocialShare from "@/components/reports/SocialShare"
 
@@ -107,36 +108,40 @@ export default {
     GetReportForm,
     SocialShare
   },
-  data() {
-    return {
-      article: {
-        title: "Address Verification in Nigeria, a report by Youverify",
-        slug: "address_verification_in_nigeria_a_report_by _youverify",
-        date: "Jun 28, 2021",
-        readTime: 300,
-        image: "https://picsum.photos/160/90",
-        excerpt: "If you have an experience that leaves you jumping for joy, you want to share that feeling. And that time you ordered a “killer outfit” right before a big party and received something that looked like it came off of a cheap halloween rack, well… you want to make sure no one else ever has that experience. And that time you ordered a “killer outfit” right before a big party and received something that looked like it came off of a cheap halloween rack, well… you want to make sure no one else ever has that experience.",
-        insights: [
-          'The current state of digital ID in Nigeria.',
-          'How it can streamline government and private sector relations.',
-          'Why unlocking universal coverage is important.'
-        ],
-        description: "Received something that looked like it came off of a cheap halloween rack, well… you want to make sure no one else ever has that experience.",
-        quote: "Came off of a cheap halloween rack",
-        hashtags: "Youverify,digitalidentity,identityverification,diitalID"
-      },
-      loading: false,
-      error: null
-    }
-  },
   computed: {
+    ...mapGetters({
+      errors: "reports/errors",
+      loading: "reports/loading",
+      report: "reports/report"
+    }),
     getUrl() {
       return window.location.href
-    }
+    },
+    article() {
+      return this.report ? this.report : [];
+    },
+  },
+  async created() {
+    await this.getReport(this.$route.params.report)
   },
   methods: {
-    goBack() {
-      this.$router.go(-1)
+    ...mapActions({
+      getReport: "reports/fetchReport"
+    }),
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'short', day: 'numeric' }
+      return new Date(date).toLocaleDateString("en-US", options)
+    },
+    computeReadTime(wordCount) {
+      const WORDS_PER_MIN = 238
+      const readTimeMins = Math.floor(wordCount / WORDS_PER_MIN)
+      const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
+      return secs > 30 ? readTimeMins + 1 : readTimeMins
+    },
+    downloadReport() {
+      this.isSubmitting = true
+      console.log(values)
+      this.isSubmitting = false
     }
   }
 }
