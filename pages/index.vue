@@ -1320,11 +1320,11 @@
     </div>
 
     <ReportsPopup>
-      <Carousel v-slot="{ slide }" :slidesCount="reports_list.length">
+      <Carousel v-slot="{ slide }" :slidesCount="reports.length">
         <ReportSlide
-          v-for="(report, index) in reports_list"
+          v-for="(report, index) in reports"
           v-show="slide === index"
-          :key="index"
+          :key="report.id"
           :report="report"
         />
       </Carousel>
@@ -1343,23 +1343,6 @@ export default {
   data() {
     return {
       showService: true,
-      reports_list: [
-        {
-          image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+1+image",
-          title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
-          link: "#",
-        },
-        {
-          image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+2+image",
-          title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
-          link: "#",
-        },
-        {
-          image: "https://via.placeholder.com/150.png/FFFFFF/0B4B58?text=Report+3+image",
-          title: "Youverify helps companies automate their decisions, onboard the right customers and fight fraud using data.",
-          link: "#",
-        }
-      ],
     };
   },
   computed: {
@@ -1372,7 +1355,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      getFeaturedReports: "reports/fetchFeaturedReport",
+      getFeaturedReports: "reports/fetchFeaturedReports",
     }),
     toggleService(params) {
       if (params === "with") {

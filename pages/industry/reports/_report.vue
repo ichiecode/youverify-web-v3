@@ -63,8 +63,8 @@
       <section class="px-4 my-8 w-full">
         <div v-if="article.image" class="w-full max-h-120">
           <LazyImage
-            :src="article.image"
-            :alt="article.title"
+          :src="article.image.formats.thumbnail.url"
+          :alt="article.image.alternativeText || article.title"
             class="object-cover w-full h-full align-middle border-0"
           />
         </div>
@@ -78,7 +78,7 @@
             👇 Enter your information for immediate access to this report
           </h1>
           <hr class="mb-6 border-gray-200 mt-4">
-          <GetReportForm @download-report="downloadReport" />
+          <GetReportForm :report="report" />
         </section>
       </section>
     </article>
@@ -138,11 +138,6 @@ export default {
       const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
       return secs > 30 ? readTimeMins + 1 : readTimeMins
     },
-    downloadReport() {
-      this.isSubmitting = true
-      console.log(values)
-      this.isSubmitting = false
-    }
   }
 }
 </script>

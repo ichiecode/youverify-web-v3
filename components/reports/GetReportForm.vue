@@ -1,5 +1,10 @@
 <template>
-  <form class="" @submit.prevent="$emit('download-report', getFieldValues)">
+  <form class="" @submit.prevent="downloadReport">
+    <Alert v-if="isAlertOpen" :type="downloadStatus" @close-alert="isAlertOpen = false">
+    <p class="flex-grow mr-2">
+      {{downloadMessage}}
+    </p>
+    </Alert>
     <div v-for="(arr, index) in pickInputFields" :key="index" class="sm:flex items-center gap-4 block">
       <text-input
         v-for="field in arr"
@@ -35,20 +40,28 @@
       :class="[buttonStyles]"
       :disabled="isSubmitting"
     >
-      DOWNLOAD REPORT
+      {{ isSubmitting ? 'DOWNLOADING...' : 'DOWNLOAD REPORT' }}
     </button>
   </form>
 </template>
 
 <script>
+import Alert from "@/components/common/Alert"
 import TextInput from "@/components/form/TextInput"
 import SelectInput from "@/components/form/Select"
 
 export default {
   name: "GetReportForm",
   components: {
+    Alert,
     TextInput,
     SelectInput,
+  },
+  props: {
+    report: {
+      type: Object,
+      default: () => {},
+    }
   },
   data() {
     return {
@@ -89,11 +102,14 @@ export default {
           name: "country",
           type: "text",
           placeholder: "Select country",
-          options: ['Afghanistan', 'Aland', 'Albania', 'Algeria', 'American', 'Andorra', 'Angola', 'Anguilla', 'Antarctica', 'Antigua', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain',]
+          options: ['Benin', 'Burkina Faso', 'Cape Verde', 'The Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Ivory Coast', 'Liberia', 'Mali', 'Mauritania', 'Niger', 'Nigeria', 'Senegal', 'Sierra Leone', 'Togo']
         },
       },
-      isSubmitting: false,
-      values: null
+      isSubmitting: this.submitting,
+      values: null,
+      downloadStatus: null,
+      downloadMessage: "",
+      isAlertOpen: false
     }
   },
   computed: {
@@ -106,8 +122,13 @@ export default {
     },
     buttonStyles() {
       return this.isSubmitting
-        ? "text-gray-200 bg-gray-400 hover:bg-gray-400"
+        ? "text-gray-200 bg-gray-400 hover:bg-gray-400 cursor-not-allowed"
         : " bg-blue text-white hover:bg-blue-300"
+    },
+  },
+  methods: {
+    sliceFields(obj, fields) {
+      return {...fields.reduce((res, key) => ({ ...res, [key]: obj[key] }), { })}
     },
     getFieldValues() {
       const values = {};
@@ -115,12 +136,31 @@ export default {
         values[field[0]] = field[1].value;
       });
       return values
-    }
-  },
-  methods: {
-    sliceFields(obj, fields) {
-      return {...fields.reduce((res, key) => ({ ...res, [key]: obj[key] }), { })}
     },
+    async downloadReport() {
+      this.isSubmitting = true
+      this.downloadStatus = null
+
+      try {
+        const payload = {...this.getFieldValues(), report: this.report}
+        const response = await this.$axios.$post(`${process.env.baseUrl}/downloads`, payload)
+        this.fields.firstName.value = ""
+        this.fields.lastName.value = ""
+        this.fields.email.value = ""
+        this.fields.company.value = ""
+        this.fields.industry.value = ""
+        this.fields.country.value = ""
+        this.downloadStatus = 'success'
+        this.downloadMessage = response.message
+      } catch (error) {
+        console.log(error)
+        this.downloadStatus = 'error'
+        this.downloadMessage = error.message
+      } finally {
+        this.isAlertOpen = true
+        this.isSubmitting = false
+      }
+    }
   }
 }
 </script>

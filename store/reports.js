@@ -1,19 +1,22 @@
 export const state = () => ({
   report: null,
   popularReports: [],
-  featuredReport: null,
+  featuredReports: [],
   loading: false,
   error: null,
   searching: false,
   searchError: null,
   searchResults: [],
+  downloading: false,
+  downloadError: null,
   perPage: 5
 });
 
 export const getters = {
   report: (state) => state.report,
   popularReports: (state) => state.popularReports,
-  featuredReport: (state) => state.featuredReport,
+  featuredReport: (state) => state.featuredReports[0],
+  featuredReports: (state) => state.featuredReports,
   loading: (state) => state.loading,
   errors: (state) => state.errors,
   searching: (state) => state.searching,
@@ -26,17 +29,25 @@ export const mutations = {
     state.loading = payload;
   },
 
+  setDownloading(state, payload) {
+    state.downloading = payload;
+  },
+
   setError(state, payload) {
     state.error = payload;
   },
 
+  setDownloadError(state, payload) {
+    state.downloadError = payload;
+  },
+
   setPopularReports(state, payload) {
-    const featured = payload.filter(report => report.id !== state.featuredReport.id)
+    const featured = payload.filter(report => report.id !== state.featuredReports[0].id)
     state.popularReports = featured > 4 ? featured.slice(0, 4) : featured
   },
 
   setFeaturedReport(state, payload) {
-    state.featuredReport = payload;
+    state.featuredReports = payload;
   },
 
   setReport(state, payload) {
@@ -93,13 +104,13 @@ export const actions = {
     }
   },
 
-  async fetchFeaturedReport({ state, commit }) {
+  async fetchFeaturedReports({ state, commit }) {
     commit("setLoading", true);
     try {
     const response = await this.$axios
       .$get(`${process.env.baseUrl}/reports?featured=true`)
 
-      commit("setFeaturedReport", response[0]);
+      commit("setFeaturedReport", response);
     } catch (error) {
       console.log(error)
       commit("setError", error.response);
@@ -110,6 +121,7 @@ export const actions = {
 
   async searchReport({ state, commit }, searchTerm) {
     commit("setSearching", true);
+
     try {
     const response = await this.$axios
       .$get(`${process.env.baseUrl}/reports?title_contains=${searchTerm}&_limit=${state.perPage}`)

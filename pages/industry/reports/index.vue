@@ -33,7 +33,7 @@
     <article v-else class="">
       <header class="my-2 md:my-4 px-4">
         <h1 class="font-semibold text-xl md:text-3xl">
-          <nuxt-link :to="`/reports/${featuredReport.slug}`" class="hover:text-blue-200 text-gray-800">
+          <nuxt-link :to="`/industry/reports/${featuredReport.slug}`" class="hover:text-blue-200 text-gray-800">
             {{ featuredReport.title }}
           </nuxt-link>
         </h1>
@@ -52,8 +52,8 @@
         <div class="px-4 w-full md:w-2/3">
           <div v-if="featuredReport.image" class="w-full max-h-120">
             <LazyImage
-              :src="featuredReport.image"
-              :alt="featuredReport.title"
+          :src="featuredReport.image.formats.thumbnail.url"
+          :alt="featuredReport.image.alternativeText || featuredReport.title"
               class="object-cover w-full h-full align-middle border-0"
             />
           </div>
@@ -65,7 +65,7 @@
               👇 Enter your information for immediate access to this report
             </h1>
             <hr class="mb-6 border-gray-200 mt-4">
-            <GetReportForm @download-report="downloadReport" />
+            <GetReportForm :report="featuredReport" />
           </section>
         </div>
         <!-- Popular articles -->
@@ -105,7 +105,7 @@
             :disabled="searching"
             @click="getReports(searchTerm)"
           >
-            search
+            {{searching ? 'searching' : 'search'}}
           </button>
         </form>
         <!-- Search results -->
@@ -152,7 +152,7 @@ export default {
   },
   data() {
     return {
-      searchTerm: ""
+      searchTerm: "",
     }
   },
   computed: {
@@ -167,18 +167,18 @@ export default {
     }),
     buttonStyles() {
       return this.searching
-        ? "text-gray-200 bg-gray-400 hover:bg-gray-400"
+        ? "text-gray-200 bg-gray-400 hover:bg-gray-400 cursor-not-allowed"
         : "bg-blue text-white hover:bg-blue-300"
     }
   },
   async created() {
-    await this.getFeaturedReport()
+    !this.featuredReport && await this.getFeaturedReport()
     await this.getPopularReports()
   },
   methods: {
     ...mapActions({
       getPopularReports: "reports/fetchPopularReports",
-      getFeaturedReport: "reports/fetchFeaturedReport",
+      getFeaturedReport: "reports/fetchFeaturedReports",
       getReports: "reports/searchReport",
       clearSearch: "reports/clearSearch"
     }),
@@ -196,11 +196,6 @@ export default {
       this.searchTerm = ''
       this.$store.commit("reports/setSearchResults", [])
     },
-    downloadReport(values) {
-      this.isSubmitting = true
-      console.log(values)
-      this.isSubmitting = false
-    }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <article class="flex my-8 w-full">
-    <nuxt-link :to="`/reports/${article.slug}`" class="flex-grow pr-2">
+    <nuxt-link :to="`/industry/reports/${article.slug}`" class="flex-grow pr-2">
       <h1 class="text-sm font-semibold hover:text-blue-200 text-gray-800">
         {{ article.title}}
       </h1>
@@ -16,8 +16,8 @@
     </nuxt-link>
     <nuxt-link v-if="article.image" :to="`/reports/${article.slug}`" class="w-32 h-auto">
       <LazyImage
-        :src="article.image"
-        :alt="article.title"
+          :src="article.image.formats.thumbnail.url"
+          :alt="article.image.alternativeText || article.title"
         class="object-cover w-full h-full align-middle border-0"
       />
     </nuxt-link>
