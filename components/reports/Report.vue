@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import { computeReadTime } from "@/helpers/readTime.js"
+
 export default {
   props: {
     article: {
@@ -37,12 +39,6 @@ export default {
       const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString("en-US", options)
     },
-    computeReadTime(wordCount) {
-      const WORDS_PER_MIN = 238
-      const readTimeMins = Math.floor(wordCount / WORDS_PER_MIN)
-      const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
-      return secs > 30 ? readTimeMins + 1 : readTimeMins
-    }
   }
 }
 </script>

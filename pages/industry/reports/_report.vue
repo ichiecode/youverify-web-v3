@@ -59,7 +59,6 @@
           ></social-share>
         </div>
       </header>
-      <!-- Report -->
       <section class="px-4 my-8 w-full">
         <div v-if="article.image" class="w-full max-h-120">
           <LazyImage
@@ -68,11 +67,9 @@
             class="object-cover w-full h-full align-middle border-0"
           />
         </div>
-        <!-- Report excerpt -->
         <div class="my-8">
           <section v-html="article.excerpt" class="my-6 text-gray-800"></section>
         </div>
-        <!-- Form -->
         <section class="my-12">
           <h1 class="font-bold text-base text-gray-800">
             👇 Enter your information for immediate access to this report
@@ -101,6 +98,7 @@
 import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import SocialShare from "@/components/reports/SocialShare"
+import { computeReadTime } from "@/helpers/readTime.js"
 
 export default {
   layout: 'reports',
@@ -131,12 +129,6 @@ export default {
     formatDate(date) {
       const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString("en-US", options)
-    },
-    computeReadTime(wordCount) {
-      const WORDS_PER_MIN = 238
-      const readTimeMins = Math.floor(wordCount / WORDS_PER_MIN)
-      const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
-      return secs > 30 ? readTimeMins + 1 : readTimeMins
     },
   }
 }

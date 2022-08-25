@@ -47,7 +47,6 @@
           {{ computeReadTime(featuredReport.word_count) }} mins
         </small>
       </header>
-      <!-- Report -->
       <section class="my-8 block md:flex">
         <div class="px-4 w-full md:w-2/3">
           <div v-if="featuredReport.image" class="w-full max-h-120">
@@ -57,9 +56,7 @@
               class="object-cover w-full h-full align-middle border-0"
             />
           </div>
-          <!-- Report excerpt -->
           <section v-html="featuredReport.excerpt" class="my-6 text-gray-800"></section>
-          <!-- Form -->
           <section class="my-12">
             <h1 class="font-bold text-base text-gray-800">
               👇 Enter your information for immediate access to this report
@@ -68,7 +65,6 @@
             <GetReportForm :report="featuredReport" />
           </section>
         </div>
-        <!-- Popular articles -->
         <aside class="w-full md:w-1/3 px-4">
           <h1 class="text-gray-800 capitalize text-xl font-semibold">
             Popular Articles
@@ -79,7 +75,6 @@
       </section>
     </article>
   </main>
-  <!-- Search -->
   <section class="mt-8 mb-24 mx-4">
     <div class="w-full max-w-5xl rounded-lg bg-blue-100 px-4 py-8 md:py-12 flex flex-col mx-auto">
       <div class="mx-auto max-w-3xl">
@@ -108,7 +103,6 @@
             {{searching ? 'searching' : 'search'}}
           </button>
         </form>
-        <!-- Search results -->
         <section class="my-4">
           <content-placeholders v-if="searching">
             <content-placeholders-heading />
@@ -142,6 +136,7 @@ import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import Report from "@/components/reports/Report"
 import TextInput from "@/components/form/TextInput"
+import { computeReadTime } from "@/helpers/readTime.js"
 
 export default {
   layout: 'reports',
@@ -185,12 +180,6 @@ export default {
     formatDate(date) {
       const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString("en-US", options)
-    },
-    computeReadTime(wordCount) {
-      const WORDS_PER_MIN = 238
-      const readTimeMins = Math.floor(wordCount / WORDS_PER_MIN)
-      const secs = Math.round(((wordCount % WORDS_PER_MIN) / WORDS_PER_MIN) * 60 )
-      return secs > 30 ? readTimeMins + 1 : readTimeMins
     },
     clearSearch() {
       this.searchTerm = ''
