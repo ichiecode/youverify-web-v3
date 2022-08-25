@@ -41,9 +41,8 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
-# Cache directory
+# Optional npm cache directory
 .npm
-.yarn
 
 # Optional eslint cache
 .eslintcache
