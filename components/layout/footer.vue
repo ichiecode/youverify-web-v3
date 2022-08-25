@@ -90,6 +90,8 @@
           ><a class="mb-2 block w-full" href="/blogs"><li>Blog</li></a
           ><a class="mb-2 block w-full" href="/about-us#career"
             ><li>Career</li></a
+          ><a class="mb-2 block w-full" href="/industry/reports"
+            ><li>Industry Reports</li></a
           ><a class="mb-2 block w-full" href="/gdpr"
             ><li>GDPR Compliance Statement</li></a
           >

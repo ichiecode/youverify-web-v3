@@ -34,6 +34,11 @@ export default {
 
   loading: { color: "#0F808C", height: "3px" },
 
+  ssr: false,
+
+  loading: { color: "#0F808C", height: '3px' },
+  // loading: '~/components/LoadingBar.vue'
+  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   env: {
@@ -53,7 +58,7 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss"],
   serverMiddleware: ['~/api/index'],
 
-  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots", 'vue-social-sharing/nuxt'],
   
   sitemap: {
     hostname: "https://youverify.co",
@@ -76,7 +81,6 @@ export default {
     Disallow: '/admin',
     Allow: '/'
   },
- 
 
   build: {
     extend(config, { isClient, isDev, loaders: { vue } }) {

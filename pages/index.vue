@@ -70,7 +70,6 @@
                   ></path>
                 </svg>
               </AppButton>
-              
             </div>
 
             <div class="mt-10 flex items-center">
@@ -182,6 +181,7 @@
       </div>
     </section>
 
+    <div id="target">
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
@@ -207,7 +207,7 @@
 
               <button
                 :class="`${showService === false ? ' text-white' : 'text-blue'}
-                  
+
                   items-center
                   justify-center
                   disabled:curs
@@ -907,11 +907,27 @@
         </span>
       </section>
     </section>
+    </div>
+
+    <ReportsPopup>
+      <Carousel v-slot="{ slide }" :slidesCount="reports.length">
+        <ReportSlide
+          v-for="(report, index) in reports"
+          v-show="slide === index"
+          :key="report.id"
+          :report="report"
+        />
+      </Carousel>
+    </ReportsPopup>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import getStarted from "~/components/common/getStarted.vue";
+import Carousel from "~/components/global/Carousel";
+import ReportsPopup from "~/components/reports/Popup.vue";
+import ReportSlide from "~/components/reports/Slide.vue";
 
 export default {
   data() {
@@ -919,7 +935,18 @@ export default {
       showService: true,
     };
   },
-  methods: { 
+  computed: {
+    ...mapGetters({
+      reports: "reports/featuredReports",
+    }),
+  },
+  async created() {
+    await this.getFeaturedReports()
+  },
+  methods: {
+    ...mapActions({
+      getFeaturedReports: "reports/fetchFeaturedReports",
+    }),
     toggleService(params) {
       if (params === "with") {
         this.showService = true;
@@ -930,6 +957,9 @@ export default {
   },
   components: {
     getStarted,
+    Carousel,
+    ReportsPopup,
+    ReportSlide
   },
 };
 </script>
