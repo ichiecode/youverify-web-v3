@@ -14,8 +14,9 @@
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="r">
           <div class="">
+
             <div class="text-center mb-8">
-              <h2 class="">vForms Demo</h2>
+              <h1 class="">vForms Demo</h1>
             </div>
             <div class="mt-3 justify-end sm:mt-8 lg:mt-10 flex flex-wrap">
               <a
@@ -46,7 +47,7 @@
                   flex-shrink-0
                 "
                 target="_blank"
-                :href="`https://os.dev.youverify.co/v-forms/${vformId}/edit/add-fields`"
+                :href="`https://os.youverify.co/v-forms/${vformId}/edit/add-fields`"
                 >Use Template<svg
                   viewBox="0 0 20 20"
                   fill="none"

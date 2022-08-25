@@ -15,7 +15,7 @@
         <div class="">
           <div class="">
             <div class="text-center mb-8 bg-white w-full py-5 sticky" style="top: 79px;">
-              <h3 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h3>
+              <h1 class="">Use Case: {{formattedIndustries ? formattedIndustries.name : ''}}</h1>
             </div>
             
             <div class="border-solid border-2 border-blue p-4 shadow-iframe">
@@ -58,7 +58,7 @@
                   flex-shrink-0
                 "
                 target="_blank"
-                :href="`https://os.dev.youverify.co/v-forms/${formattedIndustries ? formattedIndustries.vFormId: ''}/edit/add-fields`"
+                :href="`https://os.youverify.co/v-forms/${formattedIndustries ? formattedIndustries.vFormId: ''}/edit/add-fields`"
                 >Use Template<svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -104,6 +104,18 @@ export default {
   components: {
     getStarted,
   },
+  head() {
+      return {
+        title: this.formattedIndustries.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.formattedIndustries.name
+          }
+        ]
+      }
+    },
   methods: {
     async getSingleIndustry() {
       const singleIndustries = await this.$store.dispatch(

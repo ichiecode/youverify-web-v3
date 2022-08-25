@@ -8,9 +8,9 @@
           class="flex-col-reverse md:flex-row flex justify-center items-center"
         >
           <div class="md:w-3/6">
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Scale your business operations with vForms
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               Simplify compliance data acquisition and verification from over
               160 authoritative data sources without coding
@@ -70,52 +70,8 @@
                   ></path>
                 </svg>
               </AppButton>
-              <!-- <a
-                class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-                href="/vforms-demo"
-                >See how it works<svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a> -->
-              <!-- <a
-                class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-                href="/contact-us"
-                >Contact Sales<svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a> -->
+              
+              
             </div>
 
             <div class="mt-10 flex items-center">
@@ -124,42 +80,30 @@
             </div>
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-20 h-20">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
-                  alt="Carbon logo"
+                  alt="standard-cahtered"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
-                  alt="Carbon logo"
+                  alt="bolt logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Sterling Bank Plc Logo.svg"
-                  alt="Carbon logo"
+                  alt="sterling-bank-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
             </div>
           </div>
           <div class="md:w-3/6">
-            <!-- <video
-              playsinline=""
-              autoplay=""
-              loop=""
-              controlslist="nodownload"
-              class="h-full"
-            >
-              <source
-                src="~/assets/images/illustrations/pay_direct_hero-2x.webm"
-                type="video/webm"
-              />
-              Sorry, your browser doesn't support embedded videos.
-            </video> -->
+           
             <lottie-player
               class="w-full h-full"
               src="https://assets1.lottiefiles.com/packages/lf20_hgisx2ep.json"
@@ -216,11 +160,14 @@
                   justify-center
                   disabled:curs
                   inline-flex
-                  py-3
+				  py-3
+                  
                   font-bold
-                  px-4
+				  px-2
+                  md:px-4
                   rounded-full
-                  text-sm
+				  text-xs
+                  md:text-sm
                   cursor-pointer
                   z-20
                 relative
@@ -236,11 +183,14 @@
                   justify-center
                   disabled:curs
                   inline-flex
-                  py-3
-                  px-8
+				  py-3
+                  
+				  px-4
+                  md:px-8
                   font-bold
                   rounded-full
-                  text-sm
+				  text-xs
+                  md:text-sm
                   cursor-pointer
                    z-20
                   relative
@@ -306,69 +256,16 @@
             credit offering, while mitigating risk to your business.
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-			   <AppButton
-                buttonText="Video Demo"
-                buttoncolor="darkbluebutton"
-                href="#how-it-works"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-              <AppButton
-                buttonText="Contact Sales"
-                buttoncolor="whitebutton"
-                href="/contact-us"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-            <!-- <a
+            <AppButton
+              buttonText="Video Demo"
+              buttoncolor="darkbluebutton"
               href="#how-it-works"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Video Demo<svg
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -376,7 +273,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -384,17 +280,19 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
+                ></path>
+              </svg>
+            </AppButton>
+            <AppButton
+              buttonText="Contact Sales"
+              buttoncolor="whitebutton"
               href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Contact Sales<svg
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -402,7 +300,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -410,19 +307,15 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a> -->
+                ></path>
+              </svg>
+            </AppButton>
+           
           </div>
         </div>
         <div class="sm:w-5/12">
-          <div class="sm:w-auto w-full mx-auto"> 
-            <!-- <img
-              width="504"
-              height="545"
-              src="../../assets/images/illustrations/smark-credit0check.png"
-              alt="Mand holding a paper plane"
-            /> -->
+          <div class="sm:w-auto w-full mx-auto">
+            
             <lottie-player
               class="w-full h-full"
               src="https://assets9.lottiefiles.com/packages/lf20_foppdwfa.json"
@@ -442,11 +335,11 @@
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <LazyImage
               width="504"
               height="545"
               src="../../assets/images/illustrations/Compliance_3.png"
-              alt="Mand holding a paper plane"
+              alt="compliance"
             />
           </div>
         </div>
@@ -464,69 +357,16 @@
             capture and save consent; securely archive and retrieve PIIs,
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-			  <AppButton
-                buttonText="See how it works"
-                buttoncolor="darkbluebutton"
-                href="/vforms-demo"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-              <AppButton
-                buttonText="Get in touch"
-                buttoncolor="whitebutton"
-                href="/contact-us"
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-            <!-- <a
+            <AppButton
+              buttonText="See how it works"
+              buttoncolor="darkbluebutton"
               href="/vforms-demo"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >See how it works<svg
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -534,7 +374,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -542,17 +381,19 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg></a
-            ><a
+                ></path>
+              </svg>
+            </AppButton>
+            <AppButton
+              buttonText="Get in touch"
+              buttoncolor="whitebutton"
               href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-gray-100 text-black py-3.5 sm:py-3.75 px-3.75 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Get in touch<svg
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -560,7 +401,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -568,9 +408,10 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg
-            ></a> -->
+                ></path>
+              </svg>
+            </AppButton>
+            
           </div>
         </div>
       </div>
@@ -687,48 +528,19 @@
                   </svg>
                 </div>
                 <p class="-mt-1">Real-time analytics</p>
-				
               </div>
-			 
             </div>
-			<AppButton
-                buttonText="Contact Sales"
-                buttoncolor="whitebutton"
-                href="/contact-us"
-				class="min-w-max"
-				
-              >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-            <!-- <a
+            <AppButton
+              buttonText="Contact Sales"
+              buttoncolor="whitebutton"
               href="/contact-us"
-              class="items-center justify-center font-medium disabled:curs inline-flex bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
-              data-v-6addea9c=""
-              >Contact Sales<svg
+              class="min-w-max"
+            >
+              <svg
+                slot="append"
                 viewBox="0 0 20 20"
                 fill="none"
                 class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                data-v-6addea9c=""
               >
                 <path
                   d="M6 10H14"
@@ -736,7 +548,6 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
                 ></path>
                 <path
                   d="M10 6L14 10L10 14"
@@ -744,20 +555,20 @@
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  data-v-6addea9c=""
-                ></path></svg> 
-            </a> -->
-			
+                ></path>
+              </svg>
+            </AppButton>
+            
           </div>
           <div class="">
-            <img
+            <LazyImage
               src="~/assets/images/screenshots/choose-right-pattern.svg"
-              alt="Youverify Dashboard"
+              alt="choose-right-pattern"
               class="sm:block hidden absolute sm:h-full top-0 right-0"
             />
-            <img
+            <LazyImage
               src="../../assets/images/screenshots/vform-dashboard-new.jpg"
-              alt="Youverify Dashboard"
+              alt="vform-dashboard-new"
               class="absolute sm:h-full sm:w-auto w-full top-0 sm:pl-0 pl-6 py-12"
               style="right: -10%"
             />
@@ -793,6 +604,17 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
+  head: {
+    title: "vForms",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Verify and approve more customers for your business in seconds with our online identity verification form. Achieve seamless KYC and AML compliance with vForms.",
+      },
+    ],
+  },
   data() {
     return {
       showService: true,

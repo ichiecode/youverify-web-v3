@@ -24,7 +24,7 @@
               "
               >Latest Article</span
             >
-            <div><h2>Blog Post</h2></div>
+            <div><h1>Blog Post</h1></div>
             <p><i>by</i> Youverify</p>
           </header>
         </div>
@@ -44,6 +44,7 @@
               <div class="rounded w-full sm:h-72 h-60">
                 <img
                   width="880"
+                  :alt="blog.image.caption"
                   class="h-full object-cover rounded"
                   :src="blog.image.url"
                 />
@@ -52,22 +53,20 @@
                 ><span
                   class="
                     text-blue
-                    tracking-widest
                     px-4
+                    leading-widest
                     py-2
                     uppercase
                     sm:text-sm
                     text-xs
                     rounded
                     mb-3
+                    font-semibold
                     leading-none
                     inline-block
                     bg-blue-100
                   "
-                  >{{ blog.blog_categories[0].categoriesName }} |
-                  {{ blog.date | formatDate }}</span
-                ></span
-              >
+                  >{{ blog.blog_categories[0].categoriesName }}</span></span>
             </header>
             <div>
               <NuxtLink :to="`/blog/${blog.slug}`"
@@ -75,7 +74,8 @@
                   {{ blog.title }}
                 </h3>
               </NuxtLink>
-              <p class="mt-1">by {{ blog.author }}</p>
+              <p class="mt-1"> {{ blog.author }} | {{ blog.date | formatDate }}</p> 
+              <!-- <p>by {{ blog.author }}</p> -->
             </div>
           </article>
         </section>
@@ -109,6 +109,17 @@ import { mapState } from "vuex";
 
 export default {
   name: "blogPost",
+  head: {
+    title: "Blog",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Learn about Online identity verification for your business and how to store and manage your personal data on our blog.",
+      },
+    ],
+  },
   methods: {
     async getAllBlogPost() {
       const allBlogPost = await this.$store.dispatch("blogs/getBlogs");
