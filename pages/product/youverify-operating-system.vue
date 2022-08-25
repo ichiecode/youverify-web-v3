@@ -15,9 +15,9 @@
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex-col-reverse md:flex-row flex justify-center">
           <div class="md:w-3/6">
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Profile and screen customer identity on the go!
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               With the Youverify Operating System, businesses can verify one
               customer per time or tens of thousands simultaneously without
@@ -140,23 +140,23 @@
             </div>
             <div class="mt-3 grid grid-cols-3">
               <figure class="relative" style="width: 100px; height: 62px">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/cazoo_white.svg"
                   alt="Carbon logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/leovegas_white.svg"
-                  alt="Carbon logo"
+                  alt="leaovegas-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative" style="width: 100px; height: 62px">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/casumo_white.svg"
-                  alt="Carbon logo"
+                  alt="Casumo-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
@@ -350,11 +350,11 @@
         </div>
         <div class="sm:w-5/12">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <LazyImage
               width="504"
               height="545"
               src="~/assets/images/illustrations/payments_api_account_funding-2x.webp"
-              alt="Mand holding a paper plane"
+              alt="payments-api-account-funding"
             />
           </div>
         </div>
@@ -374,11 +374,11 @@
       >
         <div class="sm:w-6/12 sm:pt-0 pt-8">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <LazyImage
               width="504"
               height="545"
               src="~/assets/images/illustrations/payouts_api_auto_payouts-2x.webp"
-              alt="Mand holding a paper plane"
+              alt="payouts-api-auto-payouts"
             />
           </div>
         </div>
@@ -686,11 +686,11 @@
         </div>
         <div class="sm:w-5/12">
           <div class="sm:w-auto w-full mx-auto">
-            <img
+            <LazyImage
               width="504"
               height="545"
               src="~/assets/images/illustrations/en_account_verification.webp"
-              alt="Mand holding a paper plane"
+              alt="en-account-verification"
             />
           </div>
         </div>
@@ -1041,11 +1041,11 @@
             class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
           >
             <div class="flex flex-col items-center lg:items-start">
-              <img
+              <LazyImage
                 class="h-20 w-20"
                 src="~/assets/images/illustrations/icon_reg_azure_igaming.svg"
-                alt=""
-                srcset=""
+                alt="icon-reg-azure"
+                
               />
               <h4
                 class="
@@ -1110,10 +1110,10 @@
             class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
           >
             <div class="flex flex-col items-center lg:items-start">
-              <img
+              <LazyImage
                 class="h-20 w-20"
                 src="~/assets/images/illustrations/icon_reg_azure_igaming.svg"
-                alt=""
+                alt="icon-reg-azure-gaming"
                 srcset=""
               />
               <h4
@@ -1179,10 +1179,10 @@
             class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
           >
             <div class="flex flex-col items-center lg:items-start">
-              <img
+              <LazyImage
                 class="h-20 w-20"
                 src="~/assets/images/illustrations/icon_reg_azure_igaming.svg"
-                alt=""
+                alt="icon-reg-azure-gaming"
                 srcset=""
               />
               <h4
@@ -1248,10 +1248,10 @@
             class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
           >
             <div class="flex flex-col items-center lg:items-start">
-              <img
+              <LazyImage
                 class="h-20 w-20"
                 src="~/assets/images/illustrations/icon_reg_azure_igaming.svg"
-                alt=""
+                alt="icon-reg-azure-gaming"
                 srcset=""
               />
               <h4
@@ -1317,12 +1317,13 @@
             class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
           >
             <div class="flex flex-col items-center lg:items-start">
-              <img
+              <LazyImage
                 class="h-20 w-20"
                 src="~/assets/images/illustrations/icon_reg_azure_igaming.svg"
-                alt=""
+                alt="icon-reg-azure-gaming"
                 srcset=""
               />
+			  <h1 class="hidden"></h1>
               <h4
                 class="
                   text-center
@@ -1386,10 +1387,10 @@
             class="bg-white rounded-md p-6 sm:p-8 lg:p-8 xl:p-10"
           >
             <div class="flex flex-col items-center lg:items-start">
-              <img
+              <LazyImage
                 class="h-20 w-20"
                 src="~/assets/images/illustrations/icon_reg_azure_igaming.svg"
-                alt=""
+                alt="icon-reg-azure-gaming"
                 srcset=""
               />
               <h4
