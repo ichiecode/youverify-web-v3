@@ -16,7 +16,7 @@
       </h2>
     </div>
   </header>
-  <main class="max-w-5xl mx-auto w-full pt-4 md:pt-14">
+  <main class="max-w-5xl mx-auto w-full py-4 md:py-14">
     <content-placeholders
       v-if="loading"
       class="w-full"
@@ -26,56 +26,70 @@
       <content-placeholders-text :lines="5" />
     </content-placeholders>
     <div v-else-if="errors" class="w-full">
-      <h2 class="text-center text-grey">
-        A error occured, please try again later
+      <h2 class="text-2xl text-center text-gray-500">
+        Oops! An error has occured.
       </h2>
     </div>
     <article v-else class="">
-      <header class="my-2 md:my-4 px-4">
-        <h1 class="font-semibold text-xl md:text-3xl">
-          <nuxt-link :to="`/industry/reports/${featuredReport.slug}`" class="hover:text-blue-200 text-gray-800">
-            {{ featuredReport.title }}
-          </nuxt-link>
-        </h1>
-        <small class="text-grey">
-          {{ formatDate(featuredReport.published_at) }}
-        </small>
-        <span class="text-grey">
-          &nbsp;|&nbsp;
-        </span>
-        <small class="text-grey">
-          {{ computeReadTime(featuredReport.word_count) }} mins
-        </small>
-      </header>
-      <section class="my-8 block md:flex">
-        <div class="px-4 w-full md:w-2/3">
-          <div v-if="featuredReport.image" class="w-full max-h-120">
-            <LazyImage
-          :src="featuredReport.image.formats.thumbnail.url"
-          :alt="featuredReport.image.alternativeText || featuredReport.title"
-              class="object-cover w-full h-full align-middle border-0"
-            />
-          </div>
-          <section v-html="featuredReport.excerpt" class="my-6 text-gray-800"></section>
-          <section class="my-12">
-            <h1 class="font-bold text-base text-gray-800">
-              👇 Enter your information for immediate access to this report
-            </h1>
-            <hr class="mb-6 border-gray-200 mt-4">
-            <GetReportForm :report="featuredReport" />
-          </section>
-        </div>
-        <aside class="w-full md:w-1/3 px-4">
-          <h1 class="text-gray-800 capitalize text-xl font-semibold">
-            Popular Articles
+      <div v-if="popularArticles.length === 0" class="w-full">
+        <h2 class="text-2xl text-center text-gray-500">
+          There are no reports yet.
+        </h2>
+      </div>
+      <div v-else>
+        <header class="my-2 md:my-4 px-4">
+          <h1 class="font-semibold text-xl md:text-3xl">
+            <nuxt-link :to="`/industry/reports/${featuredReport.slug}`" class="hover:text-blue-200 text-gray-800">
+              {{ featuredReport.title }}
+            </nuxt-link>
           </h1>
-          <hr class="mb-6 w-1/3 border-blue-200 border mt-2 rounded-sm">
-          <Report v-for="article in popularArticles" :key="article.id" :article="article" />
-        </aside>
-      </section>
+          <small class="text-grey">
+            {{ formatDate(featuredReport.published_at) }}
+          </small>
+          <span class="text-grey">
+            &nbsp;|&nbsp;
+          </span>
+          <small class="text-grey">
+            {{ computeReadTime(featuredReport.word_count) }} mins
+          </small>
+        </header>
+        <section class="my-8 block md:flex">
+          <div class="px-4 w-full md:w-2/3">
+            <div v-if="featuredReport.image" class="w-full max-h-120">
+              <LazyImage
+            :src="featuredReport.image.formats.thumbnail.url"
+            :alt="featuredReport.image.alternativeText || featuredReport.title"
+                class="object-cover w-full h-full align-middle border-0"
+              />
+            </div>
+            <section v-html="featuredReport.excerpt" class="my-6 text-gray-800"></section>
+            <section class="my-12">
+              <h1 class="font-bold text-base text-gray-800">
+                👇 Enter your information for immediate access to this report
+              </h1>
+              <hr class="mb-6 border-gray-200 mt-4">
+              <GetReportForm :report="featuredReport" />
+            </section>
+          </div>
+          <aside class="w-full md:w-1/3 px-4">
+            <h1 class="text-gray-800 capitalize text-xl font-semibold">
+              Popular Articles
+            </h1>
+            <hr class="mb-6 w-1/3 border-blue-200 border mt-2 rounded-sm">
+            <template v-if="popularArticles">
+              <Report v-for="article in popularArticles" :key="article.id" :article="article" />
+            </template>
+            <div v-else class="w-full">
+              <h2 class="text-2xl text-center text-gray-500">
+                Oops! An error has occured.
+              </h2>
+            </div>
+          </aside>
+        </section>
+      </div>
     </article>
   </main>
-  <section class="mt-8 mb-24 mx-4">
+  <section v-if="featuredReport" class="mt-8 mb-24 mx-4">
     <div class="w-full max-w-5xl rounded-lg bg-blue-100 px-4 py-8 md:py-12 flex flex-col mx-auto">
       <div class="mx-auto max-w-3xl">
         <h1 class="md:text-4xl text-2xl mb-2 md:mb-4 font-bold text-center text-blue-200">
@@ -136,7 +150,6 @@ import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import Report from "@/components/reports/Report"
 import TextInput from "@/components/form/TextInput"
-import { computeReadTime } from "@/helpers/readTime.js"
 
 export default {
   layout: 'reports',
@@ -160,6 +173,9 @@ export default {
       searching: "reports/searching",
       searchError: "reports/searchError"
     }),
+    f() {
+      return []
+    },
     buttonStyles() {
       return this.searching
         ? "text-gray-200 bg-gray-400 hover:bg-gray-400 cursor-not-allowed"
