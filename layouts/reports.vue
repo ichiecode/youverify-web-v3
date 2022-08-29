@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Footer from "~/components/layout/footer.vue";
+import Footer from "~/components/layout/footer";
 
 export default {
   name: 'youverify',

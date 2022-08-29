@@ -4,16 +4,14 @@
     <div class="flex-grow">
       <Nuxt />
     </div>
-    <div class="bg-blue-100 pt-12 pb-12">
-      <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <footer class="bg-blue-100 pt-20">
         <Footer />
-      </div>
-    </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import Footer from "~/components/layout/footer.vue";
+import Footer from "~/components/layout/footer";
 import Header from "~/components/layout/header.vue";
 export default {
   name: 'youverify',
