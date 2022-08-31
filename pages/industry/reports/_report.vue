@@ -18,7 +18,7 @@
       Back
     </button>
   </div>
-  <main class="max-w-3xl mx-auto w-full pt-4 md:pt-10">
+  <main class="max-w-3xl mx-auto w-full py-4 md:py-10">
     <content-placeholders
       v-if="loading"
       class="w-full"
@@ -28,8 +28,8 @@
       <content-placeholders-text :lines="5" />
     </content-placeholders>
     <div v-else-if="errors" class="w-full">
-      <h2 class="text-center text-grey">
-        A error occured, please try again later
+      <h2 class="text-2xl text-center text-gray-500">
+        A error occured, please try again.
       </h2>
     </div>
     <article v-else class="">
@@ -79,8 +79,8 @@
         </section>
       </section>
     </article>
-    <hr class="border-gray-200 my-4 mx-4">
-    <div class="flex justify-end mt-6 mb-16 mx-4">
+    <hr v-if="report" class="border-gray-200 my-4 mx-4">
+    <div v-if="report" class="flex justify-end mt-6 mb-16 mx-4">
       <social-share
         :url="getUrl"
         :title="article.title"
@@ -98,7 +98,6 @@
 import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import SocialShare from "@/components/reports/SocialShare"
-import { computeReadTime } from "@/helpers/readTime.js"
 
 export default {
   layout: 'reports',

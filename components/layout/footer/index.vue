@@ -89,7 +89,7 @@
       <div class="my-4 sm:my-0 gap-4 flex justify-center">
         <p>Follow us on social media:</p>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://web.facebook.com/youverifyID"
           target="_blank"
         >
@@ -99,7 +99,7 @@
           />
         </a>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://www.linkedin.com/company/youcheckonline/"
           target="_blank"
         >
@@ -109,7 +109,7 @@
           />
         </a>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://www.instagram.com/youcheckonline/"
           target="_blank"
         >
@@ -119,7 +119,7 @@
           />
         </a>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://twitter.com/YoucheckOnline"
           target="_blank"
         >
