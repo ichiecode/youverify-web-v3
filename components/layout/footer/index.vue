@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
+  <div class="max-w-screen-xl mx-auto px-8">
     <section class="md:flex pb-16 md:flex-row-reverse gap-4 space-between">
       <section class="w-full md:w-1/3">
         <h3 class="mb-4">Newsletter</h3>
@@ -88,7 +88,7 @@
       <div class="my-4 sm:my-0 gap-4 flex justify-center">
         <p>Follow us on social media:</p>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://web.facebook.com/youverifyID"
           target="_blank"
         >
@@ -98,7 +98,7 @@
           />
         </a>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://www.linkedin.com/company/youcheckonline/"
           target="_blank"
         >
@@ -108,7 +108,7 @@
           />
         </a>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://www.instagram.com/youcheckonline/"
           target="_blank"
         >
@@ -118,7 +118,7 @@
           />
         </a>
         <a
-          class="inline-block sm:w-5 w-4"
+          class="flex sm:w-5 w-4"
           href="https://twitter.com/YoucheckOnline"
           target="_blank"
         >
