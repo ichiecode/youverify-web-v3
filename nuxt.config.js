@@ -49,6 +49,7 @@ export default {
     "@plugins/filters.js",
     "@plugins/vue-placeholders.js",
     "@/plugins/vue-lazysizes.client.js",
+    "@/plugins/reuseable-component.js"
   ],
 
   axios: {},
