@@ -909,7 +909,7 @@
     </section>
     </div>
 
-    <ReportsPopup>
+    <ReportsPopup v-if="reports.length > 0">
       <Carousel v-slot="{ slide }" :slidesCount="reports.length">
         <ReportSlide
           v-for="(report, index) in reports"

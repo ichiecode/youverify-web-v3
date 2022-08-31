@@ -3,7 +3,7 @@ export const state = () => ({
   popularReports: [],
   featuredReports: [],
   loading: false,
-  error: null,
+  errors: null,
   searching: false,
   searchError: null,
   searchResults: [],
@@ -34,7 +34,7 @@ export const mutations = {
   },
 
   setError(state, payload) {
-    state.error = payload;
+    state.errors = payload;
   },
 
   setDownloadError(state, payload) {
@@ -82,8 +82,7 @@ export const actions = {
 
       commit("setPopularReports", response);
     } catch (error) {
-      console.log(error.response)
-      commit("setError", error.response);
+      commit("setError", error.response.data);
     } finally {
       commit("setLoading", false);
     }
@@ -97,8 +96,7 @@ export const actions = {
 
       commit("setReport", response[0]);
     } catch (error) {
-      console.log(error.response)
-      commit("setError", error.response);
+      commit("setError", error.response.data);
     } finally {
       commit("setLoading", false);
     }
@@ -112,8 +110,7 @@ export const actions = {
 
       commit("setFeaturedReport", response);
     } catch (error) {
-      console.log(error)
-      commit("setError", error.response);
+      commit("setError", error.response.data);
     } finally {
       commit("setLoading", false);
     }
@@ -128,8 +125,7 @@ export const actions = {
 
       commit("setSearchResults", response);
     } catch (error) {
-      console.log(error)
-      commit("setSearchError", error);
+      commit("setSearchError", error.response.data);
     } finally {
       commit("setSearching", false);
     }
