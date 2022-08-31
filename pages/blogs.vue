@@ -28,16 +28,12 @@
             <p><i>by</i> Youverify</p>
           </header>
         </div>
-          <template v-if="loading && page < 1">
-            <content-placeholders
-              v-for="index in 3"
-              :key="index"
-              style="width: 390px"
-            >
+          <div v-if="loading && page < 1" class="flex items-center justify-center my-4">
+            <content-placeholders v-for="index in 3" :key="index" style="width: 300px;">
               <content-placeholders-heading :img="true" />
               <content-placeholders-text :lines="3" />
             </content-placeholders>
-          </template>
+          </div>
           <div v-else-if="error" class="w-full">
             <h2 class="text-2xl text-center text-gray-500">
               Oops! An error has occured.
