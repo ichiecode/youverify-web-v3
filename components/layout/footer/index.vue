@@ -1,8 +1,8 @@
 <template>
   <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
-    <section class="md:flex pb-8 md:flex-row-reverse gap-4 space-between">
+    <section class="md:flex pb-8 md:flex-row-reverse space-between">
       <section class="w-full md:w-1/3">
-        <h3 class="mb-4">Newsletter</h3>
+        <h3 class="mb-4 text-2xl">Newsletter</h3>
         <p class="leading-6">Subscribe to get information about our product and coupons</p>
         <form class="my-4 flex md:block">
           <input
@@ -44,7 +44,7 @@
             </footer-list-item>
           </section>
         </div>
-        <div class="sm:flex w-full md:my-8">
+        <div class="sm:flex w-full md:my-8 xl:my-0">
           <!-- Contact -->
           <section class="w-full my-8 md:my-0 lg:pr-12">
             <h4 class="mb-6">Contact</h4>
