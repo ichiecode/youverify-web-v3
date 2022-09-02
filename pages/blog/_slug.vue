@@ -23,21 +23,19 @@
               }}
               | {{ formattedPost.date | formatDate }}</span
             >
-            <a href="/blog/#"
+            <a :href="`/blog/${formattedPost.slug}`"
               ><h1>
                 {{ formattedPost.title }}
               </h1></a>
             <p><i>by</i> {{ formattedPost.author }}</p>
           </header>
           <div
-            data-gatsby-image-wrapper=""
-            class="gatsby-image-wrapper w-full object-cover object-center rounded-xl block sm:h-96 h-72 mt-6 mb-20"
+            class="w-full object-cover object-center rounded-xl block mt-10 mb-20"
           >
             <img
               :src="formattedPost.image ? formattedPost.image.url : ''"
               class="w-full"
               :alt="formattedPost.image ? formattedPost.image.caption : ''"
-              style="object-fit: cover; opacity: 1; height: 350px"
             />
           </div>
         </section>

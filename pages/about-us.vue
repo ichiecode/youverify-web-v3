@@ -126,7 +126,7 @@
       </section>
     </section>
 
-    <div id="career">
+    <div id="careers">
       <section
         class="
           text-center
