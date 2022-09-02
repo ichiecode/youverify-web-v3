@@ -80,7 +80,8 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: '/admin',
-    Allow: '/'
+    Allow: '/',
+    Sitemap: 'https://youverify.co/sitemap.xml'
   },
 
   build: {

@@ -186,8 +186,8 @@ export default {
           link: "/blogs"
         },
         {
-          name: "Career",
-          link: "/about-us#career"
+          name: "Careers",
+          link: "/about-us#careers"
         },
         {
           name: "Industry Reports",
@@ -250,7 +250,7 @@ export default {
   },
   computed: {
     ...mapState({
-      industries: (state) => state.industries.industries,
+      // industries: (state) => state.industries.industries,
       loading: (state) => state.subscriber.loading,
     }),
   },
