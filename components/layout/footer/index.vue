@@ -1,8 +1,8 @@
 <template>
-  <div class="max-w-screen-xl mx-auto px-8">
-    <section class="md:flex pb-16 md:flex-row-reverse gap-4 space-between">
+  <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <section class="md:flex pb-8 md:flex-row-reverse space-between">
       <section class="w-full md:w-1/3">
-        <h3 class="mb-4">Newsletter</h3>
+        <h3 class="mb-4 text-2xl">Newsletter</h3>
         <p class="leading-6">Subscribe to get information about our product and coupons</p>
         <form class="my-4 flex md:block">
           <input
@@ -19,41 +19,42 @@
       <div class="xl:flex md:w-2/3">
         <div class="sm:flex w-full">
           <!-- Industries -->
-          <section class="w-full my-8 md:my-0">
+          <section class="w-full my-8 md:my-0 lg:pr-12">
             <h4 class="mb-4">Industries</h4>
             <footer-list-item :items="industries">
               <template v-slot:item="{ item }">
-                <nuxt-link :to="item.link" class="py-1 block">
+                <nuxt-link :to="item.link" class="py-2 block">
                   {{ item.name }}
                 </nuxt-link>
               </template>
             </footer-list-item>
           </section>
           <!-- Company -->
-          <section class="w-full my-8 md:my-0">
+          <section class="w-full my-8 md:my-0 lg:pr-12">
             <h4 class="mb-4">Company</h4>
             <footer-list-item :items="company">
               <template v-slot:item="{ item }">
-                <nuxt-link v-if="item.external" :to="item.link" class="my-2 py-1 block">
-                  {{ item.name }}
-                </nuxt-link>
-                <a v-else :href="item.link" class="py-1 block" rel="noreferrer" target="_blank">
+                <a v-if="item.external" :href="item.link" class="py-2 block" rel="noreferrer" target="_blank">
                   {{ item.name }}
                 </a>
+                <nuxt-link v-else :to="item.link" class="py-2 block">
+                  {{ item.name }}
+                </nuxt-link>
               </template>
             </footer-list-item>
           </section>
         </div>
-        <div class="sm:flex w-full mt-8 xl:my-0">
+        <div class="sm:flex w-full md:my-8 xl:my-0">
           <!-- Contact -->
-          <section class="w-full my-8 md:my-0">
-            <h4 class="mb-4">Contact</h4>
-            <p>+1 (415) 669-5559</p>
-            <p>identity@youverify.co</p>
-            <br />
+          <section class="w-full my-8 md:my-0 lg:pr-12">
+            <h4 class="mb-6">Contact</h4>
+            <div class="text-sm mb-2">
+              <p class="mb-2">+1 (415) 669-5559</p>
+              <p>identity@youverify.co</p>
+            </div>
             <footer-list-item :items="countries">
               <template v-slot:item="{ item }">
-                <span class="py-1 block leading-6 flex items-center gap-2">
+                <span class="py-2 leading-6 flex items-center gap-2">
                   <LazyImage
                     :src="require(`~/assets/images/icons/flags/${item.icon}.svg`)"
                     :alt="`${item.name} logo`"
@@ -66,11 +67,11 @@
             </footer-list-item>
           </section>
           <!-- Policies -->
-          <section class="w-full my-8 md:my-0">
+          <section class="w-full my-8 md:my-0 lg:pr-12">
             <h4 class="mb-4">Policies</h4>
             <footer-list-item :items="policies">
               <template v-slot:item="{ item }">
-                <nuxt-link :to="item.link" class="py-1 block">
+                <nuxt-link :to="item.link" class="py-2 block">
                   {{ item.name }}
                 </nuxt-link>
               </template>

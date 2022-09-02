@@ -1,6 +1,10 @@
 <template>
   <ul>
-    <li v-for="(item, index) in items" :key="index" class="flex item-center gap-4">
+    <li
+      v-for="(item, index) in items"
+      :key="index"
+      class="flex item-center gap-4 text-sm"
+    >
       <slot name="item" :item="item">
         <!-- Fallback content -->
         {{ item.name }}
@@ -10,12 +14,12 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      items: {
-        type: Array,
-        default: () => []
-      }
-    }
-  }
+export default {
+  props: {
+    items: {
+      type: Array,
+      default: () => [],
+    },
+  },
+};
 </script>
