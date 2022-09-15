@@ -28,84 +28,76 @@
             <p><i>by</i> Youverify</p>
           </header>
         </div>
-        <section class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
-          <content-placeholders
-            v-show="loading"
-            v-for="index in 3"
-            :key="index"
-            style="width: 390px"
-          >
-            <content-placeholders-heading :img="true" />
-            <content-placeholders-text :lines="3" />
-          </content-placeholders>
-
-          <article v-show="!loading" v-for="blog in blogs" :key="blog.id">
-            <header class="relative mb-6 border">
-              <div class="rounded w-full sm:h-72 h-60">
-                <img
-                  width="880"
-                  :alt="blog.image.caption"
-                  class="h-full object-cover rounded"
-                  :src="blog.image.url"
-                />
+          <div v-if="loading && page < 1" class="flex items-center justify-center my-4">
+            <content-placeholders v-for="index in 3" :key="index" style="width: 300px;">
+              <content-placeholders-heading :img="true" />
+              <content-placeholders-text :lines="3" />
+            </content-placeholders>
+          </div>
+          <div v-else-if="error" class="w-full">
+            <h2 class="text-2xl text-center text-gray-500">
+              Oops! An error has occured.
+            </h2>
+          </div>
+        <section v-else>
+          <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
+            <article v-for="blog in blogs" :key="blog.id">
+              <header class="relative mb-6 border">
+                <div class="rounded w-full sm:h-72 h-60">
+                  <img
+                    width="880"
+                    :alt="blog.image.caption"
+                    class="h-full object-cover rounded"
+                    :src="blog.image.url"
+                  />
+                </div>
+                <span class="absolute top-3 left-3 text-sm"
+                  ><span
+                    class="
+                      text-blue
+                      px-4
+                      leading-widest
+                      py-2
+                      uppercase
+                      sm:text-sm
+                      text-xs
+                      rounded
+                      mb-3
+                      font-semibold
+                      leading-none
+                      inline-block
+                      bg-blue-100
+                    "
+                    >{{ blog.blog_categories[0].categoriesName }}</span></span>
+              </header>
+              <div>
+                <NuxtLink :to="`/blog/${blog.slug}`"
+                  ><h3 class="hover:text-blue-300">
+                    {{ blog.title }}
+                  </h3>
+                </NuxtLink>
+                <p class="mt-1"> {{ blog.author }} | {{ blog.date | formatDate }}</p> 
+                <!-- <p>by {{ blog.author }}</p> -->
               </div>
-              <span class="absolute top-3 left-3 text-sm"
-                ><span
-                  class="
-                    text-blue
-                    px-4
-                    leading-widest
-                    py-2
-                    uppercase
-                    sm:text-sm
-                    text-xs
-                    rounded
-                    mb-3
-                    font-semibold
-                    leading-none
-                    inline-block
-                    bg-blue-100
-                  "
-                  >{{ blog.blog_categories[0].categoriesName }}</span></span>
-            </header>
-            <div>
-              <NuxtLink :to="`/blog/${blog.slug}`"
-                ><h3 class="hover:text-blue-300">
-                  {{ blog.title }}
-                </h3>
-              </NuxtLink>
-              <p class="mt-1"> {{ blog.author }} | {{ blog.date | formatDate }}</p> 
-              <!-- <p>by {{ blog.author }}</p> -->
-            </div>
-          </article>
+            </article>
+          </div>
+          <div v-if="hasNextPage" size="large" class="w-full mb-4 flex justify-center">
+            <LoadingSpinners />
+          </div>
+          <div v-else-if="!hasNextPage" class="w-full mb-4">
+            <p class="text-center font-medium text-lg text-gray-500">
+              No more articles.
+            </p>
+          </div>
+          <div id="sentinel"></div>
         </section>
       </section>
     </div>
-
-    <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-      <section class="items-center my-20 max-w-screen-md text-center mx-auto">
-        <a
-          aria-current="page"
-          class="
-            inline-block
-            px-3
-            py-2
-            rounded
-            leading-none
-            bg-blue-100
-            text-blue
-            font-bold
-          "
-          href="/blogs/#"
-          >1</a
-        >
-      </section>
-    </section>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "blogPost",
@@ -120,23 +112,53 @@ export default {
       },
     ],
   },
-  methods: {
-    async getAllBlogPost() {
-      const allBlogPost = await this.$store.dispatch("blogs/getBlogs");
-      const totalBlog = await this.$store.dispatch("blogs/getTotalBlogPost");
-    },
-  },
-  mounted() {
-    this.getAllBlogPost();
+  data() {
+    return {
+      observer: null,
+      page: 0,
+      fetchingNextPage: false,
+    }
   },
   computed: {
-    ...mapState({
-      blogs: (state) => state.blogs.blogs,
-      loading: (state) => state.blogs.loading,
-      total: (state) => state.blogs.total,
+    ...mapGetters({
+      error: "blogs/error",
+      loading: "blogs/loading",
+      total: "blogs/total",
+      blogs: "blogs/blogs",
+      hasNextPage: "blogs/hasNextPage"
     }),
+  },
+  async mounted() {
+    await this.getTotalBlogPost()
+    await this.getBlogPosts();
+    this.observer = new IntersectionObserver(
+      this.onElementObserved,
+      {
+        root: null,
+        threshold: 1,
+      }
+    );
+    const el = document.getElementById('sentinel');
+    this.observer.observe(el)
+  },
+  methods: {
+    ...mapActions({
+      getBlogPosts: "blogs/getBlogs",
+      getTotalBlogPost: "blogs/getTotalBlogPost"
+    }),
+    onElementObserved(entries) {
+      entries.forEach(async (entry) => {
+        if (entry.isIntersecting && this.hasNextPage) {
+          this.fetchNextPage()
+        }
+      });
+    },
+    async fetchNextPage() {
+      this.fetchingNextPage = true
+      this.page += 1
+      await this.getBlogPosts(this.page)
+      this.fetchingNextPage = false
+    }
   },
 };
 </script>
-
-<style></style>

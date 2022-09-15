@@ -67,8 +67,8 @@
           <a aria-current="page" class="mb-2 block w-full" href="/about-us"
             ><li>About us</li></a
           ><a class="mb-2 block w-full" href="/blogs"><li>Blog</li></a
-          ><a class="mb-2 block w-full" href="/about-us#career"
-            ><li>Career</li></a
+          ><a class="mb-2 block w-full" href="/about-us#careers"
+            ><li>Careers</li></a
           ><a class="mb-2 block w-full" href="/gdpr"
             ><li>GDPR Compliance Statement</li></a
           ><a

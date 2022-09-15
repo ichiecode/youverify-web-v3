@@ -186,7 +186,6 @@ export default {
     }
   },
   async mounted() {
-    // !this.featuredReport && await this.getFeaturedReport()
     await this.getPopularReports()
   },
   methods: {
