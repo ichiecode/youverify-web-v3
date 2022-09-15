@@ -1,22 +1,17 @@
 export const state = () => ({
   report: null,
-  popularReports: [],
-  featuredReports: [],
+  reports: [],
   loading: false,
   errors: null,
   searching: false,
   searchError: null,
   searchResults: [],
-  downloading: false,
-  downloadError: null,
   perPage: 5
 });
 
 export const getters = {
   report: (state) => state.report,
-  popularReports: (state) => state.popularReports,
-  featuredReport: (state) => state.featuredReports[0],
-  featuredReports: (state) => state.featuredReports,
+  reports: (state) => state.reports,
   loading: (state) => state.loading,
   errors: (state) => state.errors,
   searching: (state) => state.searching,
@@ -29,25 +24,12 @@ export const mutations = {
     state.loading = payload;
   },
 
-  setDownloading(state, payload) {
-    state.downloading = payload;
-  },
-
   setError(state, payload) {
     state.errors = payload;
   },
 
-  setDownloadError(state, payload) {
-    state.downloadError = payload;
-  },
-
-  setPopularReports(state, payload) {
-    const featured = payload.filter(report => report.id !== state.featuredReports[0].id)
-    state.popularReports = featured > 4 ? featured.slice(0, 4) : featured
-  },
-
-  setFeaturedReport(state, payload) {
-    state.featuredReports = payload;
+  setReports(state, payload) {
+    state.reports = payload;
   },
 
   setReport(state, payload) {
@@ -68,7 +50,7 @@ export const mutations = {
 };
 
 export const actions = {
-  async fetchPopularReports({ state, commit }, limit) {
+  async fetchReports({ state, commit }, limit) {
     commit("setLoading", true);
     let payload = {
       _limit: limit ? limit: state.perPage,
@@ -80,7 +62,7 @@ export const actions = {
         `${process.env.baseUrl}/reports?_limit=${payload._limit}`
       )
 
-      commit("setPopularReports", response);
+      commit("setReports", response);
     } catch (error) {
       commit("setError", error.response.data);
     } finally {
@@ -95,20 +77,6 @@ export const actions = {
       .$get(`${process.env.baseUrl}/reports?slug=${slug}`)
 
       commit("setReport", response[0]);
-    } catch (error) {
-      commit("setError", error.response.data);
-    } finally {
-      commit("setLoading", false);
-    }
-  },
-
-  async fetchFeaturedReports({ state, commit }) {
-    commit("setLoading", true);
-    try {
-    const response = await this.$axios
-      .$get(`${process.env.baseUrl}/reports?featured=true`)
-
-      commit("setFeaturedReport", response);
     } catch (error) {
       commit("setError", error.response.data);
     } finally {

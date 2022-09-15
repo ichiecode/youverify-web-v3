@@ -11,12 +11,12 @@
     </div>
   </header>
   <div class="px-4 md:px-0 max-w-3xl mx-auto w-full mt-8">
-    <button class="inline-flex items-center justify-center relative box-border outline-0 m-0 select-none gap-2 whitespace-nowrap px-4 py-1.5 text-sm no-underline rounded transition-colors bg-transparent hover:bg-gray-100 text-gray-800 border-0" @click="$router.back()">
+    <nuxt-link to="/industry/reports" class="inline-flex items-center justify-center relative box-border outline-0 m-0 select-none gap-2 whitespace-nowrap px-4 py-1.5 text-sm no-underline rounded transition-colors bg-transparent hover:bg-gray-100 text-gray-800 border-0">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10.05 16.94V12.94H18.97L19 10.93H10.05V6.94L5.05 11.94Z" />
       </svg>
       Back
-    </button>
+    </nuxt-link>
   </div>
   <main class="max-w-3xl mx-auto w-full py-4 md:py-10">
     <content-placeholders
@@ -98,6 +98,7 @@
 import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import SocialShare from "@/components/reports/SocialShare"
+import readTime from "@/helpers/readTime.js"
 
 export default {
   layout: 'reports',
@@ -129,6 +130,9 @@ export default {
       const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString("en-US", options)
     },
+    computeReadTime(wordCount) {
+      return readTime(wordCount)
+    }
   }
 }
 </script>

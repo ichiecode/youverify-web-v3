@@ -31,7 +31,7 @@
       </h2>
     </div>
     <article v-else class="">
-      <div v-if="popularArticles.length === 0" class="w-full">
+      <div v-if="reports.length === 0" class="w-full">
         <h2 class="text-2xl text-center text-gray-500">
           There are no reports yet.
         </h2>
@@ -76,12 +76,12 @@
               Popular Articles
             </h1>
             <hr class="mb-6 w-1/3 border-blue-200 border mt-2 rounded-sm">
-            <template v-if="popularArticles">
-              <Report v-for="article in popularArticles" :key="article.id" :article="article" />
+            <template v-if="popularReports.length > 0">
+              <Report v-for="article in popularReports" :key="article.id" :article="article" />
             </template>
             <div v-else class="w-full">
-              <h2 class="text-2xl text-center text-gray-500">
-                Oops! An error has occured.
+              <h2 class="text-base text-gray-500">
+                There are no reports
               </h2>
             </div>
           </aside>
@@ -150,6 +150,7 @@ import { mapGetters, mapActions } from "vuex";
 import GetReportForm from "@/components/reports/GetReportForm"
 import Report from "@/components/reports/Report"
 import TextInput from "@/components/form/TextInput"
+import readTime from "@/helpers/readTime.js"
 
 export default {
   layout: 'reports',
@@ -165,16 +166,18 @@ export default {
   },
   computed: {
     ...mapGetters({
-      featuredReport: "reports/featuredReport",
-      popularArticles: "reports/popularReports",
+      reports: "reports/reports",
       errors: "reports/errors",
       loading: "reports/loading",
       searchResults: "reports/searchResults",
       searching: "reports/searching",
       searchError: "reports/searchError"
     }),
-    f() {
-      return []
+    featuredReport() {
+      return this.reports[0]
+    },
+    popularReports() {
+      return this.reports.slice(1, this.reports.length)
     },
     buttonStyles() {
       return this.searching
@@ -182,14 +185,13 @@ export default {
         : "bg-blue text-white hover:bg-blue-300"
     }
   },
-  async created() {
-    !this.featuredReport && await this.getFeaturedReport()
+  async mounted() {
+    // !this.featuredReport && await this.getFeaturedReport()
     await this.getPopularReports()
   },
   methods: {
     ...mapActions({
-      getPopularReports: "reports/fetchPopularReports",
-      getFeaturedReport: "reports/fetchFeaturedReports",
+      getPopularReports: "reports/fetchReports",
       getReports: "reports/searchReport",
       clearSearch: "reports/clearSearch"
     }),
@@ -201,6 +203,9 @@ export default {
       this.searchTerm = ''
       this.$store.commit("reports/setSearchResults", [])
     },
+    computeReadTime(wordCount) {
+      return readTime(wordCount)
+    }
   }
 }
 </script>

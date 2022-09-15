@@ -40,7 +40,7 @@
       :class="[buttonStyles]"
       :disabled="isSubmitting"
     >
-      {{ isSubmitting ? 'DOWNLOADING...' : 'DOWNLOAD REPORT' }}
+      {{ isSubmitting ? 'SUBMITTING...' : 'GET REPORT' }}
     </button>
   </form>
 </template>

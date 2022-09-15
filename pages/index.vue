@@ -912,7 +912,7 @@
     <ReportsPopup v-if="reports.length > 0">
       <Carousel v-slot="{ slide }" :slidesCount="reports.length">
         <ReportSlide
-          v-for="(report, index) in reports"
+          v-for="(report, index) in reports.slice(0, 2)"
           v-show="slide === index"
           :key="report.id"
           :report="report"
@@ -937,15 +937,15 @@ export default {
   },
   computed: {
     ...mapGetters({
-      reports: "reports/featuredReports",
+      reports: "reports/reports",
     }),
   },
   async created() {
-    await this.getFeaturedReports()
+    await this.getReports()
   },
   methods: {
     ...mapActions({
-      getFeaturedReports: "reports/fetchFeaturedReports",
+      getReports: "reports/fetchReports",
     }),
     toggleService(params) {
       if (params === "with") {

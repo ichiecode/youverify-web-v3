@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { computeReadTime } from "@/helpers/readTime.js"
+import readTime from "@/helpers/readTime.js"
 
 export default {
   props: {
@@ -39,6 +39,9 @@ export default {
       const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString("en-US", options)
     },
+    computeReadTime(wordCount) {
+      return readTime(wordCount)
+    }
   }
 }
 </script>
