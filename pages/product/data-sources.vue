@@ -81,14 +81,14 @@
                     @click="selectedCountry(post)"
                     class="pl-8 pr-2 py-3 border-gray-100 relative cursor-pointer hover:bg-gray-100 hover:text-white"
                   >
-                    <h4 class="text-gray-500">{{ post.country }}</h4>
+                    <h4 class="text-xl font-semibold text-gray-500">{{ post.country }}</h4>
                   </li>
                   <li
                     v-if="showDropDownWorldWide"
                     @click="selectedCountry()"
                     class="pl-8 pr-2 py-3 border-gray-100 relative cursor-pointer hover:bg-gray-100 hover:text-white"
                   >
-                    <h1 class="text-gray-500">Worldwide</h1>
+                    <h1 class="text-xl font-semibold text-gray-500">Worldwide</h1>
                   </li>
                 </ul>
               </div>
@@ -155,6 +155,18 @@
                     >
                       <abbr :title="item.title">{{ item.abbreviation }}</abbr>
                     </h5>
+                   
+                    <div v-if="!filteredSelectedList.country">
+                      <h5
+
+                      class="mt-2 font-bold"
+                      v-for="item in worldWideSanctionList"
+                      :key="item.name"
+                    >
+                      <abbr :title="item.abbreviation">{{ item.name }}</abbr>
+                    </h5>
+                    </div>
+                    
                   </div>
                 </div>
 
@@ -247,6 +259,37 @@ export default {
         LivenessTest: true,
         IDCapture: true,
       },
+      worldWideSanctionList: [
+        {
+          name: 'UNSC',
+          abbreviation: 'United Nation Security Council'
+        },
+        {
+          name: 'EU',
+          abbreviation: 'European Union'
+        },
+        {
+          name: 'UK',
+          abbreviation: 'United Kingdom Ministry of Finance'
+        },
+        {
+          name: 'SECO',
+          abbreviation: 'Switzerland State Secretariat for Economic Affairs'
+        },
+        {
+          name: 'USSDN',
+          abbreviation: 'Unites State Specially Designated Nationals and Blocked Persons'
+        },
+        {
+          name: 'DFAT',
+          abbreviation: 'Department of Foreign Affairs and Trade ) - Australian Sanctions'
+        },
+        {
+          name: 'OFAC',
+          abbreviation: 'The Office of Foreign Asset Control) of the US Department of Treasury'
+        }
+
+      ]
     };
   },
   methods: {
