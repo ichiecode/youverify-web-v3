@@ -17,6 +17,103 @@ export default {
         content:
           "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. ",
       },
+      { name: 'theme-color', content: '#46B2C8' },
+      { name: 'author', content: 'Youverify Inc' },
+      {
+        hid: 'developer',
+        name: 'developer',
+        content: 'Youverify Engineering team',
+      },
+      { hid: 'copyright', name: 'copyright', content: 'Youverify Inc' },
+     
+      // facebook, linkedln tags
+      { hid: 'og:url', property: 'og:url', content: 'https://youverify.co/' },
+      { hid: 'og:type', property: 'og:type', content: 'verification' },
+      { hid: 'fb:app_id', property: 'fb:app_id', content: '' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Youverify - KYC Automation for Banks and Startups.',
+      },
+      { hid: 'og:type', property: 'og:type', content: 'verification' },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Youverify Inc',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. "
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content:
+          'https://os.youverify.co/img/logos/logo.svg',
+      },
+      {
+        hid: 'og:locale',
+        property: 'og:locale',
+        content: 'en_US',
+      },
+      // twitter meta tags
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        name: 'card',
+        content: 'summary',
+      },
+      {
+        hid: 'twitter:creator',
+        property: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@YoucheckOnline',
+      },
+      {
+        hid: 'twitter:title',
+        property: 'twitter:title',
+        name: 'title',
+        content: 'Youverify - KYC Automation for Banks and Startups.',
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        name: 'description',
+        content: "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. "
+     
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        name: 'image',
+        content:
+          'https://os.youverify.co/img/logos/logo.svg',
+      },
+      {
+        hid: 'twitter:creator',
+        property: 'twitter:creator',
+        name: 'image',
+        content: '@YoucheckOnline',
+      },
+      // google meta tags
+      {
+        hid: 'itemProp:name',
+        itemProp: 'name',
+        content: 'Youverify - KYC Automation for Banks and Startups.',
+      },
+      {
+        hid: 'itemProp:description',
+        itemProp: 'description',
+        content: "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. "
+      },
+      {
+        hid: 'itemProp:image',
+        itemProp: 'image',
+        content:
+          'https://os.youverify.co/img/logos/logo.svg',
+      },
+      { 'http-equiv': 'expires', content: '43200' },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-32x32.png" }],
     script: [
