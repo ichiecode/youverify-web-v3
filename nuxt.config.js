@@ -1,32 +1,36 @@
 const axios = require("axios");
 
 export default {
+  ssr: true,
   head: {
-    title: "Youverify",
-    htmlAttrs: {
-      lang: "en",
-    },
+    titleTemplate: '%s - Youverify',
+    title: 'KYC Automation for Banks and Startups',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+      },
       {
         hid: "description",
         name: "description",
         content:
           "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. ",
       },
-      { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-32x32.png" }],
     script: [
       {
         charset: "utf-8",
+        defer: true,
         src: "https://d3js.org/d3.v5.min.js",
       },
       {
+        defer: true,
         src: "https://d3js.org/d3-queue.v3.min.js",
       },
       {
+        defer: true,
         src: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js",
       },
     ],
@@ -34,11 +38,6 @@ export default {
 
   loading: { color: "#0F808C", height: "3px" },
 
-  ssr: false,
-
-  loading: { color: "#0F808C", height: '3px' },
-  // loading: '~/components/LoadingBar.vue'
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   env: {
@@ -49,39 +48,42 @@ export default {
     "@plugins/filters.js",
     "@plugins/vue-placeholders.js",
     "@/plugins/vue-lazysizes.client.js",
-    "@/plugins/reuseable-component.js"
+    "@/plugins/reuseable-component.js",
   ],
 
-  axios: {},
-
-  components: true,
-
-  buildModules: ["@nuxtjs/tailwindcss"],
-  serverMiddleware: ['~/api/index'],
-
-  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots", 'vue-social-sharing/nuxt'],
   
+  buildModules: ["@nuxtjs/tailwindcss"],
+  serverMiddleware: ["~/api/index"],
+
+  modules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "vue-social-sharing/nuxt",
+  ],
+
   sitemap: {
     hostname: "https://youverify.co",
-    gzip: true,
-    exclude: ["/secret", "/admin/**"],
     routes: async () => {
+      let { data: industriesData } = await axios.get(
+        `https://cms.dev.youverify.co/industries`
+      );
+      const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
 
-      let { data: industriesData } = await axios.get(`https://cms.dev.youverify.co/industries`);
-      const industriesArray = industriesData.map(v => `/use-case/${v.slug}`)
+      let { data: blogData } = await axios.get(
+        `https://cms.dev.youverify.co/blogs`
+      );
+      const blogArray = blogData.map((v) => `/blog/${v.slug}`);
 
-      let { data: blogData } = await axios.get(`https://cms.dev.youverify.co/blogs`);
-      const blogArray = blogData.map(v => `/blog/${v.slug}`)
-
-      return [...industriesArray, ...blogArray]
-    }
+      return [...industriesArray, ...blogArray];
+    },
   },
 
   robots: {
-    UserAgent: '*',
-    Disallow: '/admin',
-    Allow: '/',
-    Sitemap: 'https://youverify.co/sitemap.xml'
+    UserAgent: "*",
+    Disallow: "",
+    Allow: "/",
+    Sitemap: "https://youverify.co/sitemap.xml",
   },
 
   build: {
@@ -89,4 +91,4 @@ export default {
       vue.transformAssetUrls.LazyImage = ["src"];
     },
   },
-}
+};
