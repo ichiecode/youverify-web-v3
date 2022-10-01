@@ -606,14 +606,6 @@ export default {
   head() {
     return {
       title: this.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Verify and approve more customers for your business in seconds with our online identity verification form. Achieve seamless KYC and AML compliance with vForms.",
-        },
-      ],
     };
   },
 

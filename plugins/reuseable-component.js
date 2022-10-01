@@ -4,7 +4,9 @@ import Vue from 'vue'
 
 import AppButton from "../components/global/AppButton.vue";
 import Loading from "@/components/global/Loading.vue";
+import LazyImage from "@/components/global/LazyImage";
 
 
 Vue.component("LoadingSpinners", Loading)
 Vue.component("AppButton", AppButton)
+Vue.component("LazyImage", LazyImage)
