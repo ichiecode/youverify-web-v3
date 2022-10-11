@@ -62,7 +62,7 @@
       <section class="px-4 my-8 w-full">
         <div v-if="article.image" class="w-full max-h-120">
           <LazyImage
-          :src="article.image.formats.thumbnail.url"
+          :src="article.image.formats.large.url"
           :alt="article.image.alternativeText || article.title"
             class="object-cover w-full h-full align-middle border-0"
           />

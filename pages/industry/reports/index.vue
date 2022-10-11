@@ -57,8 +57,8 @@
           <div class="px-4 w-full md:w-2/3">
             <div v-if="featuredReport.image" class="w-full max-h-120">
               <LazyImage
-            :src="featuredReport.image.formats.thumbnail.url"
-            :alt="featuredReport.image.alternativeText || featuredReport.title"
+                :src="featuredReport.image.formats.large.url"
+                :alt="featuredReport.image.alternativeText || featuredReport.title"
                 class="object-cover w-full h-full align-middle border-0"
               />
             </div>
