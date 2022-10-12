@@ -1,6 +1,5 @@
 <template>
   <section class="bg-blue-200 for-a-reason">
-    <h1 class="hidden"></h1>
     <div
       class="max-w-screen-xl py-20 mx-auto sm:px-8 px-6 md:mx-auto max-w-300"
     >

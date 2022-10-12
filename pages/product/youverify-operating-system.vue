@@ -130,8 +130,7 @@
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  ></path></svg
-              ></a>
+                  ></path></svg></a>
             </div>
 
             <div class="mt-10 flex items-center">
@@ -1323,7 +1322,7 @@
                 alt="icon-reg-azure-gaming"
                 srcset=""
               />
-			  <h1 class="hidden"></h1>
+
               <h4
                 class="
                   text-center

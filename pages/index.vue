@@ -384,9 +384,8 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                    ></path></svg
-                  >Request demo</a
-                >
+                    ></path>
+                    </svg>Request demo</a>
               </button></span
             >
           </div>

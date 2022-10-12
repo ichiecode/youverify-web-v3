@@ -96,23 +96,6 @@ export default {
         name: 'image',
         content: '@YoucheckOnline',
       },
-      // google meta tags
-      {
-        hid: 'itemProp:name',
-        itemProp: 'name',
-        content: 'Youverify - KYC Automation for Banks and Startups.',
-      },
-      {
-        hid: 'itemProp:description',
-        itemProp: 'description',
-        content: "Africa’s No 1 Identity verification service for businesses to ease customer onboarding, Know your customer (KYC), address verification, KYC crypto, CTF, and AML compliance. "
-      },
-      {
-        hid: 'itemProp:image',
-        itemProp: 'image',
-        content:
-          'https://os.youverify.co/img/logos/logo.svg',
-      },
       { 'http-equiv': 'expires', content: '43200' },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-32x32.png" }],
