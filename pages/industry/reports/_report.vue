@@ -32,21 +32,47 @@
         Back
       </nuxt-link>
     </div>
-    <main class="max-w-3xl mx-auto w-full py-4 md:py-10">
-      <content-placeholders v-if="loading" class="w-full">
-        <content-placeholders-heading />
-        <content-placeholders-img />
-        <content-placeholders-text :lines="5" />
-      </content-placeholders>
-      <div v-else-if="errors" class="w-full">
-        <h2 class="text-2xl text-center text-gray-500">
-          A error occured, please try again.
-        </h2>
-      </div>
-      <article v-else class="">
-        <header class="my-2 md:my-4 px-4">
-          <h1 class="font-semibold text-xl md:text-3xl text-gray-800">
-            {{ article.title }}
+    <article class="">
+      <header class="my-2 md:my-4 px-4">
+        <h1 class="font-semibold text-xl md:text-3xl text-gray-800">
+          {{ article.title }}
+        </h1>
+        <div class="flex items-center w-full">
+          <div class="flex items-center flex-grow">
+            <small class="text-grey">
+              {{ formatDate(article.published_at) }}
+            </small>
+            <span class="text-grey">
+              &nbsp;|&nbsp;
+            </span>
+            <small class="text-grey">
+              {{ computeReadTime(article.word_count) }} mins
+            </small>
+          </div>
+          <social-share
+            :url="getUrl"
+            :title="article.title"
+            :description="article.description"
+            :quote="article.quote"
+            :hashtags="article.hashtags"
+            twitter-user="YouCheckOnline"
+          ></social-share>
+        </div>
+      </header>
+      <section class="px-4 my-8 w-full">
+        <div v-if="article.image" class="w-full max-h-120">
+          <LazyImage
+          :src="article.image.formats.large.url"
+          :alt="article.image.alternativeText || article.title"
+            class="object-cover w-full h-full align-middle border-0"
+          />
+        </div>
+        <div class="my-8">
+          <section v-html="article.excerpt" class="my-6 text-gray-800"></section>
+        </div>
+        <section class="my-12">
+          <h1 class="font-bold text-base text-gray-800">
+            👇 Enter your information for immediate access to this report
           </h1>
           <div class="flex items-center w-full">
             <div class="flex items-center flex-grow">
