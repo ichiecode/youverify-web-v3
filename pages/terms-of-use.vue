@@ -53,6 +53,17 @@ export default {
   mounted() {
     this.getTermOfUse();
   },
+  head() {
+    return {
+      title: "Terms Of Use",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
   computed: {
     ...mapState({
       tou: (state) => state.documents.termOfUse,

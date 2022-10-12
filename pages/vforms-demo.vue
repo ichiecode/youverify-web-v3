@@ -85,8 +85,8 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 data-v-7c7bbed2=""
-                              ></path></svg
-                          ></NuxtLink> 
+                              ></path>
+                              </svg></NuxtLink> 
                           <a
                             :href="`https://os.youverify.co/v-forms/${useCase.vFormId}/edit/add-fields`"
                             target="_blank"
@@ -123,8 +123,7 @@
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 data-v-7c7bbed2=""
-                              ></path></svg
-                          ></a>
+                              ></path></svg></a>
                         </div>
                       </div>
                     </div>
@@ -147,6 +146,17 @@ import getStarted from "~/components/common/getStarted.vue";
 export default {
   components: {
     getStarted,
+  },
+  head() {
+    return {
+      title: "vForm Demo Page",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
   },
   methods: {
     async getAllIndustries() {

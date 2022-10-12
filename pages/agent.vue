@@ -263,16 +263,24 @@
 <script>
 import getStarted from "~/components/common/getStarted.vue";
 export default {
-  head: {
-    title: "Become an Agent",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "As our agent, you help us fulfil our mission for data accuracy and trustworthiness across Africa while we pay you for your dutiful service. With over 2000 agents at the moment, we are able to help organizations get on the ground to verify physical addresses and assets",
-      },
-    ],
+  head() {
+    return {
+      title: "Become an Agent",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "As our agent, you help us fulfil our mission for data accuracy and trustworthiness across Africa while we pay you for your dutiful service. With over 2000 agents at the moment, we are able to help organizations get on the ground to verify physical addresses and assets",
+        },
+      ],
+    };
   },
   components: {
     getStarted,

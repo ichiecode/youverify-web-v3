@@ -53,6 +53,17 @@ export default {
   mounted() {
     this.getPrivacyPolicy();
   },
+  head() {
+    return {
+      title: "Privacy Policy",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
   computed: {
     ...mapState({
       policy: (state) => state.documents.privacyPolicy,

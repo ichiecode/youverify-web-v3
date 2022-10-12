@@ -748,16 +748,24 @@
 import getStarted from "~/components/common/getStarted.vue";
 import AppButton from "../../components/global/AppButton.vue";
 export default {
-  head: {
-    title: "YOUID for Business",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "YOUID for business is the number one digital identity verification software for Know Your Customer (KYC), Anti Money Laundering (AML), and Counter-Terrorism Funding (CTF) requirements.",
-      },
-    ],
+  head() {
+    return {
+      title: "YOUID for Business",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "YOUID for business is the number one digital identity verification software for Know Your Customer (KYC), Anti Money Laundering (AML), and Counter-Terrorism Funding (CTF) requirements.",
+        },
+      ],
+    };
   },
   components: {
     getStarted,
