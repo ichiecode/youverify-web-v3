@@ -73,7 +73,7 @@
                 maxlength="20"
                 name="phone"
                 type="tel"
-				required
+                required
               />
             </div>
             <div class="form-group md:w-8/12">
@@ -83,8 +83,7 @@
                 id="description"
                 name="description"
                 rows="5"
-				required
-				
+                required
               ></textarea>
             </div>
             <div class="">
@@ -105,16 +104,24 @@
 
 <script>
 export default {
-  head: {
-    title: "Contact us",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Contact us at Youverify @ 1st Floor, Sum House, 350 Borno Way, Yaba, 101212 Lagos, Nigeria. Phone @ +234 (814) 797 3350.",
-      },
-    ],
+  head() {
+    return {
+      title: "Contact us",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Contact us at Youverify @ 1st Floor, Sum House, 350 Borno Way, Yaba, 101212 Lagos, Nigeria. Phone @ +234 (814) 797 3350.",
+        },
+      ],
+    };
   },
 };
 </script>

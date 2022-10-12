@@ -110,66 +110,64 @@
             better offers you get from our marketplace
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-			  <AppButton
-                buttonText="Video Demo"
-                buttoncolor="darkbluebutton"
-                 href="#how-it-works"
+            <AppButton
+              buttonText="Video Demo"
+              buttoncolor="darkbluebutton"
+              href="#how-it-works"
+            >
+              <svg
+                slot="append"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
               >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-              <AppButton
-                buttonText="Contact Sales"
-                buttoncolor="whitebutton"
-                href="/contact-us"
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </AppButton>
+            <AppButton
+              buttonText="Contact Sales"
+              buttoncolor="whitebutton"
+              href="/contact-us"
+            >
+              <svg
+                slot="append"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
               >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-            
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </AppButton>
           </div>
         </div>
         <div class="sm:w-5/12 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
-            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets6.lottiefiles.com/packages/lf20_gp1gfcsw.json"
@@ -188,7 +186,6 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
-            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_xh8pfev9.json"
@@ -290,67 +287,65 @@
             standards for time-based one-time passcodes (TOTP or OTP).
           </p>
           <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap" data-v-6addea9c="">
-			  <AppButton
-                buttonText="Video Demo"
-                buttoncolor="darkbluebutton"
-                 href="#how-it-works"
+            <AppButton
+              buttonText="Video Demo"
+              buttoncolor="darkbluebutton"
+              href="#how-it-works"
+            >
+              <svg
+                slot="append"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
               >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </AppButton>
-              <AppButton
-                buttonText="Contact Sales"
-                buttoncolor="whitebutton"
-                href="/contact-us"
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </AppButton>
+            <AppButton
+              buttonText="Contact Sales"
+              buttoncolor="whitebutton"
+              href="/contact-us"
+            >
+              <svg
+                slot="append"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
               >
-                <svg
-                  slot="append"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-				</AppButton>
-            
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </AppButton>
           </div>
         </div>
 
         <div class="sm:w-5/12 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex justify-end">
-            
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_tbqzhtm4.json"
@@ -369,7 +364,6 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
-           
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets6.lottiefiles.com/packages/lf20_c3i6doow.json"
@@ -481,18 +475,26 @@
 import GetStarted from "../../components/common/getStarted";
 export default {
   components: {
-    GetStarted
+    GetStarted,
   },
-  head: {
-    title: "YOUID",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Store, manage and share your personal data using the YOUID app. Seamlessly complete KYC forms, with uttermost privacy and 100% control over your data.",
-      },
-    ],
+  head() {
+    return {
+      title: "YOUID",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Store, manage and share your personal data using the YOUID app. Seamlessly complete KYC forms, with uttermost privacy and 100% control over your data.",
+        },
+      ],
+    };
   },
 };
 </script>

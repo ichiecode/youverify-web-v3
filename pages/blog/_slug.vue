@@ -33,7 +33,7 @@
             class="w-full object-cover object-center rounded-xl block mt-10 mb-20"
           >
             <img
-              :src="formattedPost.image ? formattedPost.image.formats.large.url : ''"
+              :src="formattedPost.image ? formattedPost.image.url : ''"
               class="w-full"
               :height="formattedPost.image.height"
               :width="formattedPost.image.width"

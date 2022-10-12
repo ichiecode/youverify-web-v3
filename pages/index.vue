@@ -934,6 +934,16 @@ export default {
       showService: true,
     };
   },
+  head() {
+    return {
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
   computed: {
     ...mapGetters({
       reports: "reports/reports",

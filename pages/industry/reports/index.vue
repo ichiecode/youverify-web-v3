@@ -164,6 +164,17 @@ export default {
       searchTerm: "",
     }
   },
+  head() {
+    return {
+      title: "Industries Report",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
   computed: {
     ...mapGetters({
       reports: "reports/reports",

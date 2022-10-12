@@ -48,6 +48,17 @@ export default {
       const cookies = await this.$store.dispatch("documents/getCookies");
     },
   },
+  head() {
+    return {
+      title: "Cookies Information",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
   mounted() {
     this.getCookies();
   },
