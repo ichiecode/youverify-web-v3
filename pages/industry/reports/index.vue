@@ -7,12 +7,12 @@
         alt="Youverify"
         class="sm:w-32 w-24"
     /></a>
-    <div class="w-full py-16 md:py-24 px-4">
+    <div class="w-full py-16 md:py-24 px-4 max-w-3xl m-auto">
       <h1 class="md:text-4xl text-2xl mb-2 md:mb-5 font-bold text-center text-blue-200">
-        Articles, insights & tips!
+        Industry Reports, Insights & Tips
       </h1>
       <h2 class="md:text-lg text-base font-normal text-black text-center">
-        Increase your  knowledge by reading articles with this blog. Let’s start
+        Realtime reports into the world of compliance, digital identity verification and market trends from Youverify experts.
       </h2>
     </div>
   </header>
