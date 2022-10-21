@@ -91,7 +91,7 @@ export const actions = {
             commit("setGuidesCount", response);
         } catch (error) {
             console.log(error)
-            commit(setError, error.data)
+            commit("setError", error.data)
         } finally {
             commit("setLoading", false);
         }
