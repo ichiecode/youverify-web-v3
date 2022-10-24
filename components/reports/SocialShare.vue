@@ -1,6 +1,5 @@
 <template>
   <div class="sm:flex items-center hidden gap-4">
-    Share:
     <ShareNetwork
       tag="button"
       network="facebook"
@@ -9,9 +8,13 @@
       :description="description"
       :quote="quote"
       :hashtags="hashtags"
-      class="inline-block w-4"
+      class="inline-block w-6"
     >
-      <img src="~/assets/images/icons/social/facebook.svg" alt="Share on Facebook" title="Share on Facebook" />
+      <img
+        src="~/assets/images/icons/social/facebook.svg"
+        alt="Share on Facebook"
+        title="Share on Facebook"
+      />
     </ShareNetwork>
     <ShareNetwork
       tag="button"
@@ -21,9 +24,13 @@
       :description="description"
       :hashtags="hashtags"
       :twitter-user="twitterUser"
-      class="inline-block w-4"
+      class="inline-block w-6"
     >
-      <img src="~/assets/images/icons/social/twitter.svg" alt="Share on Twitter" title="Share on Twitter" />
+      <img
+        src="~/assets/images/icons/social/twitter.svg"
+        alt="Share on Twitter"
+        title="Share on Twitter"
+      />
     </ShareNetwork>
     <ShareNetwork
       tag="button"
@@ -31,9 +38,13 @@
       :url="url"
       :title="title"
       :description="description"
-      class="inline-block w-4"
+      class="inline-block w-6"
     >
-      <img src="~/assets/images/icons/social/linkedin.svg" alt="Share on linkedin" title="Share on linkedin" />
+      <img
+        src="~/assets/images/icons/social/linkedin.svg"
+        alt="Share on linkedin"
+        title="Share on linkedin"
+      />
     </ShareNetwork>
     <ShareNetwork
       tag="button"
@@ -41,9 +52,13 @@
       :url="url"
       :title="title"
       :description="description"
-      class="inline-block w-4"
+      class="inline-block w-6"
     >
-      <img src="~/assets/images/icons/social/instagram.svg" alt="Share on instagram" title="Share on Instagram" />
+      <img
+        src="~/assets/images/icons/social/instagram.svg"
+        alt="Share on instagram"
+        title="Share on Instagram"
+      />
     </ShareNetwork>
   </div>
 </template>
@@ -76,10 +91,9 @@ export default {
       type: String,
       default: "",
     },
-  }
-}
+  },
+};
 </script>
 
 <style>
-
 </style>
