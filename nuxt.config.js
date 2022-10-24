@@ -100,8 +100,9 @@ export default {
         `https://cms.dev.youverify.co/reports`
       );
       const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
+      const guidesArray = guidesData.map((v) => `/global-compliance-guides/${v.slug}`);
 
-      return [...industriesArray, ...blogArray, ...reportsArray];
+      return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
     },
   },
 
