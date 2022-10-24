@@ -3,7 +3,7 @@
     <LazyImage
       :src="guide.coverImage.formats.small.url"
       :alt="guide.title"
-      class="object-cover align-middle border-0"
+      class="object-cover align-middle border-0 h-60 w-full"
     />
     <div class="py-5 px-9">
       <header class="flex flex-col flex-grow mb-6">

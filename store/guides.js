@@ -3,7 +3,7 @@ export const state = () => ({
     guides: [],
     loading: false,
     error: null,
-    perPage: 4,
+    perPage: 15,
     hasNextPage: true,
     count: 0
 });
