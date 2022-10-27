@@ -54,7 +54,12 @@ export default {
       );
       const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
 
-      return [...industriesArray, ...blogArray, ...reportsArray];
+      let { data: guidesData } = await axios.get(
+        `https://cms.dev.youverify.co/compliance-guides`
+      );
+      const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
+
+      return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
     },
   },
 
@@ -100,7 +105,11 @@ export default {
         `https://cms.dev.youverify.co/reports`
       );
       const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
-      const guidesArray = guidesData.map((v) => `/global-compliance-guides/${v.slug}`);
+
+      let { data: guidesData } = await axios.get(
+        `https://cms.dev.youverify.co/compliance-guides`
+      );
+      const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
 
       return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
     },
