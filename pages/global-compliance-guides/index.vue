@@ -108,18 +108,18 @@
             :guide="guide"
           />
         </section>
-      </div>
-      <div
-        v-if="hasNextPage"
-        size="large"
-        class="w-full mb-4 flex justify-center"
-      >
-        <LoadingSpinners />
-      </div>
-      <div v-else-if="!hasNextPage" class="w-full mb-4">
-        <p class="text-center font-medium text-lg text-gray-500">
-          That's all for now.
-        </p>
+        <div
+          v-if="hasNextPage"
+          size="large"
+          class="w-full mb-4 flex justify-center"
+        >
+          <LoadingSpinners />
+        </div>
+        <div v-else-if="!hasNextPage" class="w-full mb-4">
+          <p class="text-center font-medium text-lg text-gray-500">
+            That's all for now.
+          </p>
+        </div>
       </div>
     </section>
     <div id="sentinel"></div>
