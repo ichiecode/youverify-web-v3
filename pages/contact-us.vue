@@ -26,7 +26,7 @@
               <input
                 class=""
                 id="first_name"
-                name="first_name"
+                name="First name"
                 type="text"
                 placeholder="First name"
                 required
@@ -39,7 +39,7 @@
                 placeholder="Last name"
                 id="last_name"
                 maxlength="80"
-                name="last_name"
+                name="Last name"
                 type="text"
                 required
               />
@@ -61,7 +61,7 @@
                 placeholder="Enter your company name"
                 id="company"
                 maxlength="80"
-                name="company"
+                name="Company name"
                 type="text"
               />
             </div>
@@ -71,7 +71,7 @@
                 placeholder="Enter your phone number"
                 id="phone"
                 maxlength="20"
-                name="phone"
+                name="Phone number"
                 type="tel"
                 required
               />
