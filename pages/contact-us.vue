@@ -10,11 +10,11 @@
           </p>
         </div>
         <div class="mt-14">
-          <form
-            class="flex flex-col items-center justify-center"
-            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
-            method="POST"
-          >
+
+
+         <form action="http://go.pardot.com/l/1001831/2022-11-08/29yd" 
+         class="flex flex-col items-center justify-center"
+         method="post">
             <input type="hidden" name="oid" value="00D8c000007B8H4" />
             <input
               type="hidden"
@@ -26,7 +26,7 @@
               <input
                 class=""
                 id="first_name"
-                name="first_name"
+                name="First name"
                 type="text"
                 placeholder="First name"
                 required
@@ -39,7 +39,7 @@
                 placeholder="Last name"
                 id="last_name"
                 maxlength="80"
-                name="last_name"
+                name="Last name"
                 type="text"
                 required
               />
@@ -61,7 +61,7 @@
                 placeholder="Enter your company name"
                 id="company"
                 maxlength="80"
-                name="company"
+                name="Company name"
                 type="text"
               />
             </div>
@@ -71,7 +71,7 @@
                 placeholder="Enter your phone number"
                 id="phone"
                 maxlength="20"
-                name="phone"
+                name="Phone number"
                 type="tel"
                 required
               />
@@ -86,6 +86,10 @@
                 required
               ></textarea>
             </div>
+            <div style="position:absolute; left:-9999px; top: -9999px;">
+              <label for="pardot_extra_field">Comments</label>
+              <input type="text" id="pardot_extra_field" name="pardot_extra_field">
+          </div>
             <div class="">
               <span
                 class="cursor-pointer inline-block"
