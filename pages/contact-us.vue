@@ -80,7 +80,7 @@
               <label for="description"><h4>Message</h4> </label>
               <textarea
                 placeholder="Type your message or enquiry here"
-                id="description"
+                id="Message"
                 name="Message"
                 rows="5"
                 required
