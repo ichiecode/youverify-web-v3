@@ -81,7 +81,7 @@
               <textarea
                 placeholder="Type your message or enquiry here"
                 id="description"
-                name="description"
+                name="Message"
                 rows="5"
                 required
               ></textarea>
