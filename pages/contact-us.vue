@@ -12,7 +12,7 @@
         <div class="mt-14">
 
 
-         <form action="http://go.pardot.com/l/1001831/2022-11-08/29yd" 
+         <form action="https://go.pardot.com/l/1001831/2022-11-08/29yd" 
          class="flex flex-col items-center justify-center"
          method="post">
             <input type="hidden" name="oid" value="00D8c000007B8H4" />
@@ -80,7 +80,7 @@
               <label for="description"><h4>Message</h4> </label>
               <textarea
                 placeholder="Type your message or enquiry here"
-                id="description"
+                id="Message"
                 name="Message"
                 rows="5"
                 required
