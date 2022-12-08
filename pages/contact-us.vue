@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
-      <div class="pt-40 pb-20">
+      <div class="pt-56 pb-20">
         <div class="text-center">
           <h1>Contact Sales</h1>
           <p>

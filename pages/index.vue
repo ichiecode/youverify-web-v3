@@ -1,7 +1,7 @@
 <template>
   <div>
     <header
-      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-32"
+      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
