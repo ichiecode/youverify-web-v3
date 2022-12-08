@@ -1,7 +1,7 @@
 <template>
   <div>
     <span
-      class="lg:block hidden max-h-screen h-auto fixed w-full z-40 lg:py-0 py-4"
+      class="lg:block hidden max-h-screen h-auto lg:py-0 py-4"
       role="button"
       tabindex="0"
     >
@@ -604,14 +604,10 @@
     <nav
       class="
         transform
-        z-40
         w-full
         lg:hidden
-        block
-        top-0
         overflow-scroll
         duration-700
-        fixed
         right-0
         min-h-auto
       "

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex items-center justify-start pt-48">
+    <div class="flex items-center justify-start pt-56">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
           data-v-131cfc00=""

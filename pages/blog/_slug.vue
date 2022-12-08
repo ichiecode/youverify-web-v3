@@ -11,7 +11,7 @@
     </div>
 
     <div v-else>
-      <article class="text-center min-h-header pt-40">
+      <article class="text-center min-h-header pt-56">
         <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <header>
             <span
