@@ -4,7 +4,7 @@
     :class="scrollingDown ? 'py-2' : 'py-4'"
   >
     <NuxtLink
-      to="blog/youverify-makes-2023-regtech100-list"
+      to="/blog/youverify-makes-2023-regtech100-list"
       class="max-w-screen-xl mx-auto px-6 flex gap-2 sm:gap-4 items-center justify-center"
     >
       <div
