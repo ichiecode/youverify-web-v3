@@ -13,8 +13,10 @@ module.exports = {
         blue: {
           DEFAULT: "#46B2C8",
           100: "#EFF8F9",
+          150: '#C2E2E9',
           200: "#0B4B58",
           300: "#115766",
+          900: '#023A59'
         },
         orange: {
           default: "#FF993C",
@@ -852,6 +854,7 @@ module.exports = {
       full: '100%',
       screen: '100vw',
       min: 'min-content',
+      fit: 'fit-content',
       max: 'max-content',
     }),
     zIndex: {
