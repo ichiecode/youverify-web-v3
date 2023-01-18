@@ -11,7 +11,7 @@
     </div>
 
     <div v-else>
-      <article class="text-center min-h-header pt-40">
+      <article class="text-center min-h-header pt-56">
         <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
           <header>
             <span
@@ -22,22 +22,22 @@
                   : "Youverify"
               }}
               | {{ formattedPost.date | formatDate }}</span
-            ><a href="/blog/#"
-              ><h2>
-                {{ formattedPost.title }}
-              </h2></a
             >
+            <a :href="`/blog/${formattedPost.slug}`"
+              ><h1>
+                {{ formattedPost.title }}
+              </h1></a>
             <p><i>by</i> {{ formattedPost.author }}</p>
           </header>
           <div
-            data-gatsby-image-wrapper=""
-            class="gatsby-image-wrapper w-full object-cover object-center rounded-xl block sm:h-96 h-72 mt-6 mb-20"
+            class="w-full object-cover object-center rounded-xl block mt-10 mb-20"
           >
             <img
               :src="formattedPost.image ? formattedPost.image.url : ''"
               class="w-full"
+              :height="formattedPost.image.height"
+              :width="formattedPost.image.width"
               :alt="formattedPost.image ? formattedPost.image.caption : ''"
-              style="object-fit: cover; opacity: 1; height: 350px"
             />
           </div>
         </section>
@@ -110,14 +110,14 @@
               ></a>
             </div>
           </div>
-          <article>
+          <article class="article-body">
             <section v-html="formattedPost.content"></section>
           </article>
         </section>
-        <div class="px-5 px-md-4 py-md-5 container">
+        <div class="container">
           <aside class="">
             <h3 class="mb-5">Related Articles</h3>
-            <section class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
+            <section class="mb-20">
               <content-placeholders
                 v-show="loading"
                 v-for="index in 3"
@@ -127,8 +127,8 @@
                 <content-placeholders-heading :img="true" />
                 <content-placeholders-text :lines="3" />
               </content-placeholders>
-              <div v-show="!loading">
-                <article v-for="blog in formattedRelatedBlogs" :key="blog.id">
+              <div class="grid sm:grid-cols-3 grid-cols-1 gap-10" v-show="!loading">
+                <article v-for="blog in formattedRelatedBlogs.slice(0, 3)" :key="blog.id">
                   <header class="relative mb-6 border">
                     <div class="rounded w-full sm:h-72 h-60">
                       <img
@@ -193,7 +193,6 @@ export default {
         blogDetails,
       };
     } catch (e) {
-      console.log(e);
     }
   },
   head() {
@@ -209,6 +208,70 @@ export default {
           hid: "description",
           property: "description",
           content: this.$data.blogDetails[0].teaser,
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        { hid: "twitter:site", name: "twitter:site", content: "@nuxt_js" },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: `https://youverify.co/blog/${this.$data.blogDetails[0].slug}`,
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.$data.blogDetails[0].title,
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.$data.blogDetails[0].teaser,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: this.$data.blogDetails[0].image.url,
+        },
+
+        // Open Graph
+        {
+          hid: "og:site_name",
+          property: "og:site_name",
+          content: "Youverify website",
+        },
+        { hid: "og:type", property: "og:type", content: "website" },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: `https://youverify.co/blog/${this.$data.blogDetails[0].slug}`,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.$data.blogDetails[0].title,
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$data.blogDetails[0].teaser,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.$data.blogDetails[0].image.url,
+        },
+        {
+          hid: "og:image:secure_url",
+          property: "og:image:secure_url",
+          content: this.$data.blogDetails[0].image.url,
+        },
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: this.$data.blogDetails[0].image.name,
         },
       ],
     };
@@ -233,4 +296,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.article-body h1 {
+  display: none; 
+}
+h2 {
+  font-size: 30px !important;
+}
+</style>

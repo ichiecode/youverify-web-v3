@@ -1,21 +1,37 @@
 export const state = () => ({
-  blogs: null,
+  blogs: [],
   singleblogPost: null,
   relatedBlogs: null,
   total: 0,
   loading: false,
-  page: 0,
+  error: null,
   perPage: 9,
-  sort_by: "created_at:desc",
+  hasNextPage: true
 });
+
+export const getters = {
+  blogs: (state) => state.blogs,
+  hasNextPage: (state) => state.hasNextPage,
+  loading: (state) => state.loading,
+  error: (state) => state.error,
+  total: (state) => state.total,
+}
 
 export const mutations = {
   setLoading(state, payload) {
     state.loading = payload;
   },
 
+  setError(state, payload) {
+    state.error = payload;
+  },
+
+  setNextPage(state, payload) {
+    state.hasNextPage = payload
+  },
+
   setBlogs(state, payload) {
-    state.blogs = payload;
+    state.blogs = [...state.blogs, ...payload];
   },
 
   setSingleBlogPost(state, payload) {
@@ -32,22 +48,26 @@ export const mutations = {
 };
 
 export const actions = {
-  async getBlogs({ state, commit }, startPage, limitPage) {
+  async getBlogs({ state, commit }, page) {
     commit("setLoading", true);
     let payload = {
-      _start: startPage ? startPage: state.page,
-      _limit: limitPage ? limitPage: state.perPage,
+      _start: page ? page * state.perPage : 0,
+      _limit: state.perPage,
+      _sort: "createdAt:DESC"
     };
     const response = await this.$axios
       .$get(
-        `${process.env.baseUrl}/blogs?_start=${payload._start}&_limit=${payload._limit}`
+        `${process.env.baseUrl}/blogs?_start=${payload._start}&_limit=${payload._limit}&_sort=${payload._sort}`
       )
       .then((res) => {
         commit("setBlogs", res);
         commit("setLoading", false);
+        commit("setNextPage", state.blogs.length < state.total)
         return res;
       })
-      .catch((error) => ({ error: JSON.stringify(error) }));
+      .catch((error) => {
+        commit(setError, error.data)
+      })
     return response;
   },
 
@@ -60,7 +80,9 @@ export const actions = {
         commit("setLoading", false);
         return res;
       })
-      .catch((error) => ({ error: JSON.stringify(error) }));
+      .catch((error) => {
+        commit(setError, error.data)
+      })
     return response;
   },
 
@@ -73,7 +95,9 @@ export const actions = {
         commit("setLoading", false);
         return res;
       })
-      .catch((error) => ({ error: JSON.stringify(error) }));
+      .catch((error) => {
+        commit(setError, error.data)
+      })
     return response;
   },
   
@@ -86,9 +110,9 @@ export const actions = {
         commit("setLoading", false);
         return res;
       })
-      .catch((error) => ({ error: JSON.stringify(error) }));
+      .catch((error) => {
+        commit(setError, error.data)
+      })
     return response;
   },
-
-
 };

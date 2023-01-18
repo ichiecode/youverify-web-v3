@@ -1,14 +1,14 @@
 <template>
   <div>
     <header
-      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-32"
+      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-52 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div class="flex-col-reverse md:flex-row flex justify-center">
           <div class="md:w-3/6">
-            <h3 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Fill a KYC form once and forever.
-            </h3>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               YOUID’s secure digital ID lets you safely store personal details
               in an encrypted format and use it to access online services
@@ -22,14 +22,14 @@
                     class="sm:mr-4 mr-2"
                     target="_blank"
                     rel="noreferrer"
-                    ><img
+                    ><LazyImage
                       src="@/assets/images/icons/menu/apple.svg"
                       alt="Download on Apple Store" /></a
                   ><a
                     href="https://play.google.com/store/apps/details?id=com.youid"
                     target="_blank"
                     rel="noreferrer"
-                    ><img
+                    ><LazyImage
                       src="@/assets/images/icons/menu/google.svg"
                       alt="Download on Google Play"
                   /></a>
@@ -42,23 +42,23 @@
             </div>
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-20 h-20">
-                <img
+                <LazyImage
                   src="../../assets/images/logos/trusted/svg/Wema Bank Logo.svg"
-                  alt="Carbon logo"
+                  alt="wema-bank logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
-                  alt="Carbon logo"
+                  alt="bolt-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Sterling Bank Plc Logo.svg"
-                  alt="Carbon logo"
+                  alt="sterling-bank logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
@@ -66,8 +66,6 @@
           </div>
           <div class="md:w-3/6">
             <lottie-player
-              src="https://assets10.lottiefiles.com/packages/lf20_t0yoz1ta.json"
-              background="transparent"
               speed="1"
               loop
               autoplay
@@ -188,12 +186,6 @@
       <div class="flex sm:flex-row flex-col justify-evenly items-center py-20">
         <div class="sm:w-6/12 sm:pt-0 w-full h-full">
           <div class="sm:w-auto w-full mx-auto flex">
-            <!-- <img
-              width="355"
-              height="378"
-              src="../../assets/images/illustrations/products/youid/secure.svg"
-              alt="Mand holding a paper plane"
-            /> -->
             <lottie-player
               class="sm:mx-0 mx-auto"
               src="https://assets2.lottiefiles.com/packages/lf20_xh8pfev9.json"
@@ -480,17 +472,29 @@
 </template>
 
 <script>
+import GetStarted from "../../components/common/getStarted";
 export default {
-  head: {
-    title: "YOUID",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Store, manage and share your personal data using the YOUID app. Seamlessly complete KYC forms, with uttermost privacy and 100% control over your data.",
-      },
-    ],
+  components: {
+    GetStarted,
+  },
+  head() {
+    return {
+      title: "YOUID",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Store, manage and share your personal data using the YOUID app. Seamlessly complete KYC forms, with uttermost privacy and 100% control over your data.",
+        },
+      ],
+    };
   },
 };
 </script>

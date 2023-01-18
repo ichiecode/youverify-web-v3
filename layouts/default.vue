@@ -1,25 +1,28 @@
 <template>
   <div class="relative app min-h-screen flex flex-col">
-    <Header />
+    <div class="fixed z-40 w-full">
+      <RegTechHeader />
+      <Header />
+    </div>
     <div class="flex-grow">
       <Nuxt />
     </div>
-    <div class="bg-blue-100 pt-12 pb-12">
-      <div class="max-w-screen-xl mx-auto sm:px-8 px-6">
-        <Footer />
-      </div>
-    </div>
+    <footer class="bg-blue-900 pt-20">
+      <Footer />
+    </footer>
   </div>
 </template>
 
 <script>
-import Footer from "~/components/layout/footer.vue";
+import Footer from "~/components/layout/footer";
 import Header from "~/components/layout/header.vue";
+import RegTechHeader from "~/components/layout/RegTechHeader.vue";
 export default {
-  name: 'youverify',
+  name: "youverify",
   components: {
     Footer,
     Header,
+    RegTechHeader,
   },
 };
 </script>

@@ -1,8 +1,10 @@
 const axios = require("axios");
 
 export default {
+  ssr: true,
   head: {
-    title: "Youverify",
+    titleTemplate: "%s - Youverify",
+    title: "KYC Automation for Banks and Startups",
     htmlAttrs: {
       lang: "en",
     },
@@ -21,15 +23,44 @@ export default {
     script: [
       {
         charset: "utf-8",
+        defer: true,
         src: "https://d3js.org/d3.v5.min.js",
       },
       {
+        defer: true,
         src: "https://d3js.org/d3-queue.v3.min.js",
       },
       {
+        defer: true,
         src: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js",
       },
     ],
+  },
+
+  generate: {
+    routes: async () => {
+      let { data: industriesData } = await axios.get(
+        `https://cms.dev.youverify.co/industries`
+      );
+      const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
+
+      let { data: blogData } = await axios.get(
+        `https://cms.dev.youverify.co/blogs`
+      );
+      const blogArray = blogData.map((v) => `/blog/${v.slug}`);
+
+      let { data: reportData } = await axios.get(
+        `https://cms.dev.youverify.co/reports`
+      );
+      const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
+
+      let { data: guidesData } = await axios.get(
+        `https://cms.dev.youverify.co/compliance-guides`
+      );
+      const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
+
+      return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
+    },
   },
 
   loading: { color: "#0F808C", height: "3px" },
@@ -44,37 +75,51 @@ export default {
     "@plugins/filters.js",
     "@plugins/vue-placeholders.js",
     "@/plugins/vue-lazysizes.client.js",
+    "@/plugins/reuseable-component.js",
   ],
 
-  axios: {},
-
-  components: true,
-
   buildModules: ["@nuxtjs/tailwindcss"],
+  serverMiddleware: ["~/api/index"],
 
-  modules: ["@nuxtjs/axios", "@nuxtjs/sitemap", "@nuxtjs/robots"],
+  modules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "vue-social-sharing/nuxt",
+  ],
 
   sitemap: {
     hostname: "https://youverify.co",
-    gzip: true,
-    exclude: ["/secret", "/admin/**"],
     routes: async () => {
-      let baseUrl = process.env.BASE_URL || "http://0.0.0.0:1337";
+      let { data: industriesData } = await axios.get(
+        `https://cms.dev.youverify.co/industries`
+      );
+      const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
 
-      let { data: industriesData } = await axios.get(`${baseUrl}/industries`);
-      const industriesArray = industriesData.map(v => `/use-case/${v.slug}`)
+      let { data: blogData } = await axios.get(
+        `https://cms.dev.youverify.co/blogs`
+      );
+      const blogArray = blogData.map((v) => `/blog/${v.slug}`);
 
-      let { data: blogData } = await axios.get(`${baseUrl}/blogs`);
-      const blogArray = blogData.map(v => `/blog/${v.slug}`)
+      let { data: reportData } = await axios.get(
+        `https://cms.dev.youverify.co/reports`
+      );
+      const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
 
-      return [...industriesArray, ...blogArray]
-    }
+      let { data: guidesData } = await axios.get(
+        `https://cms.dev.youverify.co/compliance-guides`
+      );
+      const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
+
+      return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
+    },
   },
 
   robots: {
-    UserAgent: '*',
-    Disallow: '/admin',
-    Allow: '/'
+    UserAgent: "*",
+    Disallow: "",
+    Allow: "/",
+    Sitemap: "https://youverify.co/sitemap.xml",
   },
 
   build: {

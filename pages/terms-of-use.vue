@@ -31,6 +31,7 @@
             tou ? this.$root.$options.filters.formatDate(tou.updatedAt) : ""
           }}</span
         >
+		
         <h1>{{ tou ? tou.title : "" }}</h1>
       </header>
       
@@ -51,6 +52,17 @@ export default {
   },
   mounted() {
     this.getTermOfUse();
+  },
+  head() {
+    return {
+      title: "Terms Of Use",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
   },
   computed: {
     ...mapState({

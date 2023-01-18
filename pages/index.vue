@@ -1,16 +1,16 @@
 <template>
   <div>
     <header
-      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-32"
+      class="bg-blue relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-32"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
           class="items-center flex-col-reverse md:flex-row flex justify-center"
         >
           <div class="md:w-3/6">
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               KYC Automation for Banks and Startups
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               Youverify helps companies automate their decisions, onboard the
               right customers and fight fraud using data
@@ -70,116 +70,6 @@
                   ></path>
                 </svg>
               </AppButton>
-              <!-- <a
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-blue-300
-                  text-white
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  mr-4
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
-                href="/vforms-demo"
-                >View Demo<svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg></a
-              <
-			  <a 
-                class="
-                  items-center
-                  justify-center
-                  font-medium
-                  disabled:curs
-                  inline-flex
-                  bg-gray-100
-                  text-black
-                  py-3
-                  sm:py-4
-                  px-4
-                  sm:px-5
-                  text-sm
-                  sm:text-1sm
-                  rounded-md
-                  my-2
-                  outline-none
-                  focus:outline-none
-                  hover:outline-none
-                  transition-all
-                  cursor-pointer
-                  box-border
-                  group
-                  flex-shrink-0
-                "
-                target="_blank"
-                href="https://os.youverify.co/auth/create-account"
-                >Sign-up<svg
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  class="
-                    w-5
-                    ml-1.25
-                    transition-transform
-                    duration-75
-                    transform
-                    group-hover:translate-x-0.5
-                  "
-                >
-                  <path
-                    d="M6 10H14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M10 6L14 10L10 14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a> -->
             </div>
 
             <div class="mt-10 flex items-center">
@@ -188,42 +78,30 @@
             </div>
             <div class="mt-3 grid grid-cols-4">
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/fidelity.svg"
-                  alt="Carbon logo"
+                  alt="fidelity-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Bolt Logo.svg"
-                  alt="Carbon logo"
+                  alt="bolt-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
               <figure class="relative w-16 h-16">
-                <img
+                <LazyImage
                   src="~/assets/images/logos/trusted/svg/Wema Bank Logo.svg"
-                  alt="Carbon logo"
+                  alt="wema-bank-logo"
                   class="h-full w-full object-contain"
                 />
               </figure>
             </div>
           </div>
           <div class="md:w-3/6">
-            <!-- <video
-              playsinline=""
-              autoplay=""
-              loop=""
-              controlslist="nodownload"
-              class="h-full"
-            >
-              <source
-                src="~/assets/images/illustrations/api-box-4-loop-2x.webm"
-                type="video/webm"
-              />
-              Sorry, your browser doesn't support embedded videos.
-            </video> -->
+            
             <lottie-player
               src="https://assets2.lottiefiles.com/packages/lf20_wu2exiph.json"
               background="transparent"
@@ -267,35 +145,35 @@
           <figure class="flex h-12">
             <LazyImage
               src="~/assets/images/logos/trusted/fidelity (1).jpeg"
-              alt="Carbon logo"
+              alt="fidelity-logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
             <LazyImage
               src="~/assets/images/logos/trusted/Standard_Chartered_(2021).svg (1).png"
-              alt="Carbon logo"
+              alt="standered-logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
             <LazyImage
               src="~/assets/images/logos/trusted/leadway (1).png"
-              alt="Carbon logo"
+              alt="leadway-logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
             <LazyImage
               src="~/assets/images/logos/trusted/sterling-logo-balanced (1).png"
-              alt="Carbon logo"
+              alt="sterling-logo"
               class=""
             />
           </figure>
           <figure class="h-12 flex">
             <LazyImage
               src="~/assets/images/logos/trusted/wema-bank-plc-logo-vector (1).png"
-              alt="Carbon logo"
+              alt="wema-bank-logo"
               class=""
             />
           </figure>
@@ -303,6 +181,7 @@
       </div>
     </section>
 
+    <div id="target">
     <section class="sm:pb-20 pt-20 pb-10">
       <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
         <section
@@ -328,7 +207,7 @@
 
               <button
                 :class="`${showService === false ? ' text-white' : 'text-blue'}
-                  
+
                   items-center
                   justify-center
                   disabled:curs
@@ -424,13 +303,7 @@
         </div>
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-10/12 mx-auto">
-            <!-- <LazyImage
-              class="w-full"
-              width="505"
-              height="545"
-              src="../assets/images/illustrations/flow.gif"
-              alt="Mand holding a paper plane"
-            /> -->
+           
             <lottie-player
               src="https://assets10.lottiefiles.com/packages/lf20_rod5jzuw.json"
               background="transparent"
@@ -450,13 +323,7 @@
       >
         <div class="sm:w-3/5">
           <div class="sm:w-auto w-3/4 mx-auto">
-            <!-- <LazyImage
-              width="505"
-              height="545"
-              class="w-full"
-              src="../assets/images/illustrations/frictionless.gif"
-              alt="Man holding SIM for verification"
-            /><noscript></noscript> -->
+            
             <lottie-player
               src="https://assets9.lottiefiles.com/packages/lf20_cvruqprn.json"
               background="transparent"
@@ -517,17 +384,16 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                    ></path></svg
-                  >Request demo</a
-                >
+                    ></path>
+                    </svg>Request demo</a>
               </button></span
             >
           </div>
         </div>
         <div class="max-w-screen-lg mx-auto my-16">
-          <img
+          <LazyImage
             src="~/assets/images/illustrations/kyc-as-a-service.svg"
-            alt=""
+            alt="kysc-as-a-service-image"
           />
         </div>
       </section>
@@ -581,36 +447,7 @@
                     ></path>
                   </svg>
                 </AppButton>
-                <!-- <button
-                  class="
-                    bg-transparent
-                    text-blue
-                    rounded
-                    py-2
-                    sm:mb-0
-                    mb-4
-                    px-0
-                  "
-                >
-                  <a href="/contact-us">
-                    <svg
-                      width="8"
-                      height="14"
-                      viewBox="0 0 8 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="transform inline-block mr-4 false"
-                    >
-                      <path
-                        d="M1 0.999999L7 7L1 13"
-                        stroke="#46B2C8"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path></svg
-                    >Request demo</a
-                  >
-                </button> -->
+                
               </span>
             </div>
           </div>
@@ -903,246 +740,7 @@
         </svg>
       </div>
     </section>
-    <!-- <section
-      class="
-        text-center
-        max-w-screen-lg
-        text-container
-        sm:py-20
-        py-10
-        mx-auto
-        sm:px-8
-        px-6
-      "
-    >
-      <div>
-        <h2>More with Youverify+</h2>
-        <div
-          class="
-            grid
-            sm:gap-10
-            gap-0
-            sm:grid-cols-2
-            grid-cols-1 grid-
-            text-left
-            mt-12
-            auto-rows-fr
-          "
-        >
-          <section class="youverify-plus-item">
-            <div
-              class="p-12 sm:text-left text-center h-full bg-white rounded-xl"
-            >
-              <span class="inline-block sm:mx-0 mx-auto"
-                ><svg
-                  width="40"
-                  height="46"
-                  viewBox="0 0 40 46"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30.526 45.5886H1.2304C0.550901 45.5886 6.10352e-05 45.0377 6.10352e-05 44.3582V9.92591C6.10352e-05 9.53687 0.184067 9.17075 0.49626 8.93861L7.55183 3.69225C7.76406 3.53444 8.02149 3.44922 8.28596 3.44922H30.526C31.2055 3.44922 31.7563 4.00006 31.7563 4.67955V44.3582C31.7563 45.0377 31.2055 45.5886 30.526 45.5886Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    d="M4.67955 42.1394H33.9752C34.6547 42.1394 35.2055 41.5885 35.2055 40.909V6.47669C35.2055 6.08765 35.0215 5.72153 34.7093 5.48939L27.6537 0.243031C27.4415 0.0852217 27.1841 0 26.9196 0H4.67955C4.00006 0 3.44922 0.550839 3.44922 1.23033V40.909C3.44922 41.5885 4.00006 42.1394 4.67955 42.1394Z"
-                    fill="#115766"
-                  ></path>
-                  <path
-                    d="M30.6246 18.1791H38.5386C39.1508 18.1791 39.6471 17.6848 39.6471 17.0726V10.3807C39.6471 10.1497 39.575 9.92511 39.4408 9.73713L38.532 8.46436C38.3239 8.17295 37.9887 8 37.6307 8H30.6242C30.0119 8 29.5161 8.4963 29.5161 9.10852V17.0706C29.5161 17.6828 30.0124 18.1791 30.6246 18.1791Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M37.7222 10.8787C37.9172 11.0737 37.9172 11.3898 37.7222 11.5848L34.0055 15.3016C33.8105 15.4966 33.4943 15.4966 33.2993 15.3016L31.4409 13.4432C31.2459 13.2482 31.2459 12.9321 31.4409 12.7371C31.6359 12.5421 31.9521 12.5421 32.1471 12.7371L33.6524 14.2424L37.0161 10.8787C37.2111 10.6837 37.5272 10.6837 37.7222 10.8787Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.34155 10.4522C8.34155 9.97593 8.72763 9.58984 9.20389 9.58984H23.283C23.7593 9.58984 24.1454 9.97593 24.1454 10.4522C24.1454 10.9284 23.7593 11.3145 23.283 11.3145H9.20389C8.72763 11.3145 8.34155 10.9284 8.34155 10.4522Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.34155 17.5996C8.34155 17.1234 8.72763 16.7373 9.20389 16.7373H23.283C23.7593 16.7373 24.1454 17.1234 24.1454 17.5996C24.1454 18.0759 23.7593 18.462 23.283 18.462H9.20389C8.72763 18.462 8.34155 18.0759 8.34155 17.5996Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.34155 24.7461C8.34155 24.2699 8.72763 23.8838 9.20389 23.8838H28.6537C29.13 23.8838 29.5161 24.2699 29.5161 24.7461C29.5161 25.2224 29.13 25.6085 28.6537 25.6085H9.20389C8.72763 25.6085 8.34155 25.2224 8.34155 24.7461Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.34155 31.8936C8.34155 31.4173 8.72763 31.0312 9.20389 31.0312H28.6537C29.13 31.0312 29.5161 31.4173 29.5161 31.8936C29.5161 32.3698 29.13 32.7559 28.6537 32.7559H9.20389C8.72763 32.7559 8.34155 32.3698 8.34155 31.8936Z"
-                    fill="#46B2C8"
-                  ></path>
-                </svg>
-              </span>
-              <h4 class="mt-6">Verify CAC registration</h4>
-              <p class="mt-4 mb-2">
-                Conduct business (CAC) search report on Nigerian companies
-              </p>
-            </div>
-          </section>
-          <section class="youverify-plus-item">
-            <div
-              class="p-12 sm:text-left text-center h-full bg-white rounded-xl"
-            >
-              <span class="inline-block sm:mx-0 mx-auto"
-                ><svg
-                  width="46"
-                  height="40"
-                  viewBox="0 0 46 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="5.68286"
-                    y="16.9062"
-                    width="33.9641"
-                    height="22.7413"
-                    rx="3.07347"
-                    fill="#115766"
-                  ></rect>
-                  <path
-                    d="M22.6554 0L45.3109 19.8235H0L22.6554 0Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    d="M17.9332 29.5033H27.3973C28.246 29.5033 28.934 28.8156 28.934 27.9669V19.9049C28.934 19.5847 28.834 19.2736 28.6479 19.013L27.6033 17.55C27.3148 17.146 26.8493 16.9062 26.3529 16.9062H17.9305C17.0818 16.9062 16.3965 17.5943 16.3965 18.443V27.9665C16.3965 28.8152 17.0845 29.5033 17.9332 29.5033Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M26.5515 20.4681C26.7928 20.7094 26.7928 21.1007 26.5515 21.342L21.9519 25.9416C21.7105 26.1829 21.3193 26.1829 21.078 25.9416L18.7782 23.6418C18.5368 23.4005 18.5368 23.0092 18.7782 22.7679C19.0195 22.5266 19.4107 22.5266 19.652 22.7679L21.5149 24.6308L25.6776 20.4681C25.9189 20.2268 26.3102 20.2268 26.5515 20.4681Z"
-                    fill="#46B2C8"
-                  ></path>
-                </svg>
-              </span>
-              <h4 class="mt-6">Verify address claims</h4>
-              <p class="mt-4 mb-2">
-                Verify that the Nigerian company is available at the address
-                they claim with address verification
-              </p>
-            </div>
-          </section>
-          <section class="youverify-plus-item">
-            <div
-              class="p-12 sm:text-left text-center h-full bg-white rounded-xl"
-            >
-              <span class="inline-block sm:mx-0 mx-auto"
-                ><svg
-                  width="51"
-                  height="40"
-                  viewBox="0 0 51 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.6228 39.6472H46.7365C48.8582 39.6472 50.5781 37.9332 50.5781 35.8115V9.20372C50.5781 8.35221 50.2952 7.52647 49.7738 6.85323L45.6201 1.48947C44.8925 0.549934 43.7756 0 42.5873 0H11.6179C9.49623 0 7.78125 1.71994 7.78125 3.84159V35.8056C7.78125 37.9272 9.50119 39.6472 11.6228 39.6472Z"
-                    fill="#115766"
-                  ></path>
-                  <path
-                    d="M21.423 31.5512H1.9208C0.859978 31.5512 5.72205e-06 30.692 5.72205e-06 29.6312V13.3795C5.72205e-06 12.9793 0.125025 12.5902 0.357595 12.2645L2.75902 8.90131C3.11955 8.39637 3.69948 8.09668 4.31992 8.09668H21.4273C22.4882 8.09668 23.3438 8.95665 23.3438 10.0175V29.6304C23.3438 30.6912 22.4838 31.5512 21.423 31.5512Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17.9777 15.3054C18.3693 15.6969 18.3693 16.3317 17.9777 16.7233L10.5148 24.1862C10.1233 24.5778 9.48845 24.5778 9.09691 24.1862L5.36543 20.4547C4.97389 20.0632 4.97389 19.4284 5.36543 19.0369C5.75697 18.6453 6.39178 18.6453 6.78332 19.0369L9.80585 22.0594L16.5599 15.3054C16.9514 14.9138 17.5862 14.9138 17.9777 15.3054Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M32.3315 14.7144C31.6249 14.7144 31.0904 15.2656 31.0904 15.8991C31.0904 16.5326 31.6249 17.0838 32.3315 17.0838C33.0381 17.0838 33.5726 16.5326 33.5726 15.8991C33.5726 15.2656 33.0381 14.7144 32.3315 14.7144ZM29.5107 15.8991C29.5107 14.3516 30.7948 13.1348 32.3315 13.1348C33.8682 13.1348 35.1523 14.3516 35.1523 15.8991C35.1523 17.4466 33.8682 18.6635 32.3315 18.6635C30.7948 18.6635 29.5107 17.4466 29.5107 15.8991Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M40.4553 22.6119C39.7487 22.6119 39.2141 23.1631 39.2141 23.7966C39.2141 24.4301 39.7487 24.9813 40.4553 24.9813C41.1619 24.9813 41.6964 24.4301 41.6964 23.7966C41.6964 23.1631 41.1619 22.6119 40.4553 22.6119ZM37.6345 23.7966C37.6345 22.249 38.9185 21.0322 40.4553 21.0322C41.9921 21.0322 43.276 22.249 43.276 23.7966C43.276 25.3441 41.9921 26.5609 40.4553 26.5609C38.9185 26.5609 37.6345 25.3441 37.6345 23.7966Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M42.3756 14.0322C42.6796 14.345 42.6726 14.845 42.3599 15.1491L31.5281 25.6799C31.2154 25.984 30.7153 25.9769 30.4113 25.6642C30.1072 25.3514 30.1142 24.8514 30.427 24.5473L41.2587 14.0165C41.5715 13.7124 42.0715 13.7195 42.3756 14.0322Z"
-                    fill="#C2E2E9"
-                  ></path>
-                </svg>
-              </span>
-              <h4 class="mt-6">Verify Tax Identification Numbers</h4>
-              <p class="mt-4 mb-2">
-                Verify Nigerian companies with their Tax Identification Number
-                (TIN)
-              </p>
-            </div>
-          </section>
-          <section class="youverify-plus-item">
-            <div
-              class="p-12 sm:text-left text-center h-full bg-white rounded-xl"
-            >
-              <span class="inline-block sm:mx-0 mx-auto"
-                ><svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19.8236 19.8232C9.66798 19.8232 1.29603 27.4599 0.136989 37.304C-0.0145753 38.5913 1.05076 39.6468 2.34693 39.6468H37.3002C38.5964 39.6468 39.6617 38.5913 39.5102 37.304C38.3511 27.4599 29.9792 19.8232 19.8236 19.8232Z"
-                    fill="#115766"
-                  ></path>
-                  <path
-                    d="M12.5011 16.9916H27.1458C27.7939 16.9916 28.3193 16.4663 28.3193 15.8182V4.71479C28.3193 4.40426 28.1962 4.10639 27.977 3.88644L24.4477 0.34511C24.2275 0.12418 23.9284 0 23.6165 0H12.5011C11.853 0 11.3276 0.525378 11.3276 1.17346V15.8182C11.3276 16.4663 11.853 16.9916 12.5011 16.9916Z"
-                    fill="#46B2C8"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M24.7692 26.2528C25.0762 26.5598 25.0762 27.0577 24.7692 27.3647L18.9164 33.2175C18.6093 33.5246 18.1115 33.5246 17.8044 33.2175L14.878 30.2911C14.5709 29.9841 14.5709 29.4862 14.878 29.1792C15.1851 28.8721 15.6829 28.8721 15.99 29.1792L18.3604 31.5496L23.6572 26.2528C23.9643 25.9457 24.4621 25.9457 24.7692 26.2528Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M17.0155 4.94655C16.5271 4.94655 16.1575 5.32765 16.1575 5.7656C16.1575 6.20355 16.5271 6.58465 17.0155 6.58465C17.504 6.58465 17.8736 6.20355 17.8736 5.7656C17.8736 5.32765 17.504 4.94655 17.0155 4.94655ZM15.0654 5.7656C15.0654 4.69573 15.9531 3.85449 17.0155 3.85449C18.078 3.85449 18.9657 4.69573 18.9657 5.7656C18.9657 6.83547 18.078 7.67671 17.0155 7.67671C15.9531 7.67671 15.0654 6.83547 15.0654 5.7656Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M22.632 10.4065C22.1435 10.4065 21.7739 10.7876 21.7739 11.2256C21.7739 11.6635 22.1435 12.0446 22.632 12.0446C23.1205 12.0446 23.49 11.6635 23.49 11.2256C23.49 10.7876 23.1205 10.4065 22.632 10.4065ZM20.6819 11.2256C20.6819 10.1557 21.5696 9.31445 22.632 9.31445C23.6944 9.31445 24.5821 10.1557 24.5821 11.2256C24.5821 12.2955 23.6944 13.1367 22.632 13.1367C21.5696 13.1367 20.6819 12.2955 20.6819 11.2256Z"
-                    fill="#C2E2E9"
-                  ></path>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M23.9594 4.47498C24.1696 4.6912 24.1648 5.03689 23.9485 5.2471L16.4601 12.5275C16.2439 12.7377 15.8982 12.7329 15.688 12.5166C15.4778 12.3004 15.4826 11.9547 15.6989 11.7445L23.1873 4.4641C23.4035 4.25389 23.7492 4.25875 23.9594 4.47498Z"
-                    fill="#C2E2E9"
-                  ></path>
-                </svg>
-              </span>
-              <h4 class="mt-6">Validate business owner identities</h4>
-              <p class="mt-4 mb-2">
-                Validate the identities of the business owners
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section> -->
-
+    
     <get-started></get-started>
 
     <section class="my-20 max-w-screen-lg mx-auto text-center">
@@ -1175,7 +773,7 @@
               width="156"
               height="33"
               src="~/assets/images/logos/features/techpoint.png"
-              alt="BIOMETRIC Update"
+              alt="techpoint-image"
             />
           </div>
         </a>
@@ -1189,7 +787,7 @@
               width="156"
               height="33"
               src="~/assets/images/logos/features/techcabal.png"
-              alt="BIOMETRIC Update"
+              alt="techcabal-image"
             />
           </div>
         </a>
@@ -1203,7 +801,7 @@
               width="156"
               height="33"
               src="~/assets/images/logos/features/crunchbase.png"
-              alt="BIOMETRIC Update"
+              alt="crunchbase-image"
             />
           </div>
         </a>
@@ -1217,7 +815,7 @@
               width="156"
               height="33"
               src="~/assets/images/logos/features/venture-burn.png"
-              alt="BIOMETRIC Update"
+              alt="venture-burn-image"
             />
           </div>
         </a>
@@ -1235,7 +833,7 @@
                   <LazyImage
                     src="~/assets/images/logos/NdprLogos/code-of-practice.png"
                     class="object-cover"
-                    alt=""
+                    alt="code-of-practice"
                   />
                 </div>
 
@@ -1243,7 +841,7 @@
                   <LazyImage
                     src="~/assets/images/logos/NdprLogos/management-system.png"
                     class="object-cover"
-                    alt=""
+                    alt="management-system-image"
                   />
                 </div>
               </div>
@@ -1252,7 +850,7 @@
                 <LazyImage
                   src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.png"
                   class="object-cover h-full"
-                  alt=""
+                  alt="ndpr-audit-logo"
                 />
               </div>
             </div>
@@ -1290,42 +888,45 @@
         </div>
       </div>
     </section>
-    <!-- <section class="my-10 md:px-80">
-      <div class="flex justify-around items-center flex-col md:flex-row">
-        <div class="flex justify-center mt-8 md:mt-0">
-          <LazyImage src="~/assets/images/logos/NdprLogos/code-of-practice.png" class="object-cover h-full w-36" alt="" />
-        </div>
-        <div class="flex justify-center mt-8 md:mt-0">
-          <LazyImage src="~/assets/images/logos/NdprLogos/ndpr-audit-logo.jpg" class="object-cover h-28 w-full" alt="" />
-        </div>
-        <div class="flex justify-center mt-8 md:mt-0">
-          <LazyImage src="~/assets/images/logos/NdprLogos/management-system.png" class="object-cover h-full w-36" alt="" />
-        </div>
-      </div>
-    </section> -->
+   
 
     <section
       class="text-center bg-blue-200 py-20 text-blue-100 relative overflow-hidden"
     >
       <section class="sm:w-auto w-full px-10 mx-auto text-center">
+		 
         <h2 class="text-blue-100 my-10">Interested but with more questions?</h2>
         <span class="cursor-pointer inline-block" role="button" tabindex="0">
-          <button class="bg-blue text-white rounded py-2 sm:mb-0 mb-4 px-8">
-            <NuxtLink to="/contact-us">Request more info</NuxtLink>
-          </button>
-          <!-- <AppButton
+          
+          <AppButton
             buttonText="Request more info"
             buttoncolor="bluebutton"
             to="/contact-us"
-          /> -->
+          />
         </span>
       </section>
     </section>
+    </div>
+
+    <ReportsPopup v-if="reports.length > 0">
+      <Carousel v-slot="{ slide }" :slidesCount="reports.length">
+        <ReportSlide
+          v-for="(report, index) in reports.slice(0, 2)"
+          v-show="slide === index"
+          :key="report.id"
+          :report="report"
+        />
+      </Carousel>
+    </ReportsPopup>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import getStarted from "~/components/common/getStarted.vue";
+import Carousel from "~/components/global/Carousel";
+import ReportsPopup from "~/components/reports/Popup.vue";
+import ReportSlide from "~/components/reports/Slide.vue";
 
 export default {
   data() {
@@ -1333,7 +934,28 @@ export default {
       showService: true,
     };
   },
+  head() {
+    return {
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
+  computed: {
+    ...mapGetters({
+      reports: "reports/reports",
+    }),
+  },
+  async created() {
+    await this.getReports()
+  },
   methods: {
+    ...mapActions({
+      getReports: "reports/fetchReports",
+    }),
     toggleService(params) {
       if (params === "with") {
         this.showService = true;
@@ -1344,6 +966,9 @@ export default {
   },
   components: {
     getStarted,
+    Carousel,
+    ReportsPopup,
+    ReportSlide
   },
 };
 </script>
@@ -1436,33 +1061,5 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-/* .slide-in-image {
-  transition: transform 0.3s ease-in-out;
-}
 
-.v-enter-from {
-}
-.v-enter-active {
-  animation: slide-scale 0.3s ease-out;
-}
-.v-enter-to {
-}
-.v-leave-from {
-}
-.v-leave-active {
-  animation: slide-scale 0.3s ease-out;
-}
-.v-leave-to {
-}
-@keyframes slide-scale {
-  0% {
-    transform: translateX(0) scale(1);
-  }
-  70% {
-    transform: translateX(-120px) scale(1.1);
-  }
-  100% {
-    transform: translateX(-150px) scale(1);
-  } */
-/* } */
 </style>

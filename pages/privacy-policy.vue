@@ -31,6 +31,7 @@
             policy ? this.$root.$options.filters.formatDate(policy.updatedAt) : ""
           }}</span
         >
+		
         <h1>{{ policy ? policy.title : "" }}</h1>
       </header>
       
@@ -51,6 +52,17 @@ export default {
   },
   mounted() {
     this.getPrivacyPolicy();
+  },
+  head() {
+    return {
+      title: "Privacy Policy",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
   },
   computed: {
     ...mapState({

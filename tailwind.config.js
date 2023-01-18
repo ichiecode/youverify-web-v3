@@ -13,8 +13,10 @@ module.exports = {
         blue: {
           DEFAULT: "#46B2C8",
           100: "#EFF8F9",
+          150: '#C2E2E9',
           200: "#0B4B58",
           300: "#115766",
+          900: '#023A59'
         },
         orange: {
           default: "#FF993C",
@@ -24,6 +26,8 @@ module.exports = {
         },
         grey: {
           DEFAULT: "#6E7E82",
+          100: "F6F5FA",
+          200: "D4D4D4"
         },
       },
 
@@ -95,7 +99,7 @@ module.exports = {
       blue: {
         DEFAULT: "#46B2C8",
         100: "#EFF8F9",
-        200: "#0B4B58",
+        200: "#bla58",
         300: "#115766",
       },
       orange: {
@@ -144,6 +148,9 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      100: '25rem',
+      120: '30rem',
+      128: '32rem',
     },
     animation: {
       none: 'none',
@@ -847,6 +854,7 @@ module.exports = {
       full: '100%',
       screen: '100vw',
       min: 'min-content',
+      fit: 'fit-content',
       max: 'max-content',
     }),
     zIndex: {

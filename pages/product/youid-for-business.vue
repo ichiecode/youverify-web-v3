@@ -1,29 +1,29 @@
 <template>
   <div>
     <header
-      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-40 md:pb-20"
+      class="bg-blue-300 relative flex items-center justify-start pt-20 pb-32 md:pt-48 md:pb-20"
     >
       <section class="w-full max-w-screen-xl mx-auto sm:px-8 px-6">
         <div
           class="flex-col-reverse md:flex-row flex justify-center items-center"
         >
           <div class="md:w-3/6">
-            <h2 class="text-white max-w-screen-lg mt-8">
+            <h1 class="text-white max-w-screen-lg mt-8">
               Do business with pre-verified customers
-            </h2>
+            </h1>
             <p class="mt-3 md:w-4/5 text-white">
               YOUID for Business is a dedicated marketplace where you can share
               your products or services online with targeted customers.
             </p>
             <div class="mt-3 sm:mt-8 lg:mt-10 flex flex-wrap">
-				<AppButton
+              <AppButton
                 buttonText="See how it works"
                 buttoncolor="bigbluebutton"
-                 href="#how-it-works"
+                href="#how-it-works"
               >
                 <svg
                   slot="append"
-                  viewBox="0 0 20 20" 
+                  viewBox="0 0 20 20"
                   fill="none"
                   class="w-5 ml-1.25 transition-transform duration-75 transform group-hover:translate-x-0.5"
                 >
@@ -69,7 +69,7 @@
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-				</AppButton>
+              </AppButton>
               <!-- <a
                 class="items-center justify-center font-medium disabled:curs inline-flex bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0"
                 href="#how-it-works"
@@ -434,25 +434,31 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
+                  >
+                    <AppButton
+                      buttonText="Get a Free demo"
+                      buttoncolor="textbluebutton"
+                      href="/contact-us"
                     >
-					<AppButton buttonText="Get a Free demo"  buttoncolor="textbluebutton" href="/contact-us">
-					  <svg slot="prepend"
-                      width="8"
-                      height="14"
-                      viewBox="0 0 8 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="transform inline-block mr-4 false"
-                    >
-                      <path
-                        d="M1 0.999999L7 7L1 13"
-                        stroke="#46B2C8"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path></svg>
-				 </AppButton>
-					<!-- <a href="/contact-us"
+                      <svg
+                        slot="prepend"
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transform inline-block mr-4 false"
+                      >
+                        <path
+                          d="M1 0.999999L7 7L1 13"
+                          stroke="#46B2C8"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </AppButton>
+                    <!-- <a href="/contact-us"
                       ><button
                         class="bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0"
                       >
@@ -474,8 +480,7 @@
                         >Get a Free Demo
                       </button></a
                     > -->
-					</span
-                  >
+                  </span>
                 </p>
               </div>
             </div>
@@ -563,24 +568,29 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><AppButton buttonText="Get a Free demo"  buttoncolor="textbluebutton" href="/contact-us">
-					  <svg slot="prepend"
-                      width="8"
-                      height="14"
-                      viewBox="0 0 8 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="transform inline-block mr-4 false"
+                    ><AppButton
+                      buttonText="Get a Free demo"
+                      buttoncolor="textbluebutton"
+                      href="/contact-us"
                     >
-                      <path
-                        d="M1 0.999999L7 7L1 13"
-                        stroke="#46B2C8"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path></svg>
-				 </AppButton></span
-                  >
+                      <svg
+                        slot="prepend"
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transform inline-block mr-4 false"
+                      >
+                        <path
+                          d="M1 0.999999L7 7L1 13"
+                          stroke="#46B2C8"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg> </AppButton
+                  ></span>
                 </p>
               </div>
             </div>
@@ -669,24 +679,29 @@
                     class="cursor-pointer inline-block"
                     role="button"
                     tabindex="0"
-                    ><AppButton buttonText="Get a Free demo"  buttoncolor="textbluebutton" href="/contact-us">
-					  <svg slot="prepend"
-                      width="8"
-                      height="14"
-                      viewBox="0 0 8 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="transform inline-block mr-4 false"
+                    ><AppButton
+                      buttonText="Get a Free demo"
+                      buttoncolor="textbluebutton"
+                      href="/contact-us"
                     >
-                      <path
-                        d="M1 0.999999L7 7L1 13"
-                        stroke="#46B2C8"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path></svg>
-				 </AppButton></span
-                  >
+                      <svg
+                        slot="prepend"
+                        width="8"
+                        height="14"
+                        viewBox="0 0 8 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="transform inline-block mr-4 false"
+                      >
+                        <path
+                          d="M1 0.999999L7 7L1 13"
+                          stroke="#46B2C8"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg> </AppButton
+                  ></span>
                 </p>
               </div>
             </div>
@@ -696,9 +711,12 @@
           <h4>Option 4</h4>
           <p class="my-4">More than 2000 Transactions</p>
           <span class="cursor-pointer inline-block" role="button" tabindex="0"
-            ><AppButton  buttonText="Contact sales" buttoncolor="bluebutton" to="/contact-us" />
-			</span
-          >
+            ><AppButton
+              buttonText="Contact sales"
+              buttoncolor="bluebutton"
+              to="/contact-us"
+            />
+          </span>
         </div>
       </section>
     </section>
@@ -730,21 +748,29 @@
 import getStarted from "~/components/common/getStarted.vue";
 import AppButton from "../../components/global/AppButton.vue";
 export default {
-  head: {
-    title: "YOUID for Business",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "YOUID for business is the number one digital identity verification software for Know Your Customer (KYC), Anti Money Laundering (AML), and Counter-Terrorism Funding (CTF) requirements.",
-      },
-    ],
+  head() {
+    return {
+      title: "YOUID for Business",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "YOUID for business is the number one digital identity verification software for Know Your Customer (KYC), Anti Money Laundering (AML), and Counter-Terrorism Funding (CTF) requirements.",
+        },
+      ],
+    };
   },
   components: {
     getStarted,
-    AppButton
-},
+    AppButton,
+  },
 };
 </script>
 
