@@ -22,7 +22,7 @@
         'bg-blue text-white rounded py-3 sm:mb-0 mb-4 px-8': bluebutton,
       },
       {
-        'bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0':
+        'bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0 inline-flex items-center':
           textbluebutton,
       },
       {
