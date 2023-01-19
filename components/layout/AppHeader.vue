@@ -206,7 +206,7 @@
               @click="toggleNavList(nav.name)"
               class="flex justify-between items-center"
             >
-              <a href="#" class="font-semibold text-xl text-blue-400">
+              <a href="#" class="font-semibold text-xl text-blue-900">
                 {{ nav.name }}
               </a>
               <svg
