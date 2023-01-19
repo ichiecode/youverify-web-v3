@@ -8,7 +8,7 @@
     <div class="flex-grow">
       <Nuxt />
     </div>
-    <footer class="bg-blue-100 pt-20">
+    <footer class="bg-blue-900 pt-20">
       <Footer />
     </footer>
   </div>
