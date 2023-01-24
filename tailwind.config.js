@@ -16,7 +16,7 @@ module.exports = {
           150: '#C2E2E9',
           200: "#0B4B58",
           300: "#115766",
-          900: '#023A59'
+          900: '#023A59',
         },
         orange: {
           default: "#FF993C",
@@ -927,7 +927,7 @@ module.exports = {
     container: ['responsive'],
     contrast: ['responsive'],
     cursor: ['responsive'],
-    display: ['responsive'],
+    display: ['responsive', 'group-hover'],
     divideColor: ['responsive', 'dark'],
     divideOpacity: ['responsive', 'dark'],
     divideStyle: ['responsive'],
