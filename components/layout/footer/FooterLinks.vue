@@ -140,7 +140,11 @@
                 <li>Compliance Guides & Reports</li>
                 <li>FAQs</li>
                 <li>Case Studies</li>
-                <li>Developer Portal</li>
+                <li>
+                  <nuxt-link to="/resources/developer"
+                    >Developer Portal</nuxt-link
+                  >
+                </li>
               </ul>
             </div>
           </div>

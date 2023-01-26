@@ -406,7 +406,7 @@ export default {
             { name: "Compliance Guides & Reports", link: "#" },
             { name: "FAQs", link: "#" },
             { name: "Case Studies", link: "#" },
-            { name: "Developer portal", link: "#" },
+            { name: "Developer portal", link: "/resources/developer" },
           ],
         },
         {
