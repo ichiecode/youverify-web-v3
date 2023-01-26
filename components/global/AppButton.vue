@@ -11,11 +11,11 @@
       },
 
       {
-        'inline-flex items-center justify-center font-medium disabled:curs  bg-gray-100 text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
+        'inline-flex items-center justify-center font-medium disabled:curs bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
           whitebutton,
       },
       {
-        'inline-flex items-center justify-center font-medium disabled:curs  bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
+        'inline-flex items-center justify-center font-medium disabled:curs bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
           bigbluebutton,
       },
       {

@@ -16,7 +16,7 @@
         <div class="mt-6"></div>
       </section>
     </header>
-    <section class="max-w-screen-xl mx-auto text-center px-10">
+    <section class="max-w-screen-xl mx-auto text-center px-6 md:px-10">
       <h3>Responsive APIs for Your Consumption</h3>
       <p class="py-4">
         Access a rich library of tools like no other, and build innovative
@@ -24,11 +24,17 @@
       </p>
 
       <div class="my-20 space-y-10">
-        <div class="py-12 px-10 bg-grey-300 rounded-lg flex items-start w-full space-x-20">
-          <img src="@/assets/images/icons/developer/cog.svg" class="object-cover w-24 h-24" alt="" />
+        <div
+          class="py-6 md:py-12 px-5 md:px-10 bg-grey-300 rounded-lg md:flex items-start w-full md:space-x-20"
+        >
+          <img
+            src="@/assets/images/icons/developer/cog.svg"
+            class="object-cover w-16 md:w-24 h-16 md:h-24 mb-6 md:mb-0"
+            alt="api doc youverify icon"
+          />
           <div class="flex flex-col items-start text-left">
             <h3 class="mb-8">API Doc</h3>
-            <p class="leading-relaxed w-4/5">
+            <p class="leading-relaxed md:w-4/5">
               Seamlessly integrate your business platform with our products to
               improve customer onboarding without compromising compliance.
             </p>
@@ -62,12 +68,19 @@
             </app-button>
           </div>
         </div>
-        <div class="py-12 px-10 bg-grey-300 rounded-lg flex items-start w-full space-x-20">
-          <img src="@/assets/images/icons/developer/sdk.svg" class="object-cover w-24 h-24" alt="" />
+        <div
+          class="py-6 md:py-12 px-5 md:px-10 bg-grey-300 rounded-lg md:flex items-start w-full md:space-x-20"
+        >
+          <img
+            src="@/assets/images/icons/developer/sdk.svg"
+            class="object-cover w-16 md:w-24 h-16 md:h-24 mb-6 md:mb-0"
+            alt="sdk youverify icon"
+          />
           <div class="flex flex-col items-start text-left">
             <h3 class="mb-8">SDK</h3>
             <p class="leading-relaxed w-4/5">
-              Our SDKs are well-polished and highly customizable with adaptive designs that blend easily with your existing business platform.
+              Our SDKs are well-polished and highly customizable with adaptive
+              designs that blend easily with your existing business platform.
             </p>
             <app-button
               class="mt-10 mb-0 border-blue-300 border-2 text-blue-300"
@@ -101,11 +114,18 @@
         </div>
       </div>
     </section>
+    <div class="mt-20">
+      <know-more></know-more>
+    </div>
   </div>
 </template>
 
 <script>
+import KnowMore from "@/components/common/KnowMore";
 export default {
+  components: {
+    KnowMore,
+  },
   head() {
     return {
       title: "Developers Portal",
