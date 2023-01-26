@@ -135,7 +135,11 @@
           <div class="grid grid-cols-1 gap-6">
             <div>
               <ul class="text-white">
-                <li>Blog</li>
+                <li>
+                  <nuxt-link to="/blogs"
+                    >Blog</nuxt-link
+                  >
+                  </li>
                 <li>Industry Report</li>
                 <li>Compliance Guides & Reports</li>
                 <li>FAQs</li>

@@ -401,7 +401,7 @@ export default {
         {
           name: "Resources",
           lists: [
-            { name: "Blogs", link: "#" },
+            { name: "Blogs", link: "/blogs" },
             { name: "Industry Report", link: "#" },
             { name: "Compliance Guides & Reports", link: "#" },
             { name: "FAQs", link: "#" },
