@@ -1,10 +1,9 @@
 <template>
-  <section class="flex flex-col md:flex-row gap-8">
+  <section class="flex flex-col md:flex-row gap-16 lg:gap-32 py-20">
     <div class="md:w-1/2 text-center md:text-left">
-      <h1 class="text-2xl md:text-4xl">Still have questions?</h1>
+      <h1 class="text-2xl md:text-4xl">{{ title }}</h1>
       <p class="mt-3 md:mt-6 md:text-lg">
-        Can't find the answer you're looking for? Please send a message to our
-        friendly team
+        {{ note }}
       </p>
     </div>
 
@@ -59,6 +58,14 @@
 <script>
 import Select from "../form/Select.vue";
 export default {
+  props: {
+    title: {
+      required: true,
+    },
+    note: {
+      required: true,
+    },
+  },
   data() {
     return {
       countries: ["Kenya", "Nigeria", "South Africa", "Ghana"],

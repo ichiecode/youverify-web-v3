@@ -87,10 +87,14 @@
       </section>
     </main>
     <hr class="w-full" />
-    <div class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
-      <ContactUs />
+    <div class="py-20 px-4 md:px-8 max-w-screen-xl mx-auto">
+      <ContactUs
+        title="Still have questions?"
+        note="Can't find the answer you're looking for? Please send a message to our
+        friendly team"
+      />
     </div>
-    <KnowMore/>
+    <KnowMore />
   </div>
 </template>
 
