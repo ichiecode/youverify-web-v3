@@ -115,9 +115,14 @@
           </ul>
           <div>
             <AppButton
-              buttonText="Sign in"
-              buttoncolor="bluebutton"
+              buttonText="Login"
+              class="font-semibold py-4 px-5"
               href="https://os.youverify.co/auth/login"
+            />
+            <AppButton
+              buttonText="Sign up"
+              buttoncolor="bluebutton"
+              href="https://os.youverify.co/auth/create-account"
             />
           </div>
         </div>
@@ -274,6 +279,7 @@
                       <AppButton
                         buttonText="See pricing"
                         buttoncolor="textbluebutton"
+                        class="font-semibold"
                         href=""
                         ><svg
                           slot="append"
@@ -403,9 +409,12 @@ export default {
           lists: [
             { name: "Blogs", link: "#" },
             { name: "Industry Report", link: "#" },
-            { name: "Compliance Guides & Reports", link: "#" },
-            { name: "FAQs", link: "#" },
-            { name: "Case Studies", link: "#" },
+            {
+              name: "Compliance Guides & Reports",
+              link: "/resources/compliance-guides-and-reports",
+            },
+            { name: "FAQs", link: "/resources/faqs" },
+            { name: "Case Studies", link: "/resources/case-studies" },
             { name: "Developer portal", link: "#" },
           ],
         },
