@@ -407,7 +407,7 @@ export default {
         {
           name: "Resources",
           lists: [
-            { name: "Blogs", link: "#" },
+            { name: "Blogs", link: "/blogs" },
             { name: "Industry Report", link: "#" },
             {
               name: "Compliance Guides & Reports",
@@ -415,7 +415,7 @@ export default {
             },
             { name: "FAQs", link: "/resources/faqs" },
             { name: "Case Studies", link: "/resources/case-studies" },
-            { name: "Developer portal", link: "#" },
+            { name: "Developer portal", link: "/resources/developer" },
           ],
         },
         {

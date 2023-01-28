@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center py-20">
+  <section class="flex flex-col items-center py-20">
     <h1 class="font-semibold text-blue-300 text-xl md:text-4xl">
       Want to know more about us?
     </h1>
@@ -15,5 +15,5 @@
         >Contact Us</nuxt-link
       >
     </div>
-  </div>
+  </section>
 </template>
