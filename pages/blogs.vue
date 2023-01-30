@@ -7,9 +7,8 @@
           class="text-center w-full mb-12 sm:mb-16 lg:mb-20"
         >
           <header>
-            
-            <div><h1 class="text-blue-900 ">Welcome to our blog</h1></div>
-            <p class="text-blue text-5xl mt-10 font-bold ">Highlights</p>
+            <div><h1 class="text-blue-900">Welcome to our blog</h1></div>
+            <p class="text-blue text-5xl mt-10 font-bold">Highlights</p>
           </header>
         </div>
         <div
@@ -31,44 +30,83 @@
           </h2>
         </div>
         <section v-else>
-
-          <article style="height: 487px;" class="mb-40 flex group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer" v-for="blog in blogs.slice(0,1)" :key="blog.id">
-              <header class="relative w-1/2">
-                <div class="w-full h-full">
-                  <img
-                    :alt="blog.image.caption"
-                    class="h-full w-full object-cover"
-                    :src="blog.image.url"
-                  />
-                </div>
-              </header>
-              <div class="w-1/2 px-10 py-10 flex flex-col items-start">
-                <div
-                  class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2"
-                >
-                  {{
-                    blog.blog_categories
-                      ? blog.blog_categories[0].categoriesName
-                      : "Youverify"
-                  }}
-                </div>
-                <div class="my-10 flex items-center space-x-5">
-                  <span class="text-blue-300"> {{ blog.author }}</span>
-                  <span class="bg-blue w-3 h-3 rounded-full"></span>
-                  <span class="text-blue">{{ blog.date | formatDate }}</span>
-                </div>
-                <NuxtLink :to="`/blog/${blog.slug}`"
-                  ><h4
-                    class="text-grey text-5xl hover:text-blue-300"
-                  >
-                    {{ blog.title }}
-                  </h4>
-                </NuxtLink>
+          <article
+            style="height: 487px"
+            class="mb-40 flex group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer"
+            v-for="blog in blogs.slice(0, 1)"
+            :key="blog.id"
+          >
+            <header class="relative w-1/2">
+              <div class="w-full h-full">
+                <img
+                  :alt="blog.image.caption"
+                  class="h-full w-full object-cover"
+                  :src="blog.image.url"
+                />
               </div>
-            </article>
+            </header>
+            <div class="w-1/2 px-10 py-10 flex flex-col items-start">
+              <div
+                class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2"
+              >
+                {{
+                  blog.blog_categories
+                    ? blog.blog_categories[0].categoriesName
+                    : "Youverify"
+                }}
+              </div>
+              <div class="my-10 flex items-center space-x-5">
+                <span class="text-blue-300"> {{ blog.author }}</span>
+                <span class="bg-blue w-3 h-3 rounded-full"></span>
+                <span class="text-blue">{{ blog.date | formatDate }}</span>
+              </div>
+              <NuxtLink :to="`/blog/${blog.slug}`"
+                ><h4 class="text-grey text-5xl hover:text-blue-300">
+                  {{ blog.title }}
+                </h4>
+              </NuxtLink>
+            </div>
+          </article>
+
+          <div class="mb-40 flex items-center space-x-6">
+            <div
+              class="border h-16 border-grey px-3 py-2 rounded-lg w-full flex gap-2.5 items-center"
+            >
+              <svg
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.658 2.359C4.731 2.359 2.359 4.729 2.359 7.651C2.359 10.574 4.731 12.944 7.658 12.944C9.118 12.944 10.44 12.355 11.399 11.4C12.362 10.441 12.957 9.116 12.957 7.651C12.957 4.729 10.585 2.359 7.658 2.359ZM1.333 7.651C1.333 4.161 4.166 1.333 7.658 1.333C11.151 1.333 13.983 4.161 13.983 7.651C13.983 9.215 13.414 10.646 12.472 11.749L14.516 13.791C14.717 13.991 14.717 14.316 14.517 14.516C14.317 14.717 13.992 14.717 13.791 14.517L11.745 12.473C10.643 13.406 9.216 13.969 7.658 13.969C4.166 13.969 1.333 11.141 1.333 7.651Z"
+                  fill="#6E7E82"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search the blog"
+                class="w-full focus:outline-none text-sm"
+              />
+            </div>
+            <app-button
+              class="w-40 h-16"
+              buttonText="Search"
+              buttoncolor="bigbluebutton"
+              href="/vforms-demo"
+            >
+            </app-button>
+          </div>
 
           <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
-            <article class="group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer" v-for="blog in blogs" :key="blog.id">
+            <article
+              class="group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer"
+              v-for="blog in blogs"
+              :key="blog.id"
+            >
               <header class="relative">
                 <div class="rounded w-full sm:h-72 h-60">
                   <img
@@ -128,14 +166,21 @@
         </section>
       </section>
     </div>
+    <div class="mt-20">
+      <know-more></know-more>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import KnowMore from "@/components/common/KnowMore";
 
 export default {
   name: "blogPost",
+  components: {
+    KnowMore
+  },
   head() {
     return {
       title: "Blog Post",
