@@ -135,11 +135,13 @@
             <div>
               <ul class="text-white">
                 <li>
-                  <nuxt-link to="/blogs"
-                    >Blog</nuxt-link
-                  >
-                  </li>
-                <li>Industry Report</li>
+                  <nuxt-link to="/blogs">Blog</nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link to="/industry/reports">
+                    Industry Report
+                  </nuxt-link>
+                </li>
                 <li>Compliance Guides & Reports</li>
                 <li>FAQs</li>
                 <li>Case Studies</li>
