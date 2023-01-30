@@ -85,7 +85,7 @@
                 <ul class="mt-4 text-white">
                   <li>Workflow Builder (vForms)</li>
 
-                  <li class="text-blue">See pricing</li>
+                  <!-- <li class="text-blue">See pricing</li> -->
                 </ul>
               </div>
             </div>
@@ -120,7 +120,6 @@
                 <li>Trading</li>
                 <li>Marketplaces</li>
                 <li>Gaming and Casino</li>
-                <li>SME</li>
                 <li>NBFI</li>
               </ul>
             </div>

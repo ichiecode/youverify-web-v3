@@ -1,18 +1,15 @@
 <template>
   <div>
-    <div class="flex items-center justify-start pt-56">
-      <section class="max-w-screen-xl mx-auto sm:px-8 px-6">
+    <div class="flex items-center justify-start pt-80">
+      <section class="max-w-screen-2xl mx-auto sm:px-8 px-6">
         <div
           data-v-131cfc00=""
           class="text-center w-full mb-12 sm:mb-16 lg:mb-20"
         >
           <header>
-            <span
-              class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
-              >Latest Article</span
-            >
-            <div><h1>Blog Post</h1></div>
-            <p><i>by</i> Youverify</p>
+            
+            <div><h1 class="text-blue-900 ">Welcome to our blog</h1></div>
+            <p class="text-blue text-5xl mt-10 font-bold ">Highlights</p>
           </header>
         </div>
         <div
@@ -34,33 +31,83 @@
           </h2>
         </div>
         <section v-else>
+
+          <article style="height: 487px;" class="mb-40 flex group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer" v-for="blog in blogs.slice(0,1)" :key="blog.id">
+              <header class="relative w-1/2">
+                <div class="w-full h-full">
+                  <img
+                    :alt="blog.image.caption"
+                    class="h-full w-full object-cover"
+                    :src="blog.image.url"
+                  />
+                </div>
+              </header>
+              <div class="w-1/2 px-10 py-10 flex flex-col items-start">
+                <div
+                  class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2"
+                >
+                  {{
+                    blog.blog_categories
+                      ? blog.blog_categories[0].categoriesName
+                      : "Youverify"
+                  }}
+                </div>
+                <div class="my-10 flex items-center space-x-5">
+                  <span class="text-blue-300"> {{ blog.author }}</span>
+                  <span class="bg-blue w-3 h-3 rounded-full"></span>
+                  <span class="text-blue">{{ blog.date | formatDate }}</span>
+                </div>
+                <NuxtLink :to="`/blog/${blog.slug}`"
+                  ><h4
+                    class="text-grey text-5xl hover:text-blue-300"
+                  >
+                    {{ blog.title }}
+                  </h4>
+                </NuxtLink>
+              </div>
+            </article>
+
           <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
-            <article v-for="blog in blogs" :key="blog.id">
-              <header class="relative mb-6 border">
+            <article class="group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer" v-for="blog in blogs" :key="blog.id">
+              <header class="relative">
                 <div class="rounded w-full sm:h-72 h-60">
                   <img
                     width="880"
                     :alt="blog.image.caption"
-                    class="h-full object-cover rounded"
+                    class="h-full object-cover rounded-t-2xl"
                     :src="blog.image.url"
                   />
                 </div>
-                <span class="absolute top-3 left-3 text-sm"
-                  ><span
-                    class="text-blue px-4 leading-widest py-2 uppercase sm:text-sm text-xs rounded mb-3 font-semibold leading-none inline-block bg-blue-100"
-                    >{{ blog.blog_categories[0].categoriesName }}</span
-                  ></span
-                >
               </header>
-              <div>
+              <div class="px-4 py-6">
+                <div
+                  class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2"
+                >
+                  {{
+                    blog.blog_categories
+                      ? blog.blog_categories[0].categoriesName
+                      : "Youverify"
+                  }}
+                </div>
+                <div class="my-4 flex items-center space-x-5">
+                  <span class="text-blue-300"> {{ blog.author }}</span>
+                  <span class="bg-blue w-3 h-3 rounded-full"></span>
+                  <span class="text-blue">{{ blog.date | formatDate }}</span>
+                </div>
                 <NuxtLink :to="`/blog/${blog.slug}`"
-                  ><h3 class="hover:text-blue-300">
+                  ><h4
+                    style="font-size: 32px; line-height: 44px"
+                    class="text-grey hover:text-blue-300"
+                  >
                     {{ blog.title }}
-                  </h3>
+                  </h4>
                 </NuxtLink>
-                <p class="mt-1">
-                  {{ blog.author }} | {{ blog.date | formatDate }}
-                </p>
+
+                <div
+                  class="font-semibold outline-0 transition-colors duration-200 group-hover:text-blue-300 text-grey mt-3"
+                >
+                  Read more &nbsp; &RightArrow;
+                </div>
                 <!-- <p>by {{ blog.author }}</p> -->
               </div>
             </article>
