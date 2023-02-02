@@ -117,7 +117,7 @@
           <div>
             <AppButton
               buttonText="Login"
-              class="font-semibold py-4 px-7"
+              class="font-semibold py-4 px-7 text-blue"
               href="https://os.youverify.co/auth/login"
             />
             <AppButton
