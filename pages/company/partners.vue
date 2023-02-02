@@ -145,10 +145,6 @@ export default {
           figure: "94%",
           name: "Average growth after partnership",
         },
-        {
-          figure: "94%",
-          name: "Average growth after partnership",
-        },
       ],
       partners: [
         {
