@@ -4,12 +4,12 @@
   >
     <div
       style="background-color: #c2e2e9"
-      class="py-2 px-5 font-semibold mb-8 text-blue rounded"
+      class="py-2 px-4 text-sm font-semibold mb-8 text-blue rounded"
     >
       {{ tag }}
     </div>
     <h1
-      class="md:text-5xl text-2xl mb-4 md:mb-6 font-bold text-center text-blue-300"
+      class="md:text-4xl text-2xl mb-4 md:mb-6 font-bold text-center text-blue-300"
     >
       {{ title }}
     </h1>

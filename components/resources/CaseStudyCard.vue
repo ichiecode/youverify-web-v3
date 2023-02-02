@@ -6,7 +6,7 @@
     <LazyImage src="" alt="" class="object-cover align-middle h-52 w-full" />
     <div class="flex flex-col items-start px-4 py-6">
       <div
-        class="py-2 px-5 bg-blue bg-opacity-30 font-semibold text-blue rounded uppercase"
+        class="py-2 px-4 bg-blue bg-opacity-30 text-sm font-semibold text-blue rounded uppercase"
       >
         {{ "Fintech" || customer.category }}
       </div>
