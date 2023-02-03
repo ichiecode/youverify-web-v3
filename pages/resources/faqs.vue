@@ -28,7 +28,7 @@
 
         <div class="md:w-2/3">
           <div
-            @click="currentIndex = index"
+            @click="toggleFaq(index)"
             v-for="(faq, index) in categorisedFaq.faqs"
             :key="index"
             class="py-4 md:py-6"
@@ -293,6 +293,11 @@ export default {
     changeCategory(category) {
       this.category = category;
       this.currentIndex = 0;
+    },
+    toggleFaq(index) {
+      this.currentIndex === index
+        ? (this.currentIndex = null)
+        : (this.currentIndex = index);
     },
   },
 };

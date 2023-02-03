@@ -19,7 +19,7 @@
           bigbluebutton,
       },
       {
-        'bg-blue text-white rounded py-3 sm:mb-0 mb-4 px-8': bluebutton,
+        'bg-blue text-white rounded py-3 sm:mb-0 mb-4 px-8 inline-flex justify-center items-center': bluebutton,
       },
       {
         'bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0 inline-flex items-center':
