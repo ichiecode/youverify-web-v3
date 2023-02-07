@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-10 pb-12"
+    class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-10 pb-12 pt-8"
   >
     <div class="md:w-3/5 lg:w-1/2 flex flex-col items-center md:items-start">
       <div
@@ -15,7 +15,7 @@
         {{ title }}
       </h1>
 
-      <p class="font-medium text-xl text-center md:text-left my-8">
+      <p class="font-medium text-center md:text-left my-8">
         {{ intro }}
       </p>
 
@@ -23,7 +23,7 @@
     </div>
     <div class="h-72 md:h-auto md:w-2/5 lg:w-1/2">
       <LazyImage
-        class="h-full"
+        class="h-full md:ml-auto"
         :src="require(`~/assets/images/illustrations/${illustration}`)"
       />
     </div>

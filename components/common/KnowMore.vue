@@ -10,7 +10,7 @@
         >Get Started</a
       >
       <nuxt-link
-        to="/contact-us"
+        to="/company/contact-us"
         class="border-2 border-blue-300 rounded-xl  px-8 py-3 text-blue-300 font-semibold"
         >Contact Us</nuxt-link
       >
