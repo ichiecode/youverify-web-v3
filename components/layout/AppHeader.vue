@@ -11,7 +11,7 @@
                 class="w-32"
             /></a>
           </div>
-          <ul class="flex gap-16">
+          <ul class="flex gap-12">
             <li
               @mouseenter="validateSubmenu(ind)"
               v-for="(nav, ind) in navs"
@@ -19,7 +19,7 @@
               class="group relative"
             >
               <span
-                class="font-semibold text-lg cursor-pointer hover:text-blue duration-200 py-4"
+                class="font-semibold text-base cursor-pointer hover:text-blue duration-200 py-4"
               >
                 {{ nav.name }}
               </span>
@@ -44,8 +44,8 @@
                     />
                   </svg>
                 </div>
-                <div class="bg-white pt-9 pb-8 pl-10" style="min-width: 340px">
-                  <ul class="space-y-4 mb-20">
+                <div class="bg-white pt-9 pb-8 pl-10" style="min-width: 335px">
+                  <ul class="space-y-1 mb-16">
                     <li
                       @mouseover="showSubMenu(ind, index)"
                       v-for="(list, index) in nav.lists"
@@ -69,9 +69,9 @@
                 <div
                   v-if="subMenu"
                   class="bg-blue-100 pt-9 px-10 w-auto"
-                  style="min-width: 385px"
+                  style="min-width: 335px"
                 >
-                  <ul class="space-y-2">
+                  <ul>
                     <li
                       v-for="(list, i) in nav.lists[subIndex].subLists"
                       :key="i"
@@ -86,6 +86,7 @@
                     <AppButton
                       buttonText="See pricing"
                       buttoncolor="textbluebutton"
+                      class="font-semibold"
                       href=""
                       ><svg
                         slot="append"
@@ -116,7 +117,7 @@
           <div>
             <AppButton
               buttonText="Login"
-              class="font-semibold py-4 px-5"
+              class="font-semibold py-4 px-7 text-blue"
               href="https://os.youverify.co/auth/login"
             />
             <AppButton
@@ -398,7 +399,7 @@ export default {
                 { name: "Trading", link: "#" },
                 { name: "Marketplaces", link: "#" },
                 { name: "Gaming and Casino", link: "#" },
-                { name: "SME", link: "#" },
+                // { name: "SME", link: "#" },
                 { name: "NBFI", link: "#" },
               ],
             },
@@ -422,12 +423,18 @@ export default {
           name: "Company",
           lists: [
             { name: "About us", link: "#" },
-            { name: "Compliance Certifications", link: "#" },
+            {
+              name: "Compliance Certifications",
+              link: "/company/certifications",
+            },
             { name: "Press & Media", link: "#" },
-            { name: "Partners", link: "#" },
+            { name: "Partners", link: "/company/partners" },
             { name: "Careers", link: "#" },
-            { name: "Contact Us", link: "#" },
-            { name: "Startup Accelerator", link: "#" },
+            { name: "Contact Us", link: "/company/contact-us" },
+            {
+              name: "Startup Accelerator",
+              link: "https://startup.youverify.co/",
+            },
           ],
         },
       ],
