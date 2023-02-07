@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-10 pb-12 pt-8"
+    class="flex flex-col-reverse md:flex-row justify-between gap-12 md:gap-10 pb-12 pt-12"
   >
     <div class="md:w-3/5 lg:w-1/2 flex flex-col items-center md:items-start">
       <div
