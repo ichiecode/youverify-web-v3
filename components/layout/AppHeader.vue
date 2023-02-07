@@ -334,13 +334,28 @@ export default {
               name: "Know Your Customer (KYC)",
               button: true,
               subLists: [
-                { name: "ID Document verification", link: "#" },
-                { name: "Real-Time ID Verification", link: "#" },
+                {
+                  name: "ID Document verification",
+                  link: "/product/kyc/id-document-verification",
+                },
+                {
+                  name: "ID Data Verification",
+                  link: "/product/kyc/id-data-verification",
+                },
                 { name: "Real-Time Address Verification", link: "#" },
                 { name: "Biometrics verification", link: "#" },
-                { name: "Liveness Detection", link: "#" },
-                { name: "Bank Account Verification", link: "#" },
-                { name: "Phone Intelligence & Verification", link: "#" },
+                {
+                  name: "Liveness Detection",
+                  link: "/product/kyc/liveness-detection",
+                },
+                {
+                  name: "Bank Account Verification",
+                  link: "/product/kyc/bank-account-verification",
+                },
+                {
+                  name: "Phone Intelligence & Verification",
+                  link: "/product/kyc/phone-intelligence-and-verification",
+                },
                 { name: "PEP & Sanction Screening", link: "#" },
                 { name: "Consumer Credit Report", link: "#" },
               ],
@@ -429,7 +444,7 @@ export default {
             },
             { name: "Press & Media", link: "#" },
             { name: "Partners", link: "/company/partners" },
-            { name: "Careers", link: "#" },
+            { name: "Careers", link: "/company/careers" },
             { name: "Contact Us", link: "/company/contact-us" },
             {
               name: "Startup Accelerator",
