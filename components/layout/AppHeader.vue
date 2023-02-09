@@ -111,6 +111,23 @@
                     ></AppButton>
                   </div>
                 </div>
+                <div
+                  v-if="nav.lists[subIndex].subLists2"
+                  class="bg-blue-100 pt-9 px-5 w-auto"
+                  style="min-width: 335px"
+                >
+                  <ul>
+                    <li
+                      v-for="(list, i) in nav.lists[subIndex].subLists2"
+                      :key="i"
+                      class="hover:opacity-100 opacity-50"
+                    >
+                      <a :href="list.link" class="cursor-pointer font-semibold">
+                        {{ list.name }}</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>
@@ -274,6 +291,17 @@
                           >{{ list.name }}</a
                         >
                       </li>
+                       <li
+                        v-for="(list, i) in nav.lists[subIndex].subLists2"
+                        :key="i"
+                        class="py-1.5"
+                      >
+                        <a
+                          :href="list.link"
+                          class="font-medium text-blue-300 opacity-50"
+                          >{{ list.name }}</a
+                        >
+                      </li>
                     </ul>
 
                     <div v-if="nav.lists[subIndex].button">
@@ -342,8 +370,18 @@ export default {
                   name: "ID Data Verification",
                   link: "/product/kyc/id-data-verification",
                 },
-                { name: "Real-Time Address Verification", link: "#" },
-                { name: "Biometrics verification", link: "#" },
+                {
+                  name: "Adverse Media",
+                  link: "#",
+                },
+                {
+                  name: "Real-Time Address Verification",
+                  link: "/product/kyc/real-time-address-verification",
+                },
+                {
+                  name: "Biometrics verification",
+                  link: "/product/kyc/biometrics-verification",
+                },
                 {
                   name: "Liveness Detection",
                   link: "/product/kyc/liveness-detection",
@@ -352,12 +390,28 @@ export default {
                   name: "Bank Account Verification",
                   link: "/product/kyc/bank-account-verification",
                 },
+              ],
+              subLists2: [
                 {
                   name: "Phone Intelligence & Verification",
                   link: "/product/kyc/phone-intelligence-and-verification",
                 },
-                { name: "PEP & Sanction Screening", link: "#" },
-                { name: "Consumer Credit Report", link: "#" },
+                {
+                  name: "Criminal Check",
+                  link: "/product/kyc/criminal-check",
+                },
+                {
+                  name: "Fraud Check",
+                  link: "/product/kyc/fraud-check",
+                },
+                {
+                  name: "PEP & Sanction Screening",
+                  link: "/product/kyc/pep-and-sanction-screening",
+                },
+                {
+                  name: "Consumer Credit Report",
+                  link: "/product/kyc/consumer-credit-check",
+                },
               ],
             },
             {

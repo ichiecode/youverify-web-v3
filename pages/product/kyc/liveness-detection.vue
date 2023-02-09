@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20">
     <HeroSection
-      class="mt-28 px-4 md:px-8 max-w-screen-xl mx-auto"
+      class="mt-28"
       tag="KYC | Real-Time ID Verification"
       title="Intelligent Liveness Detection to Spot Spoofing Attacks"
       intro="Protect your business from biometric attacks and deep fakes. Scan and validate customer faces using intelligent AI algorithms to prevent spoofing attacks."
@@ -69,6 +69,7 @@
       heading="Enjoy an Extra Layer of Protection For Your Business with Real-Time Liveness Detection Today"
       note="Send us a message right away and our experts will reach out to help you get started on the best solution for your business. This is how we build reliable compliance solutions. Book a demo below"
     />
+    <Faqs :faqs="faqs" />
     <KnowMore />
   </div>
 </template>
@@ -81,6 +82,7 @@ import Features from "~/components/products/Features.vue";
 import Offers from "~/components/products/Offers.vue";
 import Integrate from "~/components/products/Integrate.vue";
 import ContactUs from "~/components/products/ContactUs.vue";
+import Faqs from "~/components/products/faqs.vue";
 import KnowMore from "~/components/common/KnowMore.vue";
 export default {
   components: {
@@ -91,6 +93,7 @@ export default {
     Offers,
     Integrate,
     ContactUs,
+    Faqs,
     KnowMore,
   },
   data() {
@@ -143,6 +146,23 @@ export default {
           illustration: "motion-detection",
           title: "2D/3D Motion Detection",
           note: "Seamlessly detect 2D photos and 3D facial movements through our superior liveness detection technology that leverages optical flow algorithms. This prevents criminal spoofing action of preventing two slightly different photos.",
+        },
+      ],
+      faqs: [
+        {
+          question: "What is Liveness Detection?",
+          answer:
+            "Liveness detection technology is used to differentiate life persons from spoofing attacks like masks, videos, photos and other deep fakes. It is generally used for facial recognition fraud detection. ",
+        },
+        {
+          question: "Why Liveness Detection?",
+          answer:
+            "Liveness detection is important because it acts as authentication to a platform or user account. For example, a criminal may use the customer's video, photo or mask to fool facial recognition algorithm to get unauthorized access to the account or data. Liveness detection identifies and flags such fakes. ",
+        },
+        {
+          question: "How Does Liveness Detection Work?",
+          answer:
+            "Liveness detection analyses user images and videos to verify their legitimacy - whether they come from a fake or live person.",
         },
       ],
     };

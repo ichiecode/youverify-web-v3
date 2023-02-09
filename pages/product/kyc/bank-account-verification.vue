@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20">
     <HeroSection
-      class="mt-28 px-4 md:px-8 max-w-screen-xl mx-auto"
+      class="mt-28"
       tag="Bank Account Verification"
       title="Instantly Authenticate and Verify Customer Bank Accounts"
       intro="Verify and authenticate customer bank accounts for effective risk control and secure digital banking. Our easy-to-use account verification service verifies accounts in real time securing your business without compromising on user experience."
@@ -46,6 +46,7 @@
       heading="Enjoy an Extra Layer of Protection For Your Business with Real-Time Liveness Detection Today"
       note="Send us a message right away and our experts will reach out to help you get started on the best solution for your business. This is how we build reliable compliance solutions. Book a demo below"
     />
+    <Faqs :faqs="faqs" />
     <KnowMore />
   </div>
 </template>
@@ -58,6 +59,7 @@ import Features from "~/components/products/Features.vue";
 import Offers from "~/components/products/Offers.vue";
 import Integrate from "~/components/products/Integrate.vue";
 import ContactUs from "~/components/products/ContactUs.vue";
+import Faqs from "~/components/products/faqs.vue";
 import KnowMore from "~/components/common/KnowMore.vue";
 export default {
   components: {
@@ -68,6 +70,7 @@ export default {
     Offers,
     Integrate,
     ContactUs,
+    Faqs,
     KnowMore,
   },
   data() {
@@ -115,6 +118,23 @@ export default {
           illustration: "case-management",
           title: "User-Friendly Case Management Platform",
           note: "Manage bank account verification cases from our user intuitive interface. Get real-time information on unique triggers that may require further investigation.",
+        },
+      ],
+      faqs: [
+        {
+          question: "What is Bank Account Verification?",
+          answer:
+            "This is the process of authenticating and verifying the legitimacy of a customer's bank account. Bank account verification helps businesses identify potential criminals and spot customer mistakes before transfers.",
+        },
+        {
+          question: "Why is Bank Account Verification Important?",
+          answer:
+            "With a Bank Account Verification service, organisations can be sure that they are conducting business with legitimate account holders and protecting themselves from potential fraud.",
+        },
+        {
+          question: "How does Bank Account Verification Work?",
+          answer:
+            "Bank account verification leverages the power of advanced algorithms and data sources to verify bank account details, including the account holder's name, account number, and routing number.",
         },
       ],
     };

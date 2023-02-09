@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20">
     <HeroSection
-      class="mt-28 px-4 md:px-8 max-w-screen-xl mx-auto"
+      class="mt-28"
       tag="KYC | ID Data Verification"
       title="Real-Time ID Verification for On-The-Go Customer Onboarding"
       intro="The most reliable and efficient way for businesses to verify the identity of their customers in real-time. Quickly verify and onboard new customers with fast and accurate results while maintaining a high level of security and compliance by directly verifying government-issued ID documents such as passports, driver's licenses, and national ID cards."
@@ -69,6 +69,7 @@
       heading="Start Onboarding Legitimate Customers with The Youverify KYC ID Document Verification Solution Today"
       note="Leave us a message! Our team will reach out with the best KYC ID document verification solution that fits your specific needs in no time. Book a demo below."
     />
+    <Faqs :faqs="faqs" />
     <KnowMore />
   </div>
 </template>
@@ -81,6 +82,7 @@ import Offers from "~/components/products/Offers.vue";
 import SupportedIds from "~/components/products/SupportedIds.vue";
 import Integrate from "~/components/products/Integrate.vue";
 import ContactUs from "~/components/products/ContactUs.vue";
+import Faqs from "~/components/products/faqs.vue";
 import KnowMore from "~/components/common/KnowMore.vue";
 export default {
   components: {
@@ -91,6 +93,7 @@ export default {
     SupportedIds,
     Integrate,
     ContactUs,
+    Faqs,
     KnowMore,
   },
   data() {
@@ -129,6 +132,33 @@ export default {
           illustration: "advanced-customisation",
           title: "Customisable",
           note: "Our service is highly customizable, allowing businesses globally to set their accepted IDs, criteria and rules. Tailor the service to your specific needs and requirements, ensuring that you are able to comply with all relevant regulations and laws.",
+        },
+      ],
+      faqs: [
+        {
+          question: "What is Identity Verification?",
+          answer:
+            "Identity verification is simply the process of verifying the identity of an individual through legally approved means which is mostly by providing IDs and running verification checks against government databases. There are a series of documents that can be used for this purpose including government-issued IDs, driver's licenses, passports and birth certificates.",
+        },
+        {
+          question: "What is ID Verification?",
+          answer:
+            "ID verification refers to the process of verifying the specific identity document provided by a customer. ",
+        },
+        {
+          question: "What is Real-Time ID Verification?",
+          answer:
+            "In real-time ID verification, the customer provides the serial number of an acceptable ID document. This number is run immediately against our government-backed database to verify the legitimacy of the ID document in seconds.",
+        },
+        {
+          question: "Why do I need to Verify a Customer ID?",
+          answer:
+            "ID verification is important because they help companies perform adequate KYC through document inspection for due diligence, risk assessment, and compliance.",
+        },
+        {
+          question: "What is ID verification Software? ",
+          answer:
+            "An ID verification software is used to help businesses digitally automate identity verification processes. Advanced ID verification software combines AI technology with machine learning to perform more complex verifications like biometric verification and liveness detection.",
         },
       ],
     };

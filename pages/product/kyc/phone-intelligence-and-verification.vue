@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20">
     <HeroSection
-      class="mt-28 px-4 md:px-8 max-w-screen-xl mx-auto"
+      class="mt-28"
       tag="KYC | Phone Intelligence & Verification"
       title="Assess Digital Interaction Risks Through Phone & Intelligence Verification"
       intro="Learn about your potential customers through phone intelligence and verification via their phone numbers. Our phone Intelligence solution provides detailed phone data for risk assessment, identifying fake account signups and data segmentation and analysis."
@@ -49,6 +49,7 @@
       heading="Start Assessing the Risk of Digital Interactions Through Phone Number Intelligence & Verification"
       note="Send us a message right away and our experts will reach out to help you get started on the best solution for your business. This is how we build reliable compliance solutions. Book a demo below."
     />
+    <Faqs :faqs="faqs" />
     <KnowMore />
   </div>
 </template>
@@ -61,6 +62,7 @@ import Features from "~/components/products/Features.vue";
 import Offers from "~/components/products/Offers.vue";
 import Integrate from "~/components/products/Integrate.vue";
 import ContactUs from "~/components/products/ContactUs.vue";
+import Faqs from "~/components/products/faqs.vue";
 import KnowMore from "~/components/common/KnowMore.vue";
 export default {
   components: {
@@ -71,6 +73,7 @@ export default {
     Offers,
     Integrate,
     ContactUs,
+    Faqs,
     KnowMore,
   },
   data() {
@@ -123,6 +126,18 @@ export default {
           illustration: "high-conversion",
           title: "Higher Conversion Rates",
           note: "Achieve a higher customer conversion rate using phone data. Improve the onboarding conversion rate of legitimate customers on your platform.",
+        },
+      ],
+      faqs: [
+        {
+          question: "What is Phone Intelligence and Verification?",
+          answer:
+            "Phone intelligence verification is the process of verifying and validating customer phone data for adequate risk assessment.",
+        },
+        {
+          question: "Why are Phone Intelligence and Verification Important?",
+          answer:
+            "Phone intelligence and verification help identify fake phone numbers and potential criminals/ criminal activities on your platform.",
         },
       ],
     };
