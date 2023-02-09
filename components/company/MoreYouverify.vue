@@ -1,5 +1,5 @@
 <template>
-  <section class="py-40 md:flex justify-between items-center gap-6">
+  <section class="py-40 px-4 md:px-8 max-w-screen-xl mx-auto md:flex justify-between items-center gap-6">
     <div>
       <h1>More</h1>
       <h1>Youverify</h1>

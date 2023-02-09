@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20">
     <HeroSection
-      class="mt-28 px-4 md:px-8 max-w-screen-xl mx-auto"
+      class="mt-28"
       tag="Partners"
       title="Partner With the Most Innovative Global Compliance Platform"
       intro="Let's grow together. See how our global compliance products can help your business."
@@ -119,7 +119,7 @@
         </form>
       </div>
     </section>
-    <MoreYouverify class="px-4 md:px-8 max-w-screen-xl mx-auto" />
+    <MoreYouverify />
   </div>
 </template>
 

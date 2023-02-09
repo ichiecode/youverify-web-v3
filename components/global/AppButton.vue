@@ -26,7 +26,7 @@
           textbluebutton,
       },
       {
-        ' sm:text-base lg:text-base font-bold inline-flex items-center hover:text-black':
+        ' sm:text-base lg:text-base inline-flex items-center hover:text-black':
           textgraybutton,
       },
 
