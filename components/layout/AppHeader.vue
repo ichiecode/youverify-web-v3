@@ -25,7 +25,7 @@
               </span>
 
               <div
-                class="rounded-2xl absolute -left-9 top-11 overflow-hidden hidden group-hover:flex"
+                class="rounded-2xl absolute -left-40 top-11 overflow-hidden hidden group-hover:flex"
                 style="box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1)"
               >
                 <div class="absolute -top-3 left-32">
@@ -54,7 +54,7 @@
                     >
                       <a
                         :href="list.subLists ? '#' : list.link"
-                        class="font-semibold cursor-pointer"
+                        class="font-semibold cursor-pointer capitalize"
                       >
                         {{ list.name }}</a
                       >
@@ -77,7 +77,7 @@
                       :key="i"
                       class="hover:opacity-100 opacity-50"
                     >
-                      <a :href="list.link" class="cursor-pointer font-semibold">
+                      <a :href="list.link" class="cursor-pointer font-semibold capitalize">
                         {{ list.name }}</a
                       >
                     </li>
@@ -112,7 +112,7 @@
                   </div>
                 </div>
                 <div
-                  v-if="nav.lists[subIndex].subLists2"
+                  v-if="subMenu && nav.lists[subIndex].subLists2"
                   class="bg-blue-100 pt-9 px-5 w-auto"
                   style="min-width: 335px"
                 >
@@ -122,7 +122,7 @@
                       :key="i"
                       class="hover:opacity-100 opacity-50"
                     >
-                      <a :href="list.link" class="cursor-pointer font-semibold">
+                      <a :href="list.link" class="cursor-pointer font-semibold capitalize">
                         {{ list.name }}</a
                       >
                     </li>
@@ -410,7 +410,7 @@ export default {
                 },
                 {
                   name: "Consumer Credit Report",
-                  link: "/product/kyc/consumer-credit-check",
+                  link: "/product/kyc/customer-credit-check",
                 },
               ],
             },
