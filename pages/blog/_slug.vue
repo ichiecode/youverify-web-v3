@@ -31,7 +31,7 @@
               </h1></a
             >
             <p class="mt-8 text-white md:text-xl">
-              <i>by</i> {{ formattedPost.author }}
+             <i>by</i> {{ formattedPost.author }}
             </p>
           </header>
         </div>
@@ -54,17 +54,36 @@
           <div
             class="sm:w-36 w-full flex-grow-0 flex-shrink-0 sticky sm:top-40 block h-16 sm:mt-0"
           >
-            <div
-              class="mt-4 flex flex-col space-y-10 justify-between"
-            >
-              <a target="_blank" :href="`http://twitter.com/share?text=${formattedPost.title}`">
-                <img class="w-14 h-14" src="@/assets/images/icons/social/twitter-color.svg" alt="">
+            <div class="mt-4 flex flex-col space-y-10 justify-between">
+              <a
+                target="_blank"
+                :href="`http://twitter.com/share?text=${formattedPost.title}`"
+              >
+                <img
+                  class="w-14 h-14"
+                  src="@/assets/images/icons/social/twitter-color.svg"
+                  alt=""
+                />
               </a>
-              <a target="_blank" :href="`https://facebook.com/sharer/sharer.php?u=${formattedPost.title}`">
-                <img class="w-14 h-14" src="@/assets/images/icons/social/facebook-color.svg" alt="">
+              <a
+                target="_blank"
+                :href="`https://facebook.com/sharer/sharer.php?u=${formattedPost.title}`"
+              >
+                <img
+                  class="w-14 h-14"
+                  src="@/assets/images/icons/social/facebook-color.svg"
+                  alt=""
+                />
               </a>
-              <a target="_blank" :href="`https://www.linkedin.com/shareArticle?title=${formattedPost.title}`">
-                <img class="w-14 h-14" src="@/assets/images/icons/social/linkedin-color.svg" alt="">
+              <a
+                target="_blank"
+                :href="`https://www.linkedin.com/shareArticle?title=${formattedPost.title}`"
+              >
+                <img
+                  class="w-14 h-14"
+                  src="@/assets/images/icons/social/linkedin-color.svg"
+                  alt=""
+                />
               </a>
             </div>
           </div>
@@ -93,31 +112,51 @@
                 <article
                   v-for="blog in formattedRelatedBlogs.slice(0, 3)"
                   :key="blog.id"
+                  class="group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer"
                 >
-                  <header class="relative mb-6 border">
+                  <header class="relative">
                     <div class="rounded w-full sm:h-72 h-60">
                       <img
                         width="880"
-                        class="h-full object-cover rounded"
+                        class="h-full object-cover rounded-t-2xl"
                         :src="blog.image.url"
                         :alt="blog.image.caption"
                       />
                     </div>
-                    <span class="absolute top-3 left-3 text-sm"
-                      ><span
-                        class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
-                      >
-                        {{ blog.createdAt | formatDate }}</span
-                      ></span
-                    >
+                    
                   </header>
-                  <div>
+                  <div class="px-4 py-6">
+                    <div
+                      class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2"
+                    >
+                      {{
+                        blog.blog_categories
+                          ? blog.blog_categories[0].categoriesName
+                          : "Youverify"
+                      }}
+                    </div>
+                    <div class="my-4 flex items-center space-x-5">
+                      <span class="text-blue-300"> {{ blog.author }}</span>
+                      <span class="bg-blue w-3 h-3 rounded-full"></span>
+                      <span class="text-blue">{{
+                        blog.date | formatDate
+                      }}</span>
+                    </div>
                     <NuxtLink :to="`/blog/${blog.slug}`"
-                      ><h3 class="hover:text-blue-300">
+                      ><h4
+                        style="font-size: 32px; line-height: 44px"
+                        class="text-grey hover:text-blue-300"
+                      >
                         {{ blog.title }}
-                      </h3>
+                      </h4>
                     </NuxtLink>
-                    <p class="mt-1">by {{ blog.author }}</p>
+
+                    <div
+                      class="font-semibold outline-0 transition-colors duration-200 group-hover:text-blue-300 text-grey mt-3"
+                    >
+                      Read more &nbsp; &RightArrow;
+                    </div>
+                    <!-- <p>by {{ blog.author }}</p> -->
                   </div>
                 </article>
 

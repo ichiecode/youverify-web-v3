@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="hidden lg:block py-5 bg-white">
-      <section class="max-w-screen-xl mx-auto px-8">
+      <section class="max-w-screen-2xl mx-auto px-8">
         <div class="flex justify-between items-center text-blue-300">
           <div>
             <a aria-current="page" class="" href="/"
@@ -478,7 +478,7 @@ export default {
           name: "Resources",
           lists: [
             { name: "Blogs", link: "/blogs" },
-            { name: "Industry Report", link: "#" },
+            { name: "Industry Report", link: "/industry/reports" },
             {
               name: "Compliance Guides & Reports",
               link: "/resources/compliance-guides-and-reports",

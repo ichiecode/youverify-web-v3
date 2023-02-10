@@ -127,7 +127,7 @@
                 <ul class="mt-4 text-white text-xs space-y-2.5">
                   <li>Workflow Builder (vForms)</li>
 
-                  <li class="text-blue">See pricing</li>
+                  <!-- <li class="text-blue">See pricing</li> -->
                 </ul>
               </div>
             </div>
@@ -162,7 +162,6 @@
                 <li>Trading</li>
                 <li>Marketplaces</li>
                 <li>Gaming and Casino</li>
-                <li>SME</li>
                 <li>NBFI</li>
               </ul>
             </div>
@@ -180,7 +179,11 @@
                 <li>
                   <nuxt-link to="/blogs">Blog</nuxt-link>
                 </li>
-                <li>Industry Report</li>
+                <li>
+                  <nuxt-link to="/industry/reports">
+                    Industry Report
+                  </nuxt-link>
+                </li>
                 <li>Compliance Guides & Reports</li>
                 <li>FAQs</li>
                 <li>Case Studies</li>

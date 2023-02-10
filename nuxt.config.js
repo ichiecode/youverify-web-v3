@@ -38,29 +38,29 @@ export default {
   },
 
   generate: {
-    routes: async () => {
-      let { data: industriesData } = await axios.get(
-        `https://cms.dev.youverify.co/industries`
-      );
-      const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
+    // routes: async () => {
+    //   let { data: industriesData } = await axios.get(
+    //     `https://cms.dev.youverify.co/industries`
+    //   );
+    //   const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
 
-      let { data: blogData } = await axios.get(
-        `https://cms.dev.youverify.co/blogs`
-      );
-      const blogArray = blogData.map((v) => `/blog/${v.slug}`);
+    //   let { data: blogData } = await axios.get(
+    //     `https://cms.dev.youverify.co/blogs`
+    //   );
+    //   const blogArray = blogData.map((v) => `/blog/${v.slug}`);
 
-      let { data: reportData } = await axios.get(
-        `https://cms.dev.youverify.co/reports`
-      );
-      const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
+    //   let { data: reportData } = await axios.get(
+    //     `https://cms.dev.youverify.co/reports`
+    //   );
+    //   const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
 
-      let { data: guidesData } = await axios.get(
-        `https://cms.dev.youverify.co/compliance-guides`
-      );
-      const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
+    //   let { data: guidesData } = await axios.get(
+    //     `https://cms.dev.youverify.co/compliance-guides`
+    //   );
+    //   const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
 
-      return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
-    },
+    //   return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
+    // },
   },
 
   loading: { color: "#0F808C", height: "3px" },
@@ -78,6 +78,7 @@ export default {
     "@/plugins/reuseable-component.js",
   ],
 
+
   buildModules: ["@nuxtjs/tailwindcss"],
   serverMiddleware: ["~/api/index"],
 
@@ -90,29 +91,29 @@ export default {
 
   sitemap: {
     hostname: "https://youverify.co",
-    routes: async () => {
-      let { data: industriesData } = await axios.get(
-        `https://cms.dev.youverify.co/industries`
-      );
-      const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
+    // routes: async () => {
+    //   let { data: industriesData } = await axios.get(
+    //     `https://cms.dev.youverify.co/industries`
+    //   );
+    //   const industriesArray = industriesData.map((v) => `/use-case/${v.slug}`);
 
-      let { data: blogData } = await axios.get(
-        `https://cms.dev.youverify.co/blogs`
-      );
-      const blogArray = blogData.map((v) => `/blog/${v.slug}`);
+    //   let { data: blogData } = await axios.get(
+    //     `https://cms.dev.youverify.co/blogs`
+    //   );
+    //   const blogArray = blogData.map((v) => `/blog/${v.slug}`);
 
-      let { data: reportData } = await axios.get(
-        `https://cms.dev.youverify.co/reports`
-      );
-      const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
+    //   let { data: reportData } = await axios.get(
+    //     `https://cms.dev.youverify.co/reports`
+    //   );
+    //   const reportsArray = reportData.map((v) => `/industry/reports/${v.slug}`);
 
-      let { data: guidesData } = await axios.get(
-        `https://cms.dev.youverify.co/compliance-guides`
-      );
-      const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
+    //   let { data: guidesData } = await axios.get(
+    //     `https://cms.dev.youverify.co/compliance-guides`
+    //   );
+    //   const guidesArray = guidesData.map((v) => `/compliance-guides?slug=${v.slug}`);
 
-      return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
-    },
+    //   return [...industriesArray, ...blogArray, ...reportsArray, ...guidesArray];
+    // },
   },
 
   robots: {

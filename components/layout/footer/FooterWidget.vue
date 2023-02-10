@@ -4,7 +4,7 @@
         <h1 class="text-white text-2xl lg:w-3/6">Subscribe to our newsletter</h1>
         <form class="mt-10 md:mt-5 lg:mt-0 md:flex sm:w-full xl:w-3/6">
           <input
-            class="w-full px-6 py-3 font-bold rounded-lg outline-none border border-white text-white bg-blue-150"
+            class="w-full px-6 py-3 font-bold rounded-lg outline-none border border-white text-blue-900 bg-blue-150"
             placeholder="Enter your email"
           />
           <button
