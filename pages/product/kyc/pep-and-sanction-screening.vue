@@ -11,7 +11,7 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
         <AppButton
           buttoncolor="textgraybutton"
@@ -72,6 +72,25 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "PEP Sanction and Screening | Youverify Screening",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Identify High-Risk Customers With our Robust PEP and Sanction Screening Solution",
+        },
+      ],
+    };
   },
   data() {
     return {

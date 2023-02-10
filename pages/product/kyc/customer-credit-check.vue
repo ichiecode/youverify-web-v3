@@ -11,7 +11,7 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
         <AppButton
           buttoncolor="textgraybutton"
@@ -73,6 +73,25 @@ export default {
     Faqs,
     KnowMore,
   },
+  head() {
+    return {
+      title: "Customer Credit Check | Youverify Check",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Automate Customer Credit Checks for Informed Decision Making",
+        },
+      ],
+    };
+  },
   data() {
     return {
       features: [
@@ -96,7 +115,7 @@ export default {
           note: "Automate your end-to-end customer application process. Establish preset actions that will be executed based on the customer credit check report.",
         },
         {
-          illustration: "fully-automatable",
+          illustration: "detailed-report",
           title: "Elaborate & Detailed Report",
           note: "Receive detailed reports from customer credit checks including credit history, credit rating/ score, outstanding debts and more.",
         },

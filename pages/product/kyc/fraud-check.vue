@@ -11,7 +11,7 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
       </div>
     </HeroSection>
@@ -50,6 +50,24 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "Fraud Check | Youverify Checks",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Identify Fraud Before It Slips Through the Cracks",
+        },
+      ],
+    };
   },
   data() {
     return {

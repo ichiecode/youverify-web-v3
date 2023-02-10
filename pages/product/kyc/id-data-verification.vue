@@ -11,12 +11,13 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
         <AppButton
           buttoncolor="textgraybutton"
           class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
           buttonText="View demo"
+          href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
             <path
@@ -40,11 +41,11 @@
     <TrustedClients class="px-4 md:px-8 max-w-screen-xl mx-auto" />
     <Features :features="features" />
     <section class="pt-24 px-4 md:px-8 max-w-screen-xl mx-auto">
-      <h1
+      <h2
         class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
       >
         How the Youverify Real-Time ID Document Verification Works
-      </h1>
+      </h2>
 
       <div
         class="flex flex-col md:flex-row justify-between items-center gap-10 mt-24"
@@ -66,6 +67,7 @@
     <SupportedIds />
     <Integrate />
     <ContactUs
+      id="#contact"
       heading="Start Onboarding Legitimate Customers with The Youverify KYC ID Document Verification Solution Today"
       note="Leave us a message! Our team will reach out with the best KYC ID document verification solution that fits your specific needs in no time. Book a demo below."
     />
@@ -95,6 +97,24 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "ID Data Verification",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Real-Time ID Verification for On-The-Go Customer Onboarding",
+        },
+      ],
+    };
   },
   data() {
     return {

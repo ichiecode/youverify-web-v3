@@ -12,12 +12,13 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
         <AppButton
           buttoncolor="textgraybutton"
           class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
           buttonText="View demo"
+          href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
             <path
@@ -45,11 +46,11 @@
     />
 
     <section class="py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
-      <h1
+      <h2
         class="text-3xl md:text-5xl font-semibold text-blue-300 text-center max-w-4xl mx-auto"
       >
         Superior Technology for Quality Assurance
-      </h1>
+      </h2>
       <div
         class="flex flex-col-reverse md:flex-row justify-between items-center gap-10 mt-24"
       >
@@ -80,7 +81,7 @@
       </div>
     </section>
     <Integrate />
-    <ContactUs
+    <ContactUs id="contact"
       heading="Verify your Customer Address With Zero Error Margin & 24-hour Turn Around Time"
       note="Send us a message right away! Our experts will reach out to help you start verifying customer data faster than ever. This is how we build reliable compliance solutions. Book a demo below."
     />
@@ -106,6 +107,24 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "Customer Address Verification",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Verify Customer Address Globally",
+        },
+      ],
+    };
   },
   data() {
     return {

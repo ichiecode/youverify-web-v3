@@ -11,12 +11,13 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
         <AppButton
           buttoncolor="textgraybutton"
           class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
           buttonText="Book a free Demo"
+          href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
             <path
@@ -46,6 +47,7 @@
     />
     <Integrate />
     <ContactUs
+      id="contact"
       heading="Start Assessing the Risk of Digital Interactions Through Phone Number Intelligence & Verification"
       note="Send us a message right away and our experts will reach out to help you get started on the best solution for your business. This is how we build reliable compliance solutions. Book a demo below."
     />
@@ -75,6 +77,25 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "Phone Intelligence and Verification | Youverify Checks",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Assess Digital Interaction Risks Through Phone & Intelligence Verification",
+        },
+      ],
+    };
   },
   data() {
     return {

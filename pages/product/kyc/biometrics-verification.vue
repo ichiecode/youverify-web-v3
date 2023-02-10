@@ -11,12 +11,13 @@
         <AppButton
           buttoncolor="bluebutton"
           buttonText="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          href="/product/kyc/pricing"
         />
         <AppButton
           buttoncolor="textgraybutton"
           class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
           buttonText="View demo"
+          href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
             <path
@@ -45,7 +46,7 @@
           class="flex flex-col md:flex-row justify-between items-center gap-12"
         >
           <div class="w-full">
-            <h1 class="font-semibold text-3xl text-white">Facial Matching</h1>
+            <h3 class="font-semibold text-3xl text-white">Facial Matching</h3>
             <p class="mt-3 md:mt-7 text-white">
               Match customers' facial features with the pictures in their
               government-backed ID in seconds through our intelligent AI. Keep
@@ -64,9 +65,9 @@
           class="flex flex-col md:flex-row-reverse justify-between items-center gap-12"
         >
           <div class="w-full">
-            <h1 class="font-semibold text-3xl text-white">
+            <h3 class="font-semibold text-3xl text-white">
               Liveness Detection
-            </h1>
+            </h3>
             <p class="mt-3 md:mt-7 text-white">
               Prevent identity spoofing through AI-powered liveness detention
               that ensures manufactured identities do not slip through the
@@ -84,11 +85,11 @@
     </section>
 
     <section class="py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
-      <h1
+      <h2
         class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
       >
         All-in-One Facial Biometric Authentication Service for your Business
-      </h1>
+      </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mt-32">
         <div
@@ -100,7 +101,7 @@
             :src="require(`~/assets/images/icons/products/${service.icon}.svg`)"
             alt=""
           />
-          <h1 class="mt-8 font-semibold text-3xl">{{ service.name }}</h1>
+          <h3 class="mt-8 font-semibold text-3xl">{{ service.name }}</h3>
           <p class="mt-5">{{ service.note }}</p>
         </div>
       </div>
@@ -117,19 +118,23 @@
         <div
           class="md:w-3/5 lg:w-1/2 flex flex-col items-center md:items-start"
         >
-          <h1
+          <h3
             class="font-semibold text-2xl text-center md:text-left md:text-3xl mt-4"
           >
             Get Started - Adopt Biometric Verification for Extra Layer of
             Business Security Today
-          </h1>
+          </h3>
 
           <p class="font-medium text-center md:text-left my-8">
             Book a demo session and we'll tell you how our Biometric
             verification AI can help to further secure your business today
           </p>
 
-          <AppButton buttoncolor="bluebutton" buttonText="Book a demo" />
+          <AppButton
+            buttoncolor="bluebutton"
+            buttonText="Book a demo"
+            href="#contact"
+          />
         </div>
         <div class="h-72 md:h-auto md:w-2/5 lg:w-1/2">
           <LazyImage
@@ -139,6 +144,11 @@
         </div>
       </div>
     </section>
+    <ContactUs
+      id="contact"
+      heading="Get Started - Adopt Biometric Verification for Extra Layer of Business Security Today"
+      note="Leave us a message! Our experts will reach out with the best biometric verification security layer for your specific business needs. This is how we build reliable compliance solutions. Book a demo below."
+    />
     <Faqs :faqs="faqs" />
     <KnowMore />
   </div>
@@ -150,6 +160,7 @@ import TrustedClients from "~/components/common/TrustedClients.vue";
 import Stats from "~/components/common/Stats.vue";
 import Offers from "~/components/products/Offers.vue";
 import Integrate from "~/components/products/Integrate.vue";
+import ContactUs from "~/components/products/ContactUs.vue";
 import Faqs from "~/components/products/faqs.vue";
 import KnowMore from "~/components/common/KnowMore.vue";
 export default {
@@ -159,8 +170,27 @@ export default {
     Stats,
     Offers,
     Integrate,
+    ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "Biometrics Verification",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Verify Customers with Swift & Reliable Biometrics",
+        },
+      ],
+    };
   },
   data() {
     return {
