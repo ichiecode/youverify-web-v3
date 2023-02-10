@@ -12,14 +12,14 @@
         </div>
         <h1
           :class="white ? 'text-blue-300' : 'text-white'"
-          class="font-bold text-2xl text-center md:text-left md:text-3xl lg:text-5xl mt-4"
+          class="font-semibold text-2xl text-center md:text-left md:text-3xl lg:text-5xl mt-4"
         >
           {{ title }}
         </h1>
 
         <p
           :class="white ? '' : 'text-white'"
-          class="font-medium text-center md:text-left my-6"
+          class="text-center md:text-left my-6"
         >
           {{ intro }}
         </p>
