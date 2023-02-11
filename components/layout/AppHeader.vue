@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="hidden lg:block py-5 bg-white">
-      <section class="max-w-screen-2xl mx-auto px-8">
+      <section class="max-w-screen-xl mx-auto px-4 md:px-8">
         <div class="flex justify-between items-center text-blue-300">
           <div>
             <a aria-current="page" class="" href="/"
@@ -147,7 +147,7 @@
       </section>
     </nav>
     <nav class="lg:hidden bg-white text-blue">
-      <section class="flex justify-between items-center p-6">
+      <section class="flex justify-between items-center px-8 py-6">
         <div>
           <a aria-current="page" class="" href="/"
             ><img
