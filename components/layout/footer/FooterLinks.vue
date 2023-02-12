@@ -205,13 +205,25 @@
           <div class="grid grid-cols-2 md:grid-cols-1 gap-10">
             <div>
               <ul class="text-white text-xs space-y-2.5">
-                <li>About Us</li>
-                <li>Compliance Certifications</li>
-                <li>Press & Media</li>
-                <li>Partners</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-                <li>Startup Accelerator</li>
+                <li><nuxt-link to="/company/about-us"> About Us</nuxt-link></li>
+                <li>
+                  <nuxt-link to="/company/compliance-certifications">
+                    Compliance Certifications</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link to="/company/press-room"> Press & Media</nuxt-link>
+                </li>
+                <li><nuxt-link to="/company/partners"> Partners</nuxt-link></li>
+                <li><nuxt-link to="/company/careers"> Careers</nuxt-link></li>
+                <li>
+                  <nuxt-link to="/company/contact-us"> Contact Us</nuxt-link>
+                </li>
+                <li>
+                  <a href="https://startup.youverify.co/">
+                    Startup Accelerator</a
+                  >
+                </li>
               </ul>
             </div>
             <ul class="text-white text-xs space-y-2.5 md:mt-5">
