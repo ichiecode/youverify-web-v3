@@ -1,6 +1,6 @@
 <template>
   <div class="pt-20">
-    <section class="mt-28 px-8 max-w-3xl mx-auto flex flex-col items-center">
+    <section class="mt-28 pt-16 px-8 max-w-3xl mx-auto flex flex-col items-center">
       <div
         style="background-color: #c2e2e9"
         class="py-2 px-4 text-sm font-semibold mb-10 text-blue rounded"
