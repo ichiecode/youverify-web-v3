@@ -9,14 +9,13 @@
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton
-          buttoncolor="bluebutton"
-          buttonText="Get started"
-          href="/product/kyc/pricing"
+          text="Get started"
+          href="https://os.youverify.co/auth/create-account"
         />
         <AppButton
-          buttoncolor="textgraybutton"
-          class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
-          buttonText="View demo"
+          theme="secondary"
+          :outline="true"
+          text="View demo"
           href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
@@ -67,7 +66,7 @@
     <SupportedIds />
     <Integrate />
     <ContactUs
-      id="#contact"
+      id="contact"
       heading="Start Onboarding Legitimate Customers with The Youverify KYC ID Document Verification Solution Today"
       note="Leave us a message! Our team will reach out with the best KYC ID document verification solution that fits your specific needs in no time. Book a demo below."
     />
@@ -111,7 +110,8 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Real-Time ID Verification for On-The-Go Customer Onboarding",
+          content:
+            "Real-Time ID Verification for On-The-Go Customer Onboarding",
         },
       ],
     };

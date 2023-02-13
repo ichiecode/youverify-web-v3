@@ -10,14 +10,14 @@
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton
-          buttoncolor="bluebutton"
-          buttonText="Get started"
-          href="/product/kyc/pricing"
+          text="Get started"
+          theme="white"
+          href="https://os.youverify.co/auth/create-account"
         />
         <AppButton
-          buttoncolor="textgraybutton"
-          class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
-          buttonText="View demo"
+          theme="white"
+          :outline="true"
+          text="View demo"
           href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
@@ -81,7 +81,8 @@
       </div>
     </section>
     <Integrate />
-    <ContactUs id="contact"
+    <ContactUs
+      id="contact"
       heading="Verify your Customer Address With Zero Error Margin & 24-hour Turn Around Time"
       note="Send us a message right away! Our experts will reach out to help you start verifying customer data faster than ever. This is how we build reliable compliance solutions. Book a demo below."
     />

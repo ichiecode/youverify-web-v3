@@ -9,14 +9,13 @@
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton
-          buttoncolor="bluebutton"
-          buttonText="Get started"
-          href="/product/kyc/pricing"
+          text="Get started"
+          href="https://os.youverify.co/auth/create-account"
         />
         <AppButton
-          buttoncolor="textgraybutton"
-          class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
-          buttonText="Book a free Demo"
+          theme="secondary"
+          :outline="true"
+          text="Book a free Demo"
           href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">

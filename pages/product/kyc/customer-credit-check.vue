@@ -9,14 +9,14 @@
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton
-          buttoncolor="bluebutton"
-          buttonText="Get started"
-          href="/product/kyc/pricing"
+          text="Get started"
+          href="https://os.youverify.co/auth/create-account"
         />
         <AppButton
-          buttoncolor="textgraybutton"
-          class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
-          buttonText="View Demo"
+          theme="secondary"
+          :outline="true"
+          text="View demo"
+          href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
             <path
@@ -45,6 +45,7 @@
     />
     <Integrate />
     <ContactUs
+      id=""
       heading="Start Automating Customer Application Decisions Today"
       note="Send us a message right away and our experts will reach out to help you get started on the best solution for your business. This is how we build reliable compliance solutions. Book a demo below."
     />
@@ -110,7 +111,7 @@ export default {
       ],
       offers: [
         {
-          illustration: "fully-automatable",
+          illustration: "fully-automated",
           title: "Fully Automatable",
           note: "Automate your end-to-end customer application process. Establish preset actions that will be executed based on the customer credit check report.",
         },
