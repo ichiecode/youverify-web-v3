@@ -29,8 +29,7 @@
           />
         </div>
         <AppButton
-          buttonText="Get a free demo"
-          buttoncolor="bluebutton"
+          text="Get a free demo"
           class="w-full mt-14"
         />
         <p class="text-xs text-left mt-3">

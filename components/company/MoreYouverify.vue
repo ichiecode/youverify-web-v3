@@ -1,8 +1,8 @@
 <template>
   <section class="py-40 px-8 max-w-screen-xl mx-auto md:flex justify-between items-center gap-6">
     <div>
-      <h1>More</h1>
-      <h1>Youverify</h1>
+      <h3 class="text-5xl">More About</h3>
+      <h3 class="text-5xl">Youverify</h3>
       <div
         class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-5 mt-6 lg:mt-12"
       >
@@ -40,7 +40,7 @@
               :src="require(`~/assets/images/icons/${nav.icon}.svg`)"
               :alt="nav.name"
             />
-            <h1 class="font-semibold text-2xl">{{ nav.name }}</h1>
+            <h5 class="font-semibold text-2xl">{{ nav.name }}</h5>
           </div>
           <p class="font-medium text-xl mt-3.5 max-w-sm">
             {{ nav.description }}

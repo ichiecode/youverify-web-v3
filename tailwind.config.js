@@ -11,11 +11,11 @@ module.exports = {
       },
       colors: {
         blue: {
-          DEFAULT: "#46B2C8",
+          DEFAULT: "#46B2C8", // primary
           100: "#EFF8F9",
           150: '#C2E2E9',
           200: "#0B4B58",
-          300: "#115766",
+          300: "#115766", // secondary
           900: '#023A59',
         },
         orange: {

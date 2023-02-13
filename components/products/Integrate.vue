@@ -14,9 +14,9 @@
 
       <AppButton
         class="mt-12 md:mt-24"
-        buttoncolor="whitebutton"
-        buttonText="Explore our Developer Kit"
-        href="/resources/developer"
+        theme="white"
+        text="Explore our Developer Kit"
+        to="/resources/developer"
       />
     </div>
   </section>
