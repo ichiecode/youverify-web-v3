@@ -1,8 +1,8 @@
 <template>
   <section class="py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
-    <h1 class="font-semibold text-2xl md:text-5xl text-center">
+    <h2 class="font-semibold text-2xl md:text-5xl text-center">
       Frequently Asked Questions
-    </h1>
+    </h2>
 
     <div class="mt-12 md:mt-28">
       <div
@@ -17,9 +17,9 @@
         "
       >
         <div class="flex justify-between cursor-pointer text-blue">
-          <h1 class="text-lg md:text-3xl font-semibold">
+          <h3 class="text-lg md:text-3xl font-semibold">
             {{ faq.question }}
-          </h1>
+          </h3>
           <div>
             <svg
               v-if="currentIndex === index"

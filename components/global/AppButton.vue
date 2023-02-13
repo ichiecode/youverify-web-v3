@@ -5,64 +5,42 @@
     :href="href"
     v-on="$listeners"
     :class="[
-      {
-        'inline-flex items-center justify-center font-medium disabled:curs  bg-blue-300 text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
-          darkbluebutton,
-      },
-
-      {
-        'inline-flex items-center justify-center font-medium disabled:curs bg-white text-black py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
-          whitebutton,
-      },
-      {
-        'inline-flex items-center justify-center font-medium disabled:curs bg-blue text-white py-3 sm:py-4 px-4 sm:px-5 text-sm sm:text-1sm rounded-md mr-4 my-2 outline-none focus:outline-none hover:outline-none transition-all cursor-pointer box-border group flex-shrink-0':
-          bigbluebutton,
-      },
-      {
-        'bg-blue text-white rounded py-3 sm:mb-0 mb-4 px-8 inline-flex justify-center items-center': bluebutton,
-      },
-      {
-        'bg-transparent text-blue rounded py-2 sm:mb-0 mb-4 px-0 inline-flex items-center':
-          textbluebutton,
-      },
-      {
-        ' sm:text-base lg:text-base inline-flex items-center hover:text-black':
-          textgraybutton,
-      },
-
-      { 'h-8 text-sm px-4': size === 'sm' },
-      { 'h-10 px-6': size === 'md' },
-      { 'h-12 text-lg  px-32': size === 'lg' },
-      { 'rounded-lg': round },
-      { rounded: rounded },
+      themeComputed,
+      fontWeightComputed,
+      radiusComputed,
+      sizeComputed,
+      `inline-flex items-center justify-center focus:outline-none flex-shrink-0`,
     ]"
   >
     <slot name="prepend"></slot>
-    <slot name="default">{{ buttonText }} </slot>
+    <span>
+      {{ text }}
+    </span>
     <slot name="append"></slot>
   </button>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      sizes: ["lg", "md", "sm"],
-    };
-  },
   props: {
-    buttonText: {
+    text: {
       type: String,
-      default: "Label",
+      default: 'Pending'
     },
-    buttoncolor: {
+    theme: {
       type: String,
-      default: "Label",
+      default: 'primary'
     },
+    fontWeight: String,
     size: {
       type: String,
-      default: "",
+      default: 'md'
     },
+    outline: {
+      type: Boolean,
+      default: false,
+    },
+    rounded: String,
     to: {
       type: String,
       default: null,
@@ -71,34 +49,70 @@ export default {
       type: String,
       default: null,
     },
-    rounded: Boolean,
-    round: Boolean,
   },
-
   computed: {
-    darkbluebutton() {
-      return this.buttoncolor === "darkbluebutton";
+    themeComputed() {
+      switch (this.theme) {
+        case "primary":
+          if (this.outline) return "border border-blue";
+          return "bg-blue text-white";
+
+        case "secondary":
+          if (this.outline) return "border-2 border-blue-300 text-blue-300";
+          return "bg-blue-300 text-white";
+
+        case "white":
+          if (this.outline) return "border border-white text-white";
+          return "bg-white text-blue-300";
+
+        case "transparent":
+          return "bg-transparent text-blue";
+      }
     },
-    whitebutton() {
-      return this.buttoncolor === "whitebutton";
+    fontWeightComputed() {
+      switch (this.fontWeight) {
+        case "light":
+          return "font-light";
+        case "medium":
+          return "font-medium";
+        case "semibold":
+          return "font-semibold";
+        case "normal":
+          return "font-normal";
+        default:
+          return "font-medium";
+      }
     },
-    bluebutton() {
-      return this.buttoncolor === "bluebutton";
+    radiusComputed() {
+      switch (this.rounded) {
+        case "sm":
+          return "rounded-sm";
+        case "md":
+          return "rounded-md";
+        case "lg":
+          return "rounded-lg";
+        case "xl":
+          return "rounded-xl";
+        case "full":
+          return "rounded-full";
+        default:
+          return "rounded";
+      }
     },
-    textbluebutton() {
-      return this.buttoncolor === "textbluebutton";
-    },
-    textgraybutton() {
-      return this.buttoncolor === "textgraybutton";
-    },
-    bigbluebutton() {
-      return this.buttoncolor === "bigbluebutton";
-    },
-    error() {
-      return this.buttoncolor === "error";
+    sizeComputed() {
+      switch (this.size) {
+        case "sm":
+          return "py-2.5 px-5 text-sm";
+        case "md":
+          return "py-4 px-9 text-sm";
+        case "lg":
+          return "rounded-lg";
+        case "xl":
+          return "rounded-xl";
+        case "none":
+          return "p-0";
+      }
     },
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

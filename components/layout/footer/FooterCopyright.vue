@@ -3,7 +3,7 @@
     class="text-white text-left lg:flex justify-between items-center pt-10 pb-10 lg:pt-14 lg:pb-20"
   >
     <div class="lg:flex ">
-      <div>
+      <!-- <div>
         <ul class="grid grid-cols-2 gap-4 lg:gap-6 md:grid-cols-3">
           <li>
             <nuxt-link to="/">Privacy Policy</nuxt-link>
@@ -15,20 +15,20 @@
             <nuxt-link to="/">Cookies Policy</nuxt-link>
           </li>
         </ul>
-      </div>
-      <p class="lg:ml-16 mt-10 lg:mt-0">
+      </div> -->
+      <p class="mt-10 lg:mt-0 text-xs">
         Copyright &copy; {{ new Date().getFullYear() }} Youverify
       </p>
     </div>
     <div class="flex space-x-4 lg:justify-center items-center mt-10 lg:mt-0">
-      <p class="">Follow us on social media:</p>
+      <p class="text-xs">Follow us on social media:</p>
       <a
         class="flex"
         href="https://web.facebook.com/youverifyID"
         target="_blank"
       >
         <LazyImage
-          class="w-8 h-8"
+          class="w-7 h-7"
           src="~/assets/images/icons/social/facebook-white.svg"
           alt="facebook-svg"
         />
@@ -39,7 +39,7 @@
         target="_blank"
       >
         <LazyImage
-          class="w-8 h-8"
+          class="w-7 h-7"
           src="~/assets/images/icons/social/linkedin-white.svg"
           alt="linkdln-svg"
         />
@@ -50,14 +50,14 @@
         target="_blank"
       >
         <LazyImage
-          class="w-8 h-8"
+          class="w-7 h-7"
           src="~/assets/images/icons/social/instagram-white.svg"
           alt="instagram-svg"
         />
       </a>
       <a class="flex" href="https://twitter.com/YoucheckOnline" target="_blank">
         <LazyImage
-          class="w-8 h-8"
+          class="w-7 h-7"
           src="~/assets/images/icons/social/twitter-white.svg"
           alt="twitter-svg"
         />

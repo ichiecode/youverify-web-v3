@@ -1,5 +1,26 @@
 <template>
-  <div class="pt-20 mt-28">
+  <div class="pt-20">
+    <section class="mt-24 hero flex flex-col justify-center items-center">
+      <div class="max-w-5xl mx-auto px-8">
+        <h1 class="font-bold text-2xl md:text-5xl text-white text-center">
+          We Are Fighting Fraud Through Global Innovative Solutions, How Can you
+          Help?
+        </h1>
+        <p
+          class="mt-4 md:mt-8 md:text-2xl font-medium text-white text-center px-4"
+        >
+          Join the Humans of Youverify in a workplace that challenges your
+          expertise, sparks your creativity and advances your career.
+        </p>
+      </div>
+      <AppButton
+        text="See Openings"
+        theme="white"
+        fontWeight="semibold"
+        class="mt-4 md:mt-8"
+        href="#careers"
+      />
+    </section>
     <section
       class="px-4 md:px-8 max-w-screen-xl mx-auto text-center py-20 md:pb-96 relative"
     >
@@ -13,13 +34,23 @@
 
       <div
         style="height: 600px"
-        class="absolute -bottom-1/2 inset-x-8 border-2 border-blue-900 rounded-2xl hidden md:block"
-      ></div>
+        class="absolute -bottom-1/2 inset-x-8 rounded-2xl hidden md:block overflow-hidden"
+      >
+        <iframe
+          class="h-full w-full"
+          src="https://www.youtube.com/embed/wQf60vo99Pg"
+        ></iframe>
+      </div>
 
       <div
         style="height: 320px"
-        class="border-2 border-blue-900 rounded-2xl md:hidden mt-14"
-      ></div>
+        class="rounded-2xl overflow-hidden md:hidden mt-14"
+      >
+        <iframe
+          class="h-full w-full"
+          src="https://www.youtube.com/embed/wQf60vo99Pg"
+        ></iframe>
+      </div>
     </section>
     <section class="py-20 md:pt-96 bg-blue">
       <div class="px-4 md:px-8 max-w-screen-xl mx-auto">
@@ -38,7 +69,7 @@
       </div>
     </section>
 
-    <section class="px-4 md:px-8 max-w-screen-xl mx-auto py-20">
+    <section id="careers" class="px-4 md:px-8 max-w-screen-xl mx-auto py-20">
       <div class="flex flex-col items-center">
         <div
           style="background-color: #c2e2e9"
@@ -211,3 +242,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(~/assets/images/company/careers-hero-background.png);
+  min-height: calc(100vh - 165px);
+  background-position: center;
+  background-size: cover;
+}
+</style>

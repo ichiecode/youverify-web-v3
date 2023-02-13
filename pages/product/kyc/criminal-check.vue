@@ -9,8 +9,7 @@
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton
-          buttoncolor="bluebutton"
-          buttonText="Get started"
+          text="Get started"
           href="https://os.youverify.co/auth/create-account"
         />
       </div>
@@ -50,6 +49,24 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "Criminal Check | Youverify Checks",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Real-Time Verification of Customer's Criminal Records",
+        },
+      ],
+    };
   },
   data() {
     return {

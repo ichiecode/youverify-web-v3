@@ -7,34 +7,76 @@
 
           <hr class="border-white mb-8 mt-4" />
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div class="space-y-6">
               <div>
                 <div class="bg-blue-150 rounded w-fit">
-                  <h5 class="text-blue text-base font-normal py-2 px-3">
+                  <h5 class="text-blue text-xs font-semibold py-2.5 px-5">
                     Know Your Customer (KYC)
                   </h5>
                 </div>
-                <ul class="mt-4 text-white">
-                  <li>ID Document verification</li>
-                  <li>Real-Time ID Verification</li>
-                  <li>Real-Time Address Verification</li>
-                  <li>Biometrics verification</li>
-                  <li>Liveness Detection</li>
-                  <li>Bank Account Verification</li>
-                  <li>Phone Intelligence & Verification</li>
-                  <li>PEP & Sanction Screening</li>
-                  <li>Consumer Credit Report</li>
-                  <li class="text-blue">See pricing</li>
+                <ul class="mt-4 text-white text-xs space-y-2.5">
+                  <li>
+                    <nuxt-link to="/product/kyc/id-document-verification">
+                      ID Document verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/id-data-verification">
+                      Real-Time ID Verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/real-time-address-verification">
+                      Real-Time Address Verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/biometrics-verification">
+                      Biometrics verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/liveness-detection">
+                      Liveness Detection</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/bank-account-verification">
+                      Bank Account Verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link
+                      to="/product/kyc/phone-intelligence-and-verification"
+                    >
+                      Phone Intelligence & Verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/pep-and-sanction-screening">
+                      PEP & Sanction Screening</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/customer-credit-check">
+                      Consumer Credit Report</nuxt-link
+                    >
+                  </li>
+                  <li class="text-blue">
+                    <nuxt-link to="/product/kyc/pricing">
+                      See pricing</nuxt-link
+                    >
+                  </li>
                 </ul>
               </div>
               <div class="">
                 <div class="bg-blue-150 rounded w-fit">
-                  <h5 class="text-blue text-base font-normal py-2 px-3">
+                  <h5 class="text-blue text-xs font-semibold py-2.5 px-5">
                     Know Your Business (KYB)
                   </h5>
                 </div>
-                <ul class="mt-4 text-white">
+                <ul class="mt-4 text-white text-xs space-y-2.5">
                   <li>Business Verification</li>
                   <li>Address verification</li>
                   <li>Identity verification</li>
@@ -48,11 +90,11 @@
             <div class="space-y-6">
               <div>
                 <div class="bg-blue-150 rounded w-fit">
-                  <h5 class="text-blue text-base font-normal py-2 px-3">
+                  <h5 class="text-blue text-xs font-semibold py-2.5 px-5">
                     Know Your Employee (KYE)
                   </h5>
                 </div>
-                <ul class="mt-4 text-white">
+                <ul class="mt-4 text-white text-xs space-y-2.5">
                   <li>Address verification</li>
                   <li>Professional Certificate verification</li>
                   <li>Education Verification</li>
@@ -64,11 +106,11 @@
               </div>
               <div class="">
                 <div class="bg-blue-150 rounded w-fit">
-                  <h5 class="text-blue text-base font-normal py-2 px-3">
+                  <h5 class="text-blue text-xs font-semibold py-2.5 px-5">
                     Know Your Transaction (KYT)
                   </h5>
                 </div>
-                <ul class="mt-4 text-white">
+                <ul class="mt-4 text-white text-xs space-y-2.5">
                   <li>Transaction monitoring</li>
                   <li>Transaction screening</li>
                   <li>Crypto Monitoring</li>
@@ -78,11 +120,11 @@
               </div>
               <div class="">
                 <div class="bg-blue-150 rounded w-fit">
-                  <h5 class="text-blue text-base font-normal py-2 px-3">
+                  <h5 class="text-blue text-xs font-semibold py-2.5 px-5">
                     Workflow Automation Tools
                   </h5>
                 </div>
-                <ul class="mt-4 text-white">
+                <ul class="mt-4 text-white text-xs space-y-2.5">
                   <li>Workflow Builder (vForms)</li>
 
                   <!-- <li class="text-blue">See pricing</li> -->
@@ -99,7 +141,7 @@
 
           <div class="grid grid-cols-1 gap-6">
             <div>
-              <ul class="text-white">
+              <ul class="text-white text-xs space-y-2.5">
                 <li>Customer Verification</li>
                 <li>Business Verification</li>
                 <li>Compliance Management</li>
@@ -108,11 +150,11 @@
             </div>
             <div class="">
               <div class="bg-blue-150 rounded w-fit">
-                <h5 class="text-blue text-base font-normal py-2 px-3">
+                <h5 class="text-blue text-xs font-semibold py-2.5 px-5">
                   Use Cases
                 </h5>
               </div>
-              <ul class="mt-4 text-white">
+              <ul class="mt-4 text-white text-xs space-y-2.5">
                 <li>Banks</li>
                 <li>Fintech</li>
                 <li>Crypto</li>
@@ -133,7 +175,7 @@
 
           <div class="grid grid-cols-1 gap-6">
             <div>
-              <ul class="text-white">
+              <ul class="text-white text-xs space-y-2.5">
                 <li>
                   <nuxt-link to="/blogs">Blog</nuxt-link>
                 </li>
@@ -160,18 +202,43 @@
 
           <hr class="border-white mb-8 mt-4" />
 
-          <div class="grid grid-cols-1 gap-6">
+          <div class="grid grid-cols-2 md:grid-cols-1 gap-10">
             <div>
-              <ul class="text-white">
-                <li>About Us</li>
-                <li>Compliance Certifications</li>
-                <li>Press & Media</li>
-                <li>Partners</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-                <li>Startup Accelerator</li>
+              <ul class="text-white text-xs space-y-2.5">
+                <li><nuxt-link to="/company/about-us"> About Us</nuxt-link></li>
+                <li>
+                  <nuxt-link to="/company/compliance-certifications">
+                    Compliance Certifications</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link to="/company/press-room"> Press & Media</nuxt-link>
+                </li>
+                <li><nuxt-link to="/company/partners"> Partners</nuxt-link></li>
+                <li><nuxt-link to="/company/careers"> Careers</nuxt-link></li>
+                <li>
+                  <nuxt-link to="/company/contact-us"> Contact Us</nuxt-link>
+                </li>
+                <li>
+                  <a href="https://startup.youverify.co/">
+                    Startup Accelerator</a
+                  >
+                </li>
               </ul>
             </div>
+            <ul class="text-white text-xs space-y-2.5 md:mt-5">
+              <li>
+                <nuxt-link to="/">Privacy Policy</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/">Terms of Use</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/">Cookies Policy</nuxt-link>
+              </li>
+              <li>PAIA Manual</li>
+              <li>GDPR Compliance Statement</li>
+            </ul>
           </div>
 
           <div class="xl:absolute bottom-0 mt-10">

@@ -13,7 +13,7 @@
             slot="append"
             viewBox="0 0 20 20"
             fill="none"
-            class="w-5 ml-1.25"
+            class="w-5 ml-2"
           >
             <path
               d="M6 10H14"

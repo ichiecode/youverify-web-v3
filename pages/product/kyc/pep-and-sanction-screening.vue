@@ -9,13 +9,13 @@
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton
-          buttoncolor="bluebutton"
-          buttonText="Get started"
+          text="Get started"
           href="https://os.youverify.co/auth/create-account"
         />
         <AppButton
-          buttoncolor="textgraybutton"
-          class="border-2 border-blue-300 font-semibold px-8 py-3 rounded text-blue-300"
+          theme="secondary"
+          :outline="true"
+          text="View demo"
           buttonText="View Demo"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
@@ -72,6 +72,25 @@ export default {
     ContactUs,
     Faqs,
     KnowMore,
+  },
+  head() {
+    return {
+      title: "PEP Sanction and Screening | Youverify Screening",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Identify High-Risk Customers With our Robust PEP and Sanction Screening Solution",
+        },
+      ],
+    };
   },
   data() {
     return {

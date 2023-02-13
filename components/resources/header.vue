@@ -9,7 +9,7 @@
       {{ tag }}
     </div>
     <h1
-      class="md:text-4xl text-2xl mb-4 md:mb-6 font-bold text-center text-blue-300"
+      class="md:text-4xl text-2xl mb-4 md:mb-6 font-semibold text-center text-blue-300"
     >
       {{ title }}
     </h1>

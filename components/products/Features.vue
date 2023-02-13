@@ -7,9 +7,9 @@
         class="bg-white rounded-3xl py-12 px-6 lg:px-10"
       >
         <img :src="require(`~/assets/images/icons/feature-${index + 1}.svg`)" />
-        <h1 class="text-2xl mt-4 md:mt-8 font-semibold">
+        <h5 class="text-2xl mt-4 md:mt-8 font-semibold">
           {{ feature.title }}
-        </h1>
+        </h5>
         <p class="mt-4 text-sm">
           {{ feature.note }}
         </p>

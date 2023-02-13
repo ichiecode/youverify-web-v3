@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="hidden lg:block py-5 bg-white">
-      <section class="max-w-screen-2xl mx-auto px-8">
+      <section class="max-w-screen-xl mx-auto px-4 md:px-8">
         <div class="flex justify-between items-center text-blue-300">
           <div>
             <a aria-current="page" class="" href="/"
@@ -25,7 +25,7 @@
               </span>
 
               <div
-                class="rounded-2xl absolute -left-9 top-11 overflow-hidden hidden group-hover:flex"
+                class="rounded-2xl absolute -left-40 top-11 overflow-hidden hidden group-hover:flex"
                 style="box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1)"
               >
                 <div class="absolute -top-3 left-32">
@@ -54,15 +54,15 @@
                     >
                       <a
                         :href="list.subLists ? '#' : list.link"
-                        class="font-semibold cursor-pointer"
+                        class="font-semibold cursor-pointer capitalize"
                       >
                         {{ list.name }}</a
                       >
                     </li>
                   </ul>
                   <AppButton
-                    buttonText="Get Started"
-                    buttoncolor="bluebutton"
+                    text="Get Started"
+                    theme="primary"
                     href="https://os.youverify.co/auth/create-account"
                   />
                 </div>
@@ -77,17 +77,21 @@
                       :key="i"
                       class="hover:opacity-100 opacity-50"
                     >
-                      <a :href="list.link" class="cursor-pointer font-semibold">
+                      <a
+                        :href="list.link"
+                        class="cursor-pointer font-semibold capitalize"
+                      >
                         {{ list.name }}</a
                       >
                     </li>
                   </ul>
                   <div v-if="nav.lists[subIndex].button" class="my-8">
                     <AppButton
-                      buttonText="See pricing"
-                      buttoncolor="textbluebutton"
-                      class="font-semibold"
-                      href=""
+                      text="See pricing"
+                      theme="transparent"
+                      fontWeight="semibold"
+                      size="none"
+                      :to="nav.lists[subIndex].button"
                       ><svg
                         slot="append"
                         viewBox="0 0 20 20"
@@ -112,7 +116,7 @@
                   </div>
                 </div>
                 <div
-                  v-if="nav.lists[subIndex].subLists2"
+                  v-if="subMenu && nav.lists[subIndex].subLists2"
                   class="bg-blue-100 pt-9 px-5 w-auto"
                   style="min-width: 335px"
                 >
@@ -122,7 +126,10 @@
                       :key="i"
                       class="hover:opacity-100 opacity-50"
                     >
-                      <a :href="list.link" class="cursor-pointer font-semibold">
+                      <a
+                        :href="list.link"
+                        class="cursor-pointer font-semibold capitalize"
+                      >
                         {{ list.name }}</a
                       >
                     </li>
@@ -133,13 +140,16 @@
           </ul>
           <div>
             <AppButton
-              buttonText="Login"
-              class="font-semibold py-4 px-7 text-blue"
+              text="Login"
+              theme="transparent"
+              rounded="md"
+              fontWeight="semibold"
               href="https://os.youverify.co/auth/login"
             />
             <AppButton
-              buttonText="Sign up"
-              buttoncolor="bluebutton"
+              text="Sign up"
+              theme="primary"
+              fontWeight="semibold"
               href="https://os.youverify.co/auth/create-account"
             />
           </div>
@@ -147,7 +157,7 @@
       </section>
     </nav>
     <nav class="lg:hidden bg-white text-blue">
-      <section class="flex justify-between items-center p-6">
+      <section class="flex justify-between items-center px-8 py-6">
         <div>
           <a aria-current="page" class="" href="/"
             ><img
@@ -291,7 +301,7 @@
                           >{{ list.name }}</a
                         >
                       </li>
-                       <li
+                      <li
                         v-for="(list, i) in nav.lists[subIndex].subLists2"
                         :key="i"
                         class="py-1.5"
@@ -360,7 +370,7 @@ export default {
           lists: [
             {
               name: "Know Your Customer (KYC)",
-              button: true,
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "ID Document verification",
@@ -410,13 +420,13 @@ export default {
                 },
                 {
                   name: "Consumer Credit Report",
-                  link: "/product/kyc/consumer-credit-check",
+                  link: "/product/kyc/customer-credit-check",
                 },
               ],
             },
             {
               name: "Know Your Business (KYB)",
-              button: true,
+              button: "true",
               subLists: [
                 { name: "Business Verification", link: "#" },
                 { name: "Address verification", link: "#" },
@@ -426,7 +436,7 @@ export default {
             },
             {
               name: "Know Your Employee (KYE)",
-              button: true,
+              button: "true",
               subLists: [
                 { name: "Address verification", link: "#" },
                 { name: "Professional Certificate verification", link: "#" },
@@ -438,7 +448,7 @@ export default {
             },
             {
               name: "Know Your Transaction (KYT)",
-              button: true,
+              button: "true",
               subLists: [
                 { name: "Transaction monitoring", link: "#" },
                 { name: "Transaction screening", link: "#" },
@@ -491,12 +501,12 @@ export default {
         {
           name: "Company",
           lists: [
-            { name: "About us", link: "#" },
+            { name: "About us", link: "/company/about-us" },
             {
               name: "Compliance Certifications",
-              link: "/company/certifications",
+              link: "/company/compliance-certifications",
             },
-            { name: "Press & Media", link: "#" },
+            { name: "Press & Media", link: "/company/press-room" },
             { name: "Partners", link: "/company/partners" },
             { name: "Careers", link: "/company/careers" },
             { name: "Contact Us", link: "/company/contact-us" },
