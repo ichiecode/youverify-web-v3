@@ -19,7 +19,7 @@
     >
       <div class="max-w-2xl text-center md:text-left">
         <h3 class="text-xl md:text-3xl font-semibold">What is YOUVERIFY</h3>
-        <p class="font-medium text-lg md:text-xl mt-5">
+        <p class="text-lg md:text-xl mt-5">
           We are a B2B company that builds SaaS and PaaS compliance products to
           help businesses establish economic relationships without compliance
           worries
@@ -57,7 +57,7 @@
       <div class="text-blue text-2xl md:text-5xl font-bold">
         Interested in Joining Us?
       </div>
-      <p class="font-medium md:w-2/3">
+      <p class=" md:w-2/3">
         We are always looking for amazing talents that share the same passion
         and vision as ours. <br />
         Think you're up to the challenge? <br />

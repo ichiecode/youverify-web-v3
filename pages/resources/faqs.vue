@@ -34,12 +34,12 @@
             class="py-4 md:py-6"
           >
             <div class="flex justify-between cursor-pointer">
-              <h1
+              <h2
                 class="text-lg md:text-2xl font-semibold"
                 :class="currentIndex === index ? 'text-blue' : 'text-grey'"
               >
                 {{ faq.question }}
-              </h1>
+              </h2>
               <div>
                 <svg
                   v-if="currentIndex !== index"

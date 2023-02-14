@@ -4,7 +4,7 @@
       <h3 class="text-3xl md:text-5xl font-semibold text-blue text-center">
         Our Values
       </h3>
-      <p class="mt-5 font-medium text-lg md:text-xl text-center">
+      <p class="mt-5 text-lg md:text-xl text-center">
         Youverify is building innovative global compliance products that will
         continue to push the boundaries of what is possible in RegTech
         compliance and fraud mitigation globally. Our core value drives how we

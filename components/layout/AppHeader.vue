@@ -19,7 +19,7 @@
               class="group relative"
             >
               <span
-                class="font-semibold text-base cursor-pointer hover:text-blue duration-200 py-4"
+                class="font-medium text-base cursor-pointer hover:text-blue duration-200 py-4"
               >
                 {{ nav.name }}
               </span>
@@ -54,7 +54,7 @@
                     >
                       <a
                         :href="list.subLists ? '#' : list.link"
-                        class="font-semibold cursor-pointer capitalize"
+                        class="font-medium cursor-pointer capitalize"
                       >
                         {{ list.name }}</a
                       >
@@ -79,7 +79,7 @@
                     >
                       <a
                         :href="list.link"
-                        class="cursor-pointer font-semibold capitalize"
+                        class="cursor-pointer font-medium capitalize"
                       >
                         {{ list.name }}</a
                       >
@@ -89,7 +89,6 @@
                     <AppButton
                       text="See pricing"
                       theme="transparent"
-                      fontWeight="semibold"
                       size="none"
                       :to="nav.lists[subIndex].button"
                       ><svg
@@ -128,7 +127,7 @@
                     >
                       <a
                         :href="list.link"
-                        class="cursor-pointer font-semibold capitalize"
+                        class="cursor-pointer font-medium capitalize"
                       >
                         {{ list.name }}</a
                       >
@@ -143,13 +142,11 @@
               text="Login"
               theme="transparent"
               rounded="md"
-              fontWeight="semibold"
               href="https://os.youverify.co/auth/login"
             />
             <AppButton
               text="Sign up"
               theme="primary"
-              fontWeight="semibold"
               href="https://os.youverify.co/auth/create-account"
             />
           </div>
@@ -239,7 +236,7 @@
               @click="toggleNavList(nav.name)"
               class="flex justify-between items-center"
             >
-              <a href="#" class="font-semibold text-xl text-blue-900">
+              <a href="#" class="font-medium text-xl text-blue-900">
                 {{ nav.name }}
               </a>
               <svg
@@ -318,7 +315,6 @@
                       <AppButton
                         buttonText="See pricing"
                         buttoncolor="textbluebutton"
-                        class="font-semibold"
                         href=""
                         ><svg
                           slot="append"
@@ -349,8 +345,7 @@
           </div>
           <div class="mt-12 px-6">
             <AppButton
-              buttonText="Sign Up"
-              buttoncolor="bluebutton"
+              text="Sign Up"
               href="https://os.youverify.co/auth/create-account"
             />
           </div>

@@ -12,7 +12,7 @@
         <h1 class="font-semibold text-xl md:text-4xl">
           Certifications and attestations
         </h1>
-        <p class="font-semibold text-lg md:text-xl mt-4 md:mt-7">
+        <p class="text-lg md:text-xl mt-4 md:mt-7">
           Explore the different ways you can intergate Youverify Operating
           System in your flows and apps
         </p>
@@ -21,17 +21,17 @@
         <div
           v-for="certificate in certifications"
           :key="certificate.name"
-          class="shadow-md rounded-md py-5 px-8 md:py-9 md:px-14 space-y-4 md:space-y-7"
+          class="shadow-md rounded-md py-5 px-8 md:py-9 md:px-14 space-y-5"
         >
           <LazyImage
             :src="
               require(`~/assets/images/logos/certifications/${certificate.image}.png`)
             "
           />
-          <h1 class="font-semibold text-xl md:text-2xl">
+          <h1 class="font-medium text-xl md:text-2xl">
             {{ certificate.name }}
           </h1>
-          <p class="font-semibold text-lg md:text-xl">{{ certificate.body }}</p>
+          <p class="text-lg">{{ certificate.body }}</p>
         </div>
       </div>
     </section>

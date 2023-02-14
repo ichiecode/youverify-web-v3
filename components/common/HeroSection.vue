@@ -6,13 +6,13 @@
       <div class="md:w-3/5 flex flex-col items-center md:items-start">
         <div
           style="background-color: #c2e2e9"
-          class="py-2 px-5 font-semibold text-blue rounded capitalize"
+          class="py-2 px-5 font-medium text-blue rounded capitalize"
         >
           {{ tag }}
         </div>
         <h1
           :class="white ? 'text-blue-300' : 'text-white'"
-          class="font-semibold text-2xl text-center md:text-left md:text-3xl lg:text-5xl mt-4"
+          class="font-bold text-2xl text-center md:text-left md:text-3xl lg:text-5xl mt-4"
         >
           {{ title }}
         </h1>

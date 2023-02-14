@@ -4,7 +4,7 @@
   >
     <div
       style="background-color: #c2e2e9"
-      class="py-2 px-4 text-sm font-semibold mb-8 text-blue rounded"
+      class="py-2 px-4 text-sm font-medium mb-8 text-blue rounded"
     >
       {{ tag }}
     </div>
@@ -13,7 +13,7 @@
     >
       {{ title }}
     </h1>
-    <p class="md:text-2xl font-semibold text-blue text-center">
+    <p class="md:text-2xl font-medium text-blue text-center">
       {{ description }}
     </p>
   </section>
