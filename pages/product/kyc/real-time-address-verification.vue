@@ -56,18 +56,18 @@
       >
         <div class="space-y-10">
           <div>
-            <h1 class="text-3xl font-semibold">
+            <h3 class="text-3xl font-semibold">
               Verify Proof of Identity via Geolocation
-            </h1>
+            </h3>
             <p class="mt-6">
               KYC-verify the Ultimate Beneficial Owners (UBOs) of a business for
               easy compliance and fraud prevention.
             </p>
           </div>
           <div>
-            <h1 class="text-3xl font-semibold">
+            <h3 class="text-3xl font-semibold">
               User-Focused Case management for risk profiling
-            </h1>
+            </h3>
             <p class="mt-6">
               Manage user risk profiles after verification through our intuitive
               case management platform.

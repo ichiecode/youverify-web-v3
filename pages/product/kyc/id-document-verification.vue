@@ -55,9 +55,9 @@
         />
 
         <div class="space-y-5 w-full">
-          <div v-for="(step, index) in steps" :key="index" class="text-xl">
-            <span class="font-semibold">Step {{ index + 1 }}</span>
-            <p class="font-medium">{{ step }}</p>
+          <div v-for="(step, index) in steps" :key="index">
+            <h3 class="font-semibold text-grey text-xl">Step {{ index + 1 }}</h3>
+            <p class="font-medium text-xl">{{ step }}</p>
           </div>
         </div>
       </div>

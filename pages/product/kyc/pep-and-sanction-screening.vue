@@ -5,7 +5,7 @@
       tag="PEP & Sanction Screening"
       title="Identify High-Risk Customers With our Robust PEP and Sanction Screening Solution"
       intro="Identify high-risk customers through real-time PEP and sanction screening solutions. Match customers with constantly updated global databases to protect your business and comply with AML regulatory requirements."
-      illustration="hero-customer-credit-check.svg"
+      illustration="hero-pep-and-sanction.svg"
     >
       <div slot="buttons" class="flex gap-6">
         <AppButton

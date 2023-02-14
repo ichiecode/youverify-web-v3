@@ -1,10 +1,10 @@
 <template>
   <section class="pt-24">
-    <h3
+    <h2
       class="text-3xl md:text-5xl font-semibold text-blue-300 text-center max-w-4xl mx-auto capitalize"
     >
       {{ title }}
-    </h3>
+    </h2>
 
     <div>
       <div

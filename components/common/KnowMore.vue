@@ -1,8 +1,8 @@
 <template>
   <section class="flex flex-col items-center py-20">
-    <h1 class="font-semibold text-blue-300 text-xl md:text-4xl">
+    <h2 class="font-semibold text-blue-300 text-xl md:text-4xl">
       Want to know more about us?
-    </h1>
+    </h2>
     <div class="flex gap-4 sm:gap-6 mt-8 md:mt-12">
       <a
         href="https://os.youverify.co/auth/create-account"
