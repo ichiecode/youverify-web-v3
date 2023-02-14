@@ -6,7 +6,7 @@
       class="rounded-3xl border flex flex-col items-center pt-10 md:pt-12 pb-12 md:pb-16"
       :class="index === 1 ? 'border-blue-300 shadow-md' : 'border-blue'"
     >
-      <h5 class="text-xl font-semibold text-blue-300">{{ pricing.name }}</h5>
+      <h2 class="text-xl font-semibold text-blue-300">{{ pricing.name }}</h2>
       <h3 class="font-semibold mt-12">{{ pricing.amount }}</h3>
       <span class="text-blue-300">min monthly payments</span>
       <span class="text-blue font-semibold mt-3.5"

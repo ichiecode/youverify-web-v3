@@ -84,6 +84,17 @@ import GuideCard from "@/components/resources/GuideCard.vue";
 
 export default {
   components: { GuideCard },
+  head() {
+    return {
+      title: "Compliance Guides and Reports | Youverify Reports",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
   data() {
     return {
       downloading: false,

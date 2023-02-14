@@ -16,7 +16,7 @@
       </h2>
     </div>
     <section v-else>
-      <div v-if="guides.length === 0" class="w-full">
+      <div v-if="guides.length === 0" class="w-full py-32">
         <h2 class="text-2xl text-center text-gray-500">
           There are no articles yet.
         </h2>
@@ -146,7 +146,7 @@ export default {
   },
   head() {
     return {
-      title: "Compliance Guides and Reports",
+      title: "Compliance Guides and Reports | Youverify Reports",
       link: [
         {
           rel: "canonical",

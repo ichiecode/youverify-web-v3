@@ -22,7 +22,9 @@
       </div>
     </header>
 
-    <section class="flex flex-col md:flex-row py-16 gap-6 max-w-screen-xl mx-auto px-4 md:px-8">
+    <section
+      class="flex flex-col md:flex-row py-16 gap-6 max-w-screen-xl mx-auto px-4 md:px-8"
+    >
       <aside class="md:w-1/3 bg-blue-100 px-9 py-8 space-y-4">
         <div class="space-y-1">
           <h1 class="text-xl font-semibold">Industry</h1>
@@ -98,5 +100,16 @@ import Card from "@/components/resources/CaseStudyCard.vue";
 
 export default {
   components: { KnowMore, Card },
+  head() {
+    return {
+      title: "Case Studies | Youverify Reports",
+      link: [
+        {
+          rel: "canonical",
+          href: "https://youverify.co" + this.$route.path,
+        },
+      ],
+    };
+  },
 };
 </script>

@@ -219,8 +219,8 @@ export default {
   },
   computed: {
     ...mapState({
-      teams: (state) => state.teams.teams,
-      loadingTeams: (state) => state.teams.loading,
+      // teams: (state) => state.teams.teams,
+      // loadingTeams: (state) => state.teams.loading,
       values: (state) => state.values.values,
       loadingValues: (state) => state.values.loading,
     }),

@@ -31,7 +31,7 @@
               </h1></a
             >
             <p class="mt-8 text-white md:text-xl">
-             <i>by</i> {{ formattedPost.author }}
+              <i>by</i> {{ formattedPost.author }}
             </p>
           </header>
         </div>
@@ -41,9 +41,7 @@
           >
             <img
               :src="formattedPost.image ? formattedPost.image.url : ''"
-              class="w-full"
-              :height="formattedPost.image.height"
-              :width="formattedPost.image.width"
+              class="h-120 w-full object-cover"
               :alt="formattedPost.image ? formattedPost.image.caption : ''"
             />
           </div>
@@ -60,7 +58,7 @@
                 :href="`http://twitter.com/share?text=${formattedPost.title}`"
               >
                 <img
-                  class="w-14 h-14"
+                  class="w-10 h-10"
                   src="@/assets/images/icons/social/twitter-color.svg"
                   alt=""
                 />
@@ -70,7 +68,7 @@
                 :href="`https://facebook.com/sharer/sharer.php?u=${formattedPost.title}`"
               >
                 <img
-                  class="w-14 h-14"
+                  class="w-10 h-10"
                   src="@/assets/images/icons/social/facebook-color.svg"
                   alt=""
                 />
@@ -80,7 +78,7 @@
                 :href="`https://www.linkedin.com/shareArticle?title=${formattedPost.title}`"
               >
                 <img
-                  class="w-14 h-14"
+                  class="w-10 h-10"
                   src="@/assets/images/icons/social/linkedin-color.svg"
                   alt=""
                 />
@@ -123,7 +121,6 @@
                         :alt="blog.image.caption"
                       />
                     </div>
-                    
                   </header>
                   <div class="px-4 py-6">
                     <div

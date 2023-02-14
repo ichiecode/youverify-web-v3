@@ -45,7 +45,7 @@
           class="flex flex-col md:flex-row justify-between items-center gap-12"
         >
           <div class="w-full">
-            <h3 class="font-semibold text-3xl text-white">Facial Matching</h3>
+            <h2 class="font-semibold text-3xl text-white">Facial Matching</h2>
             <p class="mt-3 md:mt-7 text-white">
               Match customers' facial features with the pictures in their
               government-backed ID in seconds through our intelligent AI. Keep
@@ -64,9 +64,9 @@
           class="flex flex-col md:flex-row-reverse justify-between items-center gap-12"
         >
           <div class="w-full">
-            <h3 class="font-semibold text-3xl text-white">
+            <h2 class="font-semibold text-3xl text-white">
               Liveness Detection
-            </h3>
+            </h2>
             <p class="mt-3 md:mt-7 text-white">
               Prevent identity spoofing through AI-powered liveness detention
               that ensures manufactured identities do not slip through the
@@ -117,12 +117,12 @@
         <div
           class="md:w-3/5 lg:w-1/2 flex flex-col items-center md:items-start"
         >
-          <h3
+          <h2
             class="font-semibold text-2xl text-center md:text-left md:text-3xl mt-4"
           >
             Get Started - Adopt Biometric Verification for Extra Layer of
             Business Security Today
-          </h3>
+          </h2>
 
           <p class="font-medium text-center md:text-left my-8">
             Book a demo session and we'll tell you how our Biometric

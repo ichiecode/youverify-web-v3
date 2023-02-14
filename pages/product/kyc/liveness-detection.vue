@@ -2,7 +2,7 @@
   <div class="pt-20">
     <HeroSection
       class="mt-28"
-      tag="KYC | Real-Time ID Verification"
+      tag="KYC | Liveness Detection"
       title="Intelligent Liveness Detection to Spot Spoofing Attacks"
       intro="Protect your business from biometric attacks and deep fakes. Scan and validate customer faces using intelligent AI algorithms to prevent spoofing attacks."
       illustration="hero-liveness-detection.svg"
@@ -63,7 +63,7 @@
         </div>
       </div>
     </section>
-    <Offers title="Real-Time Bank Account Authentication" :offers="offers" />
+    <Offers title="Secure Your Business Against Spoofing Attacks" :offers="offers" />
     <Integrate />
     <ContactUs id="contact"
       heading="Enjoy an Extra Layer of Protection For Your Business with Real-Time Liveness Detection Today"

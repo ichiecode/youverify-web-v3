@@ -106,7 +106,7 @@ export default {
   components: { ResourceHeader, ContactUs, KnowMore },
   head() {
     return {
-      title: "Frequently Asked Questions",
+      title: "Frequently Asked Questions | Youverify FAQ",
       link: [
         {
           rel: "canonical",
