@@ -237,7 +237,9 @@
                 <nuxt-link to="/cookies">Cookies Policy</nuxt-link>
               </li>
               <li>PAIA Manual</li>
-              <li>GDPR Compliance Statement</li>
+              <li>
+                <nuxt-link to="/gdpr">GDPR Compliance Statement</nuxt-link>
+              </li>
             </ul>
           </div>
 
