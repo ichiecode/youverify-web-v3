@@ -83,7 +83,7 @@
         </h1>
       </div>
 
-      <div v-if="false" class="flex flex-col items-center mt-10">
+      <div v-if="true" class="flex flex-col items-center mt-10">
         <img
           class="w-40 md:w-auto"
           src="~/assets/images/icons/big-search.svg"
