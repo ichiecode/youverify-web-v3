@@ -163,13 +163,12 @@
           <div class="feature_name">
             Youverify Compliance Academy Certification
           </div>
-          <div class="feature_status">Included (Pay for Certificate)</div>
+          <div class="feature_status">Available in your country soon</div>
           <div class="feature_status_standard">
-            Included (2 free Certificate) $xx/certificate for every extra
-            certificate.
+           Available in your country soon
           </div>
-          <div class="feature_status">Included (4 free Certificate)</div>
-          <div class="feature_status">Included (20 free Certificate)</div>
+          <div class="feature_status">Available in your country soon</div>
+          <div class="feature_status">Available in your country soon</div>
         </div>
 
         <div class="flex">
