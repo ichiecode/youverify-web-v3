@@ -1,24 +1,13 @@
 <template>
-  <div>
-    <header
-      class="text-center flex items-center justify-center sm:pt-24 pt-36 sm:pb-0 pb-24 min-h-header false"
-    >
-      <section class="max-w-screen-2xl mx-auto sm:px-8 px-6">
-        <span
-          class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
-          >Developer Portal</span
-        >
-        <h1 class="max-w-screen-lg">Developers</h1>
-        <p class="max-w-screen-sm mx-auto mt-6">
-          Everything you need to build a seamless compliance workflow for your
-          businesses
-        </p>
-        <div class="mt-6"></div>
-      </section>
-    </header>
-    <section class="max-w-screen-xl mx-auto text-center px-6 md:px-10">
+  <div class="pt-20">
+    <ResourceHeader
+      tag="Developer Portal"
+      title="Developers"
+      description="Everything you need to build a seamless compliance workflow for your businesses"
+    />
+    <section class="max-w-screen-xl mx-auto text-center px-8">
       <h3>Responsive APIs for Your Consumption</h3>
-      <p class="py-4">
+      <p class="py-4 max-w-3xl mx-auto">
         Access a rich library of tools like no other, and build innovative
         compliance products to the delight of your customers.
       </p>
@@ -39,9 +28,10 @@
               improve customer onboarding without compromising compliance.
             </p>
             <app-button
-              class="mt-10 mb-0 border-blue-300 border-2 text-blue-300"
-              buttonText="Explore"
-              buttoncolor="whitebutton"
+              class="mt-10"
+              text="Explore"
+              theme="secondary"
+              :outline="true"
               href="/vforms-demo"
             >
               <svg
@@ -83,9 +73,10 @@
               designs that blend easily with your existing business platform.
             </p>
             <app-button
-              class="mt-10 mb-0 border-blue-300 border-2 text-blue-300"
-              buttonText="Explore"
-              buttoncolor="whitebutton"
+              class="mt-10"
+              text="Explore"
+              theme="secondary"
+              :outline="true"
               href="/vforms-demo"
             >
               <svg
@@ -121,14 +112,16 @@
 </template>
 
 <script>
+import ResourceHeader from "@/components/resources/header.vue";
 import KnowMore from "@/components/common/KnowMore";
 export default {
   components: {
+    ResourceHeader,
     KnowMore,
   },
   head() {
     return {
-      title: "Developers Portal",
+      title: "Developer Resources | Youverify Documentation",
       link: [
         {
           rel: "canonical",

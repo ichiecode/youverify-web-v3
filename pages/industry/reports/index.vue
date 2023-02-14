@@ -1,21 +1,10 @@
 <template>
-  <div>
-    <header
-      class="text-center flex items-center justify-center sm:pt-24 pt-36 sm:pb-0 pb-24 min-h-header false"
-    >
-      <section class="max-w-screen-2xl mx-auto sm:px-8 px-6">
-        <span
-          class="text-blue tracking-widest px-4 py-2 uppercase sm:text-sm text-xs rounded mb-3 leading-none inline-block bg-blue-100"
-          >Industry Reports</span
-        >
-        <h1 class="max-w-screen-lg">Industry Reports, Insights & Tips</h1>
-        <p class="max-w-screen-sm mx-auto mt-6">
-          Realtime reports into the world of compliance, digital identity
-          verification and market trends from Youverify experts.
-        </p>
-        <div class="mt-6"></div>
-      </section>
-    </header>
+  <div class="pt-20">
+    <ResourceHeader
+      tag="Industry Reports"
+      title="Industry Reports, Insights & Tips"
+      description="Real-time reports into the world of compliance, digital identity verification and market trends from Youverify experts."
+    />
     <main class="max-w-5xl mx-auto w-full py-4 md:py-14">
       <content-placeholders v-if="loading" class="w-full">
         <content-placeholders-heading />
@@ -163,6 +152,7 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import ResourceHeader from "@/components/resources/header.vue";
 import GetReportForm from "@/components/reports/GetReportForm";
 import Report from "@/components/reports/Report";
 import TextInput from "@/components/form/TextInput";
@@ -171,6 +161,7 @@ import readTime from "@/helpers/readTime.js";
 export default {
   components: {
     Report,
+    ResourceHeader,
     TextInput,
     GetReportForm,
   },

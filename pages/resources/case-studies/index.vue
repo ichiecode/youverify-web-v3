@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20 px-4 md:px-8 max-w-screen-xl mx-auto">
+  <div class="pt-20 px-8 max-w-screen-xl mx-auto">
     <ResourceHeader
       tag="Case Studies"
       title="Our Case Studies"
@@ -25,7 +25,7 @@ export default {
   components: { ResourceHeader, Card, TrustedClients, KnowMore },
   head() {
     return {
-      title: "Case Studies",
+      title: "Case Studies | Youverify Reports",
       link: [
         {
           rel: "canonical",
