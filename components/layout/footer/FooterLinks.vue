@@ -228,13 +228,13 @@
             </div>
             <ul class="text-white text-xs space-y-2.5 md:mt-5">
               <li>
-                <nuxt-link to="/">Privacy Policy</nuxt-link>
+                <nuxt-link to="/privacy-policy">Privacy Policy</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/">Terms of Use</nuxt-link>
+                <nuxt-link to="/terms-of-use">Terms of Use</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/">Cookies Policy</nuxt-link>
+                <nuxt-link to="/cookies">Cookies Policy</nuxt-link>
               </li>
               <li>PAIA Manual</li>
               <li>GDPR Compliance Statement</li>
