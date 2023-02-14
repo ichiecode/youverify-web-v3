@@ -32,7 +32,7 @@
               text="Explore"
               theme="secondary"
               :outline="true"
-              href="/vforms-demo"
+              href="https://doc.youverify.co/"
             >
               <svg
                 slot="append"
@@ -77,7 +77,7 @@
               text="Explore"
               theme="secondary"
               :outline="true"
-              href="/vforms-demo"
+              href="https://www.npmjs.com/package/youverify-web-sdk"
             >
               <svg
                 slot="append"
