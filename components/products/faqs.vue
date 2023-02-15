@@ -17,7 +17,7 @@
         "
       >
         <div class="flex justify-between cursor-pointer text-blue">
-          <h3 class="text-lg md:text-3xl font-semibold">
+          <h3 class="text-lg md:text-2xl font-medium">
             {{ faq.question }}
           </h3>
           <div>
@@ -70,7 +70,7 @@
           class="mt-3 md:mt-8"
           :class="currentIndex === index ? 'block' : 'hidden'"
         >
-          <p class="text-xl font-medium max-w-4xl">
+          <p class="text-xl max-w-4xl">
             {{ faq.answer }}
           </p>
         </div>

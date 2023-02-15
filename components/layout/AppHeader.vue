@@ -423,8 +423,8 @@ export default {
               name: "Know Your Business (KYB)",
               button: "true",
               subLists: [
-                { name: "Business Verification", link: "#" },
-                { name: "Address verification", link: "#" },
+                { name: "Business Verification", link: "/product/kyb/business-verification" },
+                { name: "Address verification", link: "/product/kyb/business-address-verification" },
                 { name: "Identity verification", link: "#" },
                 { name: "Sanction List", link: "#" },
               ],
