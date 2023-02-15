@@ -507,7 +507,7 @@ export default {
             { name: "Contact Us", link: "/company/contact-us" },
             {
               name: "Startup Accelerator",
-              link: "https://startup.youverify.co/",
+              link: "/startup-program",
             },
           ],
         },
