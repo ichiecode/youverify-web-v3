@@ -425,8 +425,8 @@ export default {
               subLists: [
                 { name: "Business Verification", link: "/product/kyb/business-verification" },
                 { name: "Address verification", link: "/product/kyb/business-address-verification" },
-                { name: "Identity verification", link: "#" },
-                { name: "Sanction List", link: "#" },
+                { name: "Identity verification", link: "/product/kyb/business-identity-verification" },
+                { name: "Sanction List", link: "/product/kyb/sanction-list" },
               ],
             },
             {

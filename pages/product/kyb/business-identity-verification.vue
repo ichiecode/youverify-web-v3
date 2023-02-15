@@ -38,6 +38,7 @@
       </div>
     </HeroSection>
     <Stats :stats="stats" />
+    <Features :features="features" />
     <section class="pt-24 px-4 md:px-8 max-w-screen-xl mx-auto">
       <h2
         class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
@@ -64,7 +65,7 @@
       </div>
     </section>
     <Offers
-      title="Scale Your Business in Confidence with our Business Verification Solution"
+      title="Verify Business Stakeholders Identities in Real-Time"
       :offers="offers"
     />
     <Integrate />
@@ -81,6 +82,7 @@
 <script>
 import HeroSection from "~/components/common/HeroSection.vue";
 import Stats from "~/components/common/Stats.vue";
+import Features from "~/components/products/Features.vue";
 import Offers from "~/components/products/Offers.vue";
 import Integrate from "~/components/products/Integrate.vue";
 import ContactUs from "~/components/products/ContactUs.vue";
@@ -91,6 +93,7 @@ export default {
     HeroSection,
     Stats,
     Offers,
+    Features,
     Integrate,
     ContactUs,
     Faqs,
@@ -135,49 +138,57 @@ export default {
         "Proceed to verify the identity of each individual stakeholder for sanction lists, PEP screening and watch lists.",
         "The result comes out positive if there's a match and negative if there is none. Response time is immediate.",
       ],
+      features: [
+        {
+          title: "Transact with Confidence",
+          note: "Confidently establish business relationships by verifying the identities of key stakeholders for compliance",
+        },
+        {
+          title: "Leverage the Power of Technology",
+          note: "Our artificial intelligence and machine learning solution helps verify business stakeholders' IDs more efficiently and in real-time. This ensures that you only do business with entities that are owned by law-abiding individuals.",
+        },
+        {
+          title: "Guaranteed Compliance",
+          note: "Remain on the right side of compliance and regulatory authorities while you grow your business. Our real-time business ID verification solution is designed to handle your KYC compliance while you focus on other aspects of growth.",
+        },
+      ],
       offers: [
         {
           illustration: "intelligent-ai",
-          title: "Global Coverage & Easy API Integration",
-          note: "Globally verify a business's legal registration status, address, employees, and directors. Our seamless KYB APIs make it easy to customise our services to suit your platform.",
+          title: "Intelligent AI",
+          note: "Leverage the power of advanced machine learning algorithms which automatically match the ID information of business stakeholders against verified government databases and sources for instant verification.",
         },
         {
           illustration: "digital-nomad",
-          title: "Real-Time AML Screening",
-          note: "Screen business entities for watchlisting, PEPs, global sanctions and adverse media in real-time.",
+          title: "Global Coverage",
+          note: "Our global network of identity verification services and databases allows you to verify the identities of stakeholders in businesses anywhere in the world.",
         },
         {
           illustration: "advanced-customisation",
-          title: "KYC Verification of UBOs",
-          note: "KYC-verify the Ultimate Beneficial Owners (UBOs) of a business for easy compliance and fraud prevention.",
-        },
-        {
-          illustration: "digital-nomad",
-          title: "User-Friendly Case Management Tool",
-          note: "Leverage our easy-to-navigate interface and case management tool for a faster and more efficient review of business verification results.",
-        },
-        {
-          illustration: "advanced-customisation",
-          title: "Simplify Your KYB Workflow",
-          note: "Prioritise efficiency in your KYB program through our customizable workflows that allow you to select verification parameters that suit your business needs. ",
+          title: "Customisable",
+          note: "Our service is highly customizable, allowing businesses automatically select the respective business verification flow including stakeholder identity verification. Tailor the service to your specific needs and requirements, ensuring that you are able to comply with all relevant regulations and laws.",
         },
       ],
       faqs: [
         {
-          question:
-            "What is Know Your Business (KYB) or Business Verification?",
+          question: "What is Identity Verification?",
           answer:
-            "KYB is a verification procedure that confirms the legal status and compliance of a company with anti-money laundering (AML) laws and other relevant regulations.",
+            "Identity verification is simply the process of verifying the identity of an individual through legally approved means which is mostly by providing IDs and running verification checks against government databases. There are a series of documents that can be used for this purpose including government-issued IDs, driver's licenses, passports and birth certificates.",
         },
         {
-          question: "Why is KYB/ Business Verification Required?",
+          question: "What is Business Identity Verification?",
           answer:
-            "Business verification is essential because it prevents companies from establishing a partnership or business relationship with other illegal entities. It also helps the company understand its business customers, their financial dealings and how to better serve them and manage risks. With KYB, businesses can avoid a scenario of their infrastructure being used to commit criminal offences.",
+            "Business identity verification refers to the process of verifying the identities of relevant stakeholders of a business. These include Ultimate Beneficial Owners (UBOs), directors, shareholders, employees and other stakeholders.",
         },
         {
-          question: "How Does a KYB Solution Work?",
+          question: "Why do I need to Business Stakeholder Identity?",
           answer:
-            "KYB solution starts by verifying the legal existence of a business, then proceeds to verify the employees, directors and ultimate beneficial owner (UBO). However, KYB solutions can be customized to verify only data about the business.",
+            "Business stakeholder identity verification is important because it helps you determine the compliance statuses of important stakeholders in the business. This data is important in carrying out risk assessments to determine whether to establish a business relationship or not.",
+        },
+        {
+          question: "What is ID verification Software?",
+          answer:
+            "An ID verification software is used to help businesses digitally automate identity verification processes. Advanced ID verification software combines AI technology with machine learning to perform more complex verifications like biometric verification and liveness detection.",
         },
       ],
     };
