@@ -8,7 +8,7 @@
       illustration="hero-partnership.svg"
     >
       <div slot="buttons">
-        <AppButton buttoncolor="bluebutton" buttonText="Become a partner">
+        <AppButton text="Become a partner">
           <svg
             slot="append"
             viewBox="0 0 20 20"
@@ -66,7 +66,7 @@
               :alt="partner.type"
             />
             <h1 class="text-2xl font-semibold mt-8">{{ partner.type }}</h1>
-            <p class="font-medium mt-4 lg:max-w-xs">{{ partner.text }}</p>
+            <p class="mt-4 lg:max-w-xs">{{ partner.text }}</p>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
         <h1 class="text-2xl md:text-5xl font-bold">
           Ready to become a partner?
         </h1>
-        <p class="text-xl font-semibold mt-6">
+        <p class="text-xl mt-6">
           Sign up to explore partnership benefits
         </p>
         <form class="form-group w-full mt-7 md:mt-16 max-w-md mx-auto">

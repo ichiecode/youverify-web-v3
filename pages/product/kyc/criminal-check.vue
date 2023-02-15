@@ -10,7 +10,7 @@
       <div slot="buttons" class="flex gap-6">
         <AppButton
           text="Get started"
-          href="https://os.youverify.co/auth/create-account"
+          to="/product/kyc/pricing"
         />
       </div>
     </HeroSection>

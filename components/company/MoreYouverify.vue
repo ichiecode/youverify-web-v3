@@ -42,7 +42,7 @@
             />
             <h5 class="font-semibold text-2xl">{{ nav.name }}</h5>
           </div>
-          <p class="font-medium text-xl mt-3.5 max-w-sm">
+          <p class="text-xl mt-3.5 max-w-sm">
             {{ nav.description }}
           </p>
         </div>

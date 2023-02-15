@@ -16,16 +16,26 @@
       <AppButton
         text="See Openings"
         theme="white"
-        fontWeight="semibold"
         class="mt-4 md:mt-8"
         href="#careers"
+      />
+    </section>
+
+    <section class="flex justify-center items-center overflow-scroll mt-12">
+      <img
+        class=""
+        :class="index === 2 ? 'w-80 h-52' : 'w-60'"
+        v-for="(image, index) in 5"
+        :key="index"
+        :src="require(`~/assets/images/company/people-${index + 1}.png`)"
+        alt=""
       />
     </section>
     <section
       class="px-4 md:px-8 max-w-screen-xl mx-auto text-center py-20 md:pb-96 relative"
     >
       <h1 class="font-semibold text-4xl">Our Mission</h1>
-      <p class="font-medium text-xl mt-8 max-w-3xl mx-auto">
+      <p class="text-xl mt-8 max-w-3xl mx-auto">
         Youverify is building innovative global compliance products that will
         continue to push the boundaries of what is possible in RegTech
         compliance and fraud mitigation globally. Our core value drives how we
@@ -60,8 +70,8 @@
             :key="index"
             class="bg-white rounded-2xl py-5 px-4 md:py-10 md:px-9"
           >
-            <h1 class="text-xl md:text-2xl font-semibold">{{ method.name }}</h1>
-            <p class="font-medium text-lg md:text-xl mt-3 md:mt-7 mb-10">
+            <h1 class="text-xl md:text-2xl font-medium">{{ method.name }}</h1>
+            <p class="text-lg mt-3 md:mt-4 mb-8">
               {{ method.note }}
             </p>
           </div>
@@ -73,27 +83,27 @@
       <div class="flex flex-col items-center">
         <div
           style="background-color: #c2e2e9"
-          class="py-2 px-4 text-sm font-semibold mb-8 text-blue rounded"
+          class="py-2 px-4 text-sm font-medium mb-8 text-blue rounded"
         >
           Openings
         </div>
         <h1
-          class="md:text-4xl text-2xl mb-4 md:mb-6 font-bold text-center text-blue"
+          class="md:text-4xl text-2xl mb-4 md:mb-6 font-semibold text-center text-blue"
         >
           Where Do You Fit in?
         </h1>
       </div>
 
-      <div v-if="false" class="flex flex-col items-center mt-10">
+      <div v-if="true" class="flex flex-col items-center mt-10">
         <img
           class="w-40 md:w-auto"
           src="~/assets/images/icons/big-search.svg"
           alt=""
         />
-        <h1 class="text-xl font-semibold mt-8">No roles available right now</h1>
+        <h1 class="text-xl font-medium mt-8">No roles available right now</h1>
 
         <p
-          class="font-semibold text-lg md:text-2xl text-center mt-5 md:mt-10 max-w-2xl mx-auto"
+          class="font-medium text-lg md:text-xl text-center mt-5 md:mt-10 max-w-2xl mx-auto"
         >
           Wanna shoot your shot? Send an unsolicited email to
           <a class="text-blue" href="mailto:careers@youverify.co"
@@ -116,7 +126,7 @@
                 @click="toggleRoles(ind, index)"
                 class="py-4 md:py-5 px-6 md:px-8 border border-grey-200 flex items-center justify-between cursor-pointer"
               >
-                <h1 class="text-black text-lg md:text-xl font-semibold">
+                <h1 class="text-black text-lg md:text-xl font-medium">
                   {{ role.title }}
                 </h1>
                 <svg
@@ -155,7 +165,7 @@
               >
                 <p class="text-black mb-6">{{ role.description }}</p>
                 <a
-                  class="text-blue font-semibold"
+                  class="text-blue font-medium"
                   href="mailto:careers@youverify.co"
                   >To apply send a mail to careers@youverify.co</a
                 >

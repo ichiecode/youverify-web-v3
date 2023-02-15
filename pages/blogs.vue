@@ -99,7 +99,7 @@
             </app-button>
           </div>
 
-          <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 mb-20">
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 lg:gap-10 mb-20">
             <article
               is="nuxt-link"
               :to="`/blog/${blog.slug}`"
@@ -242,7 +242,10 @@ export default {
     async fetchNextPage() {
       this.fetchingNextPage = true;
       this.page += 1;
-      await this.getBlogPosts(this.page);
+      await this.getBlogPosts({
+        currentPage: this.page,
+        limit: 9
+      });
       this.fetchingNextPage = false;
     },
   },

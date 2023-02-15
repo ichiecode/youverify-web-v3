@@ -51,8 +51,8 @@ export const actions = {
   async getBlogs({ state, commit }, page) {
     commit("setLoading", true);
     let payload = {
-      _start: page ? page * state.perPage : 0,
-      _limit: state.perPage,
+      _start: page ? page.currentPage * 9 : 0,
+      _limit: page ? page.limit : 9,
       _sort: "createdAt:DESC"
     };
     const response = await this.$axios

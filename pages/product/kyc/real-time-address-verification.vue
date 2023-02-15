@@ -12,7 +12,7 @@
         <AppButton
           text="Get started"
           theme="white"
-          href="https://os.youverify.co/auth/create-account"
+          to="/product/kyc/pricing"
         />
         <AppButton
           theme="white"
