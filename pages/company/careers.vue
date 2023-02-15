@@ -20,6 +20,17 @@
         href="#careers"
       />
     </section>
+
+    <section class="flex justify-center items-center overflow-scroll mt-12">
+      <img
+        class=""
+        :class="index === 2 ? 'w-80 h-52' : 'w-60'"
+        v-for="(image, index) in 5"
+        :key="index"
+        :src="require(`~/assets/images/company/people-${index + 1}.png`)"
+        alt=""
+      />
+    </section>
     <section
       class="px-4 md:px-8 max-w-screen-xl mx-auto text-center py-20 md:pb-96 relative"
     >
