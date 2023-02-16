@@ -656,52 +656,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="md:hidden px-3">
-      <div class="flex justify-between gap-3 overflow-scroll">
-        <div class="font-semibold text-xl text-blue-300">Basic</div>
-        <div class="font-semibold text-xl text-blue-300">Standard</div>
-        <div class="font-semibold text-xl text-blue-300">Pro</div>
-        <div class="font-semibold text-xl text-blue-300">Enterprise</div>
-      </div>
-
-      <div class="mt-4">
-        <div class="px-3 py-2 text-lg font-semibold text-blue">
-          Core Modules
-        </div>
-        <div class="bg-blue-100 px-3 py-2 text-lg">KYC</div>
-        <div class="flex justify-around items-center gap-4 py-2">
-          <div>
-            <Checked />
-          </div>
-          <div>
-            <Checked />
-          </div>
-          <div>
-            <Checked />
-          </div>
-          <div>
-            <Checked />
-          </div>
-        </div>
-
-        <div class="bg-blue-100 px-3 py-2 text-lg">KYB</div>
-        <div class="flex justify-around items-center gap-4 py-2">
-          <div>
-            <Checked />
-          </div>
-          <div>
-            <Checked />
-          </div>
-          <div>
-            <Checked />
-          </div>
-          <div>
-            <Checked />
-          </div>
-        </div>
-      </div>
-    </div> -->
   </section>
 </template>
 
