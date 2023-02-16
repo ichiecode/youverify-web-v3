@@ -28,7 +28,7 @@
       <LazyImage class="h-96" src="~/assets/images/company/discussion.png" />
     </section>
     <Stats :stats="stats" />
-    <TrustedClients class="px-8 max-w-screen-xl mx-auto" />
+    <TrustedClients />
     <Values />
     <TeamMembers />
     <section class="py-16 md:py-20 relative">

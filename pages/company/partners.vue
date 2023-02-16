@@ -34,7 +34,7 @@
       </div>
     </HeroSection>
     <Stats :stats="stats" />
-    <TrustedClients class="px-4 md:px-8 max-w-screen-xl mx-auto" />
+    <TrustedClients />
     <section class="py-36">
       <h1
         class="text-2xl md:text-4xl font-semibold text-center max-w-2xl mx-auto"

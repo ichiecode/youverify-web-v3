@@ -37,7 +37,7 @@
         </AppButton>
       </div>
     </HeroSection>
-    <TrustedClients class="px-4 md:px-8 max-w-screen-xl mx-auto" />
+    <TrustedClients />
     <Stats :stats="stats" />
     <Features :features="features" />
     <Offers title="Real-Time Bank Account Authentication" :offers="offers" />

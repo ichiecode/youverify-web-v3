@@ -14,7 +14,7 @@
         />
       </div>
     </HeroSection>
-    <TrustedClients class="px-4 md:px-8 max-w-screen-xl mx-auto" />
+    <TrustedClients />
     <Features :features="features" />
     <Offers
       title="Automate Fraud Checks Through Intelligent Software Solutions"
