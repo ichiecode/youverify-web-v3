@@ -18,14 +18,15 @@
             />
           </div>
 
-          <button
+          <button :disabled="!checkbox"
             class="md:w-3/6 lg:w-2/6 mt-4 md:mt-0 md:ml-8 bg-white py-3 px-10 text-blue-900 font-bold rounded-lg"
+            :class="!checkbox ? 'cursor-not-allowed': ''"
           >
             Sign up
           </button>
         </form>
-        <div class="flex items-center mt-1.5 gap-2">
-          <input type="checkbox" id="check" />
+        <div class="flex items-center mt-1.5 gap-2 cursor-pointer">
+          <input type="checkbox" id="check" v-model="checkbox" />
           <label for="check" class="text-white" style="font-size: 10px"
             >I agree to receive emails on real-time product updates, industry
             tips, news and guides</label
@@ -37,7 +38,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      checkbox: null,
+    };
+  },
+};
 </script>
 
 <style></style>
