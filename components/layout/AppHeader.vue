@@ -377,7 +377,7 @@ export default {
                 },
                 {
                   name: "Adverse Media",
-                  link: "#",
+                  link: "/product/kyc/adverse-media-screening",
                 },
                 {
                   name: "Real-Time Address Verification",
@@ -433,9 +433,9 @@ export default {
               name: "Know Your Employee (KYE)",
               button: "true",
               subLists: [
-                { name: "Address verification", link: "#" },
-                { name: "Professional Certificate verification", link: "#" },
-                { name: "Education verification", link: "#" },
+                { name: "Address verification", link: "/product/kye/address-verification" },
+                { name: "Professional Certificate verification", link: "/product/kye/professional-certificate-verification" },
+                { name: "Education verification", link: "/product/kye/education-verification" },
                 { name: "Employment Record Check", link: "#" },
                 { name: "Reference Check", link: "#" },
                 { name: "Credit Check", link: "#" },
