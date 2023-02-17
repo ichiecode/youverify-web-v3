@@ -121,14 +121,14 @@
 import MoreYouverify from "~/components/company/MoreYouverify.vue";
 import HeroSection from "~/components/common/HeroSection.vue";
 import Stats from "~/components/common/Stats.vue";
-import Testimonials from "~/components/common/Testimonials.vue";
+// import Testimonials from "~/components/common/Testimonials.vue";
 import TrustedClients from "~/components/common/TrustedClients.vue";
 export default {
   components: {
     MoreYouverify,
     HeroSection,
     Stats,
-    Testimonials,
+    // Testimonials,
     TrustedClients,
   },
   data() {
