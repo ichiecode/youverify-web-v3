@@ -9,12 +9,7 @@
     >
       <div slot="buttons">
         <AppButton text="Become a partner">
-          <svg
-            slot="append"
-            viewBox="0 0 20 20"
-            fill="none"
-            class="w-5 ml-2"
-          >
+          <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-2">
             <path
               d="M6 10H14"
               stroke="currentColor"
@@ -71,14 +66,13 @@
         </div>
       </div>
     </section>
+    <Testimonials />
     <section class="py-20 bg-blue-100">
       <div class="px-4 md:px-8 max-w-screen-xl mx-auto text-center">
         <h1 class="text-2xl md:text-5xl font-bold">
           Ready to become a partner?
         </h1>
-        <p class="text-xl mt-6">
-          Sign up to explore partnership benefits
-        </p>
+        <p class="text-xl mt-6">Sign up to explore partnership benefits</p>
         <form class="form-group w-full mt-7 md:mt-16 max-w-md mx-auto">
           <div class="space-y-4">
             <input
@@ -127,9 +121,16 @@
 import MoreYouverify from "~/components/company/MoreYouverify.vue";
 import HeroSection from "~/components/common/HeroSection.vue";
 import Stats from "~/components/common/Stats.vue";
+import Testimonials from "~/components/common/Testimonials.vue";
 import TrustedClients from "~/components/common/TrustedClients.vue";
 export default {
-  components: { MoreYouverify, HeroSection, Stats, TrustedClients },
+  components: {
+    MoreYouverify,
+    HeroSection,
+    Stats,
+    Testimonials,
+    TrustedClients,
+  },
   data() {
     return {
       stats: [
