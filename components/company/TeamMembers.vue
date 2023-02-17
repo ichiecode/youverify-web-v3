@@ -122,7 +122,7 @@ export default {
   computed: {
     ...mapState({
       // teams: (state) => state.teams.teams,
-      // loadingTeams: (state) => state.teams.loading,
+      loadingTeams: (state) => state.teams.loading,
     }),
   },
 };

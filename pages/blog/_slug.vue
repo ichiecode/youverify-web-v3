@@ -304,7 +304,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .article-body h1 {
   display: none;
 }

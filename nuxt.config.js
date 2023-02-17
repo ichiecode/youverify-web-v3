@@ -65,7 +65,7 @@ export default {
 
   loading: { color: "#0F808C", height: "3px" },
 
-  css: [],
+  css: ['vue-slick-carousel/dist/vue-slick-carousel.css'],
 
   env: {
     baseUrl: "https://cms.dev.youverify.co" || "http://localhost:1337",
@@ -76,6 +76,7 @@ export default {
     "@plugins/vue-placeholders.js",
     "@/plugins/vue-lazysizes.client.js",
     "@/plugins/reuseable-component.js",
+    "@/plugins/vue-slick-carousel.js",
   ],
 
 

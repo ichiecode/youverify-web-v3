@@ -12,36 +12,68 @@
         <AppButton text="Contact team" />
       </div>
     </HeroSection>
-    <section class="py-20 px-8 max-w-screen-xl mx-auto">
-      <h4 class="text-2xl md:text-4xl text-center">Press Releases</h4>
-    </section>
-    <section class="py-20 bg-blue-100">
-      <div class="px-8 max-w-screen-xl mx-auto">
-        <h4 class="text-2xl md:text-4xl text-blue-300 text-center">
-          Awards & Recognition
-        </h4>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-16">
-          <img
-            class="h-32"
-            v-for="(award, index) in 10"
-            :key="index"
-            :src="require(`~/assets/images/awards/award-${index + 1}.png`)"
-            alt=""
-          />
+    <section class="py-20 px-8 max-w-screen-xl mx-auto">
+      <h2 class="text-2xl md:text-4xl">Featured Media</h2>
+    </section>
+
+    <section class="press-kit flex items-center md:block">
+      <div class="px-8 max-w-screen-xl mx-auto md:h-full relative">
+        <div
+          class="bg-white rounded-3xl p-6 md:p-12 flex items-center gap-12 md:absolute inset-x-8 -bottom-1/2 md:shadow-md"
+        >
+          <div class="md:w-1/2 lg:w-2/5">
+            <h2 class="text-blue-900 text-3xl md:text-5xl">Download press kit</h2>
+            <p class="md:text-lg my-6">
+              Here you'll find our press releases, logos, product visuals, info
+              about our founders, and the full Youverify story.
+            </p>
+            <AppButton
+              href="https://drive.google.com/drive/folders/11ufOVPPnEQ4J92j61nJAAJuIbOzVgc_r"
+              text="Get it here"
+            >
+              <svg
+                slot="append"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="w-5 ml-1.5"
+              >
+                <path
+                  d="M6 10H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10 6L14 10L10 14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path></svg
+            ></AppButton>
+          </div>
+          <div class="hidden md:block w-1/2 lg:w-3/5">
+            <LazyImage
+              class="h-72 mx-auto"
+              src="~/assets/images/illustrations/press-kit.svg"
+            />
+          </div>
         </div>
       </div>
     </section>
-    <section class="py-20 px-8 max-w-screen-xl mx-auto">
-      <h4 class="text-2xl md:text-4xl text-center">Customer Success Stories</h4>
-    </section>
-    <section class="py-20 px-8 max-w-screen-xl mx-auto">
-      <h4 class="text-2xl md:text-4xl">Featured Media</h4>
-    </section>
-    <section class="py-20 px-8 max-w-screen-xl mx-auto">
-      <h4 class="text-2xl md:text-4xl text-center">Our Blog Posts</h4>
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 lg:gap-10 mt-14">
+    <section class="py-20 px-8 max-w-screen-xl mx-auto mt-52">
+      <h2 class="text-2xl md:text-4xl text-center">Customer Success Stories</h2>
+    </section>
+
+    <section class="py-20 px-8 max-w-screen-xl mx-auto">
+      <h2 class="text-2xl md:text-4xl text-center">Our Blog Posts</h2>
+
+      <div
+        class="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 lg:gap-10 mt-14"
+      >
         <article
           is="nuxt-link"
           :to="`/blog/${blog.slug}`"
@@ -90,11 +122,29 @@
         </article>
       </div>
     </section>
+
+    <section class="py-20 bg-blue-100">
+      <div class="px-8 max-w-screen-xl mx-auto">
+        <h2 class="text-2xl md:text-4xl text-blue-300 text-center">
+          Awards & Recognition
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-16">
+          <img
+            class="h-32"
+            v-for="(award, index) in 10"
+            :key="index"
+            :src="require(`~/assets/images/awards/award-${index + 1}.png`)"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
     <section
       class="py-40 px-8 max-w-screen-xl mx-auto md:flex justify-between items-center gap-6"
     >
       <div>
-        <h3>Stay tuned to Youverify news</h3>
+        <h2>Stay tuned to Youverify news</h2>
         <div
           class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-5 mt-6 lg:mt-12"
         >
@@ -151,9 +201,9 @@
     <section
       class="py-20 px-8 max-w-screen-xl mx-auto flex flex-col items-center"
     >
-      <h3 class="text-3xl md:text-5xl font-semibold text-blue text-center">
+      <h2 class="text-3xl md:text-5xl font-semibold text-blue text-center">
         We Want to Be a Part of Your Story
-      </h3>
+      </h2>
       <p
         class="mt-5 mb-8 font-medium text-lg md:text-xl text-center max-w-2xl mx-auto"
       >
@@ -239,8 +289,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      blogs: "blogs/blogs"
-    })
+      blogs: "blogs/blogs",
+    }),
   },
   async asyncData({ store }) {
     try {
@@ -253,3 +303,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.press-kit {
+  height: 420px;
+  width: 100%;
+  background-image: url("~/assets/images/company/press-background.png");
+  background-position: center;
+  background-size: cover;
+}
+</style>

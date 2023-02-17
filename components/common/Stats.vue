@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue py-16 md:py-20 relative">
+  <div class="bg-blue py-16 md:py-24 relative">
     <div class="hidden md:block absolute inset-x-0 bottom-8">
       <img src="~/assets/images/illustrations/element-2.svg" alt="" />
     </div>

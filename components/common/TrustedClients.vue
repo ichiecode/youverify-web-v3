@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="grid gap-6 sm:gap-8 lg:gap-10 mt-4 sm:mt-10 lg:mt-12 grid-cols-2 md:grid-cols-5 lg:grid-cols-6 py-12"
-  >
+  <VueSlickCarousel v-bind="settings" class="py-12">
     <figure v-for="logo in logos" :key="logo" class="h-12 flex gray">
       <LazyImage
         :src="require(`~/assets/images/logos/trusted/${logo}`)"
@@ -9,7 +7,7 @@
         class=""
       />
     </figure>
-  </section>
+  </VueSlickCarousel>
 </template>
 
 <script>
@@ -24,11 +22,19 @@ export default {
         "Standard_Chartered_(2021).svg (1).png",
         "sterling-logo-balanced (1).png",
       ],
+      settings: {
+        arrows: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+      },
     };
   },
 };
 </script>
-
 
 <style scoped>
 .gray {
