@@ -58,7 +58,7 @@
             <h3 class="font-semibold text-grey text-xl">
               Step {{ index + 1 }}
             </h3>
-            <p class="font-medium text-xl">{{ step }}</p>
+            <p class="">{{ step }}</p>
           </div>
         </div>
       </div>
