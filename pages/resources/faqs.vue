@@ -281,6 +281,26 @@ export default {
             },
           ],
         },
+         {
+          category: "Pricing",
+          faqs: [
+            {
+              question: "Pricing question one?",
+              answer:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
+            },
+            {
+              question: "Pricing question two?",
+              answer:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
+            },
+            {
+              question: "Pricing question three?",
+              answer:
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
+            },
+          ],
+        },
       ],
     };
   },

@@ -8,9 +8,9 @@
       illustration="hero-professional-certification.svg"
     >
       <div slot="buttons" class="flex gap-6">
-        <AppButton text="Get started" theme="white" to="/product/kyc/pricing" />
+        <AppButton text="Get started" to="/product/kyc/pricing" />
         <AppButton
-          theme="white"
+          theme="secondary"
           :outline="true"
           text="Book a Free demo"
           href="#contact"
@@ -38,13 +38,13 @@
     <Stats :stats="stats" />
     <Features :features="features" />
     <Offers
-      title="Grow Your Business By Hiring the Right Candidates Based on Educational Background"
+      title="Hire Only Verified and Qualified Candidates"
       :offers="offers"
     />
     <Integrate />
     <ContactUs
       id="contact"
-      heading="Hire the Right Candidates, Verify their Educational Background Today"
+      heading="Start Verifying Candidates Professional Certifications"
       note="Send us a message right away! Our experts will reach out to help you start verifying customer data faster than ever. This is how we build reliable compliance solutions. Book a demo below."
     />
     <Faqs :faqs="faqs" />
@@ -126,40 +126,35 @@ export default {
       offers: [
         {
           illustration: "credential-verification",
-          title: "Make Informed Decisions",
-          note: "Get access to the data you need on applicants' education history to make informed hiring decisions.",
+          title: "Real-Time Credential Verification",
+          note: "Instantly verify candidate's professional credentials online during the application process to eliminate unqualified applications.",
         },
         {
           illustration: "fraud-detection",
-          title: "Fast Processing Times",
-          note: "Verify employee and potential employee education history in seconds during the onboarding or screening stage.",
+          title: "Fraud Detection",
+          note: "Detect and eliminate candidates attempting to perpetrate fraud through fake credentials and professional certifications.",
         },
         {
           illustration: "hiring-efficiency",
-          title: "Flexible Reporting Options",
-          note: "Configure educational history reporting options to suit the needs of your business. Get real-time information on degrees completed, attendance dates, and other available transcript information upon request.",
+          title: "Improved Hiring Efficiency",
+          note: "Speed up your hiring process and employee background check through instant credential verification. Save time, cost and labour while hiring.",
         },
       ],
       faqs: [
         {
-          question: "What is Education Verification?",
+          question: "What is the Purpose of Certificate Verification?",
           answer:
-            "Education verification is the process of verifying the educational history and background of an individual. Essentially, it is carried out to ensure an individual actually obtained the educational certificates he or she presents.",
+            "Verifying licenses and certifications are important steps in determining if a candidate can perform the job description. As a business, it is important that you verify the qualifications of a candidate to ensure that you hire the most qualified and best for the role.",
         },
         {
-          question: "How do Businesses Verify International Education?",
+          question: "How do You Check if a Certificate is Real or Fake?",
           answer:
-            "There are several means that a business may use to verify international education. These include legal registries like the National Student Clearinghouse (NSC) houses records, verifying from the institutions themselves or third-party educational verification data sources. However, these processes require several infrastructures therefore, it is more cost and labour friendly to outsource to regtech companies like Youverify.",
+            "There are several pointers you can look out for to tell a fake certificate. They include the design and components used, the language, the location of the professional body issuing the certificate and contacting the source. Contacting the source is the most effective among these and is how we verify professional licenses and certifications.",
         },
         {
           question: "What Comes up in Education Background Check?",
           answer:
             "An education background check verifies the education history of an individual. Generally, it looks to confirm whether the applicant attended the school they claimed, and shows proof of dates and degrees.",
-        },
-        {
-          question: "How do Businesses Verify International Education?",
-          answer:
-            "There are several means that a business may use to verify international education. These include legal registries like the National Student Clearinghouse (NSC) houses records, verifying from the institutions themselves or third-party educational verification data sources. However, these processes require several infrastructures therefore, it is more cost and labour friendly to outsource to regtech companies like Youverify.",
         },
       ],
     };

@@ -104,10 +104,12 @@
                 <content-placeholders-text :lines="3" />
               </content-placeholders>
               <div
-                class="grid sm:grid-cols-3 grid-cols-1 gap-10"
+                class="grid sm:grid-cols-3 grid-cols-1 gap-4 lg:gap-10"
                 v-show="!loading"
               >
                 <article
+                  is="nuxt-link"
+                  :to="`/blog/${blog.slug}`"
                   v-for="blog in formattedRelatedBlogs.slice(0, 3)"
                   :key="blog.id"
                   class="group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer"
@@ -126,11 +128,7 @@
                     <div
                       class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2"
                     >
-                      {{
-                        blog.blog_categories
-                          ? blog.blog_categories[0].categoriesName
-                          : "Youverify"
-                      }}
+                      {{ relatedBlogs[0].categoriesName }}
                     </div>
                     <div class="my-4 flex items-center space-x-5">
                       <span class="text-blue-300"> {{ blog.author }}</span>
@@ -141,8 +139,7 @@
                     </div>
                     <NuxtLink :to="`/blog/${blog.slug}`"
                       ><h4
-                        style="font-size: 32px; line-height: 44px"
-                        class="text-grey hover:text-blue-300"
+                        class="text-grey hover:text-blue-300 text-xl font-semibold"
                       >
                         {{ blog.title }}
                       </h4>
@@ -156,11 +153,14 @@
                     <!-- <p>by {{ blog.author }}</p> -->
                   </div>
                 </article>
-
-                <p v-if="formattedRelatedBlogs.length === 0">
-                  No related articles
-                </p>
               </div>
+
+              <p
+                v-if="formattedRelatedBlogs.length === 0"
+                class="text-center"
+              >
+                No related articles
+              </p>
             </section>
           </aside>
         </div>
