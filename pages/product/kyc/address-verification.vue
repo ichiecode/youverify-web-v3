@@ -2,7 +2,7 @@
   <div class="pt-20">
     <HeroSection
       class="mt-28"
-      tag="KYC | Real-Time ID Verification"
+      tag="KYC | Address Verification"
       title="Verify Customer Address Globally"
       intro="Manually verify customer address anywhere globally with zero error margin. Improve customer dropoff rate through KYC address verification solutions."
       illustration="hero-real-time-address-verification.svg"

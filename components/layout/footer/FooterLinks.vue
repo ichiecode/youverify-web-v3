@@ -32,8 +32,8 @@
                     >
                   </li>
                   <li>
-                    <nuxt-link to="/product/kyc/kyc-address-verification">
-                      KYC Address Verification</nuxt-link
+                    <nuxt-link to="/product/kyc/address-verification">
+                      Address Verification</nuxt-link
                     >
                   </li>
                   <li>

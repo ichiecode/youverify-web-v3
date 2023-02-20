@@ -377,8 +377,8 @@ export default {
                   link: "/product/kyc/adverse-media-screening",
                 },
                 {
-                  name: "KYC Address Verification",
-                  link: "/product/kyc/kyc-address-verification",
+                  name: "Address Verification",
+                  link: "/product/kyc/address-verification",
                 },
                 {
                   name: "Biometrics verification",
