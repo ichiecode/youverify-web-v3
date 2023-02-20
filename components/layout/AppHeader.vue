@@ -69,7 +69,7 @@
                 <div
                   v-if="subMenu"
                   class="bg-blue-100 pt-9 px-10 w-auto"
-                  style="min-width: 335px"
+                  style="min-width: 354px"
                 >
                   <ul>
                     <li
@@ -312,10 +312,7 @@
                     </ul>
 
                     <div v-if="nav.lists[subIndex].button">
-                      <AppButton
-                        buttonText="See pricing"
-                        buttoncolor="textbluebutton"
-                        href=""
+                      <AppButton text="See pricing" href="/product/kyc/pricing"
                         ><svg
                           slot="append"
                           viewBox="0 0 20 20"
@@ -380,8 +377,8 @@ export default {
                   link: "/product/kyc/adverse-media-screening",
                 },
                 {
-                  name: "Real-Time Address Verification",
-                  link: "/product/kyc/real-time-address-verification",
+                  name: "Address Verification",
+                  link: "/product/kyc/address-verification",
                 },
                 {
                   name: "Biometrics verification",
@@ -423,9 +420,18 @@ export default {
               name: "Know Your Business (KYB)",
               button: "true",
               subLists: [
-                { name: "Business Verification", link: "/product/kyb/business-verification" },
-                { name: "Address verification", link: "/product/kyb/business-address-verification" },
-                { name: "Identity verification", link: "/product/kyb/business-identity-verification" },
+                {
+                  name: "Business Verification",
+                  link: "/product/kyb/business-verification",
+                },
+                {
+                  name: "Address verification",
+                  link: "/product/kyb/business-address-verification",
+                },
+                {
+                  name: "Identity verification",
+                  link: "/product/kyb/business-identity-verification",
+                },
                 { name: "Sanction List", link: "/product/kyb/sanction-list" },
               ],
             },
@@ -433,10 +439,22 @@ export default {
               name: "Know Your Employee (KYE)",
               button: "true",
               subLists: [
-                { name: "Address verification", link: "/product/kye/address-verification" },
-                { name: "Professional Certificate verification", link: "/product/kye/professional-certificate-verification" },
-                { name: "Education verification", link: "/product/kye/education-verification" },
-                { name: "Employment Record Check", link: "#" },
+                {
+                  name: "Address verification",
+                  link: "/product/kye/address-verification",
+                },
+                {
+                  name: "Professional Certificate verification",
+                  link: "/product/kye/professional-certificate-verification",
+                },
+                {
+                  name: "Education verification",
+                  link: "/product/kye/education-verification",
+                },
+                {
+                  name: "Employment Record Check",
+                  link: "/product/kye/employment-record-check",
+                },
                 { name: "Reference Check", link: "#" },
                 { name: "Credit Check", link: "#" },
               ],
@@ -459,7 +477,10 @@ export default {
         {
           name: "Solutions",
           lists: [
-            { name: "Customer Verification", link: "#" },
+            {
+              name: "Customer Verification",
+              link: "/solutions/customer-verification",
+            },
             { name: "Business Verification", link: "#" },
             { name: "Compliance Management", link: "#" },
             { name: "Risk Management", link: "#" },

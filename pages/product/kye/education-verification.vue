@@ -5,12 +5,12 @@
       tag="KYE | Education Verification"
       title="Fast, Global Employee Education Verification Solution"
       intro="Reliably verify employee education status and credentials to ascertain qualifications and ensure you only hire the most qualified and trustworthy candidate. Get real-time information on degrees completed, attendance dates, and other available transcript information upon request."
-      illustration="hero-professional-certification.svg"
+      illustration="hero-education-verification.svg"
     >
       <div slot="buttons" class="flex gap-6">
-        <AppButton text="Get started" theme="white" to="/product/kyc/pricing" />
+        <AppButton text="Get started" to="/product/kyc/pricing" />
         <AppButton
-          theme="white"
+          theme="secondary"
           :outline="true"
           text="Book a Free demo"
           href="#contact"
@@ -38,13 +38,13 @@
     <Stats :stats="stats" />
     <Features :features="features" />
     <Offers
-      title="Hire Only Verified and Qualified Candidates"
+      title="Grow Your Business By Hiring the Right Candidates Based on Educational Background"
       :offers="offers"
     />
     <Integrate />
     <ContactUs
       id="contact"
-      heading="Start Verifying Candidates Professional Certifications"
+      heading="Hire the Right Candidates, Verify their Educational Background Today"
       note="Send us a message right away! Our experts will reach out to help you start verifying customer data faster than ever. This is how we build reliable compliance solutions. Book a demo below."
     />
     <Faqs :faqs="faqs" />
@@ -114,41 +114,46 @@ export default {
           note: "Automatically obtain information on employee and potential employee education history. Verify if they truly obtained the presented educational background.",
         },
         {
-          title: "Global Coverage",
-          note: "Verify individual education history from schooling institutions around the world. This gives you the flexibility to hire anyone, anywhere, with little cause for concern.",
-        },
-        {
           title: "Trusted Data Sources",
           note: "Our educational background data sources are retrieved from trusted, reliable sources, global education history registries and educational institutions.",
+        },
+        {
+          title: "Global Coverage",
+          note: "Verify individual education history from schooling institutions around the world. This gives you the flexibility to hire anyone, anywhere, with little cause for concern.",
         },
       ],
       offers: [
         {
-          illustration: "credential-verification",
-          title: "Real-Time Credential Verification",
-          note: "Instantly verify candidate's professional credentials online during the application process to eliminate unqualified applications.",
+          illustration: "metrics",
+          title: "Make Informed Decisions",
+          note: "Get access to the data you need on applicants' education history to make informed hiring decisions.",
         },
         {
-          illustration: "fraud-detection",
-          title: "Fraud Detection",
-          note: "Detect and eliminate candidates attempting to perpetrate fraud through fake credentials and professional certifications.",
+          illustration: "fast-processing",
+          title: "Fast Processing Times",
+          note: "Verify employee and potential employee education history in seconds during the onboarding or screening stage.",
         },
         {
-          illustration: "hiring-efficiency",
-          title: "Improved Hiring Efficiency",
-          note: "Speed up your hiring process and employee background check through instant credential verification. Save time, cost and labour while hiring.",
+          illustration: "flexible-reporting",
+          title: "Flexible Reporting Options",
+          note: "Configure educational history reporting options to suit the needs of your business. Get real-time information on degrees completed, attendance dates, and other available transcript information upon request.",
         },
       ],
       faqs: [
         {
-          question: "What is the Purpose of Certificate Verification?",
+          question: "What is Education Verification?",
           answer:
-            "Verifying licenses and certifications are important steps in determining if a candidate can perform the job description. As a business, it is important that you verify the qualifications of a candidate to ensure that you hire the most qualified and best for the role.",
+            "Education verification is the process of verifying the educational history and background of an individual. Essentially, it is carried out to ensure an individual actually obtained the educational certificates he or she presents. ",
         },
         {
-          question: "How do You Check if a Certificate is Real or Fake?",
+          question: "How do Businesses Verify International Education?",
           answer:
-            "There are several pointers you can look out for to tell a fake certificate. They include the design and components used, the language, the location of the professional body issuing the certificate and contacting the source. ",
+            "There are several means that a business may use to verify international education. These include legal registries like the National Student Clearinghouse (NSC) houses records, verifying from the institutions themselves or third-party educational verification data sources. However, these processes require several infrastructures therefore, it is more cost and labour friendly to outsource to regtech companies like Youverify.",
+        },
+        {
+          question: "What Comes up in Education Background Check?",
+          answer:
+            "An education background check verifies the education history of an individual. Generally, it looks to confirm whether the applicant attended the school they claimed, and shows proof of dates and degrees.",
         },
       ],
     };

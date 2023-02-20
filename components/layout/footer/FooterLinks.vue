@@ -23,12 +23,17 @@
                   </li>
                   <li>
                     <nuxt-link to="/product/kyc/id-data-verification">
-                      Real-Time ID Verification</nuxt-link
+                      ID Data Verification</nuxt-link
                     >
                   </li>
                   <li>
-                    <nuxt-link to="/product/kyc/real-time-address-verification">
-                      Real-Time Address Verification</nuxt-link
+                    <nuxt-link to="/product/kyc/adverse-media-screening">
+                      Adverse Media Screening</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyc/address-verification">
+                      Address Verification</nuxt-link
                     >
                   </li>
                   <li>
@@ -77,10 +82,26 @@
                   </h5>
                 </div>
                 <ul class="mt-4 text-white text-xs space-y-2.5">
-                  <li>Business Verification</li>
-                  <li>Address verification</li>
-                  <li>Identity verification</li>
-                  <li>Sanction List</li>
+                  <li>
+                    <nuxt-link to="/product/kyb/business-verification"
+                      >Business Verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyb/business-address-verification"
+                      >Address verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyb/business-identity-verification"
+                      >Identity verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyb/santion-list"
+                      >Sanction List</nuxt-link
+                    >
+                  </li>
 
                   <li class="text-blue">See pricing</li>
                 </ul>
@@ -95,10 +116,27 @@
                   </h5>
                 </div>
                 <ul class="mt-4 text-white text-xs space-y-2.5">
-                  <li>Address verification</li>
-                  <li>Professional Certificate verification</li>
-                  <li>Education Verification</li>
-                  <li>Employment Record Check</li>
+                  <li>
+                    <nuxt-link to="/product/kye/address-verification"
+                      >Address verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link
+                      to="/product/kye/professional-certificate-verification"
+                      >Professional Certificate verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kye/education-verification"
+                      >Education Verification</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kye/employment-record-check"
+                      >Employment Record Check</nuxt-link
+                    >
+                  </li>
                   <li>Reference Check</li>
                   <li>Credit Check</li>
                   <li class="text-blue">See pricing</li>
@@ -184,8 +222,12 @@
                     Industry Report
                   </nuxt-link>
                 </li>
-                <li>Compliance Guides & Reports</li>
-                <li>FAQs</li>
+                <li>
+                  <nuxt-link to="/resources/case-studies">
+                    Compliance Guides & Reports
+                  </nuxt-link>
+                </li>
+                <li><nuxt-link to="/resources/faqs"> FAQs </nuxt-link></li>
                 <li>Case Studies</li>
                 <li>
                   <nuxt-link to="/resources/developer"
@@ -236,7 +278,14 @@
               <li>
                 <nuxt-link to="/cookies">Cookies Policy</nuxt-link>
               </li>
-              <li>PAIA Manual</li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1JjKOQvCUubv_lR6QyJGonY2-3Nt_kkWZ/view?usp=share_link"
+                  target="_blank"
+                >
+                  PAIA Manual</a
+                >
+              </li>
               <li>
                 <nuxt-link to="/gdpr">GDPR Compliance Statement</nuxt-link>
               </li>
