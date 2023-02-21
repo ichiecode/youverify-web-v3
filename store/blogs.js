@@ -2,6 +2,7 @@ export const state = () => ({
   blogs: [],
   singleblogPost: null,
   relatedBlogs: null,
+  pressReleases: null,
   total: 0,
   loading: false,
   error: null,
@@ -44,6 +45,10 @@ export const mutations = {
 
   setRelatedBlogs(state, payload) {
     state.relatedBlogs = payload
+  },
+
+  setPressReleases(state, payload) {
+    state.pressReleases = payload
   }
 };
 
@@ -107,6 +112,20 @@ export const actions = {
       .$get(`${process.env.baseUrl}/blog-categories?slug=${slug}`)
       .then((res) => {
         commit("setRelatedBlogs", res);
+        commit("setLoading", false);
+        return res;
+      })
+      .catch((error) => {
+        commit(setError, error.data)
+      })
+    return response;
+  },
+  async getPressReleases({ state, commit }, slug) {
+    commit("setLoading", true);
+    const response = await this.$axios
+      .$get(`${process.env.baseUrl}/blogs?blog_categories.slug=${slug}`)
+      .then((res) => {
+        commit("setPressReleases", res);
         commit("setLoading", false);
         return res;
       })

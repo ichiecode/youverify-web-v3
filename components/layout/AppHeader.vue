@@ -312,7 +312,11 @@
                     </ul>
 
                     <div v-if="nav.lists[subIndex].button">
-                      <AppButton text="See pricing" href="/product/kyc/pricing"
+                      <AppButton
+                        text="See pricing"
+                        theme="transparent"
+                        size="none"
+                        href="/product/kyc/pricing"
                         ><svg
                           slot="append"
                           viewBox="0 0 20 20"
@@ -455,16 +459,28 @@ export default {
                   name: "Employment Record Check",
                   link: "/product/kye/employment-record-check",
                 },
-                { name: "Reference Check", link: "#" },
-                { name: "Credit Check", link: "#" },
+                {
+                  name: "Reference Check",
+                  link: "/product/kye/reference-check",
+                },
+                {
+                  name: "Credit Check",
+                  link: "/product/kye/employee-credit-check",
+                },
               ],
             },
             {
               name: "Know Your Transaction (KYT)",
               button: "true",
               subLists: [
-                { name: "Transaction monitoring", link: "#" },
-                { name: "Transaction screening", link: "#" },
+                {
+                  name: "Transaction monitoring",
+                  link: "/product/kyt/transaction-monitoring-solution",
+                },
+                {
+                  name: "Transaction screening",
+                  link: "/product/kyt/transaction-screening-solution",
+                },
                 { name: "Crypto Monitoring", link: "#" },
               ],
             },
@@ -528,7 +544,7 @@ export default {
             { name: "Contact Us", link: "/company/contact-us" },
             {
               name: "Startup Accelerator",
-              link: "/startup-program",
+              link: "https://startup.youverify.co/",
             },
           ],
         },

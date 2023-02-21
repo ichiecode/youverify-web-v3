@@ -137,8 +137,16 @@
                       >Employment Record Check</nuxt-link
                     >
                   </li>
-                  <li>Reference Check</li>
-                  <li>Credit Check</li>
+                  <li>
+                    <nuxt-link to="/product/kye/reference-check"
+                      >Reference Check</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kye/employee-credit-check"
+                      >Credit Check</nuxt-link
+                    >
+                  </li>
                   <li class="text-blue">See pricing</li>
                 </ul>
               </div>
@@ -149,8 +157,16 @@
                   </h5>
                 </div>
                 <ul class="mt-4 text-white text-xs space-y-2.5">
-                  <li>Transaction monitoring</li>
-                  <li>Transaction screening</li>
+                  <li>
+                    <nuxt-link to="/product/kyt/transaction-monitoring-solution"
+                      >Transaction monitoring</nuxt-link
+                    >
+                  </li>
+                  <li>
+                    <nuxt-link to="/product/kyt/transaction-screening-solution"
+                      >Transaction screening</nuxt-link
+                    >
+                  </li>
                   <li>Crypto Monitoring</li>
 
                   <li class="text-blue">See pricing</li>
