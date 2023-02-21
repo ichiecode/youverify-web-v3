@@ -74,6 +74,59 @@
 
     <section class="py-20 px-8 max-w-screen-xl mx-auto">
       <h2 class="text-2xl md:text-4xl">Featured Media</h2>
+      <VueSlickCarousel ref="carousel" v-bind="settings" class="grid gap-10">
+        <div
+          v-for="media in featuredMedias"
+          :key="media.id"
+          class="shadow-md rounded-2xl p-6 w-96 my-10 mr-6"
+        >
+          <LazyImage class="h-12" :src="media.Image.url" />
+          <p class="text-black mt-9 mb-16 h-24 ellipsis">
+            {{ media.Title }}
+          </p>
+          <a :href="media.Link" target="_blank" class="text-blue font-medium"
+            >Full story here</a
+          >
+        </div>
+      </VueSlickCarousel>
+      <div class="flex items-center gap-3">
+        <div
+          @click="showPrev"
+          class="h-5 w-5 rounded-full flex items-center justify-center cursor-pointer border border-blue"
+        >
+          <svg
+            width="12px"
+            height="12px"
+            viewBox="0 0 0.225 0.225"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.132 0.063C0.135 0.065 0.135 0.07 0.132 0.072L0.092 0.112L0.132 0.153C0.135 0.155 0.135 0.16 0.132 0.162C0.13 0.165 0.125 0.165 0.123 0.162L0.078 0.117C0.076 0.116 0.076 0.114 0.076 0.112C0.076 0.111 0.076 0.109 0.078 0.108L0.123 0.063C0.125 0.06 0.13 0.06 0.132 0.063Z"
+              fill="#46B2C8"
+            />
+          </svg>
+        </div>
+        <div
+          @click="showNext"
+          class="h-5 w-5 rounded-full flex items-center justify-center cursor-pointer border border-blue"
+        >
+          <svg
+            fill="#46B2C8"
+            width="12px"
+            height="12px"
+            viewBox="0 0 3.84 3.84"
+            id="Flat"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.44 3.3a0.18 0.18 0 0 1 -0.128 -0.307L2.386 1.92 1.313 0.847a0.18 0.18 0 0 1 0.254 -0.254l1.2 1.2a0.18 0.18 0 0 1 0 0.254l-1.2 1.2A0.179 0.179 0 0 1 1.44 3.3Z"
+            />
+          </svg>
+        </div>
+      </div>
     </section>
 
     <section class="press-kit flex items-center md:block">
@@ -351,6 +404,13 @@ export default {
           link: "https://instagram.com/youcheckonline",
         },
       ],
+      settings: {
+        arrows: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 2000,
+      },
     };
   },
   computed: {
@@ -360,17 +420,27 @@ export default {
     ...mapState({
       relatedBlogs: (state) => state.blogs.relatedBlogs,
       pressReleases: (state) => state.blogs.pressReleases,
+      featuredMedias: (state) => state.blogs.featuredMedias,
       loading: (state) => state.blogs.loading,
     }),
   },
+  methods: {
+    showPrev() {
+      this.$refs.carousel.prev();
+    },
+    showNext() {
+      this.$refs.carousel.next();
+    },
+  },
   async asyncData({ store }) {
-    try {
-      await store.dispatch("blogs/getBlogs", {
+    await Promise.all([
+      store.dispatch("blogs/getBlogs", {
         currentPage: 0,
         limit: 3,
-      });
-      await store.dispatch("blogs/getPressReleases", "humans-of-YV");
-    } catch (e) {}
+      }),
+      store.dispatch("blogs/getPressReleases", "humans-of-YV"),
+      store.dispatch("blogs/getFeaturedMedias"),
+    ]);
   },
 };
 </script>
@@ -382,5 +452,11 @@ export default {
   background-image: url("~/assets/images/company/press-background.png");
   background-position: center;
   background-size: cover;
+}
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>
