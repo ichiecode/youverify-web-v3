@@ -259,6 +259,64 @@
         </div>
       </div>
     </section>
+
+    <section
+      class="flex flex-col md:flex-row gap-16 lg:gap-32 pt-40 px-8 max-w-screen-xl mx-auto"
+    >
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-2xl md:text-4xl">We Want to Be a Part of Your Story</h1>
+        <p class="mt-3 md:mt-6 md:text-lg">
+          Working on an exciting story and need Youverify's help? Reach out to
+          us and our team will get back to you in less than 24 hours.
+        </p>
+      </div>
+
+      <form action="" method="post" class="w-full md:w-1/2">
+        <input
+          type="hidden"
+          name="retURL"
+          value="https://www.youverify.co/contact-us-success"
+        />
+        <div class="form-group space-y-5 w-full">
+          <div class="flex gap-4">
+            <input
+              type="text"
+              name="First Name"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              name="Last Name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <input type="email" name="Email" placeholder="Email" required />
+          <input type="text" name="Company" placeholder="Company" required />
+          <input type="tel" name="Phone Number" placeholder="Phone Number" />
+          <textarea placeholder="Message" name="Message" rows="8"></textarea>
+        </div>
+
+        <div class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" id="check" v-model="checkbox" class="w-4" />
+          <label for="check" class="text-grey" style="font-size: 10px"
+            >I want to sign up for blog updates another communications</label
+          >
+        </div>
+        <AppButton :disabled="!checkbox" text="Submit" class="w-full mt-12" />
+        <p class="text-xs mt-3">
+          By clicking the button you agree with our
+          <nuxt-link
+            to="/privacy-policy"
+            class="text-blue cursor-pointer font-semibold"
+          >
+            Privacy Policy</nuxt-link
+          >
+        </p>
+      </form>
+    </section>
+
     <section
       class="py-40 px-8 max-w-screen-xl mx-auto md:flex justify-between items-center gap-6"
     >
@@ -317,7 +375,7 @@
         </button>
       </div>
     </section>
-    <section
+    <!-- <section
       class="py-20 px-8 max-w-screen-xl mx-auto flex flex-col items-center"
     >
       <h2 class="text-3xl md:text-5xl font-semibold text-blue text-center">
@@ -353,7 +411,7 @@
             stroke-linejoin="round"
           ></path></svg
       ></AppButton>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -382,6 +440,7 @@ export default {
   },
   data() {
     return {
+      checkbox: null,
       socials: [
         {
           icon: "facebook",

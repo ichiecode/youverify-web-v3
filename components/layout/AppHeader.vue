@@ -316,7 +316,7 @@
                         text="See pricing"
                         theme="transparent"
                         size="none"
-                        href="/product/kyc/pricing"
+                        :to="nav.lists[subIndex].button"
                         ><svg
                           slot="append"
                           viewBox="0 0 20 20"
@@ -422,7 +422,7 @@ export default {
             },
             {
               name: "Know Your Business (KYB)",
-              button: "true",
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "Business Verification",
@@ -441,7 +441,7 @@ export default {
             },
             {
               name: "Know Your Employee (KYE)",
-              button: "true",
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "Address verification",
@@ -471,7 +471,7 @@ export default {
             },
             {
               name: "Know Your Transaction (KYT)",
-              button: "true",
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "Transaction monitoring",

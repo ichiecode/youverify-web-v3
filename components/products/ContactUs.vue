@@ -5,30 +5,55 @@
       <p class="text-xl font-semibold mt-12">
         {{ note }}
       </p>
-      <form class="form-group w-full mt-7 md:mt-16 max-w-md mx-auto">
-        <div class="space-y-4">
+      <form
+        action="https://go.pardot.com/l/1001831/2023-02-21/7x1n"
+        method="post"
+        class="w-full mt-7 md:mt-16 max-w-md mx-auto"
+      >
+        <input
+          type="hidden"
+          name="retURL"
+          value="https://www.youverify.co/contact-us-success"
+        />
+        <div class="space-y-4 form-group w-full">
+          <div class="flex gap-4">
+            <input
+              type="text"
+              placeholder="First name"
+              name="First Name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              name="Last Name"
+              required
+            />
+          </div>
           <input
-            class="py-3.5 px-6 w-full rounded"
-            type="text"
-            placeholder="Type your name"
-          />
-          <input
-            class="py-3.5 px-6 w-full rounded"
             type="text"
             placeholder="Company name"
+            name="Company"
+            required
           />
+          <input type="text" placeholder="Industry" name="Industry" required />
           <input
-            class="py-3.5 px-6 w-full rounded"
             type="email"
             placeholder="Type your corporate email address"
+            name="Email"
+            required
           />
-          <input
-            class="py-3.5 px-6 w-full rounded"
-            type="tel"
-            placeholder="+234"
-          />
+          <input type="tel" placeholder="Phone number" name="Phone" />
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" id="check" v-model="checkbox" class="w-4" />
+          <label for="check" class="text-grey" style="font-size: 10px"
+            >I agree to receive emails on real-time product updates, industry
+            tips, news and guides</label
+          >
         </div>
         <AppButton
+          :disabled="!checkbox"
           text="Get a free demo"
           class="w-full mt-14"
         />
@@ -51,6 +76,11 @@ export default {
   props: {
     heading: String,
     note: String,
+  },
+  data() {
+    return {
+      checkbox: null,
+    };
   },
 };
 </script>

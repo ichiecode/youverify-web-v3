@@ -73,28 +73,51 @@
           Ready to become a partner?
         </h1>
         <p class="text-xl mt-6">Sign up to explore partnership benefits</p>
-        <form class="form-group w-full mt-7 md:mt-16 max-w-md mx-auto">
-          <div class="space-y-4">
+        <form
+          action="https://go.pardot.com/l/1001831/2023-02-21/7wxk"
+          method="post"
+          class="w-full mt-7 md:mt-16 max-w-md mx-auto"
+        >
+          <input
+            type="hidden"
+            name="retURL"
+            value="https://www.youverify.co/contact-us-success"
+          />
+          <div class="form-group space-y-4 w-full">
+            <div class="flex gap-4">
+              <input
+                type="text"
+                placeholder="First name"
+                name="First Name"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last name"
+                name="Last Name"
+                required
+              />
+            </div>
+            <input type="email" placeholder="Email" name="Email" required />
             <input
-              class="py-3.5 px-6 w-full rounded"
               type="text"
-              placeholder="Type your name "
+              placeholder="Company name"
+              name="Company"
+              required
             />
             <input
-              class="py-3.5 px-6 w-full rounded"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              class="py-3.5 px-6 w-full rounded"
               type="tel"
-              placeholder="+234 "
+              placeholder="Phone number"
+              name="Phone"
+              required
             />
-            <input
-              class="py-3.5 px-6 w-full rounded"
-              type="text"
-              placeholder="Input text "
-            />
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="check" v-model="checkbox" class="w-4" />
+            <label for="check" class="text-grey" style="font-size: 10px"
+              >I agree to receive emails on real-time product updates, industry
+              tips, news and guides</label
+            >
           </div>
           <AppButton
             buttonText="Apply Now"

@@ -19,6 +19,7 @@
     <ContactUs
       title="Send us a message"
       note="Leave us a message and our team will get back to you in less than 24 hours."
+      :faq="false"
     />
   </div>
 </template>
