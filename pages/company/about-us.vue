@@ -57,7 +57,7 @@
       <div class="text-blue text-2xl md:text-5xl font-bold">
         Interested in Joining Us?
       </div>
-      <p class=" md:w-2/3">
+      <p class="md:w-2/3">
         We are always looking for amazing talents that share the same passion
         and vision as ours. <br />
         Think you're up to the challenge? <br />
@@ -219,8 +219,6 @@ export default {
   },
   computed: {
     ...mapState({
-      // teams: (state) => state.teams.teams,
-      // loadingTeams: (state) => state.teams.loading,
       values: (state) => state.values.values,
       loadingValues: (state) => state.values.loading,
     }),
@@ -228,6 +226,7 @@ export default {
   async asyncData({ store }) {
     await Promise.all([
       store.dispatch("teams/getTeams"),
+      store.dispatch("teams/getDepartments"),
       store.dispatch("values/getValues"),
     ]);
   },
