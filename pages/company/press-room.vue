@@ -15,24 +15,24 @@
 
     <section class="py-20 px-8 max-w-screen-xl mx-auto">
       <h2 class="text-2xl md:text-4xl">Press Releases</h2>
-      <content-placeholders
-        v-show="loading"
-        v-for="index in 3"
-        :key="index"
-        style="width: 390px"
-      >
-        <content-placeholders-heading :img="true" />
-        <content-placeholders-text :lines="3" />
-      </content-placeholders>
-
+      <div v-show="loading" class="flex items-center justify-center my-4">
+        <content-placeholders
+          v-for="index in 3"
+          :key="index"
+          style="width: 390px"
+        >
+          <content-placeholders-heading :img="true" />
+          <content-placeholders-text :lines="3" />
+        </content-placeholders>
+      </div>
       <div
         v-show="!loading"
-        class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-10"
+        class="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 lg:gap-10 mt-14"
       >
         <article
           is="nuxt-link"
           :to="`/blog/${blog.slug}`"
-          v-for="blog in relatedBlogs.slice(0, 3)"
+          v-for="blog in pressReleases.slice(0, 3)"
           :key="blog.id"
           class="group hover:shadow-md transition-shadow duration-300 overflow-hidden cursor-pointer"
         >
@@ -48,7 +48,7 @@
           </header>
           <div class="px-4 py-6">
             <div class="bg-blue-150 text-blue text-sm rounded w-fit px-5 py-2">
-              {{ relatedBlogs[0].categoriesName }}
+              {{ blog.blog_categories[0].categoriesName }}
             </div>
             <div class="my-4 flex items-center space-x-5">
               <span class="text-blue-300"> {{ blog.author }}</span>
@@ -359,6 +359,7 @@ export default {
     }),
     ...mapState({
       relatedBlogs: (state) => state.blogs.relatedBlogs,
+      pressReleases: (state) => state.blogs.pressReleases,
       loading: (state) => state.blogs.loading,
     }),
   },
@@ -368,8 +369,7 @@ export default {
         currentPage: 0,
         limit: 3,
       });
-      await store.dispatch("blogs/getRelatedBlogs", "humans-of-yv");
-      console.log('I got it')
+      await store.dispatch("blogs/getPressReleases", "humans-of-YV");
     } catch (e) {}
   },
 };

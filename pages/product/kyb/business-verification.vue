@@ -138,29 +138,29 @@ export default {
       ],
       offers: [
         {
-          illustration: "intelligent-ai",
+          illustration: "global",
           title: "Global Coverage & Easy API Integration",
           note: "Globally verify a business's legal registration status, address, employees, and directors. Our seamless KYB APIs make it easy to customise our services to suit your platform.",
         },
         {
-          illustration: "digital-nomad",
+          illustration: "real-time",
           title: "Real-Time AML Screening",
           note: "Screen business entities for watchlisting, PEPs, global sanctions and adverse media in real-time.",
         },
         {
-          illustration: "advanced-customisation",
+          illustration: "fingerprint-cuate",
           title: "KYC Verification of UBOs",
           note: "KYC-verify the Ultimate Beneficial Owners (UBOs) of a business for easy compliance and fraud prevention.",
         },
         {
-          illustration: "digital-nomad",
+          illustration: "friendly-case-management",
           title: "User-Friendly Case Management Tool",
           note: "Leverage our easy-to-navigate interface and case management tool for a faster and more efficient review of business verification results.",
         },
         {
           illustration: "advanced-customisation",
           title: "Simplify Your KYB Workflow",
-          note: "Prioritise efficiency in your KYB program through our customizable workflows that allow you to select verification parameters that suit your business needs. ",
+          note: "Prioritise efficiency in your KYB program through our customizable workflows that allow you to select verification parameters that suit your business needs.",
         },
       ],
       faqs: [
