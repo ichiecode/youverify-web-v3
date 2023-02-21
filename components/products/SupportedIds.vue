@@ -11,12 +11,9 @@
     <div
       class="flex justify-between gap-6 flex-col md:flex-row mt-24 md:items-end"
     >
-      <div
-        v-for="id in ids"
-        :key="id.name"
-        class="flex flex-col items-center "
-      >
-        <LazyImage class="text-blue hover:text-blue-150 transition-colors duration-300"
+      <div v-for="id in ids" :key="id.name" class="flex flex-col items-center">
+        <LazyImage
+          class="opacity-50 hover:opacity-100 duration-300"
           :src="require(`~/assets/images/icons/ids/${id.image}.svg`)"
         />
         <h1 class="text-blue-300 font-semibold text-xl mt-9">{{ id.name }}</h1>
