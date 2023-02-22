@@ -60,7 +60,7 @@
               "
               :alt="partner.type"
             />
-            <h1 class="text-2xl font-semibold mt-8">{{ partner.type }}</h1>
+            <h2 class="text-2xl font-semibold mt-8">{{ partner.type }}</h2>
             <p class="mt-4 lg:max-w-xs">{{ partner.text }}</p>
           </div>
         </div>
