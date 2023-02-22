@@ -17,7 +17,7 @@
             :key="category.id"
             class="py-4 cursor-pointer transition-colors duration-200 md:text-lg"
             :class="
-              category === category.Name
+              currentCategory === category.Name
                 ? 'text-blue font-semibold'
                 : 'text-grey font-medium'
             "
@@ -35,7 +35,7 @@
           >
             <div class="flex justify-between cursor-pointer">
               <h2
-                class="text-lg md:text-2xl font-semibold"
+                class="text-lg md:text-xl font-semibold"
                 :class="currentIndex === index ? 'text-blue' : 'text-grey'"
               >
                 {{ faq.Title }}
@@ -120,7 +120,7 @@ export default {
   },
   data() {
     return {
-      category: "Company",
+      currentCategory: "Company",
       currentIndex: 0,
     };
   },
@@ -130,12 +130,14 @@ export default {
       categories: (state) => state.faqs.categories,
     }),
     selectedCategory() {
-      return this.faqs.filter((faq) => faq.faq_category.Name === this.category);
+      return this.faqs.filter(
+        (faq) => faq.faq_category.Name === this.currentCategory
+      );
     },
   },
   methods: {
     changeCategory(category) {
-      this.category = category;
+      this.currentCategory = category;
       this.currentIndex = 0;
     },
     toggleFaq(index) {
