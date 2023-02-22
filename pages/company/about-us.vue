@@ -186,7 +186,7 @@ export default {
       stats: [
         {
           figure: "100+",
-          name: "Platfroms and banks have patnered with Youverify",
+          name: "Platforms and banks have patnered with Youverify",
         },
         {
           figure: "2000+",
