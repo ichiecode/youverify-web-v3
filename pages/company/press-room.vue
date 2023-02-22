@@ -249,12 +249,12 @@
         </h2>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-16">
-          <img
+          <LazyImage
             class="h-32"
-            v-for="(award, index) in 10"
-            :key="index"
-            :src="require(`~/assets/images/awards/award-${index + 1}.png`)"
-            alt=""
+            v-for="award in awards"
+            :key="award.id"
+            :src="award.Image.url"
+            :alt="award.Title"
           />
         </div>
       </div>
@@ -443,6 +443,7 @@ export default {
       relatedBlogs: (state) => state.blogs.relatedBlogs,
       pressReleases: (state) => state.press.pressReleases,
       featuredMedias: (state) => state.press.featuredMedias,
+      awards: (state) => state.press.awards,
       loading: (state) => state.blogs.loading,
     }),
   },

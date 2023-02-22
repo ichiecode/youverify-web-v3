@@ -1,6 +1,7 @@
 export const state = () => ({
   pressReleases: null,
   featuredMedias: null,
+  awards: null,
   loading: false,
 });
 
@@ -20,6 +21,10 @@ export const mutations = {
 
   setFeaturedMedias(state, payload) {
     state.featuredMedias = payload;
+  },
+
+  setAwards(state, payload) {
+    state.awards = payload;
   },
 };
 
@@ -44,6 +49,20 @@ export const actions = {
       .$get(`${process.env.baseUrl}/featured-medias`)
       .then((res) => {
         commit("setFeaturedMedias", res);
+        commit("setLoading", false);
+        return res;
+      })
+      .catch((error) => {
+        commit(setError, error.data);
+      });
+    return response;
+  },
+  async getAwards({ commit }) {
+    commit("setLoading", true);
+    const response = await this.$axios
+      .$get(`${process.env.baseUrl}/awards`)
+      .then((res) => {
+        commit("setAwards", res);
         commit("setLoading", false);
         return res;
       })
