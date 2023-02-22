@@ -2,8 +2,6 @@ export const state = () => ({
   blogs: [],
   singleblogPost: null,
   relatedBlogs: null,
-  pressReleases: null,
-  featuredMedias: null,
   total: 0,
   loading: false,
   error: null,
@@ -46,14 +44,6 @@ export const mutations = {
 
   setRelatedBlogs(state, payload) {
     state.relatedBlogs = payload;
-  },
-
-  setPressReleases(state, payload) {
-    state.pressReleases = payload;
-  },
-
-  setFeaturedMedias(state, payload) {
-    state.featuredMedias = payload;
   },
 };
 
@@ -117,34 +107,6 @@ export const actions = {
       .$get(`${process.env.baseUrl}/blog-categories?slug=${slug}`)
       .then((res) => {
         commit("setRelatedBlogs", res);
-        commit("setLoading", false);
-        return res;
-      })
-      .catch((error) => {
-        commit(setError, error.data);
-      });
-    return response;
-  },
-  async getPressReleases({ commit }, slug) {
-    commit("setLoading", true);
-    const response = await this.$axios
-      .$get(`${process.env.baseUrl}/blogs?blog_categories.slug=${slug}`)
-      .then((res) => {
-        commit("setPressReleases", res);
-        commit("setLoading", false);
-        return res;
-      })
-      .catch((error) => {
-        commit(setError, error.data);
-      });
-    return response;
-  },
-  async getFeaturedMedias({ commit }) {
-    commit("setLoading", true);
-    const response = await this.$axios
-      .$get(`${process.env.baseUrl}/featured-medias`)
-      .then((res) => {
-        commit("setFeaturedMedias", res);
         commit("setLoading", false);
         return res;
       })

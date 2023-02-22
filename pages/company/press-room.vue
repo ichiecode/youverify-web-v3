@@ -375,43 +375,6 @@
         </button>
       </div>
     </section>
-    <!-- <section
-      class="py-20 px-8 max-w-screen-xl mx-auto flex flex-col items-center"
-    >
-      <h2 class="text-3xl md:text-5xl font-semibold text-blue text-center">
-        We Want to Be a Part of Your Story
-      </h2>
-      <p
-        class="mt-5 mb-8 font-medium text-lg md:text-xl text-center max-w-2xl mx-auto"
-      >
-        Working on an exciting story and need Youverify's help? Reach out to us
-        at
-        <a
-          class="font-semibold text-blue-300"
-          href="mailto:contact@youverify.co"
-        >
-          contact@youverify.co</a
-        >
-      </p>
-
-      <AppButton text="Contact our press team"
-        ><svg slot="append" viewBox="0 0 20 20" fill="none" class="w-6 ml-1.5">
-          <path
-            d="M6 10H14"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-          <path
-            d="M10 6L14 10L10 14"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path></svg
-      ></AppButton>
-    </section> -->
   </div>
 </template>
 
@@ -478,8 +441,8 @@ export default {
     }),
     ...mapState({
       relatedBlogs: (state) => state.blogs.relatedBlogs,
-      pressReleases: (state) => state.blogs.pressReleases,
-      featuredMedias: (state) => state.blogs.featuredMedias,
+      pressReleases: (state) => state.press.pressReleases,
+      featuredMedias: (state) => state.press.featuredMedias,
       loading: (state) => state.blogs.loading,
     }),
   },
@@ -497,8 +460,9 @@ export default {
         currentPage: 0,
         limit: 3,
       }),
-      store.dispatch("blogs/getPressReleases", "humans-of-YV"),
-      store.dispatch("blogs/getFeaturedMedias"),
+      store.dispatch("press/getPressReleases", "humans-of-YV"),
+      store.dispatch("press/getFeaturedMedias"),
+      store.dispatch("press/getAwards"),
     ]);
   },
 };
