@@ -12,25 +12,25 @@
           class="md:w-1/3 flex md:block overflow-scroll whitespace-nowrap md:whitespace-normal items-end gap-6 text-center md:text-left leading-none border-b border-grey md:border-none"
         >
           <div
-            @click="changeCategory(faq.category)"
-            v-for="faq in faqs"
-            :key="faq.category"
+            @click="changeCategory(category.Name)"
+            v-for="category in categories"
+            :key="category.id"
             class="py-4 cursor-pointer transition-colors duration-200 md:text-lg"
             :class="
-              category === faq.category
+              category === category.Name
                 ? 'text-blue font-semibold'
                 : 'text-grey font-medium'
             "
           >
-            {{ faq.category }}
+            {{ category.Name }}
           </div>
         </div>
 
         <div class="md:w-2/3">
           <div
             @click="toggleFaq(index)"
-            v-for="(faq, index) in categorisedFaq.faqs"
-            :key="index"
+            v-for="(faq, index) in selectedCategory"
+            :key="faq.id"
             class="py-4 md:py-6"
           >
             <div class="flex justify-between cursor-pointer">
@@ -38,7 +38,7 @@
                 class="text-lg md:text-2xl font-semibold"
                 :class="currentIndex === index ? 'text-blue' : 'text-grey'"
               >
-                {{ faq.question }}
+                {{ faq.Title }}
               </h2>
               <div>
                 <svg
@@ -80,7 +80,9 @@
               class="mt-3 md:mt-5"
               :class="currentIndex === index ? 'block' : 'hidden'"
             >
-              <p class="text-base md:text-lg md:leading-7">{{ faq.answer }}</p>
+              <p class="text-base md:text-lg md:leading-7">
+                {{ faq.Description }}
+              </p>
             </div>
           </div>
         </div>
@@ -99,6 +101,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import ResourceHeader from "@/components/resources/header.vue";
 import ContactUs from "@/components/common/ContactUs.vue";
 import KnowMore from "@/components/common/KnowMore.vue";
@@ -119,194 +122,15 @@ export default {
     return {
       category: "Company",
       currentIndex: 0,
-      // Hard coded data
-      faqs: [
-        {
-          category: "Company",
-          faqs: [
-            {
-              question: "Who is Youverify",
-              answer:
-                "Youveify is a regtech service company that builds compliance products for businesses to automate their end-to-end compliance needs. This includes Know Your Customer, Know Your Business, Know Your Employee, Know Your Transaction and business-tailored compliance workflow automation (vForms).",
-            },
-            {
-              question: "Where is Youverify Located?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "What industries does Youverify serve?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "What countries are Youverify loacted in?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-        {
-          category: "Products",
-          faqs: [
-            {
-              question: "Product question one?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Product question two?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Product question three?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Product question four?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Product question five?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-        {
-          category: "Verification Solutions",
-          faqs: [
-            {
-              question: "Verification question one?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Verification question two?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Verification question three?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Verification question four?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-        {
-          category: "Customer Verification Process",
-          faqs: [
-            {
-              question: "Customer Verification question one?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Customer Verification question two?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Customer Verification question three?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Customer Verification question four?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-        {
-          category: "Software Integration",
-          faqs: [
-            {
-              question: "Software integration question one?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Software integration question two?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Software integration question three?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Software integration question four?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Software integration question five?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-        {
-          category: "Compliance and Certification",
-          faqs: [
-            {
-              question: "Compliance question one?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Compliance question two?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Compliance question three?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Compliance question four?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-         {
-          category: "Pricing",
-          faqs: [
-            {
-              question: "Pricing question one?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Pricing question two?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-            {
-              question: "Pricing question three?",
-              answer:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam dolores asperiores accusantium dicta eaque consequatur quasi quo ut officia, nihil itaque perspiciatis repellendus, laboriosam sit, fuga in.",
-            },
-          ],
-        },
-      ],
     };
   },
   computed: {
-    categorisedFaq() {
-      return this.faqs.find((faq) => faq.category === this.category);
+    ...mapState({
+      faqs: (state) => state.faqs.faqs,
+      categories: (state) => state.faqs.categories,
+    }),
+    selectedCategory() {
+      return this.faqs.filter((faq) => faq.faq_category.Name === this.category);
     },
   },
   methods: {
@@ -319,6 +143,12 @@ export default {
         ? (this.currentIndex = null)
         : (this.currentIndex = index);
     },
+  },
+  async asyncData({ store }) {
+    await Promise.all([
+      store.dispatch("faqs/getFaqs"),
+      store.dispatch("faqs/getCategories"),
+    ]);
   },
 };
 </script>
