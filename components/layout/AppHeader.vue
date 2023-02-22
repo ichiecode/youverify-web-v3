@@ -497,9 +497,15 @@ export default {
               name: "Customer Verification",
               link: "/solutions/customer-verification",
             },
-            { name: "Business Verification", link: "#" },
-            { name: "Compliance Management", link: "#" },
-            { name: "Risk Management", link: "#" },
+            {
+              name: "Business Verification",
+              link: "/solutions/business-verification",
+            },
+            {
+              name: "Compliance Management",
+              link: "/solutions/compliance-management",
+            },
+            { name: "Risk Management", link: "/solutions/risk-management" },
             {
               name: "Use Cases",
               subLists: [
