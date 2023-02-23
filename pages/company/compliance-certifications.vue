@@ -7,7 +7,7 @@
       intro="Youverify is designed with advanced engineering practices and strict security measures in mind. Our certifications and recurring testing back this up."
       illustration="hero-certification.svg"
     />
-    <section class="pt-28 px-4 md:px-8 max-w-screen-xl mx-auto">
+    <section class="pt-28 px-8 max-w-screen-xl mx-auto">
       <div class="text-center max-w-2xl mx-auto">
         <h1 class="font-semibold text-xl md:text-4xl">
           Certifications and attestations

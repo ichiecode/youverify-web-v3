@@ -74,6 +74,59 @@
 
     <section class="py-20 px-8 max-w-screen-xl mx-auto">
       <h2 class="text-2xl md:text-4xl">Featured Media</h2>
+      <VueSlickCarousel ref="carousel" v-bind="settings" class="grid gap-10">
+        <div
+          v-for="media in featuredMedias"
+          :key="media.id"
+          class="shadow-md rounded-2xl p-6 w-96 my-10 mr-6"
+        >
+          <LazyImage class="h-12" :src="media.Image.url" />
+          <p class="text-black mt-9 mb-16 h-24 ellipsis">
+            {{ media.Title }}
+          </p>
+          <a :href="media.Link" target="_blank" class="text-blue font-medium"
+            >Full story here</a
+          >
+        </div>
+      </VueSlickCarousel>
+      <div class="flex items-center gap-3">
+        <div
+          @click="showPrev"
+          class="h-5 w-5 rounded-full flex items-center justify-center cursor-pointer border border-blue"
+        >
+          <svg
+            width="12px"
+            height="12px"
+            viewBox="0 0 0.225 0.225"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.132 0.063C0.135 0.065 0.135 0.07 0.132 0.072L0.092 0.112L0.132 0.153C0.135 0.155 0.135 0.16 0.132 0.162C0.13 0.165 0.125 0.165 0.123 0.162L0.078 0.117C0.076 0.116 0.076 0.114 0.076 0.112C0.076 0.111 0.076 0.109 0.078 0.108L0.123 0.063C0.125 0.06 0.13 0.06 0.132 0.063Z"
+              fill="#46B2C8"
+            />
+          </svg>
+        </div>
+        <div
+          @click="showNext"
+          class="h-5 w-5 rounded-full flex items-center justify-center cursor-pointer border border-blue"
+        >
+          <svg
+            fill="#46B2C8"
+            width="12px"
+            height="12px"
+            viewBox="0 0 3.84 3.84"
+            id="Flat"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.44 3.3a0.18 0.18 0 0 1 -0.128 -0.307L2.386 1.92 1.313 0.847a0.18 0.18 0 0 1 0.254 -0.254l1.2 1.2a0.18 0.18 0 0 1 0 0.254l-1.2 1.2A0.179 0.179 0 0 1 1.44 3.3Z"
+            />
+          </svg>
+        </div>
+      </div>
     </section>
 
     <section class="press-kit flex items-center md:block">
@@ -196,16 +249,74 @@
         </h2>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-16">
-          <img
+          <LazyImage
             class="h-32"
-            v-for="(award, index) in 10"
-            :key="index"
-            :src="require(`~/assets/images/awards/award-${index + 1}.png`)"
-            alt=""
+            v-for="award in awards"
+            :key="award.id"
+            :src="award.Image.url"
+            :alt="award.Title"
           />
         </div>
       </div>
     </section>
+
+    <section
+      class="flex flex-col md:flex-row gap-16 lg:gap-32 pt-40 px-8 max-w-screen-xl mx-auto"
+    >
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-2xl md:text-4xl">We Want to Be a Part of Your Story</h1>
+        <p class="mt-3 md:mt-6 md:text-lg">
+          Working on an exciting story and need Youverify's help? Reach out to
+          us and our team will get back to you in less than 24 hours.
+        </p>
+      </div>
+
+      <form action="" method="post" class="w-full md:w-1/2">
+        <input
+          type="hidden"
+          name="retURL"
+          value="https://www.youverify.co/contact-us-success"
+        />
+        <div class="form-group space-y-5 w-full">
+          <div class="flex gap-4">
+            <input
+              type="text"
+              name="First Name"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              name="Last Name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <input type="email" name="Email" placeholder="Email" required />
+          <input type="text" name="Company" placeholder="Company" required />
+          <input type="tel" name="Phone Number" placeholder="Phone Number" />
+          <textarea placeholder="Message" name="Message" rows="8"></textarea>
+        </div>
+
+        <div class="flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" id="check" v-model="checkbox" class="w-4" />
+          <label for="check" class="text-grey" style="font-size: 10px"
+            >I want to sign up for blog updates another communications</label
+          >
+        </div>
+        <AppButton :disabled="!checkbox" text="Submit" class="w-full mt-12" />
+        <p class="text-xs mt-3">
+          By clicking the button you agree with our
+          <nuxt-link
+            to="/privacy-policy"
+            class="text-blue cursor-pointer font-semibold"
+          >
+            Privacy Policy</nuxt-link
+          >
+        </p>
+      </form>
+    </section>
+
     <section
       class="py-40 px-8 max-w-screen-xl mx-auto md:flex justify-between items-center gap-6"
     >
@@ -264,43 +375,6 @@
         </button>
       </div>
     </section>
-    <section
-      class="py-20 px-8 max-w-screen-xl mx-auto flex flex-col items-center"
-    >
-      <h2 class="text-3xl md:text-5xl font-semibold text-blue text-center">
-        We Want to Be a Part of Your Story
-      </h2>
-      <p
-        class="mt-5 mb-8 font-medium text-lg md:text-xl text-center max-w-2xl mx-auto"
-      >
-        Working on an exciting story and need Youverify's help? Reach out to us
-        at
-        <a
-          class="font-semibold text-blue-300"
-          href="mailto:contact@youverify.co"
-        >
-          contact@youverify.co</a
-        >
-      </p>
-
-      <AppButton text="Contact our press team"
-        ><svg slot="append" viewBox="0 0 20 20" fill="none" class="w-6 ml-1.5">
-          <path
-            d="M6 10H14"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-          <path
-            d="M10 6L14 10L10 14"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path></svg
-      ></AppButton>
-    </section>
   </div>
 </template>
 
@@ -329,6 +403,7 @@ export default {
   },
   data() {
     return {
+      checkbox: null,
       socials: [
         {
           icon: "facebook",
@@ -351,6 +426,13 @@ export default {
           link: "https://instagram.com/youcheckonline",
         },
       ],
+      settings: {
+        arrows: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 2000,
+      },
     };
   },
   computed: {
@@ -359,18 +441,30 @@ export default {
     }),
     ...mapState({
       relatedBlogs: (state) => state.blogs.relatedBlogs,
-      pressReleases: (state) => state.blogs.pressReleases,
+      pressReleases: (state) => state.press.pressReleases,
+      featuredMedias: (state) => state.press.featuredMedias,
+      awards: (state) => state.press.awards,
       loading: (state) => state.blogs.loading,
     }),
   },
+  methods: {
+    showPrev() {
+      this.$refs.carousel.prev();
+    },
+    showNext() {
+      this.$refs.carousel.next();
+    },
+  },
   async asyncData({ store }) {
-    try {
-      await store.dispatch("blogs/getBlogs", {
+    await Promise.all([
+      store.dispatch("blogs/getBlogs", {
         currentPage: 0,
         limit: 3,
-      });
-      await store.dispatch("blogs/getPressReleases", "humans-of-YV");
-    } catch (e) {}
+      }),
+      store.dispatch("press/getPressReleases", "humans-of-YV"),
+      store.dispatch("press/getFeaturedMedias"),
+      store.dispatch("press/getAwards"),
+    ]);
   },
 };
 </script>
@@ -382,5 +476,11 @@ export default {
   background-image: url("~/assets/images/company/press-background.png");
   background-position: center;
   background-size: cover;
+}
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>

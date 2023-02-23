@@ -2,12 +2,11 @@ export const state = () => ({
   blogs: [],
   singleblogPost: null,
   relatedBlogs: null,
-  pressReleases: null,
   total: 0,
   loading: false,
   error: null,
   perPage: 9,
-  hasNextPage: true
+  hasNextPage: true,
 });
 
 export const getters = {
@@ -16,7 +15,7 @@ export const getters = {
   loading: (state) => state.loading,
   error: (state) => state.error,
   total: (state) => state.total,
-}
+};
 
 export const mutations = {
   setLoading(state, payload) {
@@ -28,7 +27,7 @@ export const mutations = {
   },
 
   setNextPage(state, payload) {
-    state.hasNextPage = payload
+    state.hasNextPage = payload;
   },
 
   setBlogs(state, payload) {
@@ -44,12 +43,8 @@ export const mutations = {
   },
 
   setRelatedBlogs(state, payload) {
-    state.relatedBlogs = payload
+    state.relatedBlogs = payload;
   },
-
-  setPressReleases(state, payload) {
-    state.pressReleases = payload
-  }
 };
 
 export const actions = {
@@ -58,7 +53,7 @@ export const actions = {
     let payload = {
       _start: page ? page.currentPage * 9 : 0,
       _limit: page ? page.limit : 9,
-      _sort: "createdAt:DESC"
+      _sort: "createdAt:DESC",
     };
     const response = await this.$axios
       .$get(
@@ -67,12 +62,12 @@ export const actions = {
       .then((res) => {
         commit("setBlogs", res);
         commit("setLoading", false);
-        commit("setNextPage", state.blogs.length < state.total)
+        commit("setNextPage", state.blogs.length < state.total);
         return res;
       })
       .catch((error) => {
-        commit(setError, error.data)
-      })
+        commit(setError, error.data);
+      });
     return response;
   },
 
@@ -86,8 +81,8 @@ export const actions = {
         return res;
       })
       .catch((error) => {
-        commit(setError, error.data)
-      })
+        commit(setError, error.data);
+      });
     return response;
   },
 
@@ -101,11 +96,11 @@ export const actions = {
         return res;
       })
       .catch((error) => {
-        commit(setError, error.data)
-      })
+        commit(setError, error.data);
+      });
     return response;
   },
-  
+
   async getRelatedBlogs({ state, commit }, slug) {
     commit("setLoading", true);
     const response = await this.$axios
@@ -116,22 +111,8 @@ export const actions = {
         return res;
       })
       .catch((error) => {
-        commit(setError, error.data)
-      })
-    return response;
-  },
-  async getPressReleases({ state, commit }, slug) {
-    commit("setLoading", true);
-    const response = await this.$axios
-      .$get(`${process.env.baseUrl}/blogs?blog_categories.slug=${slug}`)
-      .then((res) => {
-        commit("setPressReleases", res);
-        commit("setLoading", false);
-        return res;
-      })
-      .catch((error) => {
-        commit(setError, error.data)
-      })
+        commit(setError, error.data);
+      });
     return response;
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="hidden lg:block py-5 bg-white">
-      <section class="max-w-screen-xl mx-auto px-4 md:px-8">
+      <section class="max-w-screen-xl mx-auto px-8">
         <div class="flex justify-between items-center text-blue-300">
           <div>
             <a aria-current="page" class="" href="/"
@@ -316,7 +316,7 @@
                         text="See pricing"
                         theme="transparent"
                         size="none"
-                        href="/product/kyc/pricing"
+                        :to="nav.lists[subIndex].button"
                         ><svg
                           slot="append"
                           viewBox="0 0 20 20"
@@ -422,7 +422,7 @@ export default {
             },
             {
               name: "Know Your Business (KYB)",
-              button: "true",
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "Business Verification",
@@ -441,7 +441,7 @@ export default {
             },
             {
               name: "Know Your Employee (KYE)",
-              button: "true",
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "Address verification",
@@ -471,7 +471,7 @@ export default {
             },
             {
               name: "Know Your Transaction (KYT)",
-              button: "true",
+              button: "/product/kyc/pricing",
               subLists: [
                 {
                   name: "Transaction monitoring",
@@ -497,9 +497,15 @@ export default {
               name: "Customer Verification",
               link: "/solutions/customer-verification",
             },
-            { name: "Business Verification", link: "#" },
-            { name: "Compliance Management", link: "#" },
-            { name: "Risk Management", link: "#" },
+            {
+              name: "Business Verification",
+              link: "/solutions/business-verification",
+            },
+            {
+              name: "Compliance Management",
+              link: "/solutions/compliance-management",
+            },
+            { name: "Risk Management", link: "/solutions/risk-management" },
             {
               name: "Use Cases",
               subLists: [

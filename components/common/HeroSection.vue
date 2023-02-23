@@ -1,7 +1,7 @@
 <template>
   <div :class="lightBlue ? 'bg-blue-100' : white ? 'bg-white' : 'bg-blue-300'" class="pt-12 pb-20">
     <div
-      class="px-4 md:px-8 max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-12 md:gap-28"
+      class="px-8 max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-12 md:gap-28"
     >
       <div class="md:w-3/5 flex flex-col items-center md:items-start">
         <div

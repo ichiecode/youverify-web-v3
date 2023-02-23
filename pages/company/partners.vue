@@ -46,7 +46,7 @@
           <img src="~/assets/images/illustrations/element.svg" alt="" />
         </div>
         <div
-          class="flex flex-col md:flex-row gap-7 md:gap-4 px-4 md:px-8 max-w-screen-xl mx-auto"
+          class="flex flex-col md:flex-row gap-7 md:gap-4 px-8 max-w-screen-xl mx-auto"
         >
           <div
             v-for="partner in partners"
@@ -60,7 +60,7 @@
               "
               :alt="partner.type"
             />
-            <h1 class="text-2xl font-semibold mt-8">{{ partner.type }}</h1>
+            <h2 class="text-2xl font-semibold mt-8">{{ partner.type }}</h2>
             <p class="mt-4 lg:max-w-xs">{{ partner.text }}</p>
           </div>
         </div>
@@ -68,33 +68,56 @@
     </section>
     <Testimonials />
     <section class="py-20 bg-blue-100">
-      <div class="px-4 md:px-8 max-w-screen-xl mx-auto text-center">
+      <div class="px-8 max-w-screen-xl mx-auto text-center">
         <h1 class="text-2xl md:text-5xl font-bold">
           Ready to become a partner?
         </h1>
         <p class="text-xl mt-6">Sign up to explore partnership benefits</p>
-        <form class="form-group w-full mt-7 md:mt-16 max-w-md mx-auto">
-          <div class="space-y-4">
+        <form
+          action="https://go.pardot.com/l/1001831/2023-02-21/7wxk"
+          method="post"
+          class="w-full mt-7 md:mt-16 max-w-md mx-auto"
+        >
+          <input
+            type="hidden"
+            name="retURL"
+            value="https://www.youverify.co/contact-us-success"
+          />
+          <div class="form-group space-y-4 w-full">
+            <div class="flex gap-4">
+              <input
+                type="text"
+                placeholder="First name"
+                name="First Name"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last name"
+                name="Last Name"
+                required
+              />
+            </div>
+            <input type="email" placeholder="Email" name="Email" required />
             <input
-              class="py-3.5 px-6 w-full rounded"
               type="text"
-              placeholder="Type your name "
+              placeholder="Company name"
+              name="Company"
+              required
             />
             <input
-              class="py-3.5 px-6 w-full rounded"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              class="py-3.5 px-6 w-full rounded"
               type="tel"
-              placeholder="+234 "
+              placeholder="Phone number"
+              name="Phone"
+              required
             />
-            <input
-              class="py-3.5 px-6 w-full rounded"
-              type="text"
-              placeholder="Input text "
-            />
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="check" v-model="checkbox" class="w-4" />
+            <label for="check" class="text-grey" style="font-size: 10px"
+              >I agree to receive emails on real-time product updates, industry
+              tips, news and guides</label
+            >
           </div>
           <AppButton
             buttonText="Apply Now"

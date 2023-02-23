@@ -196,10 +196,26 @@
           <div class="grid grid-cols-1 gap-6">
             <div>
               <ul class="text-white text-xs space-y-2.5">
-                <li>Customer Verification</li>
-                <li>Business Verification</li>
-                <li>Compliance Management</li>
-                <li>Risk Management</li>
+                <li>
+                  <nuxt-link to="/solutions/customer-verification"
+                    >Customer Verification</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link to="/solutions/business-verification"
+                    >Business Verification</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link to="/solutions/compliance-management"
+                    >Compliance Management</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link to="/solutions/risk-management"
+                    >Risk Management</nuxt-link
+                  >
+                </li>
               </ul>
             </div>
             <div class="">

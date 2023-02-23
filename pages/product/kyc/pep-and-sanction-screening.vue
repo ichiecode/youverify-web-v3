@@ -15,7 +15,7 @@
         <AppButton
           theme="secondary"
           :outline="true"
-          text="View demo"
+          text="Book demo"
           buttonText="View Demo"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">

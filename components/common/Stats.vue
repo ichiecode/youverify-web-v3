@@ -4,7 +4,7 @@
       <img src="~/assets/images/illustrations/element-2.svg" alt="" />
     </div>
     <div
-      class="flex flex-col md:flex-row justify-between gap-4 px-4 md:px-8 relative z-10 max-w-6xl mx-auto space-y-8 md:space-y-0"
+      class="flex flex-col md:flex-row justify-between gap-4 px-8 relative z-10 max-w-6xl mx-auto space-y-8 md:space-y-0"
     >
       <div v-for="stat in stats" :key="stat.name" class="text-center">
         <h2 class="font-bold text-4xl md:text-5xl lg:text-6xl text-white">{{ stat.figure }}</h2>

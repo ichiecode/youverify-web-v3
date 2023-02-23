@@ -7,42 +7,60 @@
       </p>
     </div>
 
-    <form class="form-group w-full md:w-1/2 space-y-5">
-      <div class="flex gap-4">
+    <form
+      :action="
+        faq
+          ? 'https://go.pardot.com/l/1001831/2023-02-21/7x1c'
+          : 'https://go.pardot.com/l/1001831/2023-02-21/7wx2'
+      "
+      method="post"
+      class="w-full md:w-1/2"
+    >
+      <input
+        type="hidden"
+        name="retURL"
+        value="https://www.youverify.co/contact-us-success"
+      />
+      <div class="form-group space-y-5 w-full">
+        <div class="flex gap-4">
+          <input
+            type="text"
+            name="First Name"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            name="Last Name"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="text" name="Company" placeholder="Company" required />
         <input
           type="text"
-          name="First Name"
-          placeholder="First Name"
+          placeholder="Country of operations"
+          name="Country"
           required
         />
-        <input type="text" name="Last Name" placeholder="Last Name" required />
+        <input type="tel" name="Phone Number" placeholder="Phone Number" />
+        <textarea
+          placeholder="Message"
+          name="Message"
+          rows="8"
+          :required="faq"
+        ></textarea>
       </div>
-      <input type="email" name="Email" placeholder="Email" required />
-      <input type="text" name="Company" placeholder="Company" required />
-      <select name="Country" v-model="country" required>
-        <option value="" disabled hidden>Country of operations</option>
-        <option v-for="country in countries" :key="country" :value="country">
-          {{ country }}
-        </option>
-      </select>
-      <input
-        type="tel"
-        name="Phone Number"
-        placeholder="Phone Number"
-        required
-      />
-      <textarea
-        placeholder="Message"
-        name="Message"
-        rows="8"
-        required
-      ></textarea>
-      <AppButton
-        buttonText="Submit"
-        buttoncolor="bluebutton"
-        class="w-full mt-12"
-      />
-      <p class="text-xs">
+
+      <div class="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" id="check" v-model="checkbox" class="w-4" />
+        <label for="check" class="text-grey" style="font-size: 10px"
+          >I want to sign up for blog updates another communications</label
+        >
+      </div>
+      <AppButton :disabled="!checkbox" text="Submit" class="w-full mt-12" />
+      <p class="text-xs mt-3">
         By clicking the button you agree with our
         <nuxt-link
           to="/privacy-policy"
@@ -56,7 +74,6 @@
 </template>
 
 <script>
-import Select from "../form/Select.vue";
 export default {
   props: {
     title: {
@@ -65,11 +82,13 @@ export default {
     note: {
       required: true,
     },
+    faq: {
+      default: true,
+    },
   },
   data() {
     return {
-      countries: ["Kenya", "Nigeria", "South Africa", "Ghana"],
-      country: "",
+      checkbox: null,
     };
   },
 };

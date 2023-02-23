@@ -15,7 +15,7 @@
         <AppButton
           theme="secondary"
           :outline="true"
-          text="View demo"
+          text="Book demo"
           href="#contact"
         >
           <svg slot="append" viewBox="0 0 20 20" fill="none" class="w-5 ml-1.5">
@@ -39,7 +39,7 @@
     </HeroSection>
     <TrustedClients />
     <Features :features="features" />
-    <section class="pt-24 px-4 md:px-8 max-w-screen-xl mx-auto">
+    <section class="pt-24 px-8 max-w-screen-xl mx-auto">
       <h2
         class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
       >

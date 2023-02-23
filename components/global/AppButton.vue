@@ -4,12 +4,14 @@
     :to="to"
     :href="href"
     v-on="$listeners"
+    :disabled="disabled"
     :class="[
       themeComputed,
       fontWeightComputed,
       radiusComputed,
       sizeComputed,
       `inline-flex items-center justify-center focus:outline-none flex-shrink-0`,
+      { 'cursor-not-allowed': disabled },
     ]"
   >
     <slot name="prepend"></slot>
@@ -25,16 +27,16 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Pending'
+      default: "Pending",
     },
     theme: {
       type: String,
-      default: 'primary'
+      default: "primary",
     },
     fontWeight: String,
     size: {
       type: String,
-      default: 'md'
+      default: "md",
     },
     outline: {
       type: Boolean,
@@ -47,6 +49,9 @@ export default {
     },
     href: {
       type: String,
+    },
+    disabled: {
+      default: false,
     },
   },
   computed: {

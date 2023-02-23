@@ -32,7 +32,7 @@
       />
     </section>
     <section
-      class="px-4 md:px-8 max-w-screen-xl mx-auto text-center py-20 md:pb-96 relative"
+      class="px-8 max-w-screen-xl mx-auto text-center py-20 md:pb-96 relative"
     >
       <h1 class="font-semibold text-4xl">Our Mission</h1>
       <p class="text-xl mt-8 max-w-3xl mx-auto">
@@ -63,7 +63,7 @@
       </div>
     </section>
     <section class="py-20 md:pt-96 bg-blue">
-      <div class="px-4 md:px-8 max-w-screen-xl mx-auto">
+      <div class="px-8 max-w-screen-xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div
             v-for="(method, index) in methods"
@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <section id="careers" class="px-4 md:px-8 max-w-screen-xl mx-auto py-20">
+    <section id="careers" class="px-8 max-w-screen-xl mx-auto py-20">
       <div class="flex flex-col items-center">
         <div
           style="background-color: #c2e2e9"
@@ -175,7 +175,7 @@
         </div>
       </div>
     </section>
-    <MoreYouverify class="px-4 md:px-8 max-w-screen-xl mx-auto" />
+    <MoreYouverify class="px-8 max-w-screen-xl mx-auto" />
   </div>
 </template>
 

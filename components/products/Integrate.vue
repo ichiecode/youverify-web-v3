@@ -1,7 +1,7 @@
 <template>
   <section class="py-20 md:pt-32 bg-blue-900">
     <div
-      class="px-4 md:px-8 max-w-6xl mx-auto flex flex-col items-center text-center"
+      class="px-8 max-w-6xl mx-auto flex flex-col items-center text-center"
     >
       <h2 class="text-white font-semibold text-3xl md:text-5xl">
         Seamlessly Integrate Your Tech Infrastructure with the Youverify OS
