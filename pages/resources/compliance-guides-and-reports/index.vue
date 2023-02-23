@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full py-16 md:py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
+  <main class="w-full py-16 md:py-24 px-8 max-w-screen-xl mx-auto">
     <ResourceHeader
       tag="Compliance Guides & Reports"
       title="Compliance Guides & Reports"

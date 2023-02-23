@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full max-w-screen-xl mt-24 px-4 md:px-8 mx-auto">
+  <main class="w-full max-w-screen-xl mt-24 px-8 mx-auto">
     <content-placeholders v-if="loading" class="w-full">
       <content-placeholders-img />
       <content-placeholders-heading />

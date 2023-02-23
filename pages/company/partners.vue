@@ -46,7 +46,7 @@
           <img src="~/assets/images/illustrations/element.svg" alt="" />
         </div>
         <div
-          class="flex flex-col md:flex-row gap-7 md:gap-4 px-4 md:px-8 max-w-screen-xl mx-auto"
+          class="flex flex-col md:flex-row gap-7 md:gap-4 px-8 max-w-screen-xl mx-auto"
         >
           <div
             v-for="partner in partners"
@@ -68,7 +68,7 @@
     </section>
     <Testimonials />
     <section class="py-20 bg-blue-100">
-      <div class="px-4 md:px-8 max-w-screen-xl mx-auto text-center">
+      <div class="px-8 max-w-screen-xl mx-auto text-center">
         <h1 class="text-2xl md:text-5xl font-bold">
           Ready to become a partner?
         </h1>

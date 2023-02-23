@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 text-center px-4 md:px-8 max-w-screen-xl mx-auto">
+  <section class="py-24 text-center px-8 max-w-screen-xl mx-auto">
     <h2 class="font-semibold text-3xl md:text-5xl text-blue-300">
       Supports All Government IDs
     </h2>

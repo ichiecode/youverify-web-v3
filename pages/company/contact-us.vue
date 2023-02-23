@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20 px-4 md:px-8 max-w-screen-xl mx-auto">
+  <div class="pt-20 px-8 max-w-screen-xl mx-auto">
     <div class="mt-28 mb-16 md:my-32 max-w-4xl mx-auto">
       <h1 class="md:text-5xl text-2xl mb-4 md:mb-8 font-bold text-center">
         Youverify Wants to Hear From You

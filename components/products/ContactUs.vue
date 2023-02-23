@@ -1,6 +1,6 @@
 <template>
   <section class="py-20 bg-blue-100">
-    <div class="px-4 md:px-8 max-w-5xl mx-auto text-center">
+    <div class="px-8 max-w-5xl mx-auto text-center">
       <h2 class="text-xl md:text-3xl font-bold">{{ heading }}</h2>
       <p class="text-xl font-semibold mt-12">
         {{ note }}

@@ -40,7 +40,7 @@
     <TrustedClients />
     <Stats :stats="stats" />
     <section class="py-16 bg-blue-300">
-      <div class="px-4 md:px-8 max-w-screen-xl mx-auto">
+      <div class="px-8 max-w-screen-xl mx-auto">
         <div
           class="flex flex-col md:flex-row justify-between items-center gap-12"
         >
@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <section class="py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
+    <section class="py-24 px-8 max-w-screen-xl mx-auto">
       <h2
         class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
       >
@@ -112,7 +112,7 @@
     <Integrate />
     <section class="py-20 bg-blue-100">
       <div
-        class="px-4 md:px-8 max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-12 md:gap-10"
+        class="px-8 max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-12 md:gap-10"
       >
         <div
           class="md:w-3/5 lg:w-1/2 flex flex-col items-center md:items-start"

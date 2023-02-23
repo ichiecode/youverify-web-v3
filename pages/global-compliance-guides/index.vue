@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full py-16 md:py-24 px-4 md:px-8 max-w-6xl mx-auto">
+  <main class="w-full py-16 md:py-24 px-8 max-w-6xl mx-auto">
     <section class="my-12 md:my-32 max-w-4xl mx-auto">
       <h1
         class="

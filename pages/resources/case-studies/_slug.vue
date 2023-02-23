@@ -2,7 +2,7 @@
   <div class="mt-28">
     <header class="bg-blue-300 py-40">
       <div
-        class="flex flex-col items-center px-4 md:px-8 max-w-screen-xl mx-auto"
+        class="flex flex-col items-center px-8 max-w-screen-xl mx-auto"
       >
         <div
           style="background-color: #c2e2e9"
@@ -23,7 +23,7 @@
     </header>
 
     <section
-      class="flex flex-col md:flex-row py-16 gap-6 max-w-screen-xl mx-auto px-4 md:px-8"
+      class="flex flex-col md:flex-row py-16 gap-6 max-w-screen-xl mx-auto px-8"
     >
       <aside class="md:w-1/3 bg-blue-100 px-9 py-8 space-y-4">
         <div class="space-y-1">
@@ -73,7 +73,7 @@
 
     <hr class="w-full" />
 
-    <section class="my-20 max-w-screen-xl mx-auto px-4 md:px-8">
+    <section class="my-20 max-w-screen-xl mx-auto px-8">
       <h1 class="text-4xl mb-4 capitalize text-center">Related Resources</h1>
       <div
         class="grid gap-5 md:gap-10 my-16"

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
+  <section class="py-24 px-8 max-w-screen-xl mx-auto">
     <h2 class="font-semibold text-2xl md:text-5xl text-center">
       Frequently Asked Questions
     </h2>

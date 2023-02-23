@@ -13,27 +13,86 @@
     </HeroSection>
     <TrustedClients />
     <Features :features="features" />
-    <!-- <Stats :stats="stats" /> -->
+    <section class="py-24 px-8 max-w-screen-xl mx-auto">
+      <h2
+        class="text-3xl md:text-5xl font-semibold text-blue-300 text-center max-w-4xl mx-auto capitalize"
+      >
+        Verify Your Customer at Every Step of the Way
+      </h2>
+
+      <div
+        class="py-20 flex flex-col md:flex-row gap-10 md:gap-5 justify-between"
+      >
+        <div>
+          <h3
+            class="font-semibold text-2xl bg-blue-900 rounded-lg text-white py-4 px-5 text-center"
+          >
+            Customer Verification
+          </h3>
+          <div
+            class="border-dashed border border-blue-900 bg-blue-900 bg-opacity-20 pl-12 pr-9 py-11 rounded-lg mt-6 md:mt-12 md:max-w-xs"
+          >
+            <ul class="text-blue-900 text-lg font-medium list-disc">
+              <li>AML screening</li>
+              <li>Biometric Authentication</li>
+              <li>Reusable KYC</li>
+              <li>Identity Verification</li>
+              <li>Address Verification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3
+            class="font-semibold text-2xl bg-blue-300 rounded-lg text-white py-4 px-5 text-center"
+          >
+            Business Verification
+          </h3>
+          <div
+            class="border-dashed border border-blue-300 bg-blue-300 bg-opacity-20 pl-12 pr-9 py-11 rounded-lg mt-6 md:mt-12 md:max-w-xs"
+          >
+            <ul class="text-blue-300 text-lg font-medium list-disc">
+              <li>Registry Verification</li>
+              <li>Address Verification</li>
+              <li>Beneficial Ownership Verification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3
+            class="font-semibold text-2xl bg-blue rounded-lg text-white py-4 px-5 text-center"
+          >
+            Monitoring
+          </h3>
+          <div
+            class="border-dashed border border-blue bg-blue bg-opacity-20 pl-12 pr-9 py-11 rounded-lg mt-6 md:mt-12 md:max-w-xs"
+          >
+            <ul class="text-blue text-lg font-medium list-disc">
+              <li>Transaction Monitoring</li>
+              <li>Transaction Screening</li>
+              <li>Crypto Monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <Offers
       title="Scale your Business with our Comprehensive KYB Solution"
       :offers="offers"
     />
-    <section
-      class="py-24 px-8 max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16"
-    >
-      <LazyImage
-        class="md:w-1/3 lg:w-1/2 h-96 md:h-auto"
-        src="~/assets/images/illustrations/user-research.svg"
-      />
-      <div>
-        <h2 class="font-semibold text-5xl mb-8">
-          Start Performing Seamless KYB Today
-        </h2>
+    <section class="py-24 bg-blue-150">
+      <div
+        class="px-8 max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between gap-16"
+      >
+        <LazyImage
+          src="~/assets/images/icons/solutions/compliance-and-security.svg"
+        />
 
-        <AppButton text="Book a Free Demo" href="#contact" />
+        <div></div>
       </div>
     </section>
-    
+
     <ContactUs
       id="contact"
       heading="Custom Design Your Business Compliance Needs Today With Youverify"
@@ -49,7 +108,6 @@ import HeroSection from "~/components/common/HeroSection.vue";
 import TrustedClients from "~/components/common/TrustedClients.vue";
 import Features from "~/components/common/Features.vue";
 import Offers from "~/components/products/Offers.vue";
-import Stats from "~/components/common/Stats.vue";
 import ContactUs from "~/components/products/ContactUs.vue";
 import Faqs from "~/components/products/faqs.vue";
 import KnowMore from "~/components/common/KnowMore.vue";
@@ -59,7 +117,6 @@ export default {
     TrustedClients,
     Features,
     Offers,
-    Stats,
     ContactUs,
     Faqs,
     KnowMore,

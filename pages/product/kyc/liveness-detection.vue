@@ -40,7 +40,7 @@
     <TrustedClients />
     <Stats :stats="stats" />
     <Features :features="features" />
-    <section class="pt-24 px-4 md:px-8 max-w-screen-xl mx-auto">
+    <section class="pt-24 px-8 max-w-screen-xl mx-auto">
       <h2
         class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
       >

@@ -45,7 +45,7 @@
       :offers="offers"
     />
 
-    <section class="py-24 px-4 md:px-8 max-w-screen-xl mx-auto">
+    <section class="py-24 px-8 max-w-screen-xl mx-auto">
       <h2
         class="text-3xl md:text-5xl font-semibold text-blue-300 text-center max-w-4xl mx-auto"
       >

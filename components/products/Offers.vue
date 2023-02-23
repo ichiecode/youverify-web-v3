@@ -1,7 +1,7 @@
 <template>
   <section class="pt-24">
     <h2
-      class="text-3xl md:text-5xl font-semibold text-blue-300 text-center max-w-4xl mx-auto capitalize"
+      class="text-3xl md:text-5xl font-semibold text-blue-300 text-center max-w-4xl mx-auto capitalize px-8"
     >
       {{ title }}
     </h2>
@@ -14,7 +14,7 @@
         :class="index % 2 !== 0 ? 'bg-blue-100' : 'bg-white'"
       >
         <div
-          class="flex flex-col justify-between items-center gap-12 px-4 md:px-8 max-w-screen-xl mx-auto"
+          class="flex flex-col justify-between items-center gap-12 px-8 max-w-screen-xl mx-auto"
           :class="index % 2 !== 0 ? 'md:flex-row' : 'md:flex-row-reverse'"
         >
           <div class="w-full">
