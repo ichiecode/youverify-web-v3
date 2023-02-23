@@ -81,15 +81,40 @@
       title="Scale your Business with our Comprehensive KYB Solution"
       :offers="offers"
     />
-    <section class="py-24 bg-blue-150">
+    <section class="py-24 bg-blue-100 my-24">
       <div
-        class="px-8 max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between gap-16"
+        class="px-8 max-w-screen-xl mx-auto flex flex-col md:flex-row items-start justify-between gap-12"
       >
         <LazyImage
+          class="mx-auto md:mx-0 h-24 md:h-auto"
           src="~/assets/images/icons/solutions/compliance-and-security.svg"
         />
 
-        <div></div>
+        <div class="md:w-2/3">
+          <h2 class="font-semibold text-xl md:text-3xl">
+            Compliance and Security? We Lead by Example
+          </h2>
+          <p class="mt-9">
+            Trusting us with your data means we need to take extra precautions
+            and pay attention to security. All data is encrypted and protected
+            in adherence to global standards.
+          </p>
+
+          <div class="flex gap-3.5 mt-20">
+            <LazyImage
+              class="h-12 sm:h-auto"
+              src="~/assets/images/icons/solutions/iso-27001.svg"
+            />
+            <LazyImage
+              class="h-12 sm:h-auto"
+              src="~/assets/images/icons/solutions/iso-27018.svg"
+            />
+            <LazyImage
+              class="h-12 sm:h-auto"
+              src="~/assets/images/icons/solutions/nitda.svg"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
