@@ -35,16 +35,65 @@
     </HeroSection>
     <TrustedClients />
     <Features :features="features" />
-    <!-- <Stats :stats="stats" /> -->
-    <!-- <Offers
-      title="Scale your Business with our Comprehensive KYB Solution"
-      :offers="offers"
-    /> -->
-    <section
-      class="py-24 px-8 max-w-screen-xl mx-auto"
-    >
-    
+
+    <section class="px-8 max-w-screen-xl mx-auto py-20">
+      <h2
+        class="font-semibold text-blue-300 text-2xl md:text-5xl text-center max-w-4xl m-auto"
+      >
+        How we help you stay compliant
+      </h2>
+      <div class="mt-28 space-y-3 md:space-y-8">
+        <div
+          @click="currentIndex = index"
+          v-for="(product, index) in products"
+          :key="index"
+          class="flex gap-12"
+          :class="{ 'items-center': currentIndex !== index }"
+        >
+          <div
+            @click="currentIndex = index"
+            class="hidden h-14 rounded-full md:flex justify-center items-center cursor-pointer text-white font-semibold text-2xl duration-300 ease-in-out"
+            style="min-width: 56px"
+            :class="currentIndex === index ? 'bg-blue-300 mt-5' : 'bg-blue-150'"
+          >
+            {{ index + 1 }}
+          </div>
+          <div
+            @click="currentIndex = index"
+            class="rounded-3xl px-7 lg:px-11 flex justify-between items-center gap-8 lg:gap-16 cursor-pointer duration-300 ease-in-out md:w-2/3"
+            :class="
+              currentIndex === index
+                ? 'bg-blue-300 h-72 lg:h-56'
+                : 'bg-blue-150 h-20 md:h-28'
+            "
+          >
+            <div class="max-w-3xl">
+              <h3
+                class="font-semibold text-xl md:text-3xl"
+                :class="{ 'text-white': currentIndex === index }"
+              >
+                {{ product.heading }}
+              </h3>
+              <p
+                v-show="currentIndex === index"
+                class="mt-3 lg:mt-6 text-white font-medium md:text-xl"
+              >
+                {{ product.note }}
+              </p>
+            </div>
+          </div>
+          <div v-show="currentIndex === index" class="hidden sm:block">
+            <!-- <img
+                :src="
+                  require(`~/assets/images/icons/solutions/${product.icon}.svg`)
+                "
+              /> -->
+            <LazyImage src="~/assets/images/products/list.png" />
+          </div>
+        </div>
+      </div>
     </section>
+    <section class="py-24 px-8 max-w-screen-xl mx-auto"></section>
     <ContactUs
       id="contact"
       heading="SSetup a Robust Risk Management System with Youverify Compliance Solutions"
@@ -95,6 +144,7 @@ export default {
   },
   data() {
     return {
+      currentIndex: 0,
       stats: [
         {
           figure: "1 sec",
@@ -136,6 +186,43 @@ export default {
           illustration: "v-forms",
           title: "Interactive Management Dashboard",
           note: "Set up and control the customer verification flow and ongoing monitoring in our interactive management dashboard. Analyse every detail and set conditions for cases to be reviewed manually to make informed decisions.",
+        },
+      ],
+      products: [
+        {
+          icon: "transaction-initiation",
+          heading: "Know Your Customer (KYC)",
+          note: "Perform full KYC verification globally to satisfy compliance. Perform ID, address, biometric, and phone number verification. AML screen and criminal/ fraud check customers for PEP and sanction listing.",
+        },
+        {
+          icon: "screening",
+          heading: "Know Your Business (KYB)",
+          note: "Verify the legal existence and registry of a business including its address, incorporation documents, the identity of directors and ultimate beneficial owners.",
+        },
+        {
+          icon: "satisfy-compliance",
+          heading: "Know Your Employee (KYE)",
+          note: "Protect your business by screening employees for adequate risk assessment. Verify their identity, work history and certificates.",
+        },
+        {
+          icon: "decision-making",
+          heading: "Know Your Transaction (KYT)",
+          note: "Monitor and detect suspicious customer activities through our elaborate transaction monitoring solution. Get access to ready-to-use scenery or create your industry-tailored custom rules.",
+        },
+        {
+          icon: "decision-making",
+          heading: "Workflow Automation",
+          note: "Custom build your compliance workflow to suit the needs of your business, creating a seamless onboarding experience for customers.",
+        },
+        {
+          icon: "decision-making",
+          heading: "AI & Machine Learning Behavioural Analysis",
+          note: "Our robust AI & Machine learning software monitors and identifies high-risk users through behavioural signals and fraudulent patterns.",
+        },
+        {
+          icon: "decision-making",
+          heading: "Design Your Business-Tailored Risk Management Process",
+          note: "Build your risk management workflow logic in the way that best suits your business. Verify and onboard customers quickly while fishing out bad actors, fraudulent applications, and set parameters for cases to be manually reviewed.",
         },
       ],
       faqs: [
