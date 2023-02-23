@@ -172,9 +172,10 @@
               class="mt-3 md:mt-5"
               :class="currentIndex === index ? 'block' : 'hidden'"
             >
-              <p class="text-base md:text-lg md:leading-7">
-                {{ faq.Description }}
-              </p>
+              <p
+                class="text-base md:text-lg md:leading-7 list-disc"
+                v-html="faq.Description"
+              ></p>
             </div>
           </div>
         </div>
